@@ -1,0 +1,1442 @@
+{
+  "main_body_risks": [
+    {
+      "clause_id": "C1",
+      "clause_type": "合同期限",
+      "risk_type": "试用期风险",
+      "risk_level_preliminary": "中",
+      "trigger_phrases": [
+        "试用期",
+        "试用"
+      ],
+      "rule_hits": {
+        "clause_type_related": true,
+        "keyword_hits": [
+          "试用期",
+          "试用"
+        ],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 2,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": true,
+          "required_groups": [],
+          "required_groups_ok": true,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": true,
+          "required_combinations_any": [],
+          "required_combinations_ok": true,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": true
+        }
+      },
+      "needs_attention": true
+    },
+    {
+      "clause_id": "C2",
+      "clause_type": "工作内容和工作地点",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C3",
+      "clause_type": "工作时间和休息休假",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C4",
+      "clause_type": "工作时间和休息休假",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C5",
+      "clause_type": "工作时间和休息休假",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C6",
+      "clause_type": "劳动报酬",
+      "risk_type": "薪酬支付风险",
+      "risk_level_preliminary": "中",
+      "trigger_phrases": [
+        "工资",
+        "劳动报酬",
+        "支付",
+        "绩效工资",
+        "计件工资"
+      ],
+      "rule_hits": {
+        "clause_type_related": true,
+        "keyword_hits": [
+          "工资",
+          "劳动报酬",
+          "支付",
+          "绩效工资",
+          "计件工资"
+        ],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 5,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": true,
+          "required_groups": [],
+          "required_groups_ok": true,
+          "required_any_keywords": [
+            "工资构成",
+            "薪酬结构",
+            "发薪方式",
+            "发放标准",
+            "工资标准",
+            "绩效工资",
+            "计件工资",
+            "试用期工资",
+            "奖金",
+            "代扣",
+            "扣发",
+            "工资待遇"
+          ],
+          "required_any_keywords_hits": [
+            "绩效工资",
+            "计件工资"
+          ],
+          "required_any_keywords_ok": true,
+          "required_combinations_any": [
+            [
+              "工资",
+              "标准"
+            ],
+            [
+              "工资",
+              "构成"
+            ],
+            [
+              "工资",
+              "代扣"
+            ],
+            [
+              "工资",
+              "扣发"
+            ],
+            [
+              "发薪",
+              "方式"
+            ],
+            [
+              "试用期",
+              "工资"
+            ],
+            [
+              "绩效",
+              "工资"
+            ],
+            [
+              "计件",
+              "工资"
+            ]
+          ],
+          "required_combinations_ok": true,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": true
+        }
+      },
+      "needs_attention": true
+    },
+    {
+      "clause_id": "C7",
+      "clause_type": "劳动报酬",
+      "risk_type": "试用期风险",
+      "risk_level_preliminary": "中",
+      "trigger_phrases": [
+        "试用期",
+        "试用"
+      ],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [
+          "试用期",
+          "试用"
+        ],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 2,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": true,
+          "required_groups": [],
+          "required_groups_ok": true,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": true,
+          "required_combinations_any": [],
+          "required_combinations_ok": true,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": true
+        }
+      },
+      "needs_attention": true
+    },
+    {
+      "clause_id": "C8",
+      "clause_type": "劳动报酬",
+      "risk_type": "薪酬支付风险",
+      "risk_level_preliminary": "中",
+      "trigger_phrases": [
+        "工资",
+        "劳动报酬",
+        "工资待遇",
+        "代扣"
+      ],
+      "rule_hits": {
+        "clause_type_related": true,
+        "keyword_hits": [
+          "工资",
+          "劳动报酬",
+          "工资待遇",
+          "代扣"
+        ],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 4,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": true,
+          "required_groups": [],
+          "required_groups_ok": true,
+          "required_any_keywords": [
+            "工资构成",
+            "薪酬结构",
+            "发薪方式",
+            "发放标准",
+            "工资标准",
+            "绩效工资",
+            "计件工资",
+            "试用期工资",
+            "奖金",
+            "代扣",
+            "扣发",
+            "工资待遇"
+          ],
+          "required_any_keywords_hits": [
+            "代扣",
+            "工资待遇"
+          ],
+          "required_any_keywords_ok": true,
+          "required_combinations_any": [
+            [
+              "工资",
+              "标准"
+            ],
+            [
+              "工资",
+              "构成"
+            ],
+            [
+              "工资",
+              "代扣"
+            ],
+            [
+              "工资",
+              "扣发"
+            ],
+            [
+              "发薪",
+              "方式"
+            ],
+            [
+              "试用期",
+              "工资"
+            ],
+            [
+              "绩效",
+              "工资"
+            ],
+            [
+              "计件",
+              "工资"
+            ]
+          ],
+          "required_combinations_ok": true,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": true
+        }
+      },
+      "needs_attention": true
+    },
+    {
+      "clause_id": "C9",
+      "clause_type": "社会保险和福利待遇",
+      "risk_type": "社保公积金风险",
+      "risk_level_preliminary": "中",
+      "trigger_phrases": [
+        "社会保险",
+        "缴纳",
+        "代缴"
+      ],
+      "rule_hits": {
+        "clause_type_related": true,
+        "keyword_hits": [
+          "社会保险",
+          "缴纳",
+          "代缴"
+        ],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 3,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": true,
+          "required_groups": [],
+          "required_groups_ok": true,
+          "required_any_keywords": [
+            "缴纳",
+            "代缴",
+            "公积金",
+            "住房公积金",
+            "手续",
+            "转正后缴纳",
+            "试用期后缴纳",
+            "社保手续"
+          ],
+          "required_any_keywords_hits": [
+            "缴纳",
+            "代缴",
+            "手续"
+          ],
+          "required_any_keywords_ok": true,
+          "required_combinations_any": [
+            [
+              "社会保险",
+              "缴纳"
+            ],
+            [
+              "社保",
+              "缴纳"
+            ],
+            [
+              "社保",
+              "代缴"
+            ],
+            [
+              "社会保险",
+              "手续"
+            ],
+            [
+              "社保",
+              "手续"
+            ],
+            [
+              "住房",
+              "公积金"
+            ],
+            [
+              "公积金",
+              "缴纳"
+            ],
+            [
+              "转正后",
+              "缴纳"
+            ],
+            [
+              "试用期后",
+              "缴纳"
+            ]
+          ],
+          "required_combinations_ok": true,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": true
+        }
+      },
+      "needs_attention": true
+    },
+    {
+      "clause_id": "C10",
+      "clause_type": "社会保险和福利待遇",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C11",
+      "clause_type": "社会保险和福利待遇",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C12",
+      "clause_type": "职业培训和劳动保护",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C13",
+      "clause_type": "职业培训和劳动保护",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C14",
+      "clause_type": "职业培训和劳动保护",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C15",
+      "clause_type": "劳动合同变更/解除/终止",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C16",
+      "clause_type": "劳动合同变更/解除/终止",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C17",
+      "clause_type": "劳动合同变更/解除/终止",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C18",
+      "clause_type": "劳动合同变更/解除/终止",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C19",
+      "clause_type": "保密义务/竞业限制",
+      "risk_type": "竞业限制风险",
+      "risk_level_preliminary": "高",
+      "trigger_phrases": [
+        "竞业限制",
+        "竞业"
+      ],
+      "rule_hits": {
+        "clause_type_related": true,
+        "keyword_hits": [
+          "竞业限制",
+          "竞业"
+        ],
+        "strong_keyword_hits": [
+          "竞业限制",
+          "竞业"
+        ],
+        "keyword_hit_count": 2,
+        "strong_keyword_hit_count": 2,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": true,
+          "strong_keyword_ok": true,
+          "required_groups": [],
+          "required_groups_ok": true,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": true,
+          "required_combinations_any": [],
+          "required_combinations_ok": true,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": true
+        }
+      },
+      "needs_attention": true
+    },
+    {
+      "clause_id": "C20",
+      "clause_type": "培训服务期",
+      "risk_type": "培训服务期风险",
+      "risk_level_preliminary": "中",
+      "trigger_phrases": [
+        "培训",
+        "服务期"
+      ],
+      "rule_hits": {
+        "clause_type_related": true,
+        "keyword_hits": [
+          "培训",
+          "服务期"
+        ],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 2,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {
+          "training_terms": [
+            "培训"
+          ],
+          "constraint_terms": [
+            "服务期",
+            "约定服务期",
+            "协议"
+          ]
+        },
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": true,
+          "required_groups": [
+            "training_terms",
+            "constraint_terms"
+          ],
+          "required_groups_ok": true,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": true,
+          "required_combinations_any": [],
+          "required_combinations_ok": true,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": true
+        }
+      },
+      "needs_attention": true
+    },
+    {
+      "clause_id": "C21",
+      "clause_type": "其他约定",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C22",
+      "clause_type": "劳动争议处理",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C23",
+      "clause_type": "其他",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C24",
+      "clause_type": "其他",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C25",
+      "clause_type": "其他",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    }
+  ],
+  "attachment_risks": [
+    {
+      "clause_id": "A1",
+      "clause_type": "续订劳动合同附件",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "A2",
+      "clause_type": "变更劳动合同附件",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    }
+  ],
+  "key_risk_clauses": [
+    {
+      "clause_id": "C1",
+      "clause_type": "合同期限",
+      "risk_type": "试用期风险",
+      "risk_level_preliminary": "中",
+      "trigger_phrases": [
+        "试用期",
+        "试用"
+      ],
+      "rule_hits": {
+        "clause_type_related": true,
+        "keyword_hits": [
+          "试用期",
+          "试用"
+        ],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 2,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": true,
+          "required_groups": [],
+          "required_groups_ok": true,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": true,
+          "required_combinations_any": [],
+          "required_combinations_ok": true,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": true
+        }
+      },
+      "needs_attention": true
+    },
+    {
+      "clause_id": "C6",
+      "clause_type": "劳动报酬",
+      "risk_type": "薪酬支付风险",
+      "risk_level_preliminary": "中",
+      "trigger_phrases": [
+        "工资",
+        "劳动报酬",
+        "支付",
+        "绩效工资",
+        "计件工资"
+      ],
+      "rule_hits": {
+        "clause_type_related": true,
+        "keyword_hits": [
+          "工资",
+          "劳动报酬",
+          "支付",
+          "绩效工资",
+          "计件工资"
+        ],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 5,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": true,
+          "required_groups": [],
+          "required_groups_ok": true,
+          "required_any_keywords": [
+            "工资构成",
+            "薪酬结构",
+            "发薪方式",
+            "发放标准",
+            "工资标准",
+            "绩效工资",
+            "计件工资",
+            "试用期工资",
+            "奖金",
+            "代扣",
+            "扣发",
+            "工资待遇"
+          ],
+          "required_any_keywords_hits": [
+            "绩效工资",
+            "计件工资"
+          ],
+          "required_any_keywords_ok": true,
+          "required_combinations_any": [
+            [
+              "工资",
+              "标准"
+            ],
+            [
+              "工资",
+              "构成"
+            ],
+            [
+              "工资",
+              "代扣"
+            ],
+            [
+              "工资",
+              "扣发"
+            ],
+            [
+              "发薪",
+              "方式"
+            ],
+            [
+              "试用期",
+              "工资"
+            ],
+            [
+              "绩效",
+              "工资"
+            ],
+            [
+              "计件",
+              "工资"
+            ]
+          ],
+          "required_combinations_ok": true,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": true
+        }
+      },
+      "needs_attention": true
+    },
+    {
+      "clause_id": "C7",
+      "clause_type": "劳动报酬",
+      "risk_type": "试用期风险",
+      "risk_level_preliminary": "中",
+      "trigger_phrases": [
+        "试用期",
+        "试用"
+      ],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [
+          "试用期",
+          "试用"
+        ],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 2,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": true,
+          "required_groups": [],
+          "required_groups_ok": true,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": true,
+          "required_combinations_any": [],
+          "required_combinations_ok": true,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": true
+        }
+      },
+      "needs_attention": true
+    },
+    {
+      "clause_id": "C8",
+      "clause_type": "劳动报酬",
+      "risk_type": "薪酬支付风险",
+      "risk_level_preliminary": "中",
+      "trigger_phrases": [
+        "工资",
+        "劳动报酬",
+        "工资待遇",
+        "代扣"
+      ],
+      "rule_hits": {
+        "clause_type_related": true,
+        "keyword_hits": [
+          "工资",
+          "劳动报酬",
+          "工资待遇",
+          "代扣"
+        ],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 4,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": true,
+          "required_groups": [],
+          "required_groups_ok": true,
+          "required_any_keywords": [
+            "工资构成",
+            "薪酬结构",
+            "发薪方式",
+            "发放标准",
+            "工资标准",
+            "绩效工资",
+            "计件工资",
+            "试用期工资",
+            "奖金",
+            "代扣",
+            "扣发",
+            "工资待遇"
+          ],
+          "required_any_keywords_hits": [
+            "代扣",
+            "工资待遇"
+          ],
+          "required_any_keywords_ok": true,
+          "required_combinations_any": [
+            [
+              "工资",
+              "标准"
+            ],
+            [
+              "工资",
+              "构成"
+            ],
+            [
+              "工资",
+              "代扣"
+            ],
+            [
+              "工资",
+              "扣发"
+            ],
+            [
+              "发薪",
+              "方式"
+            ],
+            [
+              "试用期",
+              "工资"
+            ],
+            [
+              "绩效",
+              "工资"
+            ],
+            [
+              "计件",
+              "工资"
+            ]
+          ],
+          "required_combinations_ok": true,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": true
+        }
+      },
+      "needs_attention": true
+    },
+    {
+      "clause_id": "C9",
+      "clause_type": "社会保险和福利待遇",
+      "risk_type": "社保公积金风险",
+      "risk_level_preliminary": "中",
+      "trigger_phrases": [
+        "社会保险",
+        "缴纳",
+        "代缴"
+      ],
+      "rule_hits": {
+        "clause_type_related": true,
+        "keyword_hits": [
+          "社会保险",
+          "缴纳",
+          "代缴"
+        ],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 3,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": true,
+          "required_groups": [],
+          "required_groups_ok": true,
+          "required_any_keywords": [
+            "缴纳",
+            "代缴",
+            "公积金",
+            "住房公积金",
+            "手续",
+            "转正后缴纳",
+            "试用期后缴纳",
+            "社保手续"
+          ],
+          "required_any_keywords_hits": [
+            "缴纳",
+            "代缴",
+            "手续"
+          ],
+          "required_any_keywords_ok": true,
+          "required_combinations_any": [
+            [
+              "社会保险",
+              "缴纳"
+            ],
+            [
+              "社保",
+              "缴纳"
+            ],
+            [
+              "社保",
+              "代缴"
+            ],
+            [
+              "社会保险",
+              "手续"
+            ],
+            [
+              "社保",
+              "手续"
+            ],
+            [
+              "住房",
+              "公积金"
+            ],
+            [
+              "公积金",
+              "缴纳"
+            ],
+            [
+              "转正后",
+              "缴纳"
+            ],
+            [
+              "试用期后",
+              "缴纳"
+            ]
+          ],
+          "required_combinations_ok": true,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": true
+        }
+      },
+      "needs_attention": true
+    },
+    {
+      "clause_id": "C19",
+      "clause_type": "保密义务/竞业限制",
+      "risk_type": "竞业限制风险",
+      "risk_level_preliminary": "高",
+      "trigger_phrases": [
+        "竞业限制",
+        "竞业"
+      ],
+      "rule_hits": {
+        "clause_type_related": true,
+        "keyword_hits": [
+          "竞业限制",
+          "竞业"
+        ],
+        "strong_keyword_hits": [
+          "竞业限制",
+          "竞业"
+        ],
+        "keyword_hit_count": 2,
+        "strong_keyword_hit_count": 2,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": true,
+          "strong_keyword_ok": true,
+          "required_groups": [],
+          "required_groups_ok": true,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": true,
+          "required_combinations_any": [],
+          "required_combinations_ok": true,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": true
+        }
+      },
+      "needs_attention": true
+    },
+    {
+      "clause_id": "C20",
+      "clause_type": "培训服务期",
+      "risk_type": "培训服务期风险",
+      "risk_level_preliminary": "中",
+      "trigger_phrases": [
+        "培训",
+        "服务期"
+      ],
+      "rule_hits": {
+        "clause_type_related": true,
+        "keyword_hits": [
+          "培训",
+          "服务期"
+        ],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 2,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {
+          "training_terms": [
+            "培训"
+          ],
+          "constraint_terms": [
+            "服务期",
+            "约定服务期",
+            "协议"
+          ]
+        },
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": true,
+          "required_groups": [
+            "training_terms",
+            "constraint_terms"
+          ],
+          "required_groups_ok": true,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": true,
+          "required_combinations_any": [],
+          "required_combinations_ok": true,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": true
+        }
+      },
+      "needs_attention": true
+    }
+  ],
+  "summary": {
+    "total_records": 27,
+    "attention_records": 7,
+    "high_risk_records": 1,
+    "risk_type_counts": {
+      "试用期风险": 2,
+      "无明显风险": 20,
+      "薪酬支付风险": 2,
+      "社保公积金风险": 1,
+      "竞业限制风险": 1,
+      "培训服务期风险": 1
+    },
+    "key_risk_clause_count": 7
+  }
+}
