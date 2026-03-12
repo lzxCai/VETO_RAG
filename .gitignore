@@ -1,0 +1,15 @@
+cat <<EOT >> .gitignore
+.env
+
+venv/
+env/
+
+.DS_Store
+
+__pycache__/
+*.pyc
+
+# 忽略本地临时生成的数据库或大型索引文件（可选）
+# 如果你不想把生成的本地数据库传上去，可以取消下面这行的注释
+# storage/
+EOT
