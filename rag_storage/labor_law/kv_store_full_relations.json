@@ -1,0 +1,3230 @@
+{
+  "doc-db161f575c0e9349bf3b18d1733f159c": {
+    "relation_pairs": [
+      [
+        "Article 36",
+        "Article 37"
+      ],
+      [
+        "Article 36",
+        "Labor Law of the People's Republic of China"
+      ],
+      [
+        "Employer",
+        "Piece-Rate Worker"
+      ],
+      [
+        "Article 37",
+        "Employer"
+      ],
+      [
+        "Article 37",
+        "Labor Law of the People's Republic of China"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1773320347,
+    "update_time": 1773320347,
+    "_id": "doc-db161f575c0e9349bf3b18d1733f159c"
+  },
+  "doc-d4778fa05214fc08dae5f90c37126391": {
+    "relation_pairs": [
+      [
+        "Article Seventy-Four",
+        "Social Insurance Fund Supervisory Agency"
+      ],
+      [
+        "Social Insurance Fund",
+        "Social Insurance Fund Administration Agency"
+      ],
+      [
+        "Article Seventy-Four",
+        "Social Insurance Fund"
+      ],
+      [
+        "Social Insurance Fund",
+        "Social Insurance Fund Supervisory Agency"
+      ],
+      [
+        "Any Organization or Individual",
+        "Social Insurance Fund"
+      ],
+      [
+        "Article Seventy-Four",
+        "Social Insurance Fund Administration Agency"
+      ],
+      [
+        "Social Insurance Fund Administration Agency",
+        "Social Insurance Fund Supervisory Agency"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773320350,
+    "update_time": 1773320350,
+    "_id": "doc-d4778fa05214fc08dae5f90c37126391"
+  },
+  "doc-532fb6a3f85ff55e73d76c3c0830e0c0": {
+    "relation_pairs": [
+      [
+        "Special Operations Workers",
+        "Specialized Training"
+      ],
+      [
+        "Article 55",
+        "Special Operations Qualification"
+      ],
+      [
+        "Special Operations Qualification",
+        "Special Operations Workers"
+      ],
+      [
+        "Article 55",
+        "Special Operations Workers"
+      ],
+      [
+        "Article 55",
+        "Specialized Training"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1773320364,
+    "update_time": 1773320364,
+    "_id": "doc-532fb6a3f85ff55e73d76c3c0830e0c0"
+  },
+  "doc-0f133335b434209fb07a50ad3e0a2f33": {
+    "relation_pairs": [
+      [
+        "Criminal Liability",
+        "Laborer"
+      ],
+      [
+        "Article Twenty-Five",
+        "Employer"
+      ],
+      [
+        "Employer",
+        "Labor Contract"
+      ],
+      [
+        "Labor Discipline",
+        "Laborer"
+      ],
+      [
+        "Labor Contract",
+        "Laborer"
+      ],
+      [
+        "Article Twenty-Five",
+        "Laborer"
+      ],
+      [
+        "Embezzlement and Fraud",
+        "Laborer"
+      ],
+      [
+        "Gross Negligence",
+        "Laborer"
+      ],
+      [
+        "Laborer",
+        "Probation Period"
+      ],
+      [
+        "Employer's Rules and Regulations",
+        "Laborer"
+      ]
+    ],
+    "count": 10,
+    "create_time": 1773320374,
+    "update_time": 1773320374,
+    "_id": "doc-0f133335b434209fb07a50ad3e0a2f33"
+  },
+  "doc-8312a3dee9750ae6ed96f0944844f476": {
+    "relation_pairs": [
+      [
+        "Article 23",
+        "Labor Contract"
+      ],
+      [
+        "Article 23",
+        "Chinese Labor Law"
+      ],
+      [
+        "Article 23",
+        "Contract Termination"
+      ]
+    ],
+    "count": 3,
+    "create_time": 1773320375,
+    "update_time": 1773320375,
+    "_id": "doc-8312a3dee9750ae6ed96f0944844f476"
+  },
+  "doc-96ddd1389a8d1afebfed70b7a0051cd8": {
+    "relation_pairs": [
+      [
+        "Collective Contract",
+        "Employee"
+      ],
+      [
+        "Article 35",
+        "Individual Labor Contract"
+      ],
+      [
+        "Article 35",
+        "Collective Contract"
+      ],
+      [
+        "Collective Contract",
+        "Individual Labor Contract"
+      ],
+      [
+        "Collective Contract",
+        "Enterprise"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1773320389,
+    "update_time": 1773320389,
+    "_id": "doc-96ddd1389a8d1afebfed70b7a0051cd8"
+  },
+  "doc-eb26be1be6719b2d63eda122721b5d68": {
+    "relation_pairs": [
+      [
+        "Article 44",
+        "Statutory Holiday Work"
+      ],
+      [
+        "Employer",
+        "Statutory Holiday Work"
+      ],
+      [
+        "Article 44",
+        "China's Labor Law"
+      ],
+      [
+        "Employer",
+        "Overtime Work"
+      ],
+      [
+        "Article 44",
+        "Overtime Work"
+      ],
+      [
+        "Employer",
+        "Rest Day Work"
+      ],
+      [
+        "Article 44",
+        "Rest Day Work"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773320394,
+    "update_time": 1773320394,
+    "_id": "doc-eb26be1be6719b2d63eda122721b5d68"
+  },
+  "doc-31e42e6a06e7bc74c1fb5360756f9132": {
+    "relation_pairs": [
+      [
+        "Collective Contract",
+        "Trade Union"
+      ],
+      [
+        "Collective Contract",
+        "Employee-Designated Representative"
+      ],
+      [
+        "Collective Contract",
+        "Labor Remuneration"
+      ],
+      [
+        "Collective Contract",
+        "Employee Representative Congress"
+      ],
+      [
+        "Collective Contract",
+        "Working Hours"
+      ],
+      [
+        "Collective Contract",
+        "Rest And Vacation"
+      ],
+      [
+        "Enterprise",
+        "Enterprise Employee Party"
+      ],
+      [
+        "Collective Contract",
+        "Insurance And Welfare"
+      ],
+      [
+        "Collective Contract",
+        "Enterprise Employee Party"
+      ],
+      [
+        "Collective Contract",
+        "Occupational Safety And Health"
+      ],
+      [
+        "Collective Contract",
+        "Enterprise"
+      ]
+    ],
+    "count": 11,
+    "create_time": 1773320419,
+    "update_time": 1773320419,
+    "_id": "doc-31e42e6a06e7bc74c1fb5360756f9132"
+  },
+  "doc-302371bc27545b04a86a89dc8b5a11c5": {
+    "relation_pairs": [
+      [
+        "Social Insurance",
+        "State"
+      ],
+      [
+        "People's Governments at All Levels",
+        "Vocational Training"
+      ],
+      [
+        "Employers",
+        "Vocational Training"
+      ],
+      [
+        "State",
+        "Vocational Skill Standards"
+      ],
+      [
+        "Assessment and Appraisal Institutions",
+        "Professional Qualification Certificate System"
+      ],
+      [
+        "Professional Qualification Certificate System",
+        "State"
+      ],
+      [
+        "State",
+        "Vocational Training"
+      ],
+      [
+        "Social Insurance",
+        "Workers"
+      ],
+      [
+        "Vocational Training",
+        "Workers"
+      ],
+      [
+        "Employers",
+        "Technical Workers"
+      ],
+      [
+        "Occupational Classification",
+        "State"
+      ]
+    ],
+    "count": 11,
+    "create_time": 1773320425,
+    "update_time": 1773320425,
+    "_id": "doc-302371bc27545b04a86a89dc8b5a11c5"
+  },
+  "doc-6f58679d44bde34664e3b2b1d8d81021": {
+    "relation_pairs": [
+      [
+        "Labor Law Article 50",
+        "Wage Payment"
+      ],
+      [
+        "Article 50",
+        "Laborer"
+      ],
+      [
+        "Laborer",
+        "Wage Payment"
+      ]
+    ],
+    "count": 3,
+    "create_time": 1773320430,
+    "update_time": 1773320430,
+    "_id": "doc-6f58679d44bde34664e3b2b1d8d81021"
+  },
+  "doc-ff0cf62a6db3fe1d75880bb84131de82": {
+    "relation_pairs": [
+      [
+        "Labor Safety and Health Facilities",
+        "Simultaneous Construction"
+      ],
+      [
+        "Labor Safety and Health Facilities",
+        "Renovation Projects"
+      ],
+      [
+        "Article 53",
+        "Labor Safety and Health Facilities"
+      ],
+      [
+        "Labor Safety and Health Facilities",
+        "National Standards"
+      ],
+      [
+        "Labor Safety and Health Facilities",
+        "Simultaneous Design"
+      ],
+      [
+        "Labor Safety and Health Facilities",
+        "Simultaneous Commissioning"
+      ],
+      [
+        "Expansion Projects",
+        "Labor Safety and Health Facilities"
+      ],
+      [
+        "Labor Safety and Health Facilities",
+        "New Construction Projects"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1773320453,
+    "update_time": 1773320453,
+    "_id": "doc-ff0cf62a6db3fe1d75880bb84131de82"
+  },
+  "doc-9a17dbf9d68b3a46e25ed3308c88ffbf": {
+    "relation_pairs": [
+      [
+        "Article 48",
+        "Employer"
+      ],
+      [
+        "Article 48",
+        "State Council"
+      ],
+      [
+        "Municipality People's Government",
+        "State Council"
+      ],
+      [
+        "Minimum Wage Guarantee System",
+        "Minimum Wage Standard"
+      ],
+      [
+        "Minimum Wage Standard",
+        "Municipality People's Government"
+      ],
+      [
+        "Autonomous Region People's Government",
+        "Minimum Wage Standard"
+      ],
+      [
+        "Autonomous Region People's Government",
+        "State Council"
+      ],
+      [
+        "Employer",
+        "Minimum Wage Standard"
+      ],
+      [
+        "Provincial People's Government",
+        "State Council"
+      ],
+      [
+        "Article 48",
+        "Municipality People's Government"
+      ],
+      [
+        "Article 48",
+        "Provincial People's Government"
+      ],
+      [
+        "Minimum Wage Standard",
+        "Provincial People's Government"
+      ],
+      [
+        "Article 48",
+        "Minimum Wage Guarantee System"
+      ],
+      [
+        "Article 48",
+        "Worker"
+      ],
+      [
+        "Article 48",
+        "Autonomous Region People's Government"
+      ],
+      [
+        "Employer",
+        "Worker"
+      ]
+    ],
+    "count": 16,
+    "create_time": 1773320459,
+    "update_time": 1773320459,
+    "_id": "doc-9a17dbf9d68b3a46e25ed3308c88ffbf"
+  },
+  "doc-fc2cc869b28e0784bd829a72850245ab": {
+    "relation_pairs": [
+      [
+        "Public Security Organs",
+        "Responsible Personnel"
+      ],
+      [
+        "Article 96",
+        "Employer"
+      ],
+      [
+        "Article 96",
+        "Public Security Organs"
+      ],
+      [
+        "Employer",
+        "Threat"
+      ],
+      [
+        "Criminal Liability",
+        "Responsible Personnel"
+      ],
+      [
+        "Employer",
+        "Illegal Restriction of Personal Freedom"
+      ],
+      [
+        "Employer",
+        "Forced Labor"
+      ],
+      [
+        "Employer",
+        "Violence"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1773320476,
+    "update_time": 1773320476,
+    "_id": "doc-fc2cc869b28e0784bd829a72850245ab"
+  },
+  "doc-58cdd101c942cf6d953d675aa6fecbb1": {
+    "relation_pairs": [
+      [
+        "Chapter Four",
+        "Working Hours"
+      ],
+      [
+        "Chapter Four",
+        "Rest and Vacation"
+      ]
+    ],
+    "count": 2,
+    "create_time": 1773320484,
+    "update_time": 1773320484,
+    "_id": "doc-58cdd101c942cf6d953d675aa6fecbb1"
+  },
+  "doc-c5e2a3fc3ae04a7ea467816a16c1b275": {
+    "relation_pairs": [
+      [
+        "Employers",
+        "Minor Workers"
+      ],
+      [
+        "Female Workers",
+        "Third-Level Physical Labor Intensity"
+      ],
+      [
+        "Employers",
+        "Female Workers"
+      ],
+      [
+        "Chinese Labor Law",
+        "Minor Workers"
+      ],
+      [
+        "Female Workers",
+        "State"
+      ],
+      [
+        "Female Workers",
+        "Lactation"
+      ],
+      [
+        "Fourth-Level Physical Labor Intensity",
+        "Minor Workers"
+      ],
+      [
+        "Employers",
+        "Night Shift Work"
+      ],
+      [
+        "Female Workers",
+        "Ninety-Day Maternity Leave"
+      ],
+      [
+        "Female Workers",
+        "Mine Underground Work"
+      ],
+      [
+        "Female Workers",
+        "Pregnancy"
+      ],
+      [
+        "Minor Workers",
+        "Toxic and Harmful Work"
+      ],
+      [
+        "Minor Workers",
+        "State"
+      ],
+      [
+        "Female Workers",
+        "Fourth-Level Physical Labor Intensity"
+      ],
+      [
+        "Employers",
+        "Overtime Work"
+      ],
+      [
+        "Mine Underground Work",
+        "Minor Workers"
+      ],
+      [
+        "Female Workers",
+        "Menstruation"
+      ],
+      [
+        "Chinese Labor Law",
+        "Female Workers"
+      ]
+    ],
+    "count": 18,
+    "create_time": 1773320499,
+    "update_time": 1773320499,
+    "_id": "doc-c5e2a3fc3ae04a7ea467816a16c1b275"
+  },
+  "doc-d8dbf846bb0ff55e508ce6be270bcf82": {
+    "relation_pairs": [
+      [
+        "Labor Contract Law Article 20",
+        "Open-Ended Labor Contract"
+      ],
+      [
+        "Open-Ended Labor Contract",
+        "Ten-Year Continuous Employment"
+      ],
+      [
+        "Fixed-Term Labor Contract",
+        "Labor Contract Law Article 20"
+      ],
+      [
+        "Labor Contract Law Article 20",
+        "Task-Based Labor Contract"
+      ],
+      [
+        "Labor Contract Law",
+        "Labor Contract Law Article 20"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1773320501,
+    "update_time": 1773320501,
+    "_id": "doc-d8dbf846bb0ff55e508ce6be270bcf82"
+  },
+  "doc-82eedbfc6978ce7b8284768afbfab33f": {
+    "relation_pairs": [
+      [
+        "Laborer",
+        "Written Notice"
+      ],
+      [
+        "Employer",
+        "Laborer"
+      ],
+      [
+        "Article Thirty-One",
+        "Employer"
+      ],
+      [
+        "Labor Contract",
+        "Laborer"
+      ],
+      [
+        "Article Thirty-One",
+        "Laborer"
+      ],
+      [
+        "Laborer",
+        "Thirty-Day Notice Period"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1773320517,
+    "update_time": 1773320517,
+    "_id": "doc-82eedbfc6978ce7b8284768afbfab33f"
+  },
+  "doc-35ee711c6a1d7e90851eb7505f271fc1": {
+    "relation_pairs": [
+      [
+        "Article 47",
+        "Employer"
+      ],
+      [
+        "Operational Characteristics",
+        "Wage Distribution Method"
+      ],
+      [
+        "Economic Performance",
+        "Wage Level"
+      ],
+      [
+        "Employer",
+        "Wage Distribution Method"
+      ],
+      [
+        "Employer",
+        "Wage Level"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1773320521,
+    "update_time": 1773320521,
+    "_id": "doc-35ee711c6a1d7e90851eb7505f271fc1"
+  },
+  "doc-a8b98b69c20324f8a16d939573b5b8f0": {
+    "relation_pairs": [
+      [
+        "Article 45",
+        "National Paid Annual Leave System"
+      ],
+      [
+        "National Paid Annual Leave System",
+        "State Council"
+      ],
+      [
+        "National Paid Annual Leave System",
+        "Workers"
+      ]
+    ],
+    "count": 3,
+    "create_time": 1773320528,
+    "update_time": 1773320528,
+    "_id": "doc-a8b98b69c20324f8a16d939573b5b8f0"
+  },
+  "doc-25702dd54870df07d3bedb29b9496851": {
+    "relation_pairs": [
+      [
+        "Article 26",
+        "Labor Contract"
+      ],
+      [
+        "Article 28",
+        "Economic Compensation"
+      ],
+      [
+        "Employer",
+        "Labor Contract"
+      ],
+      [
+        "Article 27",
+        "Labor Contract"
+      ],
+      [
+        "Economic Compensation",
+        "Employer"
+      ],
+      [
+        "Article 24",
+        "Labor Law"
+      ],
+      [
+        "Economic Compensation",
+        "Employee"
+      ],
+      [
+        "Article 28",
+        "Employer"
+      ],
+      [
+        "Article 28",
+        "Labor Law"
+      ],
+      [
+        "Article 26",
+        "Labor Law"
+      ],
+      [
+        "Employee",
+        "Labor Contract"
+      ],
+      [
+        "Article 24",
+        "Labor Contract"
+      ],
+      [
+        "Article 27",
+        "Labor Law"
+      ]
+    ],
+    "count": 13,
+    "create_time": 1773320558,
+    "update_time": 1773320558,
+    "_id": "doc-25702dd54870df07d3bedb29b9496851"
+  },
+  "doc-5144d09ac2f1a1e98af0cc571325d656": {
+    "relation_pairs": [
+      [
+        "Article 41",
+        "Article 42"
+      ],
+      [
+        "Equipment Failure",
+        "Transportation Lines"
+      ],
+      [
+        "Article 42",
+        "Labor Law"
+      ],
+      [
+        "Article 42",
+        "Labor Safety and Health"
+      ],
+      [
+        "Equipment Failure",
+        "Public Facilities"
+      ],
+      [
+        "Accident",
+        "Article 42"
+      ],
+      [
+        "Article 42",
+        "Property Safety"
+      ],
+      [
+        "Article 42",
+        "Public Interest"
+      ],
+      [
+        "Article 42",
+        "Equipment Failure"
+      ],
+      [
+        "Article 42",
+        "Legal and Administrative Regulations"
+      ],
+      [
+        "Equipment Failure",
+        "Production Equipment"
+      ],
+      [
+        "Article 42",
+        "Natural Disaster"
+      ]
+    ],
+    "count": 12,
+    "create_time": 1773320562,
+    "update_time": 1773320562,
+    "_id": "doc-5144d09ac2f1a1e98af0cc571325d656"
+  },
+  "doc-ceb37133f3e224a3a753772003f89e9e": {
+    "relation_pairs": [
+      [
+        "Chapter Eight Vocational Training",
+        "Page Thirteen"
+      ]
+    ],
+    "count": 1,
+    "create_time": 1773320563,
+    "update_time": 1773320563,
+    "_id": "doc-ceb37133f3e224a3a753772003f89e9e"
+  },
+  "doc-7352b9127a22f0a9251386f17f0f9768": {
+    "relation_pairs": [
+      [
+        "Article Thirty-Four",
+        "Collective Labor Contract"
+      ],
+      [
+        "Fifteen-Day Review Period",
+        "Labor Administration Department"
+      ],
+      [
+        "Collective Labor Contract",
+        "Contract Effectiveness"
+      ],
+      [
+        "Collective Labor Contract",
+        "Labor Administration Department"
+      ],
+      [
+        "Article Thirty-Four",
+        "Labor Administration Department"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1773320578,
+    "update_time": 1773320578,
+    "_id": "doc-7352b9127a22f0a9251386f17f0f9768"
+  },
+  "doc-225b307bc1363ee71949e25c8ac697f3": {
+    "relation_pairs": [
+      [
+        "Labor Hour System",
+        "Workers"
+      ],
+      [
+        "Eight-Hour Workday",
+        "Labor Hour System"
+      ],
+      [
+        "Article 36",
+        "Labor Hour System"
+      ],
+      [
+        "Forty-Four-Hour Workweek",
+        "Labor Hour System"
+      ],
+      [
+        "China",
+        "Labor Hour System"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1773320579,
+    "update_time": 1773320579,
+    "_id": "doc-225b307bc1363ee71949e25c8ac697f3"
+  },
+  "doc-12cdd7ef2f5ab7ae8af0f7aa527a5494": {
+    "relation_pairs": [
+      [
+        "Chapter Eight",
+        "Vocational Training"
+      ]
+    ],
+    "count": 1,
+    "create_time": 1773320585,
+    "update_time": 1773320585,
+    "_id": "doc-12cdd7ef2f5ab7ae8af0f7aa527a5494"
+  },
+  "doc-d41ba7cc39eba05754bf473088deb752": {
+    "relation_pairs": [
+      [
+        "Chapter Three",
+        "Collective Contract"
+      ],
+      [
+        "Chapter Three Labor Contracts and Collective Contracts",
+        "Collective Contract"
+      ],
+      [
+        "Chapter Three",
+        "Labor Contract"
+      ],
+      [
+        "Chapter Three Labor Contracts and Collective Contracts",
+        "Labor Contract"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1773320596,
+    "update_time": 1773320596,
+    "_id": "doc-d41ba7cc39eba05754bf473088deb752"
+  },
+  "doc-900f9424a8f6a615634cfe7eb308739e": {
+    "relation_pairs": [
+      [
+        "Employer",
+        "Forced Risky Work"
+      ],
+      [
+        "Employer",
+        "Violation of Command"
+      ],
+      [
+        "Violation of Command",
+        "Worker"
+      ],
+      [
+        "Forced Risky Work",
+        "Worker"
+      ],
+      [
+        "Hazard to Life Safety and Health",
+        "Worker"
+      ],
+      [
+        "Safety Operating Procedures",
+        "Worker"
+      ],
+      [
+        "Article 56",
+        "Employer"
+      ],
+      [
+        "Article 56",
+        "Worker"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1773320600,
+    "update_time": 1773320600,
+    "_id": "doc-900f9424a8f6a615634cfe7eb308739e"
+  },
+  "doc-f1a27b67d73b4ed3925ff3ffe1e99ca3": {
+    "relation_pairs": [
+      [
+        "Labor Contract",
+        "Probationary Period"
+      ],
+      [
+        "Article 21",
+        "Probationary Period"
+      ],
+      [
+        "Article 21",
+        "Labor Contract"
+      ],
+      [
+        "Probationary Period",
+        "Six-Month Limit"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1773320612,
+    "update_time": 1773320612,
+    "_id": "doc-f1a27b67d73b4ed3925ff3ffe1e99ca3"
+  },
+  "doc-4854ca3e86ea91f91e6984abe5fcda52": {
+    "relation_pairs": [
+      [
+        "Article Six",
+        "State"
+      ],
+      [
+        "Model Worker",
+        "State"
+      ],
+      [
+        "State",
+        "Workers"
+      ],
+      [
+        "Advanced Worker",
+        "State"
+      ],
+      [
+        "Rationalization Proposal Activity",
+        "State"
+      ],
+      [
+        "Social Voluntary Labor",
+        "State"
+      ],
+      [
+        "Labor Competition",
+        "State"
+      ],
+      [
+        "Invention and Creation",
+        "State"
+      ],
+      [
+        "Scientific Research",
+        "State"
+      ],
+      [
+        "State",
+        "Technological Innovation"
+      ]
+    ],
+    "count": 10,
+    "create_time": 1773320623,
+    "update_time": 1773320623,
+    "_id": "doc-4854ca3e86ea91f91e6984abe5fcda52"
+  },
+  "doc-7440e9a9d68a40eb06fc88eaf48bf3a0": {
+    "relation_pairs": [
+      [
+        "Article Sixteen",
+        "Employer"
+      ],
+      [
+        "Labor Relationship",
+        "Worker"
+      ],
+      [
+        "Employer",
+        "Labor Contract"
+      ],
+      [
+        "Labor Contract",
+        "Worker"
+      ],
+      [
+        "Article Sixteen",
+        "Worker"
+      ],
+      [
+        "Article Sixteen",
+        "Labor Contract"
+      ],
+      [
+        "Employer",
+        "Labor Relationship"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773320628,
+    "update_time": 1773320628,
+    "_id": "doc-7440e9a9d68a40eb06fc88eaf48bf3a0"
+  },
+  "doc-c6768f8c1f0e359974ecafdba6b02c7c": {
+    "relation_pairs": [
+      [
+        "Article Eight",
+        "Laborer"
+      ],
+      [
+        "Employer",
+        "Laborer"
+      ],
+      [
+        "Laborer",
+        "Legal Rights and Interests of Laborers"
+      ],
+      [
+        "Article Eight",
+        "Employer"
+      ],
+      [
+        "Equal Negotiation",
+        "Legal Rights and Interests of Laborers"
+      ],
+      [
+        "Democratic Management",
+        "Workers' Assembly"
+      ],
+      [
+        "Laborer",
+        "Workers' Congress"
+      ],
+      [
+        "Laborer",
+        "Workers' Assembly"
+      ],
+      [
+        "Democratic Management",
+        "Workers' Congress"
+      ]
+    ],
+    "count": 9,
+    "create_time": 1773320646,
+    "update_time": 1773320646,
+    "_id": "doc-c6768f8c1f0e359974ecafdba6b02c7c"
+  },
+  "doc-d2c130666c9b8351b89ec909dc97396f": {
+    "relation_pairs": [
+      [
+        "Labor Contract",
+        "Written Form"
+      ],
+      [
+        "Labor Contract",
+        "Labor Discipline"
+      ],
+      [
+        "Labor Contract",
+        "Labor Remuneration"
+      ],
+      [
+        "Article 19",
+        "Labor Contract"
+      ],
+      [
+        "Additional Agreed Terms",
+        "Labor Contract"
+      ],
+      [
+        "Labor Contract",
+        "Labor Protection and Working Conditions"
+      ],
+      [
+        "Conditions for Termination of Labor Contract",
+        "Labor Contract"
+      ],
+      [
+        "Labor Contract",
+        "Liability for Breach of Labor Contract"
+      ],
+      [
+        "Job Content",
+        "Labor Contract"
+      ],
+      [
+        "Labor Contract",
+        "Labor Contract Term"
+      ]
+    ],
+    "count": 10,
+    "create_time": 1773320661,
+    "update_time": 1773320661,
+    "_id": "doc-d2c130666c9b8351b89ec909dc97396f"
+  },
+  "doc-9ade40507636905dbb256fde347d4c4d": {
+    "relation_pairs": [
+      [
+        "Article 40",
+        "Statutory Holiday"
+      ],
+      [
+        "Statutory Holiday",
+        "Worker"
+      ],
+      [
+        "Article 40",
+        "Employer"
+      ],
+      [
+        "Employer",
+        "Statutory Holiday"
+      ],
+      [
+        "Employer",
+        "National Day"
+      ],
+      [
+        "Labor Law",
+        "Statutory Holiday"
+      ],
+      [
+        "Employer",
+        "New Year's Day"
+      ],
+      [
+        "Employer",
+        "Spring Festival"
+      ],
+      [
+        "Employer",
+        "International Labor Day"
+      ],
+      [
+        "Article 40",
+        "Worker"
+      ]
+    ],
+    "count": 10,
+    "create_time": 1773320670,
+    "update_time": 1773320670,
+    "_id": "doc-9ade40507636905dbb256fde347d4c4d"
+  },
+  "doc-1c3f29bba2e48ace661e0e106cd6c106": {
+    "relation_pairs": [
+      [
+        "Article One Hundred",
+        "Labor Administration Department"
+      ],
+      [
+        "Labor Administration Department",
+        "Late Payment Surcharge"
+      ],
+      [
+        "Employer",
+        "Social Insurance Premium"
+      ],
+      [
+        "Article One Hundred",
+        "Employer"
+      ],
+      [
+        "Employer",
+        "Labor Administration Department"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1773320676,
+    "update_time": 1773320676,
+    "_id": "doc-1c3f29bba2e48ace661e0e106cd6c106"
+  },
+  "doc-8091f80b54e6c94fc8302e0ea487ae6e": {
+    "relation_pairs": [
+      [
+        "Article 39",
+        "Labor Law"
+      ],
+      [
+        "Article 39",
+        "Enterprise"
+      ],
+      [
+        "Article 39",
+        "Labor Administrative Department"
+      ],
+      [
+        "Article 38",
+        "Labor Law"
+      ],
+      [
+        "Enterprise",
+        "Labor Administrative Department"
+      ],
+      [
+        "Article 36",
+        "Labor Law"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1773320687,
+    "update_time": 1773320687,
+    "_id": "doc-8091f80b54e6c94fc8302e0ea487ae6e"
+  },
+  "doc-ebd08f8b818641fd5c206645935abc5f": {
+    "relation_pairs": [
+      [
+        "Chapter Thirteen",
+        "Chapter Thirteen Supplementary Provisions"
+      ],
+      [
+        "Chapter Ten",
+        "Chapter Ten Labor Disputes"
+      ],
+      [
+        "Chapter Thirteen Supplementary Provisions",
+        "Chapter Twelve Legal Liability"
+      ],
+      [
+        "Chapter Nine",
+        "Chapter Nine Social Insurance and Welfare"
+      ],
+      [
+        "Chapter Eleven Supervision and Inspection",
+        "Chapter Twelve Legal Liability"
+      ],
+      [
+        "Chapter Nine Social Insurance and Welfare",
+        "Chapter Ten Labor Disputes"
+      ],
+      [
+        "Chapter Eleven",
+        "Chapter Eleven Supervision and Inspection"
+      ],
+      [
+        "Chapter Eleven Supervision and Inspection",
+        "Chapter Ten Labor Disputes"
+      ],
+      [
+        "Chapter Twelve",
+        "Chapter Twelve Legal Liability"
+      ]
+    ],
+    "count": 9,
+    "create_time": 1773320700,
+    "update_time": 1773320700,
+    "_id": "doc-ebd08f8b818641fd5c206645935abc5f"
+  },
+  "doc-11661d5949c7a4c46892595299c2a3db": {
+    "relation_pairs": [
+      [
+        "Employer",
+        "Major Casualty Accident"
+      ],
+      [
+        "Criminal Responsibility",
+        "Employer"
+      ],
+      [
+        "Major Casualty Accident",
+        "Serious Consequences"
+      ],
+      [
+        "Employer",
+        "Violation-Risk Work"
+      ],
+      [
+        "Employer",
+        "Worker"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1773320707,
+    "update_time": 1773320707,
+    "_id": "doc-11661d5949c7a4c46892595299c2a3db"
+  },
+  "doc-16710c0d4227925f557982746f69c1b2": {
+    "relation_pairs": [
+      [
+        "Article 24",
+        "Mutual Agreement"
+      ],
+      [
+        "Article 24",
+        "Labor Contract"
+      ],
+      [
+        "Contract Party",
+        "Labor Contract"
+      ],
+      [
+        "Contract Party",
+        "Mutual Agreement"
+      ],
+      [
+        "Labor Contract",
+        "Mutual Agreement"
+      ],
+      [
+        "Contract Termination",
+        "Labor Contract"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1773320716,
+    "update_time": 1773320716,
+    "_id": "doc-16710c0d4227925f557982746f69c1b2"
+  },
+  "doc-5e04f20b8b7b250ab2854ffab0ad26c2": {
+    "relation_pairs": [
+      [
+        "Employee",
+        "Occupational Health Examination"
+      ],
+      [
+        "Employer",
+        "National Regulations"
+      ],
+      [
+        "Employer",
+        "Labor Protective Equipment"
+      ],
+      [
+        "Employer",
+        "Occupational Health Examination"
+      ],
+      [
+        "Employer",
+        "Labor Safety and Hygiene Conditions"
+      ],
+      [
+        "Employee",
+        "National Regulations"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1773320729,
+    "update_time": 1773320729,
+    "_id": "doc-5e04f20b8b7b250ab2854ffab0ad26c2"
+  },
+  "doc-f1e934469e0af82604f570bd7744c5cb": {
+    "relation_pairs": [
+      [
+        "Employer",
+        "Labor Contract"
+      ],
+      [
+        "Employer",
+        "Labor Union"
+      ],
+      [
+        "Article 30",
+        "Labor Union"
+      ],
+      [
+        "Article 30",
+        "Employer"
+      ],
+      [
+        "Labor Union",
+        "Law and Regulations"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1773320732,
+    "update_time": 1773320732,
+    "_id": "doc-f1e934469e0af82604f570bd7744c5cb"
+  },
+  "doc-0c42492e507d3ed5394992be8206bb0c": {
+    "relation_pairs": [
+      [
+        "Disabled Persons",
+        "Employment"
+      ],
+      [
+        "Article Fourteen",
+        "Ethnic Minority Personnel"
+      ],
+      [
+        "Article Fourteen",
+        "Demobilized Military Personnel"
+      ],
+      [
+        "Employment",
+        "Ethnic Minority Personnel"
+      ],
+      [
+        "Demobilized Military Personnel",
+        "Employment"
+      ],
+      [
+        "Article Fourteen",
+        "Disabled Persons"
+      ],
+      [
+        "Employment",
+        "Law And Regulations"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773320748,
+    "update_time": 1773320748,
+    "_id": "doc-0c42492e507d3ed5394992be8206bb0c"
+  },
+  "doc-1833eb6307e64f230db692d0cf7279ca": {
+    "relation_pairs": [
+      [
+        "Employers",
+        "State"
+      ],
+      [
+        "State",
+        "Workers"
+      ],
+      [
+        "Article 75",
+        "Savings-Based Insurance"
+      ],
+      [
+        "Employers",
+        "Supplementary Insurance"
+      ],
+      [
+        "Article 75",
+        "State"
+      ],
+      [
+        "Article 75",
+        "Supplementary Insurance"
+      ],
+      [
+        "Savings-Based Insurance",
+        "Workers"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773320750,
+    "update_time": 1773320750,
+    "_id": "doc-1833eb6307e64f230db692d0cf7279ca"
+  },
+  "doc-3ccd272c055ffadcfc0230544b262015": {
+    "relation_pairs": [
+      [
+        "Article 46",
+        "State Macro-Control Over Total Wages"
+      ],
+      [
+        "Article 46",
+        "Wage Distribution"
+      ],
+      [
+        "Article 46",
+        "Wage Level"
+      ],
+      [
+        "Distribution According To Labor",
+        "Wage Distribution"
+      ],
+      [
+        "Article 46",
+        "Equal Pay For Equal Work"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1773320766,
+    "update_time": 1773320766,
+    "_id": "doc-3ccd272c055ffadcfc0230544b262015"
+  },
+  "doc-29625ec97f3aa262c09d4aa1c862291b": {
+    "relation_pairs": [
+      [
+        "Employer",
+        "Laborer"
+      ],
+      [
+        "Laborer",
+        "Marriage Leave"
+      ],
+      [
+        "Article 51",
+        "Employer"
+      ],
+      [
+        "Article 51",
+        "Laborer"
+      ],
+      [
+        "Laborer",
+        "Statutory Holiday"
+      ],
+      [
+        "Labor Safety and Health",
+        "Laborer"
+      ],
+      [
+        "Laborer",
+        "Social Activity"
+      ],
+      [
+        "Bereavement Leave",
+        "Laborer"
+      ],
+      [
+        "Chapter 6",
+        "Labor Safety and Health"
+      ]
+    ],
+    "count": 9,
+    "create_time": 1773320773,
+    "update_time": 1773320773,
+    "_id": "doc-29625ec97f3aa262c09d4aa1c862291b"
+  },
+  "doc-7b6eb7df22cbf1e6b2dcf127e89cc5b3": {
+    "relation_pairs": [
+      [
+        "Local People's Governments",
+        "Vocational Introduction Institutions"
+      ],
+      [
+        "Article 11",
+        "Local People's Governments"
+      ],
+      [
+        "Article 11",
+        "Vocational Introduction Institutions"
+      ],
+      [
+        "Article 11",
+        "Employment Services"
+      ],
+      [
+        "Employment Services",
+        "Vocational Introduction Institutions"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1773320781,
+    "update_time": 1773320781,
+    "_id": "doc-7b6eb7df22cbf1e6b2dcf127e89cc5b3"
+  },
+  "doc-484ec462bb336f0faad2e38a9ab16421": {
+    "relation_pairs": [
+      [
+        "Article 41",
+        "China's Labor Law"
+      ],
+      [
+        "Employer",
+        "Labor Union"
+      ],
+      [
+        "Extended Working Hours",
+        "Worker"
+      ],
+      [
+        "Article 41",
+        "Labor Union"
+      ],
+      [
+        "Article 41",
+        "Employer"
+      ],
+      [
+        "Article 41",
+        "Worker"
+      ],
+      [
+        "Employer",
+        "Worker"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773320793,
+    "update_time": 1773320793,
+    "_id": "doc-484ec462bb336f0faad2e38a9ab16421"
+  },
+  "doc-73b6c9297c7a7da453da3a92e368350a": {
+    "relation_pairs": [
+      [
+        "Employee",
+        "Invalid Employment Contract"
+      ],
+      [
+        "Employer",
+        "Invalid Employment Contract"
+      ],
+      [
+        "Compensation Liability",
+        "Employer"
+      ],
+      [
+        "Article 97",
+        "Employer"
+      ],
+      [
+        "Article 97",
+        "Employee"
+      ],
+      [
+        "Article 97",
+        "Invalid Employment Contract"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1773320798,
+    "update_time": 1773320798,
+    "_id": "doc-73b6c9297c7a7da453da3a92e368350a"
+  },
+  "doc-d7f12b62d488f4ca39157007ee023697": {
+    "relation_pairs": [
+      [
+        "Article 104",
+        "Social Insurance Fund"
+      ],
+      [
+        "Criminal Liability",
+        "State Personnel"
+      ],
+      [
+        "Article 104",
+        "State Personnel"
+      ],
+      [
+        "Criminal Liability",
+        "Social Insurance Fund Management Institutions Staff"
+      ],
+      [
+        "Article 104",
+        "Social Insurance Fund Management Institutions Staff"
+      ],
+      [
+        "Social Insurance Fund",
+        "State Personnel"
+      ],
+      [
+        "Social Insurance Fund",
+        "Social Insurance Fund Management Institutions Staff"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773320810,
+    "update_time": 1773320810,
+    "_id": "doc-d7f12b62d488f4ca39157007ee023697"
+  },
+  "doc-f6caf56110d85965c35a028c39252a52": {
+    "relation_pairs": [
+      [
+        "Social Insurance Fund",
+        "Social Insurance Premium"
+      ],
+      [
+        "Social Insurance Fund",
+        "Social Pooling"
+      ],
+      [
+        "Article 72",
+        "Worker"
+      ],
+      [
+        "Article 72",
+        "Employer"
+      ],
+      [
+        "Article 72",
+        "Social Insurance Fund"
+      ],
+      [
+        "Employer",
+        "Social Insurance Premium"
+      ],
+      [
+        "Social Insurance Premium",
+        "Worker"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773320821,
+    "update_time": 1773320821,
+    "_id": "doc-f6caf56110d85965c35a028c39252a52"
+  },
+  "doc-e890e90dedc2136610b35e3511ee4bff": {
+    "relation_pairs": [
+      [
+        "Administrative Region",
+        "Local People's Government Labor Administration Department"
+      ],
+      [
+        "Article Nine",
+        "State Council Labor Administration Department"
+      ],
+      [
+        "Article Nine",
+        "Local People's Government Labor Administration Department"
+      ],
+      [
+        "Labor Work",
+        "State Council Labor Administration Department"
+      ],
+      [
+        "Labor Work",
+        "Local People's Government Labor Administration Department"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1773320825,
+    "update_time": 1773320825,
+    "_id": "doc-e890e90dedc2136610b35e3511ee4bff"
+  },
+  "doc-add3425ac8339584dcc65694586b9a03": {
+    "relation_pairs": [
+      [
+        "Compensation Liability",
+        "Employer"
+      ],
+      [
+        "Article 95",
+        "Employer"
+      ],
+      [
+        "Article 95",
+        "Labor Administrative Department"
+      ],
+      [
+        "Employer",
+        "Female Worker"
+      ],
+      [
+        "Employer",
+        "Labor Administrative Department"
+      ],
+      [
+        "Employer",
+        "Underage Worker"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1773320839,
+    "update_time": 1773320839,
+    "_id": "doc-add3425ac8339584dcc65694586b9a03"
+  },
+  "doc-c1affc2633f7ab17127fc986e6c20944": {
+    "relation_pairs": [
+      [
+        "Employee",
+        "Employer"
+      ],
+      [
+        "Labor Contract",
+        "Legal Binding Force"
+      ],
+      [
+        "Employee",
+        "Labor Contract"
+      ],
+      [
+        "Employer",
+        "Labor Contract"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1773320859,
+    "update_time": 1773320859,
+    "_id": "doc-c1affc2633f7ab17127fc986e6c20944"
+  },
+  "doc-a07aa9ee7ca74e51c0e67e4531d28af0": {
+    "relation_pairs": [
+      [
+        "Article 52",
+        "Employer"
+      ],
+      [
+        "Article 52",
+        "National Labor Safety and Health Regulations and Standards"
+      ],
+      [
+        "Employer",
+        "Labor Safety and Health System"
+      ],
+      [
+        "Article 52",
+        "Workplace Accident"
+      ],
+      [
+        "Article 52",
+        "Labor Safety and Health Education"
+      ],
+      [
+        "Article 52",
+        "Occupational Hazard"
+      ],
+      [
+        "Employer",
+        "Occupational Hazard"
+      ],
+      [
+        "Article 52",
+        "Labor Safety and Health System"
+      ],
+      [
+        "Employer",
+        "National Labor Safety and Health Regulations and Standards"
+      ],
+      [
+        "Employer",
+        "Workplace Accident"
+      ],
+      [
+        "Employer",
+        "Labor Safety and Health Education"
+      ]
+    ],
+    "count": 11,
+    "create_time": 1773320861,
+    "update_time": 1773320861,
+    "_id": "doc-a07aa9ee7ca74e51c0e67e4531d28af0"
+  },
+  "doc-d7bbdc9c932c7302eba4fe28c810a8b7": {
+    "relation_pairs": [
+      [
+        "Article 107",
+        "The Law"
+      ],
+      [
+        "January 1 1995",
+        "The Law"
+      ]
+    ],
+    "count": 2,
+    "create_time": 1773320871,
+    "update_time": 1773320871,
+    "_id": "doc-d7bbdc9c932c7302eba4fe28c810a8b7"
+  },
+  "doc-f5cd7ed5505461fd7709fa8b54316269": {
+    "relation_pairs": [
+      [
+        "Article 26",
+        "Employee"
+      ],
+      [
+        "Employer",
+        "Labor Contract"
+      ],
+      [
+        "Employee",
+        "Medical Leave Period"
+      ],
+      [
+        "Article 26",
+        "Employer"
+      ],
+      [
+        "Employee",
+        "Job Competency"
+      ],
+      [
+        "Employee",
+        "Labor Contract"
+      ],
+      [
+        "Employer",
+        "Written Notice"
+      ],
+      [
+        "Article 26",
+        "Written Notice"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1773320882,
+    "update_time": 1773320882,
+    "_id": "doc-f5cd7ed5505461fd7709fa8b54316269"
+  },
+  "doc-15db89e812c6ec17f40e3e2ae7f1d0cd": {
+    "relation_pairs": [
+      [
+        "Employer",
+        "Original Employer"
+      ],
+      [
+        "Article 99",
+        "Labor Contract"
+      ],
+      [
+        "Article 99",
+        "China's Labor Law"
+      ],
+      [
+        "Labor Contract",
+        "Worker"
+      ],
+      [
+        "Employer",
+        "Joint and Several Liability"
+      ],
+      [
+        "Economic Loss",
+        "Original Employer"
+      ],
+      [
+        "Employer",
+        "Worker"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773320892,
+    "update_time": 1773320892,
+    "_id": "doc-15db89e812c6ec17f40e3e2ae7f1d0cd"
+  },
+  "doc-2dd1fd3462e1832af7cfde4c6f880f76": {
+    "relation_pairs": [
+      [
+        "Employer",
+        "Working Hours"
+      ],
+      [
+        "Labor Law",
+        "Worker"
+      ],
+      [
+        "Article 43",
+        "Employer"
+      ],
+      [
+        "Article 43",
+        "Labor Law"
+      ],
+      [
+        "Article 43",
+        "Worker"
+      ],
+      [
+        "Employer",
+        "Labor Law"
+      ],
+      [
+        "Worker",
+        "Working Hours"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773320898,
+    "update_time": 1773320898,
+    "_id": "doc-2dd1fd3462e1832af7cfde4c6f880f76"
+  },
+  "doc-9e1896276de0d9340c0ef6a2e907293b": {
+    "relation_pairs": [
+      [
+        "Employment",
+        "State"
+      ],
+      [
+        "Economic Development",
+        "Employment"
+      ],
+      [
+        "Employment",
+        "Social Development"
+      ],
+      [
+        "Enterprises",
+        "State"
+      ],
+      [
+        "Article Ten",
+        "State"
+      ],
+      [
+        "Social Organizations",
+        "State"
+      ],
+      [
+        "Institutions",
+        "State"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773320917,
+    "update_time": 1773320917,
+    "_id": "doc-9e1896276de0d9340c0ef6a2e907293b"
+  },
+  "doc-8bca3d7a5b26e41a901895456edf1d72": {
+    "relation_pairs": [
+      [
+        "Labor Dispute",
+        "Labor Dispute Mediation Committee"
+      ],
+      [
+        "Employer",
+        "State"
+      ],
+      [
+        "Labor Dispute",
+        "Labor Dispute Arbitration Committee"
+      ],
+      [
+        "Labor Dispute Mediation Committee",
+        "Trade Union"
+      ],
+      [
+        "Labor Administrative Department",
+        "Labor Dispute Arbitration Committee"
+      ],
+      [
+        "Labor Dispute Arbitration Committee",
+        "People's Court"
+      ],
+      [
+        "Arbitration",
+        "Mediation"
+      ],
+      [
+        "Employer",
+        "Labor Dispute Mediation Committee"
+      ],
+      [
+        "Arbitration",
+        "Litigation"
+      ],
+      [
+        "Employer",
+        "Worker"
+      ]
+    ],
+    "count": 10,
+    "create_time": 1773320920,
+    "update_time": 1773320920,
+    "_id": "doc-8bca3d7a5b26e41a901895456edf1d72"
+  },
+  "doc-7a84ae174a5d852490f9ffb8bbcec291": {
+    "relation_pairs": [
+      [
+        "State",
+        "Workers"
+      ],
+      [
+        "Chapter Three",
+        "Collective Contract"
+      ],
+      [
+        "Individual Business Operations",
+        "Workers"
+      ],
+      [
+        "Employment",
+        "Workers"
+      ],
+      [
+        "Chapter Three",
+        "Labor Contract"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1773320935,
+    "update_time": 1773320935,
+    "_id": "doc-7a84ae174a5d852490f9ffb8bbcec291"
+  },
+  "doc-add1965d088b328f8a7f228f9ba5c825": {
+    "relation_pairs": [
+      [
+        "Employment Status",
+        "Minimum Wage Standard"
+      ],
+      [
+        "Average Wage Level",
+        "Minimum Wage Standard"
+      ],
+      [
+        "Labor Productivity",
+        "Minimum Wage Standard"
+      ],
+      [
+        "Article 49",
+        "Minimum Wage Standard"
+      ],
+      [
+        "Living Expenses",
+        "Minimum Wage Standard"
+      ],
+      [
+        "Minimum Wage Standard",
+        "Regional Economic Development Disparities"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1773320955,
+    "update_time": 1773320955,
+    "_id": "doc-add1965d088b328f8a7f228f9ba5c825"
+  },
+  "doc-e1005fcbd1306706f050d1a4d82ca943": {
+    "relation_pairs": [
+      [
+        "Law And Regulations",
+        "Social Insurance Benefits"
+      ],
+      [
+        "Laborer",
+        "Survivor Allowance"
+      ],
+      [
+        "Illness",
+        "Laborer"
+      ],
+      [
+        "Laborer",
+        "Occupational Disease"
+      ],
+      [
+        "Dependents",
+        "Laborer"
+      ],
+      [
+        "Injury",
+        "Laborer"
+      ],
+      [
+        "Laborer",
+        "Social Insurance Benefits"
+      ],
+      [
+        "Article 73",
+        "Law And Regulations"
+      ],
+      [
+        "Laborer",
+        "Work-Related Disability"
+      ],
+      [
+        "Article 73",
+        "Survivor Allowance"
+      ],
+      [
+        "Article 73",
+        "Social Insurance Benefits"
+      ],
+      [
+        "Laborer",
+        "Maternity"
+      ],
+      [
+        "Article 73",
+        "Social Insurance Payment"
+      ],
+      [
+        "Laborer",
+        "Unemployment"
+      ],
+      [
+        "Social Insurance Benefits",
+        "Social Insurance Payment"
+      ],
+      [
+        "Article 73",
+        "Laborer"
+      ],
+      [
+        "Laborer",
+        "Retirement"
+      ]
+    ],
+    "count": 17,
+    "create_time": 1773320960,
+    "update_time": 1773320960,
+    "_id": "doc-e1005fcbd1306706f050d1a4d82ca943"
+  },
+  "doc-c1b224bc392defbea2ebc9ea123f70db": {
+    "relation_pairs": [
+      [
+        "Article 38",
+        "Worker"
+      ],
+      [
+        "Article 38",
+        "Employer"
+      ],
+      [
+        "Employer",
+        "Weekly Rest Day"
+      ],
+      [
+        "Employer",
+        "Worker"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1773320971,
+    "update_time": 1773320971,
+    "_id": "doc-c1b224bc392defbea2ebc9ea123f70db"
+  },
+  "doc-304f106d130307ad6bf0bdf62f720f8c": {
+    "relation_pairs": [
+      [
+        "Article 105",
+        "Labor Law"
+      ],
+      [
+        "Article 105",
+        "Penalty Provision"
+      ],
+      [
+        "Article 105",
+        "Workers' Lawful Rights and Interests"
+      ],
+      [
+        "Other Laws and Administrative Regulations",
+        "Penalty Provision"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1773320974,
+    "update_time": 1773320974,
+    "_id": "doc-304f106d130307ad6bf0bdf62f720f8c"
+  },
+  "doc-534cee49a6033035c2c5393b14d42b64": {
+    "relation_pairs": [
+      [
+        "Abuse of Power",
+        "Staff Members"
+      ],
+      [
+        "Relevant Departments",
+        "Staff Members"
+      ],
+      [
+        "Criminal Liability",
+        "Dereliction of Duty"
+      ],
+      [
+        "Abuse of Power",
+        "Criminal Liability"
+      ],
+      [
+        "Labor Administration Department",
+        "Staff Members"
+      ],
+      [
+        "Dereliction of Duty",
+        "Staff Members"
+      ],
+      [
+        "Administrative Sanction",
+        "Dereliction of Duty"
+      ],
+      [
+        "Administrative Sanction",
+        "Favoritism and Malpractice"
+      ],
+      [
+        "Article 103",
+        "Labor Administration Department"
+      ],
+      [
+        "Abuse of Power",
+        "Administrative Sanction"
+      ],
+      [
+        "Favoritism and Malpractice",
+        "Staff Members"
+      ],
+      [
+        "Article 103",
+        "Relevant Departments"
+      ],
+      [
+        "Criminal Liability",
+        "Favoritism and Malpractice"
+      ]
+    ],
+    "count": 13,
+    "create_time": 1773321003,
+    "update_time": 1773321003,
+    "_id": "doc-534cee49a6033035c2c5393b14d42b64"
+  },
+  "doc-5a7d21f4dbacb9974d96f6a4b7cd73aa": {
+    "relation_pairs": [
+      [
+        "Article 90",
+        "Employer"
+      ],
+      [
+        "Employer",
+        "Wage Payment"
+      ],
+      [
+        "Employer",
+        "Labor Regulations"
+      ],
+      [
+        "Employer",
+        "Working Hours"
+      ],
+      [
+        "Article 89",
+        "Labor Administrative Department"
+      ],
+      [
+        "Article 91",
+        "Labor Administrative Department"
+      ],
+      [
+        "Article 90",
+        "Labor Administrative Department"
+      ],
+      [
+        "Article 91",
+        "Employer"
+      ],
+      [
+        "Compensation Liability",
+        "Labor Administrative Department"
+      ],
+      [
+        "Economic Compensation",
+        "Employer"
+      ],
+      [
+        "Compensation Payment",
+        "Employer"
+      ],
+      [
+        "Employer",
+        "Labor Administrative Department"
+      ],
+      [
+        "Article 89",
+        "Employer"
+      ]
+    ],
+    "count": 13,
+    "create_time": 1773321014,
+    "update_time": 1773321014,
+    "_id": "doc-5a7d21f4dbacb9974d96f6a4b7cd73aa"
+  },
+  "doc-6446a7689e729164af31e8ab0faafc8b": {
+    "relation_pairs": [
+      [
+        "Labor Administrative Department",
+        "People's Government at or Above the County Level"
+      ],
+      [
+        "Employer",
+        "Labor Administrative Department"
+      ],
+      [
+        "Article 85",
+        "Labor Administrative Department"
+      ],
+      [
+        "Labor Administrative Department",
+        "Labor Law and Regulations"
+      ]
+    ],
+    "count": 4,
+    "create_time": 1773321021,
+    "update_time": 1773321021,
+    "_id": "doc-6446a7689e729164af31e8ab0faafc8b"
+  },
+  "doc-2f9cf51a71d05c5aaeae0c910ea62a37": {
+    "relation_pairs": [
+      [
+        "Article 12",
+        "Employment Discrimination"
+      ],
+      [
+        "Article 12",
+        "Religious Belief"
+      ],
+      [
+        "Article 12",
+        "Race"
+      ],
+      [
+        "Article 12",
+        "Laborer"
+      ],
+      [
+        "Article 12",
+        "Labor Employment"
+      ],
+      [
+        "Article 12",
+        "Ethnicity"
+      ],
+      [
+        "Article 12",
+        "Gender"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773321042,
+    "update_time": 1773321042,
+    "_id": "doc-2f9cf51a71d05c5aaeae0c910ea62a37"
+  },
+  "doc-37520b7460881d90be5e94afa5fee4c5": {
+    "relation_pairs": [
+      [
+        "Social Insurance",
+        "State"
+      ],
+      [
+        "State",
+        "Vocational Education"
+      ],
+      [
+        "Labor Standards",
+        "State"
+      ],
+      [
+        "Labor Employment",
+        "State"
+      ],
+      [
+        "Living Standards of Workers",
+        "State"
+      ],
+      [
+        "Article Five",
+        "State"
+      ],
+      [
+        "Labor Relations Coordination",
+        "State"
+      ],
+      [
+        "Social Income Regulation",
+        "State"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1773321044,
+    "update_time": 1773321044,
+    "_id": "doc-37520b7460881d90be5e94afa5fee4c5"
+  },
+  "doc-1b31fb50320a0aa42681462a5892c534": {
+    "relation_pairs": [
+      [
+        "Article 57",
+        "Occupational Disease Reporting and Handling System"
+      ],
+      [
+        "Employer",
+        "Occupational Disease Reporting and Handling System"
+      ],
+      [
+        "State",
+        "Workplace Accident Reporting and Handling System"
+      ],
+      [
+        "Labor Administrative Department",
+        "Workplace Accident Reporting and Handling System"
+      ],
+      [
+        "Occupational Disease Reporting and Handling System",
+        "Worker"
+      ],
+      [
+        "Labor Administrative Department",
+        "Occupational Disease Reporting and Handling System"
+      ],
+      [
+        "Occupational Disease Reporting and Handling System",
+        "State"
+      ],
+      [
+        "Worker",
+        "Workplace Accident Reporting and Handling System"
+      ],
+      [
+        "Article 57",
+        "Workplace Accident Reporting and Handling System"
+      ],
+      [
+        "Employer",
+        "Workplace Accident Reporting and Handling System"
+      ]
+    ],
+    "count": 10,
+    "create_time": 1773321066,
+    "update_time": 1773321066,
+    "_id": "doc-1b31fb50320a0aa42681462a5892c534"
+  },
+  "doc-3ef7680c783357332f2ef093d817c7f2": {
+    "relation_pairs": [
+      [
+        "Article 4",
+        "Labor Law of the People's Republic of China"
+      ],
+      [
+        "Labor Obligations",
+        "Workers"
+      ],
+      [
+        "Labor Rights",
+        "Workers"
+      ],
+      [
+        "Constitution of the People's Republic of China",
+        "Labor Law of the People's Republic of China"
+      ],
+      [
+        "Article 2",
+        "Labor Law of the People's Republic of China"
+      ],
+      [
+        "Labor Law of the People's Republic of China",
+        "Socialist Market Economy"
+      ],
+      [
+        "Employer Rules and Regulations",
+        "Employers"
+      ],
+      [
+        "Article 1",
+        "Labor Law of the People's Republic of China"
+      ],
+      [
+        "Article 3",
+        "Labor Law of the People's Republic of China"
+      ],
+      [
+        "Labor Law of the People's Republic of China",
+        "Workers"
+      ],
+      [
+        "Employers",
+        "Labor Law of the People's Republic of China"
+      ]
+    ],
+    "count": 11,
+    "create_time": 1773321083,
+    "update_time": 1773321083,
+    "_id": "doc-3ef7680c783357332f2ef093d817c7f2"
+  },
+  "doc-01ab560573c5cd878f4442fcbbac6cef": {
+    "relation_pairs": [
+      [
+        "Labor Contract Law",
+        "Laborer"
+      ],
+      [
+        "Compensation Liability",
+        "Economic Loss"
+      ],
+      [
+        "Economic Loss",
+        "Unauthorized Termination of Labor Contract"
+      ],
+      [
+        "Breach of Confidentiality",
+        "Economic Loss"
+      ],
+      [
+        "Employer",
+        "Laborer"
+      ],
+      [
+        "Article 102",
+        "Labor Contract Law"
+      ],
+      [
+        "Laborer",
+        "Unauthorized Termination of Labor Contract"
+      ],
+      [
+        "Breach of Confidentiality",
+        "Laborer"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1773321092,
+    "update_time": 1773321092,
+    "_id": "doc-01ab560573c5cd878f4442fcbbac6cef"
+  },
+  "doc-391c9ac1a44dcff50d59e13e3dd208b6": {
+    "relation_pairs": [
+      [
+        "People's Republic of China",
+        "Provincial People's Government"
+      ],
+      [
+        "Provincial People's Government",
+        "State Council"
+      ],
+      [
+        "Article 106",
+        "Labor Contract System"
+      ],
+      [
+        "Labor Contract System",
+        "Provincial People's Government"
+      ],
+      [
+        "Labor Contract System",
+        "People's Republic of China"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1773321101,
+    "update_time": 1773321101,
+    "_id": "doc-391c9ac1a44dcff50d59e13e3dd208b6"
+  },
+  "doc-c1a4ebf44debb9e60481cc178f07fa11": {
+    "relation_pairs": [
+      [
+        "Article 22",
+        "Labor Contract Law of the People's Republic of China"
+      ],
+      [
+        "Article 22",
+        "Labor Contract"
+      ],
+      [
+        "Employee",
+        "Employer"
+      ],
+      [
+        "Commercial Secret",
+        "Employer"
+      ],
+      [
+        "Commercial Secret",
+        "Employee"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1773321113,
+    "update_time": 1773321113,
+    "_id": "doc-c1a4ebf44debb9e60481cc178f07fa11"
+  },
+  "doc-0025690c407466c1d21fda9ca2cd0b52": {
+    "relation_pairs": [
+      [
+        "Employment Rights",
+        "State-Designated Occupations"
+      ],
+      [
+        "Article Thirteen",
+        "State-Designated Occupations"
+      ],
+      [
+        "Employment Rights",
+        "Women"
+      ],
+      [
+        "Article Thirteen",
+        "Men"
+      ],
+      [
+        "Article Thirteen",
+        "Women"
+      ],
+      [
+        "Employment Rights",
+        "Men"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1773321129,
+    "update_time": 1773321129,
+    "_id": "doc-0025690c407466c1d21fda9ca2cd0b52"
+  },
+  "doc-4d8030db75e52bd9e7110fb8f615de79": {
+    "relation_pairs": [
+      [
+        "Major Accident",
+        "Responsible Personnel"
+      ],
+      [
+        "Article 92",
+        "County-Level or Higher People's Government"
+      ],
+      [
+        "Labor Safety Facilities",
+        "Worker"
+      ],
+      [
+        "Labor Protective Equipment",
+        "Worker"
+      ],
+      [
+        "Employer",
+        "Labor Administrative Department"
+      ],
+      [
+        "County-Level or Higher People's Government",
+        "Employer"
+      ],
+      [
+        "Employer",
+        "Labor Protective Equipment"
+      ],
+      [
+        "Criminal Liability",
+        "Responsible Personnel"
+      ],
+      [
+        "Article 92",
+        "Responsible Personnel"
+      ],
+      [
+        "Employer",
+        "Labor Safety Facilities"
+      ],
+      [
+        "Article 92",
+        "Employer"
+      ],
+      [
+        "Employer",
+        "Labor Hygiene Conditions"
+      ],
+      [
+        "Article 92",
+        "Labor Administrative Department"
+      ]
+    ],
+    "count": 13,
+    "create_time": 1773321133,
+    "update_time": 1773321133,
+    "_id": "doc-4d8030db75e52bd9e7110fb8f615de79"
+  },
+  "doc-3b0d980fa13701d98c8fef09e4c134b5": {
+    "relation_pairs": [
+      [
+        "Invalid Labor Contract",
+        "Legal Binding Force"
+      ],
+      [
+        "Invalid Labor Contract",
+        "People's Court"
+      ],
+      [
+        "Fraud or Coercion",
+        "Invalid Labor Contract"
+      ],
+      [
+        "Invalid Labor Contract",
+        "Law Violation"
+      ],
+      [
+        "Article 18",
+        "Invalid Labor Contract"
+      ],
+      [
+        "Invalid Labor Contract",
+        "Labor Dispute Arbitration Committee"
+      ]
+    ],
+    "count": 6,
+    "create_time": 1773321148,
+    "update_time": 1773321148,
+    "_id": "doc-3b0d980fa13701d98c8fef09e4c134b5"
+  },
+  "doc-8ee12e2672dfb9fc10f84edd44b67880": {
+    "relation_pairs": [
+      [
+        "Labor Administrative Department",
+        "People's Government at or Above the County Level"
+      ],
+      [
+        "Article 86",
+        "People's Government at or Above the County Level"
+      ],
+      [
+        "Article 86",
+        "Labor Administrative Department"
+      ]
+    ],
+    "count": 3,
+    "create_time": 1773321153,
+    "update_time": 1773321153,
+    "_id": "doc-8ee12e2672dfb9fc10f84edd44b67880"
+  },
+  "doc-c6a093f2a713e82a84a2df8dea3ab064": {
+    "relation_pairs": [
+      [
+        "Labor Contract",
+        "Working Conditions"
+      ],
+      [
+        "Employer",
+        "Labor Contract"
+      ],
+      [
+        "Article 32",
+        "Laborer"
+      ],
+      [
+        "Labor Contract",
+        "Probation Period"
+      ],
+      [
+        "Labor Contract",
+        "Labor Remuneration"
+      ],
+      [
+        "Labor Contract",
+        "Laborer"
+      ],
+      [
+        "Article 32",
+        "Employer"
+      ],
+      [
+        "Forced Labor",
+        "Labor Contract"
+      ]
+    ],
+    "count": 8,
+    "create_time": 1773321184,
+    "update_time": 1773321184,
+    "_id": "doc-c6a093f2a713e82a84a2df8dea3ab064"
+  },
+  "doc-5f221ff98ea22e9acb2603a0162c0526": {
+    "relation_pairs": [
+      [
+        "Employee",
+        "Employer"
+      ],
+      [
+        "Article 98",
+        "Labor Law"
+      ],
+      [
+        "Employer",
+        "Labor Law"
+      ],
+      [
+        "Employer",
+        "Employment Contract"
+      ],
+      [
+        "Employer",
+        "Labor Administration Department"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1773321186,
+    "update_time": 1773321186,
+    "_id": "doc-5f221ff98ea22e9acb2603a0162c0526"
+  },
+  "doc-c60e5be371dfa1f9ec2c3f41c6c51bea": {
+    "relation_pairs": [
+      [
+        "Article Seventeen",
+        "Principle of Equality and Voluntariness"
+      ],
+      [
+        "Article Seventeen",
+        "Law and Administrative Regulations"
+      ],
+      [
+        "Article Seventeen",
+        "Principle of Consensus Through Consultation"
+      ],
+      [
+        "Labor Contract",
+        "Law and Administrative Regulations"
+      ],
+      [
+        "Article Seventeen",
+        "Labor Contract"
+      ],
+      [
+        "Labor Contract",
+        "Principle of Equality and Voluntariness"
+      ],
+      [
+        "Labor Contract",
+        "Principle of Consensus Through Consultation"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773321204,
+    "update_time": 1773321204,
+    "_id": "doc-c60e5be371dfa1f9ec2c3f41c6c51bea"
+  },
+  "doc-982fdc171e24d19c2286c2a017fe7f13": {
+    "relation_pairs": [
+      [
+        "Compulsory Education",
+        "Minor Under Sixteen"
+      ],
+      [
+        "National Regulations",
+        "Special Craft Units"
+      ],
+      [
+        "Article Fifteen",
+        "Sports Organizations"
+      ],
+      [
+        "Article Fifteen",
+        "Employer"
+      ],
+      [
+        "Cultural Institutions",
+        "National Regulations"
+      ],
+      [
+        "Article Fifteen",
+        "Cultural Institutions"
+      ],
+      [
+        "Employer",
+        "Minor Under Sixteen"
+      ],
+      [
+        "Minor Under Sixteen",
+        "Sports Organizations"
+      ],
+      [
+        "Minor Under Sixteen",
+        "Special Craft Units"
+      ],
+      [
+        "Article Fifteen",
+        "Minor Under Sixteen"
+      ],
+      [
+        "Article Fifteen",
+        "Special Craft Units"
+      ],
+      [
+        "Article Fifteen",
+        "Compulsory Education"
+      ],
+      [
+        "Cultural Institutions",
+        "Minor Under Sixteen"
+      ],
+      [
+        "National Regulations",
+        "Sports Organizations"
+      ]
+    ],
+    "count": 14,
+    "create_time": 1773321214,
+    "update_time": 1773321214,
+    "_id": "doc-982fdc171e24d19c2286c2a017fe7f13"
+  },
+  "doc-09d777684aee4aa08ce23008df6295e7": {
+    "relation_pairs": [
+      [
+        "Employer",
+        "Labor Administrative Department"
+      ],
+      [
+        "Severe Operational Hardship",
+        "Staff Reduction"
+      ],
+      [
+        "Staff Reduction",
+        "Statutory Restructuring"
+      ],
+      [
+        "Employer",
+        "Priority Re-Employment"
+      ],
+      [
+        "Employer",
+        "Trade Union"
+      ],
+      [
+        "Employer",
+        "Staff Reduction"
+      ],
+      [
+        "Employees",
+        "Employer"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773321225,
+    "update_time": 1773321225,
+    "_id": "doc-09d777684aee4aa08ce23008df6295e7"
+  },
+  "doc-7772034814a251985224602f1dd80c02": {
+    "relation_pairs": [
+      [
+        "Article Seven",
+        "Laborer"
+      ],
+      [
+        "Article Seven",
+        "Trade Union"
+      ],
+      [
+        "Laborer",
+        "Trade Union"
+      ]
+    ],
+    "count": 3,
+    "create_time": 1773321229,
+    "update_time": 1773321229,
+    "_id": "doc-7772034814a251985224602f1dd80c02"
+  },
+  "doc-49dfcfe749ae5b7a3d964afb5d16559b": {
+    "relation_pairs": [
+      [
+        "Article 94",
+        "Market Regulation Department"
+      ],
+      [
+        "Article 94",
+        "Employer"
+      ],
+      [
+        "Employer",
+        "Minor Under Sixteen"
+      ],
+      [
+        "Employer",
+        "Market Regulation Department"
+      ],
+      [
+        "Article 94",
+        "Labor Administration Department"
+      ],
+      [
+        "Article 94",
+        "Labor Law of the People's Republic of China"
+      ],
+      [
+        "Employer",
+        "Labor Administration Department"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773321248,
+    "update_time": 1773321248,
+    "_id": "doc-49dfcfe749ae5b7a3d964afb5d16559b"
+  },
+  "doc-e07869d7cd11d05487d341eeabe67b63": {
+    "relation_pairs": [
+      [
+        "Article 29",
+        "Nursing Period"
+      ],
+      [
+        "Employer",
+        "Laborer"
+      ],
+      [
+        "Article 29",
+        "Labor Contract Law of the People's Republic of China"
+      ],
+      [
+        "Article 29",
+        "Work-Related Injury"
+      ],
+      [
+        "Article 29",
+        "Laborer"
+      ],
+      [
+        "Article 29",
+        "Maternity Leave"
+      ],
+      [
+        "Article 29",
+        "Medical Leave Period"
+      ],
+      [
+        "Article 29",
+        "Pregnancy"
+      ],
+      [
+        "Article 27",
+        "Employer"
+      ],
+      [
+        "Article 26",
+        "Employer"
+      ],
+      [
+        "Article 29",
+        "Occupational Disease"
+      ]
+    ],
+    "count": 11,
+    "create_time": 1773321261,
+    "update_time": 1773321261,
+    "_id": "doc-e07869d7cd11d05487d341eeabe67b63"
+  },
+  "doc-cdfe4fd7432c0c1b10d2636d5f862da7": {
+    "relation_pairs": [
+      [
+        "Chapter Seven Female Workers and Underage Workers Special Protection",
+        "Female Workers"
+      ],
+      [
+        "Chapter Seven",
+        "Underage Workers"
+      ],
+      [
+        "Chapter Seven",
+        "Special Protection"
+      ],
+      [
+        "Chapter Seven",
+        "Female Workers"
+      ],
+      [
+        "Chapter Seven Female Workers and Underage Workers Special Protection",
+        "Underage Workers"
+      ]
+    ],
+    "count": 5,
+    "create_time": 1773321262,
+    "update_time": 1773321262,
+    "_id": "doc-cdfe4fd7432c0c1b10d2636d5f862da7"
+  },
+  "doc-1ee1394b419d5bc0695ef81391d0c4b8": {
+    "relation_pairs": [
+      [
+        "Chapter Two",
+        "Employment Promotion"
+      ]
+    ],
+    "count": 1,
+    "create_time": 1773321267,
+    "update_time": 1773321267,
+    "_id": "doc-1ee1394b419d5bc0695ef81391d0c4b8"
+  },
+  "doc-55fedf8879833ede48386f292722cc7d": {
+    "relation_pairs": [
+      [
+        "Employer",
+        "Whistleblower"
+      ],
+      [
+        "Article 101",
+        "Labor Administration Department"
+      ],
+      [
+        "Article 101",
+        "Whistleblower"
+      ],
+      [
+        "Article 101",
+        "Relevant Departments"
+      ],
+      [
+        "Employer",
+        "Labor Administration Department"
+      ],
+      [
+        "Criminal Liability",
+        "Employer"
+      ],
+      [
+        "Employer",
+        "Relevant Departments"
+      ]
+    ],
+    "count": 7,
+    "create_time": 1773321279,
+    "update_time": 1773321279,
+    "_id": "doc-55fedf8879833ede48386f292722cc7d"
+  }
+}

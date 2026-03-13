@@ -1,0 +1,62 @@
+2026-03-13 14:13:25,107 - lightrag - INFO - [] Loaded graph from /Users/pysama/first_prize_RAG/rag_storage/labor_law/graph_chunk_entity_relation.graphml with 415 nodes, 580 edges
+2026-03-13 14:13:25,128 - lightrag - INFO - [] Process 6163 KV load full_docs with 96 records
+2026-03-13 14:13:25,129 - lightrag - INFO - [] Process 6163 KV load text_chunks with 96 records
+2026-03-13 14:13:25,129 - lightrag - INFO - [] Process 6163 KV load full_entities with 95 records
+2026-03-13 14:13:25,130 - lightrag - INFO - [] Process 6163 KV load full_relations with 89 records
+2026-03-13 14:13:25,131 - lightrag - INFO - [] Process 6163 KV load entity_chunks with 415 records
+2026-03-13 14:13:25,131 - lightrag - INFO - [] Process 6163 KV load relation_chunks with 580 records
+2026-03-13 14:13:25,142 - lightrag - INFO - [] Process 6163 KV load llm_response_cache with 207 records
+2026-03-13 14:13:25,143 - lightrag - INFO - [] Process 6163 doc status load doc_status with 96 records
+2026-03-13 14:13:25,155 - lightrag - INFO - LLM func: 4 new workers initialized (Timeouts: Func: 180s, Worker: 360s, Health Check: 375s)
+2026-03-13 14:13:41,477 - lightrag - ERROR - OpenAI API Connection Error: Connection error.
+2026-03-13 14:13:45,246 - lightrag - INFO - Successfully finalized 12 storages
+2026-03-13 14:13:45,674 - lightrag - ERROR - LLM func: Critical error in worker: Event loop is closed
+2026-03-13 14:14:50,668 - lightrag - INFO - [] Loaded graph from /Users/pysama/first_prize_RAG/rag_storage/labor_law/graph_chunk_entity_relation.graphml with 415 nodes, 580 edges
+2026-03-13 14:14:50,688 - lightrag - INFO - [] Process 6344 KV load full_docs with 96 records
+2026-03-13 14:14:50,689 - lightrag - INFO - [] Process 6344 KV load text_chunks with 96 records
+2026-03-13 14:14:50,689 - lightrag - INFO - [] Process 6344 KV load full_entities with 95 records
+2026-03-13 14:14:50,689 - lightrag - INFO - [] Process 6344 KV load full_relations with 89 records
+2026-03-13 14:14:50,690 - lightrag - INFO - [] Process 6344 KV load entity_chunks with 415 records
+2026-03-13 14:14:50,691 - lightrag - INFO - [] Process 6344 KV load relation_chunks with 580 records
+2026-03-13 14:14:50,699 - lightrag - INFO - [] Process 6344 KV load llm_response_cache with 207 records
+2026-03-13 14:14:50,699 - lightrag - INFO - [] Process 6344 doc status load doc_status with 96 records
+2026-03-13 14:14:50,703 - lightrag - INFO - LLM func: 4 new workers initialized (Timeouts: Func: 180s, Worker: 360s, Health Check: 375s)
+2026-03-13 14:14:52,492 - lightrag - INFO -  == LLM cache == saving: hybrid:keywords:447743708b6f7d96139e03b96d6b6b16
+2026-03-13 14:14:52,493 - lightrag - INFO - Embedding func: 8 new workers initialized (Timeouts: Func: 30s, Worker: 60s, Health Check: 75s)
+2026-03-13 14:14:52,917 - lightrag - INFO - Query nodes: Assault, Workplace misconduct, Termination, Criminal charges, Civil lawsuit (top_k:40, cosine:0.2)
+2026-03-13 14:14:53,353 - lightrag - INFO - Local query: 40 entites, 214 relations
+2026-03-13 14:14:53,353 - lightrag - INFO - Query edges: Workplace violence, Legal liability, Employment risk (top_k:40, cosine:0.2)
+2026-03-13 14:14:53,928 - lightrag - INFO - Global query: 42 entites, 40 relations
+2026-03-13 14:14:53,928 - lightrag - INFO - Raw search results: 68 entities, 220 relations, 0 vector chunks
+2026-03-13 14:14:53,944 - lightrag - INFO - After truncation: 68 entities, 173 relations
+2026-03-13 14:14:53,955 - lightrag - INFO - Selecting 56 from 56 entity-related chunks by vector similarity
+2026-03-13 14:14:53,958 - lightrag - INFO - Find no additional relations-related chunks from 173 relations
+2026-03-13 14:14:53,958 - lightrag - INFO - Round-robin merged chunks: 56 -> 56 (deduplicated 0)
+2026-03-13 14:14:53,968 - lightrag - INFO - Final context: 68 entities, 173 relations, 20 chunks
+2026-03-13 14:14:53,968 - lightrag - INFO - Final chunks S+F/O: E5/1 E7/2 E4/3 E4/4 E2/5 E5/6 E3/7 E6/8 E5/9 E8/10 E2/11 E5/12 E2/13 E2/14 E2/15 E5/16 E4/17 E1/18 E2/19 E4/20
+2026-03-13 14:15:21,656 - lightrag - INFO -  == LLM cache == saving: hybrid:query:9d2b0cb03acb39e3dbaae014810af3f8
+2026-03-13 14:15:21,678 - lightrag - INFO - Successfully finalized 12 storages
+2026-03-13 14:17:35,981 - lightrag - INFO - [] Loaded graph from /Users/pysama/first_prize_RAG/rag_storage/labor_law/graph_chunk_entity_relation.graphml with 415 nodes, 580 edges
+2026-03-13 14:17:36,001 - lightrag - INFO - [] Process 6482 KV load full_docs with 96 records
+2026-03-13 14:17:36,001 - lightrag - INFO - [] Process 6482 KV load text_chunks with 96 records
+2026-03-13 14:17:36,002 - lightrag - INFO - [] Process 6482 KV load full_entities with 95 records
+2026-03-13 14:17:36,002 - lightrag - INFO - [] Process 6482 KV load full_relations with 89 records
+2026-03-13 14:17:36,003 - lightrag - INFO - [] Process 6482 KV load entity_chunks with 415 records
+2026-03-13 14:17:36,003 - lightrag - INFO - [] Process 6482 KV load relation_chunks with 580 records
+2026-03-13 14:17:36,011 - lightrag - INFO - [] Process 6482 KV load llm_response_cache with 209 records
+2026-03-13 14:17:36,011 - lightrag - INFO - [] Process 6482 doc status load doc_status with 96 records
+2026-03-13 14:17:36,015 - lightrag - INFO - LLM func: 4 new workers initialized (Timeouts: Func: 180s, Worker: 360s, Health Check: 375s)
+2026-03-13 14:17:37,137 - lightrag - INFO -  == LLM cache == saving: hybrid:keywords:315bdd81b37a49acff86b2cbc58974f1
+2026-03-13 14:17:37,138 - lightrag - WARNING - low_level_keywords is empty
+2026-03-13 14:17:37,138 - lightrag - INFO - Embedding func: 8 new workers initialized (Timeouts: Func: 30s, Worker: 60s, Health Check: 75s)
+2026-03-13 14:17:37,519 - lightrag - INFO - Query edges: Model identity, Model version (top_k:40, cosine:0.2)
+2026-03-13 14:17:37,906 - lightrag - INFO - Global query: 53 entites, 40 relations
+2026-03-13 14:17:37,906 - lightrag - INFO - Raw search results: 53 entities, 40 relations, 0 vector chunks
+2026-03-13 14:17:37,914 - lightrag - INFO - After truncation: 53 entities, 40 relations
+2026-03-13 14:17:37,924 - lightrag - INFO - Selecting 67 from 67 entity-related chunks by vector similarity
+2026-03-13 14:17:37,925 - lightrag - INFO - Find no additional relations-related chunks from 40 relations
+2026-03-13 14:17:37,925 - lightrag - INFO - Round-robin merged chunks: 67 -> 67 (deduplicated 0)
+2026-03-13 14:17:37,932 - lightrag - INFO - Final context: 53 entities, 40 relations, 20 chunks
+2026-03-13 14:17:37,933 - lightrag - INFO - Final chunks S+F/O: E2/1 E2/2 E1/3 E2/4 E2/5 E1/6 E10/7 E1/8 E3/9 E3/10 E1/11 E2/12 E2/13 E4/14 E6/15 E1/16 E1/17 E3/18 E2/19 E2/20
+2026-03-13 14:17:45,634 - lightrag - INFO -  == LLM cache == saving: hybrid:query:893d063026f1640eaa166a2b09a8fc16
+2026-03-13 14:17:45,654 - lightrag - INFO - Successfully finalized 12 storages
