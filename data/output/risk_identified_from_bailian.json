@@ -1,0 +1,877 @@
+{
+  "main_body_risks": [
+    {
+      "clause_id": "C1",
+      "clause_type": "职业培训和劳动保护",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C2",
+      "clause_type": "其他",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C3",
+      "clause_type": "职业培训和劳动保护",
+      "risk_type": "培训服务期风险",
+      "risk_level_preliminary": "中",
+      "trigger_phrases": [
+        "培训",
+        "赔偿"
+      ],
+      "rule_hits": {
+        "clause_type_related": true,
+        "keyword_hits": [
+          "培训",
+          "赔偿"
+        ],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 2,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {
+          "training_terms": [
+            "培训"
+          ],
+          "constraint_terms": [
+            "协议",
+            "赔偿"
+          ]
+        },
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": true,
+          "required_groups": [
+            "training_terms",
+            "constraint_terms"
+          ],
+          "required_groups_ok": true,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": true,
+          "required_combinations_any": [],
+          "required_combinations_ok": true,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": true
+        }
+      },
+      "needs_attention": true
+    },
+    {
+      "clause_id": "C4",
+      "clause_type": "其他",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C5",
+      "clause_type": "职业培训和劳动保护",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C6",
+      "clause_type": "职业培训和劳动保护",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C7",
+      "clause_type": "其他",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C8",
+      "clause_type": "其他",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C9",
+      "clause_type": "劳动合同变更/解除/终止",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C10",
+      "clause_type": "其他",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C11",
+      "clause_type": "其他",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C12",
+      "clause_type": "其他",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C13",
+      "clause_type": "职业培训和劳动保护",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C14",
+      "clause_type": "其他",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C15",
+      "clause_type": "其他",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C16",
+      "clause_type": "其他",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C17",
+      "clause_type": "其他",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C18",
+      "clause_type": "其他",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C19",
+      "clause_type": "其他",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C20",
+      "clause_type": "其他",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C21",
+      "clause_type": "其他",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C22",
+      "clause_type": "其他",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C23",
+      "clause_type": "其他",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C24",
+      "clause_type": "劳动争议处理",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C25",
+      "clause_type": "劳动争议处理",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C26",
+      "clause_type": "其他",
+      "risk_type": "无明显风险",
+      "risk_level_preliminary": "无明显风险",
+      "trigger_phrases": [],
+      "rule_hits": {
+        "clause_type_related": false,
+        "keyword_hits": [],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 0,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {},
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": false,
+          "required_groups": [],
+          "required_groups_ok": false,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": false,
+          "required_combinations_any": [],
+          "required_combinations_ok": false,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": false
+        }
+      },
+      "needs_attention": false
+    },
+    {
+      "clause_id": "C27",
+      "clause_type": "职业培训和劳动保护",
+      "risk_type": "培训服务期风险",
+      "risk_level_preliminary": "低",
+      "trigger_phrases": [
+        "培训"
+      ],
+      "rule_hits": {
+        "clause_type_related": true,
+        "keyword_hits": [
+          "培训"
+        ],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 1,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {
+          "training_terms": [
+            "培训"
+          ],
+          "constraint_terms": [
+            "协议"
+          ]
+        },
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": true,
+          "required_groups": [
+            "training_terms",
+            "constraint_terms"
+          ],
+          "required_groups_ok": true,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": true,
+          "required_combinations_any": [],
+          "required_combinations_ok": true,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": true
+        }
+      },
+      "needs_attention": false
+    }
+  ],
+  "attachment_risks": [],
+  "key_risk_clauses": [
+    {
+      "clause_id": "C3",
+      "clause_type": "职业培训和劳动保护",
+      "risk_type": "培训服务期风险",
+      "risk_level_preliminary": "中",
+      "trigger_phrases": [
+        "培训",
+        "赔偿"
+      ],
+      "rule_hits": {
+        "clause_type_related": true,
+        "keyword_hits": [
+          "培训",
+          "赔偿"
+        ],
+        "strong_keyword_hits": [],
+        "keyword_hit_count": 2,
+        "strong_keyword_hit_count": 0,
+        "group_hits": {
+          "training_terms": [
+            "培训"
+          ],
+          "constraint_terms": [
+            "协议",
+            "赔偿"
+          ]
+        },
+        "precondition_checks": {
+          "require_strong_keyword": false,
+          "strong_keyword_ok": true,
+          "required_groups": [
+            "training_terms",
+            "constraint_terms"
+          ],
+          "required_groups_ok": true,
+          "required_any_keywords": [],
+          "required_any_keywords_hits": [],
+          "required_any_keywords_ok": true,
+          "required_combinations_any": [],
+          "required_combinations_ok": true,
+          "blocked_phrase_hits": [],
+          "blocked_context_ok": true
+        }
+      },
+      "needs_attention": true
+    }
+  ],
+  "summary": {
+    "total_records": 27,
+    "attention_records": 1,
+    "high_risk_records": 0,
+    "risk_type_counts": {
+      "无明显风险": 25,
+      "培训服务期风险": 2
+    },
+    "key_risk_clause_count": 1
+  }
+}
