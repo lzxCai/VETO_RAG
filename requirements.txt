@@ -1,0 +1,3 @@
+lightrag-hku
+llama-index-core
+llama-index-postprocessor-dashscope-rerank

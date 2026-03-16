@@ -31,7 +31,7 @@ def convert_pdf_to_md():
     # 4. 写入本地缓存文件
     # 为什么要保存下来？为了省 API 额度和节省每次调试的时间！
     pathlib.Path(MD_PATH).write_bytes(md_text.encode("utf-8"))
-    print(f"✅ LlamaParse 解析成功！极其精准的 Markdown 文件已保存至: {MD_PATH}")
+    print(f"✅ LlamaParse 解析成功！Markdown 文件已保存至: {MD_PATH}")
 
 if __name__ == "__main__":
     convert_pdf_to_md()

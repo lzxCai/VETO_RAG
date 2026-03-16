@@ -11,14 +11,13 @@ load_dotenv()
 
 # 全局变量定义
 DATA_DIR = "dataset"
-PDF_PATH = os.path.join(DATA_DIR, "labor_law.pdf")
-MD_PATH = os.path.join(DATA_DIR, "labor_law.md")
+PDF_PATH = os.path.join(DATA_DIR, "civil_code.pdf")
+MD_PATH = os.path.join(DATA_DIR, "civil_code.md")
 
 # 初始化模型的函数
 def init_models():
     """初始化全局 LLM 和 Embedding 模型"""
     
-    # 1. 配置 DeepSeek (用于提取知识图谱关系)
     Settings.llm = OpenAILike(
         model="qwen-plus",
         api_base="https://dashscope.aliyuncs.com/compatible-mode/v1",
