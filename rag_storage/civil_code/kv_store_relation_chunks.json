@@ -62604,11 +62604,12 @@
   },
   "Employee<SEP>Employer": {
     "chunk_ids": [
-      "chunk-96d03cac0325224435bc2bfada13f81e"
+      "chunk-96d03cac0325224435bc2bfada13f81e",
+      "chunk-5f221ff98ea22e9acb2603a0162c0526",
+      "chunk-5a7d21f4dbacb9974d96f6a4b7cd73aa"
     ],
-    "count": 1,
-    "create_time": 1773376619,
-    "update_time": 1773376619,
+    "count": 3,
+    "update_time": 1773711910,
     "_id": "Employee<SEP>Employer"
   },
   "Labor Dispatch Unit<SEP>User Entity": {
@@ -64518,5 +64519,5167 @@
     "create_time": 1773377028,
     "update_time": 1773377028,
     "_id": "Article 1084<SEP>Child Custody"
+  },
+  "Local People's Governments<SEP>Vocational Introduction Institutions": {
+    "chunk_ids": [
+      "chunk-7b6eb7df22cbf1e6b2dcf127e89cc5b3"
+    ],
+    "count": 1,
+    "create_time": 1773711356,
+    "update_time": 1773711356,
+    "_id": "Local People's Governments<SEP>Vocational Introduction Institutions"
+  },
+  "Employment Services<SEP>Vocational Introduction Institutions": {
+    "chunk_ids": [
+      "chunk-7b6eb7df22cbf1e6b2dcf127e89cc5b3"
+    ],
+    "count": 1,
+    "create_time": 1773711357,
+    "update_time": 1773711357,
+    "_id": "Employment Services<SEP>Vocational Introduction Institutions"
+  },
+  "Article 11<SEP>Local People's Governments": {
+    "chunk_ids": [
+      "chunk-7b6eb7df22cbf1e6b2dcf127e89cc5b3"
+    ],
+    "count": 1,
+    "create_time": 1773711357,
+    "update_time": 1773711357,
+    "_id": "Article 11<SEP>Local People's Governments"
+  },
+  "Article 11<SEP>Vocational Introduction Institutions": {
+    "chunk_ids": [
+      "chunk-7b6eb7df22cbf1e6b2dcf127e89cc5b3"
+    ],
+    "count": 1,
+    "create_time": 1773711357,
+    "update_time": 1773711357,
+    "_id": "Article 11<SEP>Vocational Introduction Institutions"
+  },
+  "Article 11<SEP>Employment Services": {
+    "chunk_ids": [
+      "chunk-7b6eb7df22cbf1e6b2dcf127e89cc5b3"
+    ],
+    "count": 1,
+    "create_time": 1773711358,
+    "update_time": 1773711358,
+    "_id": "Article 11<SEP>Employment Services"
+  },
+  "Labor Contract<SEP>Legal Binding Force": {
+    "chunk_ids": [
+      "chunk-c1affc2633f7ab17127fc986e6c20944"
+    ],
+    "count": 1,
+    "create_time": 1773711358,
+    "update_time": 1773711358,
+    "_id": "Labor Contract<SEP>Legal Binding Force"
+  },
+  "Contractual Obligation<SEP>Labor Contract": {
+    "chunk_ids": [
+      "chunk-c1affc2633f7ab17127fc986e6c20944"
+    ],
+    "count": 1,
+    "create_time": 1773711359,
+    "update_time": 1773711359,
+    "_id": "Contractual Obligation<SEP>Labor Contract"
+  },
+  "Employer<SEP>Social Insurance Premium": {
+    "chunk_ids": [
+      "chunk-1c3f29bba2e48ace661e0e106cd6c106"
+    ],
+    "count": 1,
+    "create_time": 1773711378,
+    "update_time": 1773711378,
+    "_id": "Employer<SEP>Social Insurance Premium"
+  },
+  "Labor Administrative Department<SEP>Late Payment Surcharge": {
+    "chunk_ids": [
+      "chunk-1c3f29bba2e48ace661e0e106cd6c106"
+    ],
+    "count": 1,
+    "create_time": 1773711378,
+    "update_time": 1773711378,
+    "_id": "Labor Administrative Department<SEP>Late Payment Surcharge"
+  },
+  "Employer<SEP>Labor Administrative Department": {
+    "chunk_ids": [
+      "chunk-1c3f29bba2e48ace661e0e106cd6c106",
+      "chunk-6446a7689e729164af31e8ab0faafc8b",
+      "chunk-5f221ff98ea22e9acb2603a0162c0526",
+      "chunk-add3425ac8339584dcc65694586b9a03",
+      "chunk-5a7d21f4dbacb9974d96f6a4b7cd73aa",
+      "chunk-55fedf8879833ede48386f292722cc7d",
+      "chunk-4d8030db75e52bd9e7110fb8f615de79"
+    ],
+    "count": 7,
+    "update_time": 1773712164,
+    "_id": "Employer<SEP>Labor Administrative Department"
+  },
+  "Article 100<SEP>Employer": {
+    "chunk_ids": [
+      "chunk-1c3f29bba2e48ace661e0e106cd6c106"
+    ],
+    "count": 1,
+    "create_time": 1773711379,
+    "update_time": 1773711379,
+    "_id": "Article 100<SEP>Employer"
+  },
+  "Article 100<SEP>Labor Administrative Department": {
+    "chunk_ids": [
+      "chunk-1c3f29bba2e48ace661e0e106cd6c106"
+    ],
+    "count": 1,
+    "create_time": 1773711380,
+    "update_time": 1773711380,
+    "_id": "Article 100<SEP>Labor Administrative Department"
+  },
+  "Article 100<SEP>China Labor Law": {
+    "chunk_ids": [
+      "chunk-1c3f29bba2e48ace661e0e106cd6c106"
+    ],
+    "count": 1,
+    "create_time": 1773711380,
+    "update_time": 1773711380,
+    "_id": "Article 100<SEP>China Labor Law"
+  },
+  "Employer<SEP>Staff Reduction": {
+    "chunk_ids": [
+      "chunk-09d777684aee4aa08ce23008df6295e7"
+    ],
+    "count": 1,
+    "create_time": 1773711382,
+    "update_time": 1773711382,
+    "_id": "Employer<SEP>Staff Reduction"
+  },
+  "Staff Reduction<SEP>Statutory Restructuring": {
+    "chunk_ids": [
+      "chunk-09d777684aee4aa08ce23008df6295e7"
+    ],
+    "count": 1,
+    "create_time": 1773711383,
+    "update_time": 1773711383,
+    "_id": "Staff Reduction<SEP>Statutory Restructuring"
+  },
+  "Employer<SEP>Trade Union": {
+    "chunk_ids": [
+      "chunk-09d777684aee4aa08ce23008df6295e7",
+      "chunk-484ec462bb336f0faad2e38a9ab16421"
+    ],
+    "count": 2,
+    "update_time": 1773712126,
+    "_id": "Employer<SEP>Trade Union"
+  },
+  "Employees<SEP>Employer": {
+    "chunk_ids": [
+      "chunk-09d777684aee4aa08ce23008df6295e7"
+    ],
+    "count": 1,
+    "create_time": 1773711383,
+    "update_time": 1773711383,
+    "_id": "Employees<SEP>Employer"
+  },
+  "Severe Operational Difficulties<SEP>Staff Reduction": {
+    "chunk_ids": [
+      "chunk-09d777684aee4aa08ce23008df6295e7"
+    ],
+    "count": 1,
+    "create_time": 1773711383,
+    "update_time": 1773711383,
+    "_id": "Severe Operational Difficulties<SEP>Staff Reduction"
+  },
+  "Employer<SEP>Labor Administration Department": {
+    "chunk_ids": [
+      "chunk-09d777684aee4aa08ce23008df6295e7",
+      "chunk-49dfcfe749ae5b7a3d964afb5d16559b"
+    ],
+    "count": 2,
+    "update_time": 1773711793,
+    "_id": "Employer<SEP>Labor Administration Department"
+  },
+  "Article 27<SEP>Staff Reduction": {
+    "chunk_ids": [
+      "chunk-09d777684aee4aa08ce23008df6295e7"
+    ],
+    "count": 1,
+    "create_time": 1773711384,
+    "update_time": 1773711384,
+    "_id": "Article 27<SEP>Staff Reduction"
+  },
+  "Employer<SEP>Priority Rehiring": {
+    "chunk_ids": [
+      "chunk-09d777684aee4aa08ce23008df6295e7"
+    ],
+    "count": 1,
+    "create_time": 1773711384,
+    "update_time": 1773711384,
+    "_id": "Employer<SEP>Priority Rehiring"
+  },
+  "Article 27<SEP>Statutory Restructuring": {
+    "chunk_ids": [
+      "chunk-09d777684aee4aa08ce23008df6295e7"
+    ],
+    "count": 1,
+    "create_time": 1773711384,
+    "update_time": 1773711384,
+    "_id": "Article 27<SEP>Statutory Restructuring"
+  },
+  "Article 27<SEP>Severe Operational Difficulties": {
+    "chunk_ids": [
+      "chunk-09d777684aee4aa08ce23008df6295e7"
+    ],
+    "count": 1,
+    "create_time": 1773711385,
+    "update_time": 1773711385,
+    "_id": "Article 27<SEP>Severe Operational Difficulties"
+  },
+  "Article 27<SEP>Priority Rehiring": {
+    "chunk_ids": [
+      "chunk-09d777684aee4aa08ce23008df6295e7"
+    ],
+    "count": 1,
+    "create_time": 1773711385,
+    "update_time": 1773711385,
+    "_id": "Article 27<SEP>Priority Rehiring"
+  },
+  "Employment<SEP>State": {
+    "chunk_ids": [
+      "chunk-9e1896276de0d9340c0ef6a2e907293b"
+    ],
+    "count": 1,
+    "create_time": 1773711403,
+    "update_time": 1773711403,
+    "_id": "Employment<SEP>State"
+  },
+  "Enterprises<SEP>State": {
+    "chunk_ids": [
+      "chunk-9e1896276de0d9340c0ef6a2e907293b"
+    ],
+    "count": 1,
+    "create_time": 1773711404,
+    "update_time": 1773711404,
+    "_id": "Enterprises<SEP>State"
+  },
+  "Economic Development<SEP>Employment": {
+    "chunk_ids": [
+      "chunk-9e1896276de0d9340c0ef6a2e907293b"
+    ],
+    "count": 1,
+    "create_time": 1773711404,
+    "update_time": 1773711404,
+    "_id": "Economic Development<SEP>Employment"
+  },
+  "Employment<SEP>Social Development": {
+    "chunk_ids": [
+      "chunk-9e1896276de0d9340c0ef6a2e907293b"
+    ],
+    "count": 1,
+    "create_time": 1773711404,
+    "update_time": 1773711404,
+    "_id": "Employment<SEP>Social Development"
+  },
+  "Institutions<SEP>State": {
+    "chunk_ids": [
+      "chunk-9e1896276de0d9340c0ef6a2e907293b"
+    ],
+    "count": 1,
+    "create_time": 1773711405,
+    "update_time": 1773711405,
+    "_id": "Institutions<SEP>State"
+  },
+  "Social Organizations<SEP>State": {
+    "chunk_ids": [
+      "chunk-9e1896276de0d9340c0ef6a2e907293b"
+    ],
+    "count": 1,
+    "create_time": 1773711405,
+    "update_time": 1773711405,
+    "_id": "Social Organizations<SEP>State"
+  },
+  "Article Ten<SEP>State": {
+    "chunk_ids": [
+      "chunk-9e1896276de0d9340c0ef6a2e907293b"
+    ],
+    "count": 1,
+    "create_time": 1773711406,
+    "update_time": 1773711406,
+    "_id": "Article Ten<SEP>State"
+  },
+  "Labor Contract<SEP>Laborer": {
+    "chunk_ids": [
+      "chunk-c6a093f2a713e82a84a2df8dea3ab064",
+      "chunk-82eedbfc6978ce7b8284768afbfab33f",
+      "chunk-0f133335b434209fb07a50ad3e0a2f33"
+    ],
+    "count": 3,
+    "update_time": 1773711714,
+    "_id": "Labor Contract<SEP>Laborer"
+  },
+  "Laborer<SEP>Probationary Period": {
+    "chunk_ids": [
+      "chunk-c6a093f2a713e82a84a2df8dea3ab064"
+    ],
+    "count": 1,
+    "create_time": 1773711407,
+    "update_time": 1773711407,
+    "_id": "Laborer<SEP>Probationary Period"
+  },
+  "Employer<SEP>Labor Contract": {
+    "chunk_ids": [
+      "chunk-c6a093f2a713e82a84a2df8dea3ab064",
+      "chunk-f1e934469e0af82604f570bd7744c5cb",
+      "chunk-25702dd54870df07d3bedb29b9496851",
+      "chunk-f5cd7ed5505461fd7709fa8b54316269",
+      "chunk-0f133335b434209fb07a50ad3e0a2f33",
+      "chunk-7440e9a9d68a40eb06fc88eaf48bf3a0",
+      "chunk-5f221ff98ea22e9acb2603a0162c0526",
+      "chunk-c1a4ebf44debb9e60481cc178f07fa11"
+    ],
+    "count": 8,
+    "update_time": 1773712253,
+    "_id": "Employer<SEP>Labor Contract"
+  },
+  "Article 32<SEP>Labor Contract": {
+    "chunk_ids": [
+      "chunk-c6a093f2a713e82a84a2df8dea3ab064"
+    ],
+    "count": 1,
+    "create_time": 1773711408,
+    "update_time": 1773711408,
+    "_id": "Article 32<SEP>Labor Contract"
+  },
+  "Forced Labor<SEP>Laborer": {
+    "chunk_ids": [
+      "chunk-c6a093f2a713e82a84a2df8dea3ab064"
+    ],
+    "count": 1,
+    "create_time": 1773711408,
+    "update_time": 1773711408,
+    "_id": "Forced Labor<SEP>Laborer"
+  },
+  "Labor Remuneration<SEP>Laborer": {
+    "chunk_ids": [
+      "chunk-c6a093f2a713e82a84a2df8dea3ab064"
+    ],
+    "count": 1,
+    "create_time": 1773711408,
+    "update_time": 1773711408,
+    "_id": "Labor Remuneration<SEP>Laborer"
+  },
+  "Laborer<SEP>Working Conditions": {
+    "chunk_ids": [
+      "chunk-c6a093f2a713e82a84a2df8dea3ab064"
+    ],
+    "count": 1,
+    "create_time": 1773711409,
+    "update_time": 1773711409,
+    "_id": "Laborer<SEP>Working Conditions"
+  },
+  "State<SEP>Workplace Accident": {
+    "chunk_ids": [
+      "chunk-1b31fb50320a0aa42681462a5892c534"
+    ],
+    "count": 1,
+    "create_time": 1773711422,
+    "update_time": 1773711422,
+    "_id": "State<SEP>Workplace Accident"
+  },
+  "Labor Administrative Department<SEP>Workplace Accident": {
+    "chunk_ids": [
+      "chunk-1b31fb50320a0aa42681462a5892c534"
+    ],
+    "count": 1,
+    "create_time": 1773711423,
+    "update_time": 1773711423,
+    "_id": "Labor Administrative Department<SEP>Workplace Accident"
+  },
+  "Occupational Disease<SEP>State": {
+    "chunk_ids": [
+      "chunk-1b31fb50320a0aa42681462a5892c534"
+    ],
+    "count": 1,
+    "create_time": 1773711423,
+    "update_time": 1773711423,
+    "_id": "Occupational Disease<SEP>State"
+  },
+  "Employer<SEP>Workplace Accident": {
+    "chunk_ids": [
+      "chunk-1b31fb50320a0aa42681462a5892c534"
+    ],
+    "count": 1,
+    "create_time": 1773711423,
+    "update_time": 1773711423,
+    "_id": "Employer<SEP>Workplace Accident"
+  },
+  "Article 57<SEP>State": {
+    "chunk_ids": [
+      "chunk-1b31fb50320a0aa42681462a5892c534"
+    ],
+    "count": 1,
+    "create_time": 1773711423,
+    "update_time": 1773711423,
+    "_id": "Article 57<SEP>State"
+  },
+  "Labor Administrative Department<SEP>Occupational Disease": {
+    "chunk_ids": [
+      "chunk-1b31fb50320a0aa42681462a5892c534"
+    ],
+    "count": 1,
+    "create_time": 1773711423,
+    "update_time": 1773711423,
+    "_id": "Labor Administrative Department<SEP>Occupational Disease"
+  },
+  "Employer<SEP>Occupational Disease": {
+    "chunk_ids": [
+      "chunk-1b31fb50320a0aa42681462a5892c534"
+    ],
+    "count": 1,
+    "create_time": 1773711424,
+    "update_time": 1773711424,
+    "_id": "Employer<SEP>Occupational Disease"
+  },
+  "Constitution of the People's Republic of China<SEP>Labor Law of the People's Republic of China": {
+    "chunk_ids": [
+      "chunk-3ef7680c783357332f2ef093d817c7f2"
+    ],
+    "count": 1,
+    "create_time": 1773711438,
+    "update_time": 1773711438,
+    "_id": "Constitution of the People's Republic of China<SEP>Labor Law of the People's Republic of China"
+  },
+  "Labor Rights<SEP>Workers": {
+    "chunk_ids": [
+      "chunk-3ef7680c783357332f2ef093d817c7f2"
+    ],
+    "count": 1,
+    "create_time": 1773711438,
+    "update_time": 1773711438,
+    "_id": "Labor Rights<SEP>Workers"
+  },
+  "Labor Obligations<SEP>Workers": {
+    "chunk_ids": [
+      "chunk-3ef7680c783357332f2ef093d817c7f2"
+    ],
+    "count": 1,
+    "create_time": 1773711438,
+    "update_time": 1773711438,
+    "_id": "Labor Obligations<SEP>Workers"
+  },
+  "People's Republic of China<SEP>Workers": {
+    "chunk_ids": [
+      "chunk-3ef7680c783357332f2ef093d817c7f2"
+    ],
+    "count": 1,
+    "create_time": 1773711439,
+    "update_time": 1773711439,
+    "_id": "People's Republic of China<SEP>Workers"
+  },
+  "Labor Law of the People's Republic of China<SEP>Workers": {
+    "chunk_ids": [
+      "chunk-3ef7680c783357332f2ef093d817c7f2"
+    ],
+    "count": 1,
+    "create_time": 1773711439,
+    "update_time": 1773711439,
+    "_id": "Labor Law of the People's Republic of China<SEP>Workers"
+  },
+  "Employers<SEP>Labor Law of the People's Republic of China": {
+    "chunk_ids": [
+      "chunk-3ef7680c783357332f2ef093d817c7f2"
+    ],
+    "count": 1,
+    "create_time": 1773711440,
+    "update_time": 1773711440,
+    "_id": "Employers<SEP>Labor Law of the People's Republic of China"
+  },
+  "Labor Law of the People's Republic of China<SEP>Socialist Market Economy": {
+    "chunk_ids": [
+      "chunk-3ef7680c783357332f2ef093d817c7f2"
+    ],
+    "count": 1,
+    "create_time": 1773711440,
+    "update_time": 1773711440,
+    "_id": "Labor Law of the People's Republic of China<SEP>Socialist Market Economy"
+  },
+  "Employers<SEP>Labor Regulations": {
+    "chunk_ids": [
+      "chunk-3ef7680c783357332f2ef093d817c7f2"
+    ],
+    "count": 1,
+    "create_time": 1773711440,
+    "update_time": 1773711440,
+    "_id": "Employers<SEP>Labor Regulations"
+  },
+  "Employers<SEP>People's Republic of China": {
+    "chunk_ids": [
+      "chunk-3ef7680c783357332f2ef093d817c7f2"
+    ],
+    "count": 1,
+    "create_time": 1773711440,
+    "update_time": 1773711440,
+    "_id": "Employers<SEP>People's Republic of China"
+  },
+  "Chapter One General Provisions<SEP>Labor Law of the People's Republic of China": {
+    "chunk_ids": [
+      "chunk-3ef7680c783357332f2ef093d817c7f2"
+    ],
+    "count": 1,
+    "create_time": 1773711441,
+    "update_time": 1773711441,
+    "_id": "Chapter One General Provisions<SEP>Labor Law of the People's Republic of China"
+  },
+  "Article 44<SEP>Employer": {
+    "chunk_ids": [
+      "chunk-eb26be1be6719b2d63eda122721b5d68"
+    ],
+    "count": 1,
+    "create_time": 1773711442,
+    "update_time": 1773711442,
+    "_id": "Article 44<SEP>Employer"
+  },
+  "Employer<SEP>Extended Working Hours": {
+    "chunk_ids": [
+      "chunk-eb26be1be6719b2d63eda122721b5d68"
+    ],
+    "count": 1,
+    "create_time": 1773711443,
+    "update_time": 1773711443,
+    "_id": "Employer<SEP>Extended Working Hours"
+  },
+  "Article 44<SEP>Worker": {
+    "chunk_ids": [
+      "chunk-eb26be1be6719b2d63eda122721b5d68"
+    ],
+    "count": 1,
+    "create_time": 1773711443,
+    "update_time": 1773711443,
+    "_id": "Article 44<SEP>Worker"
+  },
+  "Employer<SEP>Rest Day": {
+    "chunk_ids": [
+      "chunk-eb26be1be6719b2d63eda122721b5d68"
+    ],
+    "count": 1,
+    "create_time": 1773711443,
+    "update_time": 1773711443,
+    "_id": "Employer<SEP>Rest Day"
+  },
+  "Article 44<SEP>Labor Law of the People's Republic of China": {
+    "chunk_ids": [
+      "chunk-eb26be1be6719b2d63eda122721b5d68"
+    ],
+    "count": 1,
+    "create_time": 1773711443,
+    "update_time": 1773711443,
+    "_id": "Article 44<SEP>Labor Law of the People's Republic of China"
+  },
+  "Employer<SEP>Statutory Holiday": {
+    "chunk_ids": [
+      "chunk-eb26be1be6719b2d63eda122721b5d68",
+      "chunk-9ade40507636905dbb256fde347d4c4d"
+    ],
+    "count": 2,
+    "update_time": 1773711500,
+    "_id": "Employer<SEP>Statutory Holiday"
+  },
+  "Chinese Labor Law<SEP>Labor Union": {
+    "chunk_ids": [
+      "chunk-f1e934469e0af82604f570bd7744c5cb"
+    ],
+    "count": 1,
+    "create_time": 1773711458,
+    "update_time": 1773711458,
+    "_id": "Chinese Labor Law<SEP>Labor Union"
+  },
+  "Article 30<SEP>Labor Union": {
+    "chunk_ids": [
+      "chunk-f1e934469e0af82604f570bd7744c5cb"
+    ],
+    "count": 1,
+    "create_time": 1773711459,
+    "update_time": 1773711459,
+    "_id": "Article 30<SEP>Labor Union"
+  },
+  "Employer<SEP>Labor Union": {
+    "chunk_ids": [
+      "chunk-f1e934469e0af82604f570bd7744c5cb"
+    ],
+    "count": 1,
+    "create_time": 1773711459,
+    "update_time": 1773711459,
+    "_id": "Employer<SEP>Labor Union"
+  },
+  "Chinese Labor Law<SEP>Employer": {
+    "chunk_ids": [
+      "chunk-f1e934469e0af82604f570bd7744c5cb"
+    ],
+    "count": 1,
+    "create_time": 1773711460,
+    "update_time": 1773711460,
+    "_id": "Chinese Labor Law<SEP>Employer"
+  },
+  "Article 30<SEP>Employer": {
+    "chunk_ids": [
+      "chunk-f1e934469e0af82604f570bd7744c5cb"
+    ],
+    "count": 1,
+    "create_time": 1773711460,
+    "update_time": 1773711460,
+    "_id": "Article 30<SEP>Employer"
+  },
+  "Labor Law<SEP>Workers": {
+    "chunk_ids": [
+      "chunk-304f106d130307ad6bf0bdf62f720f8c"
+    ],
+    "count": 1,
+    "create_time": 1773711471,
+    "update_time": 1773711471,
+    "_id": "Labor Law<SEP>Workers"
+  },
+  "Labor Law<SEP>Other Laws and Administrative Regulations": {
+    "chunk_ids": [
+      "chunk-304f106d130307ad6bf0bdf62f720f8c"
+    ],
+    "count": 1,
+    "create_time": 1773711472,
+    "update_time": 1773711472,
+    "_id": "Labor Law<SEP>Other Laws and Administrative Regulations"
+  },
+  "Article 105<SEP>Labor Law": {
+    "chunk_ids": [
+      "chunk-304f106d130307ad6bf0bdf62f720f8c"
+    ],
+    "count": 1,
+    "create_time": 1773711472,
+    "update_time": 1773711472,
+    "_id": "Article 105<SEP>Labor Law"
+  },
+  "Employer<SEP>Worker": {
+    "chunk_ids": [
+      "chunk-15db89e812c6ec17f40e3e2ae7f1d0cd",
+      "chunk-7440e9a9d68a40eb06fc88eaf48bf3a0",
+      "chunk-900f9424a8f6a615634cfe7eb308739e",
+      "chunk-c1b224bc392defbea2ebc9ea123f70db",
+      "chunk-8bca3d7a5b26e41a901895456edf1d72",
+      "chunk-484ec462bb336f0faad2e38a9ab16421",
+      "chunk-11661d5949c7a4c46892595299c2a3db"
+    ],
+    "count": 7,
+    "update_time": 1773712204,
+    "_id": "Employer<SEP>Worker"
+  },
+  "Original Employer<SEP>Worker": {
+    "chunk_ids": [
+      "chunk-15db89e812c6ec17f40e3e2ae7f1d0cd"
+    ],
+    "count": 1,
+    "create_time": 1773711473,
+    "update_time": 1773711473,
+    "_id": "Original Employer<SEP>Worker"
+  },
+  "Economic Loss<SEP>Original Employer": {
+    "chunk_ids": [
+      "chunk-15db89e812c6ec17f40e3e2ae7f1d0cd"
+    ],
+    "count": 1,
+    "create_time": 1773711474,
+    "update_time": 1773711474,
+    "_id": "Economic Loss<SEP>Original Employer"
+  },
+  "Employer<SEP>Original Employer": {
+    "chunk_ids": [
+      "chunk-15db89e812c6ec17f40e3e2ae7f1d0cd"
+    ],
+    "count": 1,
+    "create_time": 1773711474,
+    "update_time": 1773711474,
+    "_id": "Employer<SEP>Original Employer"
+  },
+  "Employer<SEP>Joint and Several Liability": {
+    "chunk_ids": [
+      "chunk-15db89e812c6ec17f40e3e2ae7f1d0cd"
+    ],
+    "count": 1,
+    "create_time": 1773711475,
+    "update_time": 1773711475,
+    "_id": "Employer<SEP>Joint and Several Liability"
+  },
+  "Article 99<SEP>Employer": {
+    "chunk_ids": [
+      "chunk-15db89e812c6ec17f40e3e2ae7f1d0cd"
+    ],
+    "count": 1,
+    "create_time": 1773711475,
+    "update_time": 1773711475,
+    "_id": "Article 99<SEP>Employer"
+  },
+  "Article 99<SEP>Original Employer": {
+    "chunk_ids": [
+      "chunk-15db89e812c6ec17f40e3e2ae7f1d0cd"
+    ],
+    "count": 1,
+    "create_time": 1773711476,
+    "update_time": 1773711476,
+    "_id": "Article 99<SEP>Original Employer"
+  },
+  "Article 99<SEP>Economic Loss": {
+    "chunk_ids": [
+      "chunk-15db89e812c6ec17f40e3e2ae7f1d0cd"
+    ],
+    "count": 1,
+    "create_time": 1773711476,
+    "update_time": 1773711476,
+    "_id": "Article 99<SEP>Economic Loss"
+  },
+  "Employer<SEP>New Year's Day": {
+    "chunk_ids": [
+      "chunk-9ade40507636905dbb256fde347d4c4d"
+    ],
+    "count": 1,
+    "create_time": 1773711498,
+    "update_time": 1773711498,
+    "_id": "Employer<SEP>New Year's Day"
+  },
+  "Employer<SEP>Spring Festival": {
+    "chunk_ids": [
+      "chunk-9ade40507636905dbb256fde347d4c4d"
+    ],
+    "count": 1,
+    "create_time": 1773711499,
+    "update_time": 1773711499,
+    "_id": "Employer<SEP>Spring Festival"
+  },
+  "Employer<SEP>International Labor Day": {
+    "chunk_ids": [
+      "chunk-9ade40507636905dbb256fde347d4c4d"
+    ],
+    "count": 1,
+    "create_time": 1773711499,
+    "update_time": 1773711499,
+    "_id": "Employer<SEP>International Labor Day"
+  },
+  "Employer<SEP>National Day": {
+    "chunk_ids": [
+      "chunk-9ade40507636905dbb256fde347d4c4d"
+    ],
+    "count": 1,
+    "create_time": 1773711500,
+    "update_time": 1773711500,
+    "_id": "Employer<SEP>National Day"
+  },
+  "Article 40<SEP>Employer": {
+    "chunk_ids": [
+      "chunk-9ade40507636905dbb256fde347d4c4d"
+    ],
+    "count": 1,
+    "create_time": 1773711501,
+    "update_time": 1773711501,
+    "_id": "Article 40<SEP>Employer"
+  },
+  "Article 40<SEP>Worker": {
+    "chunk_ids": [
+      "chunk-9ade40507636905dbb256fde347d4c4d"
+    ],
+    "count": 1,
+    "create_time": 1773711501,
+    "update_time": 1773711501,
+    "_id": "Article 40<SEP>Worker"
+  },
+  "Article 40<SEP>New Year's Day": {
+    "chunk_ids": [
+      "chunk-9ade40507636905dbb256fde347d4c4d"
+    ],
+    "count": 1,
+    "create_time": 1773711502,
+    "update_time": 1773711502,
+    "_id": "Article 40<SEP>New Year's Day"
+  },
+  "Article 40<SEP>Spring Festival": {
+    "chunk_ids": [
+      "chunk-9ade40507636905dbb256fde347d4c4d"
+    ],
+    "count": 1,
+    "create_time": 1773711502,
+    "update_time": 1773711502,
+    "_id": "Article 40<SEP>Spring Festival"
+  },
+  "Article 40<SEP>International Labor Day": {
+    "chunk_ids": [
+      "chunk-9ade40507636905dbb256fde347d4c4d"
+    ],
+    "count": 1,
+    "create_time": 1773711503,
+    "update_time": 1773711503,
+    "_id": "Article 40<SEP>International Labor Day"
+  },
+  "Labor Contract Law<SEP>Laborer": {
+    "chunk_ids": [
+      "chunk-01ab560573c5cd878f4442fcbbac6cef",
+      "chunk-e07869d7cd11d05487d341eeabe67b63"
+    ],
+    "count": 2,
+    "update_time": 1773711630,
+    "_id": "Labor Contract Law<SEP>Laborer"
+  },
+  "Economic Loss<SEP>Unlawful Termination of Labor Contract": {
+    "chunk_ids": [
+      "chunk-01ab560573c5cd878f4442fcbbac6cef"
+    ],
+    "count": 1,
+    "create_time": 1773711503,
+    "update_time": 1773711503,
+    "_id": "Economic Loss<SEP>Unlawful Termination of Labor Contract"
+  },
+  "Compensation Liability<SEP>Economic Loss": {
+    "chunk_ids": [
+      "chunk-01ab560573c5cd878f4442fcbbac6cef"
+    ],
+    "count": 1,
+    "create_time": 1773711503,
+    "update_time": 1773711503,
+    "_id": "Compensation Liability<SEP>Economic Loss"
+  },
+  "Article 40<SEP>National Day": {
+    "chunk_ids": [
+      "chunk-9ade40507636905dbb256fde347d4c4d"
+    ],
+    "count": 1,
+    "create_time": 1773711503,
+    "update_time": 1773711503,
+    "_id": "Article 40<SEP>National Day"
+  },
+  "Employer<SEP>Laborer": {
+    "chunk_ids": [
+      "chunk-01ab560573c5cd878f4442fcbbac6cef",
+      "chunk-82eedbfc6978ce7b8284768afbfab33f",
+      "chunk-e07869d7cd11d05487d341eeabe67b63",
+      "chunk-29625ec97f3aa262c09d4aa1c862291b",
+      "chunk-c6768f8c1f0e359974ecafdba6b02c7c"
+    ],
+    "count": 5,
+    "update_time": 1773712186,
+    "_id": "Employer<SEP>Laborer"
+  },
+  "Article 102<SEP>Labor Contract Law": {
+    "chunk_ids": [
+      "chunk-01ab560573c5cd878f4442fcbbac6cef"
+    ],
+    "count": 1,
+    "create_time": 1773711503,
+    "update_time": 1773711503,
+    "_id": "Article 102<SEP>Labor Contract Law"
+  },
+  "Article 40<SEP>Statutory Holiday": {
+    "chunk_ids": [
+      "chunk-9ade40507636905dbb256fde347d4c4d"
+    ],
+    "count": 1,
+    "create_time": 1773711503,
+    "update_time": 1773711503,
+    "_id": "Article 40<SEP>Statutory Holiday"
+  },
+  "Breach of Confidentiality<SEP>Laborer": {
+    "chunk_ids": [
+      "chunk-01ab560573c5cd878f4442fcbbac6cef"
+    ],
+    "count": 1,
+    "create_time": 1773711504,
+    "update_time": 1773711504,
+    "_id": "Breach of Confidentiality<SEP>Laborer"
+  },
+  "Laborer<SEP>Unlawful Termination of Labor Contract": {
+    "chunk_ids": [
+      "chunk-01ab560573c5cd878f4442fcbbac6cef"
+    ],
+    "count": 1,
+    "create_time": 1773711505,
+    "update_time": 1773711505,
+    "_id": "Laborer<SEP>Unlawful Termination of Labor Contract"
+  },
+  "Breach of Confidentiality<SEP>Economic Loss": {
+    "chunk_ids": [
+      "chunk-01ab560573c5cd878f4442fcbbac6cef"
+    ],
+    "count": 1,
+    "create_time": 1773711505,
+    "update_time": 1773711505,
+    "_id": "Breach of Confidentiality<SEP>Economic Loss"
+  },
+  "National Paid Annual Leave System<SEP>Worker": {
+    "chunk_ids": [
+      "chunk-a8b98b69c20324f8a16d939573b5b8f0"
+    ],
+    "count": 1,
+    "create_time": 1773711515,
+    "update_time": 1773711515,
+    "_id": "National Paid Annual Leave System<SEP>Worker"
+  },
+  "National Paid Annual Leave System<SEP>State Council": {
+    "chunk_ids": [
+      "chunk-a8b98b69c20324f8a16d939573b5b8f0"
+    ],
+    "count": 1,
+    "create_time": 1773711515,
+    "update_time": 1773711515,
+    "_id": "National Paid Annual Leave System<SEP>State Council"
+  },
+  "Article 45<SEP>National Paid Annual Leave System": {
+    "chunk_ids": [
+      "chunk-a8b98b69c20324f8a16d939573b5b8f0"
+    ],
+    "count": 1,
+    "create_time": 1773711516,
+    "update_time": 1773711516,
+    "_id": "Article 45<SEP>National Paid Annual Leave System"
+  },
+  "Article 28<SEP>Labor Contract Law": {
+    "chunk_ids": [
+      "chunk-25702dd54870df07d3bedb29b9496851"
+    ],
+    "count": 1,
+    "create_time": 1773711518,
+    "update_time": 1773711518,
+    "_id": "Article 28<SEP>Labor Contract Law"
+  },
+  "Economic Compensation<SEP>Employer": {
+    "chunk_ids": [
+      "chunk-25702dd54870df07d3bedb29b9496851"
+    ],
+    "count": 1,
+    "create_time": 1773711519,
+    "update_time": 1773711519,
+    "_id": "Economic Compensation<SEP>Employer"
+  },
+  "Article 28<SEP>Employer": {
+    "chunk_ids": [
+      "chunk-25702dd54870df07d3bedb29b9496851"
+    ],
+    "count": 1,
+    "create_time": 1773711519,
+    "update_time": 1773711519,
+    "_id": "Article 28<SEP>Employer"
+  },
+  "Economic Compensation<SEP>National Regulations": {
+    "chunk_ids": [
+      "chunk-25702dd54870df07d3bedb29b9496851"
+    ],
+    "count": 1,
+    "create_time": 1773711519,
+    "update_time": 1773711519,
+    "_id": "Economic Compensation<SEP>National Regulations"
+  },
+  "Labor Safety and Health Facilities<SEP>National Standards": {
+    "chunk_ids": [
+      "chunk-ff0cf62a6db3fe1d75880bb84131de82"
+    ],
+    "count": 1,
+    "create_time": 1773711540,
+    "update_time": 1773711540,
+    "_id": "Labor Safety and Health Facilities<SEP>National Standards"
+  },
+  "Employee<SEP>Labor Contract": {
+    "chunk_ids": [
+      "chunk-f5cd7ed5505461fd7709fa8b54316269",
+      "chunk-5f221ff98ea22e9acb2603a0162c0526",
+      "chunk-c1a4ebf44debb9e60481cc178f07fa11"
+    ],
+    "count": 3,
+    "update_time": 1773712253,
+    "_id": "Employee<SEP>Labor Contract"
+  },
+  "Employer<SEP>Training": {
+    "chunk_ids": [
+      "chunk-f5cd7ed5505461fd7709fa8b54316269"
+    ],
+    "count": 1,
+    "create_time": 1773711542,
+    "update_time": 1773711542,
+    "_id": "Employer<SEP>Training"
+  },
+  "Employee<SEP>Medical Leave Period": {
+    "chunk_ids": [
+      "chunk-f5cd7ed5505461fd7709fa8b54316269"
+    ],
+    "count": 1,
+    "create_time": 1773711543,
+    "update_time": 1773711543,
+    "_id": "Employee<SEP>Medical Leave Period"
+  },
+  "Employer<SEP>Job Reassignment": {
+    "chunk_ids": [
+      "chunk-f5cd7ed5505461fd7709fa8b54316269"
+    ],
+    "count": 1,
+    "create_time": 1773711543,
+    "update_time": 1773711543,
+    "_id": "Employer<SEP>Job Reassignment"
+  },
+  "Article 26<SEP>Employer": {
+    "chunk_ids": [
+      "chunk-f5cd7ed5505461fd7709fa8b54316269"
+    ],
+    "count": 1,
+    "create_time": 1773711543,
+    "update_time": 1773711543,
+    "_id": "Article 26<SEP>Employer"
+  },
+  "Employee<SEP>Job Competency": {
+    "chunk_ids": [
+      "chunk-f5cd7ed5505461fd7709fa8b54316269"
+    ],
+    "count": 1,
+    "create_time": 1773711543,
+    "update_time": 1773711543,
+    "_id": "Employee<SEP>Job Competency"
+  },
+  "Article 26<SEP>Employee": {
+    "chunk_ids": [
+      "chunk-f5cd7ed5505461fd7709fa8b54316269"
+    ],
+    "count": 1,
+    "create_time": 1773711544,
+    "update_time": 1773711544,
+    "_id": "Article 26<SEP>Employee"
+  },
+  "Article 26<SEP>Labor Contract": {
+    "chunk_ids": [
+      "chunk-f5cd7ed5505461fd7709fa8b54316269"
+    ],
+    "count": 1,
+    "create_time": 1773711544,
+    "update_time": 1773711544,
+    "_id": "Article 26<SEP>Labor Contract"
+  },
+  "Labor Safety and Health Facilities<SEP>New Construction Projects": {
+    "chunk_ids": [
+      "chunk-ff0cf62a6db3fe1d75880bb84131de82"
+    ],
+    "count": 1,
+    "create_time": 1773711546,
+    "update_time": 1773711546,
+    "_id": "Labor Safety and Health Facilities<SEP>New Construction Projects"
+  },
+  "Labor Safety and Health Facilities<SEP>Renovation Projects": {
+    "chunk_ids": [
+      "chunk-ff0cf62a6db3fe1d75880bb84131de82"
+    ],
+    "count": 1,
+    "create_time": 1773711547,
+    "update_time": 1773711547,
+    "_id": "Labor Safety and Health Facilities<SEP>Renovation Projects"
+  },
+  "Expansion Projects<SEP>Labor Safety and Health Facilities": {
+    "chunk_ids": [
+      "chunk-ff0cf62a6db3fe1d75880bb84131de82"
+    ],
+    "count": 1,
+    "create_time": 1773711547,
+    "update_time": 1773711547,
+    "_id": "Expansion Projects<SEP>Labor Safety and Health Facilities"
+  },
+  "Labor Safety and Health Facilities<SEP>Main Engineering Works": {
+    "chunk_ids": [
+      "chunk-ff0cf62a6db3fe1d75880bb84131de82"
+    ],
+    "count": 1,
+    "create_time": 1773711548,
+    "update_time": 1773711548,
+    "_id": "Labor Safety and Health Facilities<SEP>Main Engineering Works"
+  },
+  "Article 53<SEP>Labor Safety and Health Facilities": {
+    "chunk_ids": [
+      "chunk-ff0cf62a6db3fe1d75880bb84131de82"
+    ],
+    "count": 1,
+    "create_time": 1773711549,
+    "update_time": 1773711549,
+    "_id": "Article 53<SEP>Labor Safety and Health Facilities"
+  },
+  "Article 53<SEP>National Standards": {
+    "chunk_ids": [
+      "chunk-ff0cf62a6db3fe1d75880bb84131de82"
+    ],
+    "count": 1,
+    "create_time": 1773711549,
+    "update_time": 1773711549,
+    "_id": "Article 53<SEP>National Standards"
+  },
+  "Article 53<SEP>New Construction Projects": {
+    "chunk_ids": [
+      "chunk-ff0cf62a6db3fe1d75880bb84131de82"
+    ],
+    "count": 1,
+    "create_time": 1773711550,
+    "update_time": 1773711550,
+    "_id": "Article 53<SEP>New Construction Projects"
+  },
+  "Article 53<SEP>Renovation Projects": {
+    "chunk_ids": [
+      "chunk-ff0cf62a6db3fe1d75880bb84131de82"
+    ],
+    "count": 1,
+    "create_time": 1773711550,
+    "update_time": 1773711550,
+    "_id": "Article 53<SEP>Renovation Projects"
+  },
+  "Article 53<SEP>Expansion Projects": {
+    "chunk_ids": [
+      "chunk-ff0cf62a6db3fe1d75880bb84131de82"
+    ],
+    "count": 1,
+    "create_time": 1773711550,
+    "update_time": 1773711550,
+    "_id": "Article 53<SEP>Expansion Projects"
+  },
+  "Article Thirty-One<SEP>Labor Contract": {
+    "chunk_ids": [
+      "chunk-82eedbfc6978ce7b8284768afbfab33f"
+    ],
+    "count": 1,
+    "create_time": 1773711559,
+    "update_time": 1773711559,
+    "_id": "Article Thirty-One<SEP>Labor Contract"
+  },
+  "Laborer<SEP>Thirty-Day Notice Period": {
+    "chunk_ids": [
+      "chunk-82eedbfc6978ce7b8284768afbfab33f"
+    ],
+    "count": 1,
+    "create_time": 1773711559,
+    "update_time": 1773711559,
+    "_id": "Laborer<SEP>Thirty-Day Notice Period"
+  },
+  "Laborer<SEP>Written Notice": {
+    "chunk_ids": [
+      "chunk-82eedbfc6978ce7b8284768afbfab33f"
+    ],
+    "count": 1,
+    "create_time": 1773711560,
+    "update_time": 1773711560,
+    "_id": "Laborer<SEP>Written Notice"
+  },
+  "Labor Administrative Department<SEP>People's Government at or Above the County Level": {
+    "chunk_ids": [
+      "chunk-6446a7689e729164af31e8ab0faafc8b"
+    ],
+    "count": 1,
+    "create_time": 1773711566,
+    "update_time": 1773711566,
+    "_id": "Labor Administrative Department<SEP>People's Government at or Above the County Level"
+  },
+  "Article 85<SEP>People's Government at or Above the County Level": {
+    "chunk_ids": [
+      "chunk-6446a7689e729164af31e8ab0faafc8b"
+    ],
+    "count": 1,
+    "create_time": 1773711566,
+    "update_time": 1773711566,
+    "_id": "Article 85<SEP>People's Government at or Above the County Level"
+  },
+  "Labor Administrative Department<SEP>Labor Law and Regulations": {
+    "chunk_ids": [
+      "chunk-6446a7689e729164af31e8ab0faafc8b"
+    ],
+    "count": 1,
+    "create_time": 1773711567,
+    "update_time": 1773711567,
+    "_id": "Labor Administrative Department<SEP>Labor Law and Regulations"
+  },
+  "Article 85<SEP>Labor Administrative Department": {
+    "chunk_ids": [
+      "chunk-6446a7689e729164af31e8ab0faafc8b"
+    ],
+    "count": 1,
+    "create_time": 1773711567,
+    "update_time": 1773711567,
+    "_id": "Article 85<SEP>Labor Administrative Department"
+  },
+  "Article 41<SEP>Article 42": {
+    "chunk_ids": [
+      "chunk-5144d09ac2f1a1e98af0cc571325d656"
+    ],
+    "count": 1,
+    "create_time": 1773711586,
+    "update_time": 1773711586,
+    "_id": "Article 41<SEP>Article 42"
+  },
+  "Natural Disaster<SEP>Workers' Life and Health": {
+    "chunk_ids": [
+      "chunk-5144d09ac2f1a1e98af0cc571325d656"
+    ],
+    "count": 1,
+    "create_time": 1773711586,
+    "update_time": 1773711586,
+    "_id": "Natural Disaster<SEP>Workers' Life and Health"
+  },
+  "Article 42<SEP>Natural Disaster": {
+    "chunk_ids": [
+      "chunk-5144d09ac2f1a1e98af0cc571325d656"
+    ],
+    "count": 1,
+    "create_time": 1773711586,
+    "update_time": 1773711586,
+    "_id": "Article 42<SEP>Natural Disaster"
+  },
+  "Equipment Failure<SEP>Public Interest": {
+    "chunk_ids": [
+      "chunk-5144d09ac2f1a1e98af0cc571325d656"
+    ],
+    "count": 1,
+    "create_time": 1773711586,
+    "update_time": 1773711586,
+    "_id": "Equipment Failure<SEP>Public Interest"
+  },
+  "Accident<SEP>Article 42": {
+    "chunk_ids": [
+      "chunk-5144d09ac2f1a1e98af0cc571325d656"
+    ],
+    "count": 1,
+    "create_time": 1773711587,
+    "update_time": 1773711587,
+    "_id": "Accident<SEP>Article 42"
+  },
+  "Article 42<SEP>Equipment Failure": {
+    "chunk_ids": [
+      "chunk-5144d09ac2f1a1e98af0cc571325d656"
+    ],
+    "count": 1,
+    "create_time": 1773711587,
+    "update_time": 1773711587,
+    "_id": "Article 42<SEP>Equipment Failure"
+  },
+  "Accident<SEP>Workers' Life and Health": {
+    "chunk_ids": [
+      "chunk-5144d09ac2f1a1e98af0cc571325d656"
+    ],
+    "count": 1,
+    "create_time": 1773711587,
+    "update_time": 1773711587,
+    "_id": "Accident<SEP>Workers' Life and Health"
+  },
+  "Article 42<SEP>Legal Provision": {
+    "chunk_ids": [
+      "chunk-5144d09ac2f1a1e98af0cc571325d656"
+    ],
+    "count": 1,
+    "create_time": 1773711588,
+    "update_time": 1773711588,
+    "_id": "Article 42<SEP>Legal Provision"
+  },
+  "Administrative Regulation<SEP>Article 42": {
+    "chunk_ids": [
+      "chunk-5144d09ac2f1a1e98af0cc571325d656"
+    ],
+    "count": 1,
+    "create_time": 1773711588,
+    "update_time": 1773711588,
+    "_id": "Administrative Regulation<SEP>Article 42"
+  },
+  "Article 42<SEP>Labor Law": {
+    "chunk_ids": [
+      "chunk-5144d09ac2f1a1e98af0cc571325d656"
+    ],
+    "count": 1,
+    "create_time": 1773711588,
+    "update_time": 1773711588,
+    "_id": "Article 42<SEP>Labor Law"
+  },
+  "Disabled Persons<SEP>Employment": {
+    "chunk_ids": [
+      "chunk-0c42492e507d3ed5394992be8206bb0c"
+    ],
+    "count": 1,
+    "create_time": 1773711596,
+    "update_time": 1773711596,
+    "_id": "Disabled Persons<SEP>Employment"
+  },
+  "Employment<SEP>Ethnic Minority Personnel": {
+    "chunk_ids": [
+      "chunk-0c42492e507d3ed5394992be8206bb0c"
+    ],
+    "count": 1,
+    "create_time": 1773711596,
+    "update_time": 1773711596,
+    "_id": "Employment<SEP>Ethnic Minority Personnel"
+  },
+  "Article Fourteen<SEP>Disabled Persons": {
+    "chunk_ids": [
+      "chunk-0c42492e507d3ed5394992be8206bb0c"
+    ],
+    "count": 1,
+    "create_time": 1773711596,
+    "update_time": 1773711596,
+    "_id": "Article Fourteen<SEP>Disabled Persons"
+  },
+  "Article Fourteen<SEP>Ethnic Minority Personnel": {
+    "chunk_ids": [
+      "chunk-0c42492e507d3ed5394992be8206bb0c"
+    ],
+    "count": 1,
+    "create_time": 1773711597,
+    "update_time": 1773711597,
+    "_id": "Article Fourteen<SEP>Ethnic Minority Personnel"
+  },
+  "Demobilized Military Personnel<SEP>Employment": {
+    "chunk_ids": [
+      "chunk-0c42492e507d3ed5394992be8206bb0c"
+    ],
+    "count": 1,
+    "create_time": 1773711597,
+    "update_time": 1773711597,
+    "_id": "Demobilized Military Personnel<SEP>Employment"
+  },
+  "Employment<SEP>Law and Regulations": {
+    "chunk_ids": [
+      "chunk-0c42492e507d3ed5394992be8206bb0c"
+    ],
+    "count": 1,
+    "create_time": 1773711597,
+    "update_time": 1773711597,
+    "_id": "Employment<SEP>Law and Regulations"
+  },
+  "Article Fourteen<SEP>Demobilized Military Personnel": {
+    "chunk_ids": [
+      "chunk-0c42492e507d3ed5394992be8206bb0c"
+    ],
+    "count": 1,
+    "create_time": 1773711597,
+    "update_time": 1773711597,
+    "_id": "Article Fourteen<SEP>Demobilized Military Personnel"
+  },
+  "State<SEP>Workers": {
+    "chunk_ids": [
+      "chunk-7a84ae174a5d852490f9ffb8bbcec291",
+      "chunk-1833eb6307e64f230db692d0cf7279ca",
+      "chunk-4854ca3e86ea91f91e6984abe5fcda52"
+    ],
+    "count": 3,
+    "update_time": 1773712338,
+    "_id": "State<SEP>Workers"
+  },
+  "Chapter Three<SEP>Labor Contract": {
+    "chunk_ids": [
+      "chunk-7a84ae174a5d852490f9ffb8bbcec291",
+      "chunk-d41ba7cc39eba05754bf473088deb752"
+    ],
+    "count": 2,
+    "update_time": 1773712170,
+    "_id": "Chapter Three<SEP>Labor Contract"
+  },
+  "Employment<SEP>Workers": {
+    "chunk_ids": [
+      "chunk-7a84ae174a5d852490f9ffb8bbcec291"
+    ],
+    "count": 1,
+    "create_time": 1773711612,
+    "update_time": 1773711612,
+    "_id": "Employment<SEP>Workers"
+  },
+  "Chapter Three<SEP>Collective Contract": {
+    "chunk_ids": [
+      "chunk-7a84ae174a5d852490f9ffb8bbcec291",
+      "chunk-d41ba7cc39eba05754bf473088deb752"
+    ],
+    "count": 2,
+    "update_time": 1773712171,
+    "_id": "Chapter Three<SEP>Collective Contract"
+  },
+  "Individual Business Operations<SEP>Workers": {
+    "chunk_ids": [
+      "chunk-7a84ae174a5d852490f9ffb8bbcec291"
+    ],
+    "count": 1,
+    "create_time": 1773711612,
+    "update_time": 1773711612,
+    "_id": "Individual Business Operations<SEP>Workers"
+  },
+  "Article 26<SEP>Labor Contract Law": {
+    "chunk_ids": [
+      "chunk-e07869d7cd11d05487d341eeabe67b63"
+    ],
+    "count": 1,
+    "create_time": 1773711626,
+    "update_time": 1773711626,
+    "_id": "Article 26<SEP>Labor Contract Law"
+  },
+  "Article 27<SEP>Labor Contract Law": {
+    "chunk_ids": [
+      "chunk-e07869d7cd11d05487d341eeabe67b63"
+    ],
+    "count": 1,
+    "create_time": 1773711627,
+    "update_time": 1773711627,
+    "_id": "Article 27<SEP>Labor Contract Law"
+  },
+  "Laborer<SEP>Occupational Disease": {
+    "chunk_ids": [
+      "chunk-e07869d7cd11d05487d341eeabe67b63",
+      "chunk-e1005fcbd1306706f050d1a4d82ca943"
+    ],
+    "count": 2,
+    "update_time": 1773711871,
+    "_id": "Laborer<SEP>Occupational Disease"
+  },
+  "Laborer<SEP>Work-Related Injury": {
+    "chunk_ids": [
+      "chunk-e07869d7cd11d05487d341eeabe67b63",
+      "chunk-e1005fcbd1306706f050d1a4d82ca943"
+    ],
+    "count": 2,
+    "update_time": 1773711870,
+    "_id": "Laborer<SEP>Work-Related Injury"
+  },
+  "Laborer<SEP>Medical Leave Period": {
+    "chunk_ids": [
+      "chunk-e07869d7cd11d05487d341eeabe67b63"
+    ],
+    "count": 1,
+    "create_time": 1773711628,
+    "update_time": 1773711628,
+    "_id": "Laborer<SEP>Medical Leave Period"
+  },
+  "Social Insurance Fund<SEP>State Personnel": {
+    "chunk_ids": [
+      "chunk-d7f12b62d488f4ca39157007ee023697"
+    ],
+    "count": 1,
+    "create_time": 1773711628,
+    "update_time": 1773711628,
+    "_id": "Social Insurance Fund<SEP>State Personnel"
+  },
+  "Laborer<SEP>Pregnancy Period": {
+    "chunk_ids": [
+      "chunk-e07869d7cd11d05487d341eeabe67b63"
+    ],
+    "count": 1,
+    "create_time": 1773711628,
+    "update_time": 1773711628,
+    "_id": "Laborer<SEP>Pregnancy Period"
+  },
+  "Criminal Liability<SEP>State Personnel": {
+    "chunk_ids": [
+      "chunk-d7f12b62d488f4ca39157007ee023697"
+    ],
+    "count": 1,
+    "create_time": 1773711629,
+    "update_time": 1773711629,
+    "_id": "Criminal Liability<SEP>State Personnel"
+  },
+  "Social Insurance Fund<SEP>Social Insurance Fund Management Institutions Staff": {
+    "chunk_ids": [
+      "chunk-d7f12b62d488f4ca39157007ee023697"
+    ],
+    "count": 1,
+    "create_time": 1773711629,
+    "update_time": 1773711629,
+    "_id": "Social Insurance Fund<SEP>Social Insurance Fund Management Institutions Staff"
+  },
+  "Laborer<SEP>Maternity Period": {
+    "chunk_ids": [
+      "chunk-e07869d7cd11d05487d341eeabe67b63"
+    ],
+    "count": 1,
+    "create_time": 1773711629,
+    "update_time": 1773711629,
+    "_id": "Laborer<SEP>Maternity Period"
+  },
+  "Laborer<SEP>Nursing Period": {
+    "chunk_ids": [
+      "chunk-e07869d7cd11d05487d341eeabe67b63"
+    ],
+    "count": 1,
+    "create_time": 1773711629,
+    "update_time": 1773711629,
+    "_id": "Laborer<SEP>Nursing Period"
+  },
+  "Article 104<SEP>State Personnel": {
+    "chunk_ids": [
+      "chunk-d7f12b62d488f4ca39157007ee023697"
+    ],
+    "count": 1,
+    "create_time": 1773711629,
+    "update_time": 1773711629,
+    "_id": "Article 104<SEP>State Personnel"
+  },
+  "Criminal Liability<SEP>Social Insurance Fund Management Institutions Staff": {
+    "chunk_ids": [
+      "chunk-d7f12b62d488f4ca39157007ee023697"
+    ],
+    "count": 1,
+    "create_time": 1773711629,
+    "update_time": 1773711629,
+    "_id": "Criminal Liability<SEP>Social Insurance Fund Management Institutions Staff"
+  },
+  "Article 104<SEP>Social Insurance Fund Management Institutions Staff": {
+    "chunk_ids": [
+      "chunk-d7f12b62d488f4ca39157007ee023697"
+    ],
+    "count": 1,
+    "create_time": 1773711630,
+    "update_time": 1773711630,
+    "_id": "Article 104<SEP>Social Insurance Fund Management Institutions Staff"
+  },
+  "Article 29<SEP>Labor Contract Law": {
+    "chunk_ids": [
+      "chunk-e07869d7cd11d05487d341eeabe67b63"
+    ],
+    "count": 1,
+    "create_time": 1773711630,
+    "update_time": 1773711630,
+    "_id": "Article 29<SEP>Labor Contract Law"
+  },
+  "Article 104<SEP>Social Insurance Fund": {
+    "chunk_ids": [
+      "chunk-d7f12b62d488f4ca39157007ee023697"
+    ],
+    "count": 1,
+    "create_time": 1773711630,
+    "update_time": 1773711630,
+    "_id": "Article 104<SEP>Social Insurance Fund"
+  },
+  "Article 46<SEP>Wage Distribution": {
+    "chunk_ids": [
+      "chunk-3ccd272c055ffadcfc0230544b262015"
+    ],
+    "count": 1,
+    "create_time": 1773711646,
+    "update_time": 1773711646,
+    "_id": "Article 46<SEP>Wage Distribution"
+  },
+  "Distribution According to Labor<SEP>Wage Distribution": {
+    "chunk_ids": [
+      "chunk-3ccd272c055ffadcfc0230544b262015"
+    ],
+    "count": 1,
+    "create_time": 1773711646,
+    "update_time": 1773711646,
+    "_id": "Distribution According to Labor<SEP>Wage Distribution"
+  },
+  "Article 46<SEP>Equal Pay for Equal Work": {
+    "chunk_ids": [
+      "chunk-3ccd272c055ffadcfc0230544b262015"
+    ],
+    "count": 1,
+    "create_time": 1773711646,
+    "update_time": 1773711646,
+    "_id": "Article 46<SEP>Equal Pay for Equal Work"
+  },
+  "Article 46<SEP>Wage Level Adjustment": {
+    "chunk_ids": [
+      "chunk-3ccd272c055ffadcfc0230544b262015"
+    ],
+    "count": 1,
+    "create_time": 1773711647,
+    "update_time": 1773711647,
+    "_id": "Article 46<SEP>Wage Level Adjustment"
+  },
+  "Article 46<SEP>National Macro-Control of Total Wages": {
+    "chunk_ids": [
+      "chunk-3ccd272c055ffadcfc0230544b262015"
+    ],
+    "count": 1,
+    "create_time": 1773711647,
+    "update_time": 1773711647,
+    "_id": "Article 46<SEP>National Macro-Control of Total Wages"
+  },
+  "Equality and Voluntariness<SEP>Labor Contract": {
+    "chunk_ids": [
+      "chunk-c60e5be371dfa1f9ec2c3f41c6c51bea"
+    ],
+    "count": 1,
+    "create_time": 1773711650,
+    "update_time": 1773711650,
+    "_id": "Equality and Voluntariness<SEP>Labor Contract"
+  },
+  "Labor Contract<SEP>Mutual Consultation": {
+    "chunk_ids": [
+      "chunk-c60e5be371dfa1f9ec2c3f41c6c51bea"
+    ],
+    "count": 1,
+    "create_time": 1773711650,
+    "update_time": 1773711650,
+    "_id": "Labor Contract<SEP>Mutual Consultation"
+  },
+  "Labor Contract<SEP>Legal and Administrative Regulations": {
+    "chunk_ids": [
+      "chunk-c60e5be371dfa1f9ec2c3f41c6c51bea"
+    ],
+    "count": 1,
+    "create_time": 1773711651,
+    "update_time": 1773711651,
+    "_id": "Labor Contract<SEP>Legal and Administrative Regulations"
+  },
+  "Article Seventeen<SEP>Labor Contract": {
+    "chunk_ids": [
+      "chunk-c60e5be371dfa1f9ec2c3f41c6c51bea"
+    ],
+    "count": 1,
+    "create_time": 1773711651,
+    "update_time": 1773711651,
+    "_id": "Article Seventeen<SEP>Labor Contract"
+  },
+  "Labor Contract<SEP>Labor Contract Term": {
+    "chunk_ids": [
+      "chunk-d2c130666c9b8351b89ec909dc97396f"
+    ],
+    "count": 1,
+    "create_time": 1773711669,
+    "update_time": 1773711669,
+    "_id": "Labor Contract<SEP>Labor Contract Term"
+  },
+  "Job Content<SEP>Labor Contract": {
+    "chunk_ids": [
+      "chunk-d2c130666c9b8351b89ec909dc97396f"
+    ],
+    "count": 1,
+    "create_time": 1773711669,
+    "update_time": 1773711669,
+    "_id": "Job Content<SEP>Labor Contract"
+  },
+  "Labor Contract<SEP>Labor Protection and Working Conditions": {
+    "chunk_ids": [
+      "chunk-d2c130666c9b8351b89ec909dc97396f"
+    ],
+    "count": 1,
+    "create_time": 1773711670,
+    "update_time": 1773711670,
+    "_id": "Labor Contract<SEP>Labor Protection and Working Conditions"
+  },
+  "Employer<SEP>Labor Safety and Health Conditions": {
+    "chunk_ids": [
+      "chunk-5e04f20b8b7b250ab2854ffab0ad26c2"
+    ],
+    "count": 1,
+    "create_time": 1773711670,
+    "update_time": 1773711670,
+    "_id": "Employer<SEP>Labor Safety and Health Conditions"
+  },
+  "Occupational Hazard Job<SEP>Worker": {
+    "chunk_ids": [
+      "chunk-5e04f20b8b7b250ab2854ffab0ad26c2"
+    ],
+    "count": 1,
+    "create_time": 1773711670,
+    "update_time": 1773711670,
+    "_id": "Occupational Hazard Job<SEP>Worker"
+  },
+  "Labor Protective Equipment<SEP>National Regulations": {
+    "chunk_ids": [
+      "chunk-5e04f20b8b7b250ab2854ffab0ad26c2"
+    ],
+    "count": 1,
+    "create_time": 1773711670,
+    "update_time": 1773711670,
+    "_id": "Labor Protective Equipment<SEP>National Regulations"
+  },
+  "Regular Health Examination<SEP>Worker": {
+    "chunk_ids": [
+      "chunk-5e04f20b8b7b250ab2854ffab0ad26c2"
+    ],
+    "count": 1,
+    "create_time": 1773711670,
+    "update_time": 1773711670,
+    "_id": "Regular Health Examination<SEP>Worker"
+  },
+  "Labor Contract<SEP>Labor Remuneration": {
+    "chunk_ids": [
+      "chunk-d2c130666c9b8351b89ec909dc97396f"
+    ],
+    "count": 1,
+    "create_time": 1773711670,
+    "update_time": 1773711670,
+    "_id": "Labor Contract<SEP>Labor Remuneration"
+  },
+  "Employer<SEP>Labor Protective Equipment": {
+    "chunk_ids": [
+      "chunk-5e04f20b8b7b250ab2854ffab0ad26c2"
+    ],
+    "count": 1,
+    "create_time": 1773711671,
+    "update_time": 1773711671,
+    "_id": "Employer<SEP>Labor Protective Equipment"
+  },
+  "Labor Contract<SEP>Labor Discipline": {
+    "chunk_ids": [
+      "chunk-d2c130666c9b8351b89ec909dc97396f"
+    ],
+    "count": 1,
+    "create_time": 1773711671,
+    "update_time": 1773711671,
+    "_id": "Labor Contract<SEP>Labor Discipline"
+  },
+  "National Regulations<SEP>Regular Health Examination": {
+    "chunk_ids": [
+      "chunk-5e04f20b8b7b250ab2854ffab0ad26c2"
+    ],
+    "count": 1,
+    "create_time": 1773711671,
+    "update_time": 1773711671,
+    "_id": "National Regulations<SEP>Regular Health Examination"
+  },
+  "Employer<SEP>Regular Health Examination": {
+    "chunk_ids": [
+      "chunk-5e04f20b8b7b250ab2854ffab0ad26c2"
+    ],
+    "count": 1,
+    "create_time": 1773711672,
+    "update_time": 1773711672,
+    "_id": "Employer<SEP>Regular Health Examination"
+  },
+  "Labor Safety and Health Conditions<SEP>National Regulations": {
+    "chunk_ids": [
+      "chunk-5e04f20b8b7b250ab2854ffab0ad26c2"
+    ],
+    "count": 1,
+    "create_time": 1773711672,
+    "update_time": 1773711672,
+    "_id": "Labor Safety and Health Conditions<SEP>National Regulations"
+  },
+  "Conditions for Termination of Labor Contract<SEP>Labor Contract": {
+    "chunk_ids": [
+      "chunk-d2c130666c9b8351b89ec909dc97396f"
+    ],
+    "count": 1,
+    "create_time": 1773711672,
+    "update_time": 1773711672,
+    "_id": "Conditions for Termination of Labor Contract<SEP>Labor Contract"
+  },
+  "Labor Contract<SEP>Liability for Breach of Labor Contract": {
+    "chunk_ids": [
+      "chunk-d2c130666c9b8351b89ec909dc97396f"
+    ],
+    "count": 1,
+    "create_time": 1773711672,
+    "update_time": 1773711672,
+    "_id": "Labor Contract<SEP>Liability for Breach of Labor Contract"
+  },
+  "Employer<SEP>National Regulations": {
+    "chunk_ids": [
+      "chunk-5e04f20b8b7b250ab2854ffab0ad26c2"
+    ],
+    "count": 1,
+    "create_time": 1773711673,
+    "update_time": 1773711673,
+    "_id": "Employer<SEP>National Regulations"
+  },
+  "Article 19<SEP>Labor Contract": {
+    "chunk_ids": [
+      "chunk-d2c130666c9b8351b89ec909dc97396f"
+    ],
+    "count": 1,
+    "create_time": 1773711673,
+    "update_time": 1773711673,
+    "_id": "Article 19<SEP>Labor Contract"
+  },
+  "China<SEP>State Council Labor Administration Department": {
+    "chunk_ids": [
+      "chunk-e890e90dedc2136610b35e3511ee4bff"
+    ],
+    "count": 1,
+    "create_time": 1773711686,
+    "update_time": 1773711686,
+    "_id": "China<SEP>State Council Labor Administration Department"
+  },
+  "Administrative Region<SEP>Local People's Government Labor Administration Department": {
+    "chunk_ids": [
+      "chunk-e890e90dedc2136610b35e3511ee4bff"
+    ],
+    "count": 1,
+    "create_time": 1773711686,
+    "update_time": 1773711686,
+    "_id": "Administrative Region<SEP>Local People's Government Labor Administration Department"
+  },
+  "Article Nine<SEP>State Council Labor Administration Department": {
+    "chunk_ids": [
+      "chunk-e890e90dedc2136610b35e3511ee4bff"
+    ],
+    "count": 1,
+    "create_time": 1773711687,
+    "update_time": 1773711687,
+    "_id": "Article Nine<SEP>State Council Labor Administration Department"
+  },
+  "Article Nine<SEP>Local People's Government Labor Administration Department": {
+    "chunk_ids": [
+      "chunk-e890e90dedc2136610b35e3511ee4bff"
+    ],
+    "count": 1,
+    "create_time": 1773711688,
+    "update_time": 1773711688,
+    "_id": "Article Nine<SEP>Local People's Government Labor Administration Department"
+  },
+  "Employer<SEP>Invalid Employment Contract": {
+    "chunk_ids": [
+      "chunk-73b6c9297c7a7da453da3a92e368350a"
+    ],
+    "count": 1,
+    "create_time": 1773711689,
+    "update_time": 1773711689,
+    "_id": "Employer<SEP>Invalid Employment Contract"
+  },
+  "Employee<SEP>Invalid Employment Contract": {
+    "chunk_ids": [
+      "chunk-73b6c9297c7a7da453da3a92e368350a"
+    ],
+    "count": 1,
+    "create_time": 1773711690,
+    "update_time": 1773711690,
+    "_id": "Employee<SEP>Invalid Employment Contract"
+  },
+  "Compensation Liability<SEP>Employer": {
+    "chunk_ids": [
+      "chunk-73b6c9297c7a7da453da3a92e368350a",
+      "chunk-add3425ac8339584dcc65694586b9a03"
+    ],
+    "count": 2,
+    "update_time": 1773711879,
+    "_id": "Compensation Liability<SEP>Employer"
+  },
+  "Article 97<SEP>Invalid Employment Contract": {
+    "chunk_ids": [
+      "chunk-73b6c9297c7a7da453da3a92e368350a"
+    ],
+    "count": 1,
+    "create_time": 1773711690,
+    "update_time": 1773711690,
+    "_id": "Article 97<SEP>Invalid Employment Contract"
+  },
+  "Article 97<SEP>Employer": {
+    "chunk_ids": [
+      "chunk-73b6c9297c7a7da453da3a92e368350a"
+    ],
+    "count": 1,
+    "create_time": 1773711696,
+    "update_time": 1773711696,
+    "_id": "Article 97<SEP>Employer"
+  },
+  "Article 97<SEP>Employee": {
+    "chunk_ids": [
+      "chunk-73b6c9297c7a7da453da3a92e368350a"
+    ],
+    "count": 1,
+    "create_time": 1773711697,
+    "update_time": 1773711697,
+    "_id": "Article 97<SEP>Employee"
+  },
+  "Collective Contract<SEP>Enterprise": {
+    "chunk_ids": [
+      "chunk-96ddd1389a8d1afebfed70b7a0051cd8",
+      "chunk-31e42e6a06e7bc74c1fb5360756f9132"
+    ],
+    "count": 2,
+    "update_time": 1773712233,
+    "_id": "Collective Contract<SEP>Enterprise"
+  },
+  "Collective Contract<SEP>Employee": {
+    "chunk_ids": [
+      "chunk-96ddd1389a8d1afebfed70b7a0051cd8"
+    ],
+    "count": 1,
+    "create_time": 1773711712,
+    "update_time": 1773711712,
+    "_id": "Collective Contract<SEP>Employee"
+  },
+  "Collective Contract<SEP>Individual Labor Contract": {
+    "chunk_ids": [
+      "chunk-96ddd1389a8d1afebfed70b7a0051cd8"
+    ],
+    "count": 1,
+    "create_time": 1773711713,
+    "update_time": 1773711713,
+    "_id": "Collective Contract<SEP>Individual Labor Contract"
+  },
+  "Article 35<SEP>Collective Contract": {
+    "chunk_ids": [
+      "chunk-96ddd1389a8d1afebfed70b7a0051cd8"
+    ],
+    "count": 1,
+    "create_time": 1773711713,
+    "update_time": 1773711713,
+    "_id": "Article 35<SEP>Collective Contract"
+  },
+  "Article 35<SEP>Enterprise": {
+    "chunk_ids": [
+      "chunk-96ddd1389a8d1afebfed70b7a0051cd8"
+    ],
+    "count": 1,
+    "create_time": 1773711714,
+    "update_time": 1773711714,
+    "_id": "Article 35<SEP>Enterprise"
+  },
+  "Article 35<SEP>Employee": {
+    "chunk_ids": [
+      "chunk-96ddd1389a8d1afebfed70b7a0051cd8"
+    ],
+    "count": 1,
+    "create_time": 1773711714,
+    "update_time": 1773711714,
+    "_id": "Article 35<SEP>Employee"
+  },
+  "Laborer<SEP>Probation Period": {
+    "chunk_ids": [
+      "chunk-0f133335b434209fb07a50ad3e0a2f33"
+    ],
+    "count": 1,
+    "create_time": 1773711714,
+    "update_time": 1773711714,
+    "_id": "Laborer<SEP>Probation Period"
+  },
+  "Labor Discipline<SEP>Laborer": {
+    "chunk_ids": [
+      "chunk-0f133335b434209fb07a50ad3e0a2f33"
+    ],
+    "count": 1,
+    "create_time": 1773711715,
+    "update_time": 1773711715,
+    "_id": "Labor Discipline<SEP>Laborer"
+  },
+  "Article 25<SEP>Labor Contract": {
+    "chunk_ids": [
+      "chunk-0f133335b434209fb07a50ad3e0a2f33"
+    ],
+    "count": 1,
+    "create_time": 1773711715,
+    "update_time": 1773711715,
+    "_id": "Article 25<SEP>Labor Contract"
+  },
+  "Article 25<SEP>Chinese Labor Law": {
+    "chunk_ids": [
+      "chunk-0f133335b434209fb07a50ad3e0a2f33"
+    ],
+    "count": 1,
+    "create_time": 1773711716,
+    "update_time": 1773711716,
+    "_id": "Article 25<SEP>Chinese Labor Law"
+  },
+  "Employer's Rules and Regulations<SEP>Laborer": {
+    "chunk_ids": [
+      "chunk-0f133335b434209fb07a50ad3e0a2f33"
+    ],
+    "count": 1,
+    "create_time": 1773711716,
+    "update_time": 1773711716,
+    "_id": "Employer's Rules and Regulations<SEP>Laborer"
+  },
+  "Gross Negligence<SEP>Laborer": {
+    "chunk_ids": [
+      "chunk-0f133335b434209fb07a50ad3e0a2f33"
+    ],
+    "count": 1,
+    "create_time": 1773711716,
+    "update_time": 1773711716,
+    "_id": "Gross Negligence<SEP>Laborer"
+  },
+  "Embezzlement and Fraud<SEP>Laborer": {
+    "chunk_ids": [
+      "chunk-0f133335b434209fb07a50ad3e0a2f33"
+    ],
+    "count": 1,
+    "create_time": 1773711717,
+    "update_time": 1773711717,
+    "_id": "Embezzlement and Fraud<SEP>Laborer"
+  },
+  "Criminal Liability<SEP>Laborer": {
+    "chunk_ids": [
+      "chunk-0f133335b434209fb07a50ad3e0a2f33"
+    ],
+    "count": 1,
+    "create_time": 1773711717,
+    "update_time": 1773711717,
+    "_id": "Criminal Liability<SEP>Laborer"
+  },
+  "Chapter Two<SEP>Employment Promotion": {
+    "chunk_ids": [
+      "chunk-1ee1394b419d5bc0695ef81391d0c4b8"
+    ],
+    "count": 1,
+    "create_time": 1773711724,
+    "update_time": 1773711724,
+    "_id": "Chapter Two<SEP>Employment Promotion"
+  },
+  "Employment Rights<SEP>Women": {
+    "chunk_ids": [
+      "chunk-0025690c407466c1d21fda9ca2cd0b52"
+    ],
+    "count": 1,
+    "create_time": 1773711729,
+    "update_time": 1773711729,
+    "_id": "Employment Rights<SEP>Women"
+  },
+  "Article Thirteen<SEP>Women": {
+    "chunk_ids": [
+      "chunk-0025690c407466c1d21fda9ca2cd0b52"
+    ],
+    "count": 1,
+    "create_time": 1773711729,
+    "update_time": 1773711729,
+    "_id": "Article Thirteen<SEP>Women"
+  },
+  "Employment Rights<SEP>Men": {
+    "chunk_ids": [
+      "chunk-0025690c407466c1d21fda9ca2cd0b52"
+    ],
+    "count": 1,
+    "create_time": 1773711729,
+    "update_time": 1773711729,
+    "_id": "Employment Rights<SEP>Men"
+  },
+  "Article Thirteen<SEP>Men": {
+    "chunk_ids": [
+      "chunk-0025690c407466c1d21fda9ca2cd0b52"
+    ],
+    "count": 1,
+    "create_time": 1773711730,
+    "update_time": 1773711730,
+    "_id": "Article Thirteen<SEP>Men"
+  },
+  "Employment Rights<SEP>State-Designated Occupations": {
+    "chunk_ids": [
+      "chunk-0025690c407466c1d21fda9ca2cd0b52"
+    ],
+    "count": 1,
+    "create_time": 1773711730,
+    "update_time": 1773711730,
+    "_id": "Employment Rights<SEP>State-Designated Occupations"
+  },
+  "Article Thirteen<SEP>Employment Recruitment": {
+    "chunk_ids": [
+      "chunk-0025690c407466c1d21fda9ca2cd0b52"
+    ],
+    "count": 1,
+    "create_time": 1773711730,
+    "update_time": 1773711730,
+    "_id": "Article Thirteen<SEP>Employment Recruitment"
+  },
+  "Employer<SEP>Labor Safety and Health System": {
+    "chunk_ids": [
+      "chunk-a07aa9ee7ca74e51c0e67e4531d28af0"
+    ],
+    "count": 1,
+    "create_time": 1773711741,
+    "update_time": 1773711741,
+    "_id": "Employer<SEP>Labor Safety and Health System"
+  },
+  "Employer<SEP>National Labor Safety and Health Regulations and Standards": {
+    "chunk_ids": [
+      "chunk-a07aa9ee7ca74e51c0e67e4531d28af0"
+    ],
+    "count": 1,
+    "create_time": 1773711741,
+    "update_time": 1773711741,
+    "_id": "Employer<SEP>National Labor Safety and Health Regulations and Standards"
+  },
+  "Employer<SEP>Labor Safety and Health Education": {
+    "chunk_ids": [
+      "chunk-a07aa9ee7ca74e51c0e67e4531d28af0"
+    ],
+    "count": 1,
+    "create_time": 1773711742,
+    "update_time": 1773711742,
+    "_id": "Employer<SEP>Labor Safety and Health Education"
+  },
+  "Employer<SEP>Workplace Accident Prevention": {
+    "chunk_ids": [
+      "chunk-a07aa9ee7ca74e51c0e67e4531d28af0"
+    ],
+    "count": 1,
+    "create_time": 1773711742,
+    "update_time": 1773711742,
+    "_id": "Employer<SEP>Workplace Accident Prevention"
+  },
+  "Employer<SEP>Occupational Hazard Reduction": {
+    "chunk_ids": [
+      "chunk-a07aa9ee7ca74e51c0e67e4531d28af0"
+    ],
+    "count": 1,
+    "create_time": 1773711743,
+    "update_time": 1773711743,
+    "_id": "Employer<SEP>Occupational Hazard Reduction"
+  },
+  "Article 52<SEP>Employer": {
+    "chunk_ids": [
+      "chunk-a07aa9ee7ca74e51c0e67e4531d28af0"
+    ],
+    "count": 1,
+    "create_time": 1773711743,
+    "update_time": 1773711743,
+    "_id": "Article 52<SEP>Employer"
+  },
+  "Article 107<SEP>The Law": {
+    "chunk_ids": [
+      "chunk-d7bbdc9c932c7302eba4fe28c810a8b7"
+    ],
+    "count": 1,
+    "create_time": 1773711745,
+    "update_time": 1773711745,
+    "_id": "Article 107<SEP>The Law"
+  },
+  "Article 107<SEP>January 1, 1995": {
+    "chunk_ids": [
+      "chunk-d7bbdc9c932c7302eba4fe28c810a8b7"
+    ],
+    "count": 1,
+    "create_time": 1773711745,
+    "update_time": 1773711745,
+    "_id": "Article 107<SEP>January 1, 1995"
+  },
+  "Labor Contract<SEP>Worker": {
+    "chunk_ids": [
+      "chunk-7440e9a9d68a40eb06fc88eaf48bf3a0"
+    ],
+    "count": 1,
+    "create_time": 1773711760,
+    "update_time": 1773711760,
+    "_id": "Labor Contract<SEP>Worker"
+  },
+  "Labor Contract<SEP>Labor Relationship": {
+    "chunk_ids": [
+      "chunk-7440e9a9d68a40eb06fc88eaf48bf3a0"
+    ],
+    "count": 1,
+    "create_time": 1773711761,
+    "update_time": 1773711761,
+    "_id": "Labor Contract<SEP>Labor Relationship"
+  },
+  "Article Sixteen<SEP>Labor Contract": {
+    "chunk_ids": [
+      "chunk-7440e9a9d68a40eb06fc88eaf48bf3a0"
+    ],
+    "count": 1,
+    "create_time": 1773711761,
+    "update_time": 1773711761,
+    "_id": "Article Sixteen<SEP>Labor Contract"
+  },
+  "Article Sixteen<SEP>Worker": {
+    "chunk_ids": [
+      "chunk-7440e9a9d68a40eb06fc88eaf48bf3a0"
+    ],
+    "count": 1,
+    "create_time": 1773711762,
+    "update_time": 1773711762,
+    "_id": "Article Sixteen<SEP>Worker"
+  },
+  "Article Sixteen<SEP>Employer": {
+    "chunk_ids": [
+      "chunk-7440e9a9d68a40eb06fc88eaf48bf3a0"
+    ],
+    "count": 1,
+    "create_time": 1773711762,
+    "update_time": 1773711762,
+    "_id": "Article Sixteen<SEP>Employer"
+  },
+  "Employer<SEP>Minor Under Sixteen": {
+    "chunk_ids": [
+      "chunk-982fdc171e24d19c2286c2a017fe7f13",
+      "chunk-49dfcfe749ae5b7a3d964afb5d16559b"
+    ],
+    "count": 2,
+    "update_time": 1773711792,
+    "_id": "Employer<SEP>Minor Under Sixteen"
+  },
+  "Cultural and Artistic Units<SEP>Minor Under Sixteen": {
+    "chunk_ids": [
+      "chunk-982fdc171e24d19c2286c2a017fe7f13"
+    ],
+    "count": 1,
+    "create_time": 1773711773,
+    "update_time": 1773711773,
+    "_id": "Cultural and Artistic Units<SEP>Minor Under Sixteen"
+  },
+  "National Regulations<SEP>Sports Units": {
+    "chunk_ids": [
+      "chunk-982fdc171e24d19c2286c2a017fe7f13"
+    ],
+    "count": 1,
+    "create_time": 1773711773,
+    "update_time": 1773711773,
+    "_id": "National Regulations<SEP>Sports Units"
+  },
+  "National Regulations<SEP>Special Craft Units": {
+    "chunk_ids": [
+      "chunk-982fdc171e24d19c2286c2a017fe7f13"
+    ],
+    "count": 1,
+    "create_time": 1773711774,
+    "update_time": 1773711774,
+    "_id": "National Regulations<SEP>Special Craft Units"
+  },
+  "Minor Under Sixteen<SEP>Sports Units": {
+    "chunk_ids": [
+      "chunk-982fdc171e24d19c2286c2a017fe7f13"
+    ],
+    "count": 1,
+    "create_time": 1773711774,
+    "update_time": 1773711774,
+    "_id": "Minor Under Sixteen<SEP>Sports Units"
+  },
+  "Compulsory Education<SEP>Cultural and Artistic Units": {
+    "chunk_ids": [
+      "chunk-982fdc171e24d19c2286c2a017fe7f13"
+    ],
+    "count": 1,
+    "create_time": 1773711774,
+    "update_time": 1773711774,
+    "_id": "Compulsory Education<SEP>Cultural and Artistic Units"
+  },
+  "Article Fifteen<SEP>Employer": {
+    "chunk_ids": [
+      "chunk-982fdc171e24d19c2286c2a017fe7f13"
+    ],
+    "count": 1,
+    "create_time": 1773711774,
+    "update_time": 1773711774,
+    "_id": "Article Fifteen<SEP>Employer"
+  },
+  "Minor Under Sixteen<SEP>Special Craft Units": {
+    "chunk_ids": [
+      "chunk-982fdc171e24d19c2286c2a017fe7f13"
+    ],
+    "count": 1,
+    "create_time": 1773711774,
+    "update_time": 1773711774,
+    "_id": "Minor Under Sixteen<SEP>Special Craft Units"
+  },
+  "Cultural and Artistic Units<SEP>National Regulations": {
+    "chunk_ids": [
+      "chunk-982fdc171e24d19c2286c2a017fe7f13"
+    ],
+    "count": 1,
+    "create_time": 1773711775,
+    "update_time": 1773711775,
+    "_id": "Cultural and Artistic Units<SEP>National Regulations"
+  },
+  "Compulsory Education<SEP>Sports Units": {
+    "chunk_ids": [
+      "chunk-982fdc171e24d19c2286c2a017fe7f13"
+    ],
+    "count": 1,
+    "create_time": 1773711775,
+    "update_time": 1773711775,
+    "_id": "Compulsory Education<SEP>Sports Units"
+  },
+  "Article Fifteen<SEP>Minor Under Sixteen": {
+    "chunk_ids": [
+      "chunk-982fdc171e24d19c2286c2a017fe7f13"
+    ],
+    "count": 1,
+    "create_time": 1773711775,
+    "update_time": 1773711775,
+    "_id": "Article Fifteen<SEP>Minor Under Sixteen"
+  },
+  "Compulsory Education<SEP>Special Craft Units": {
+    "chunk_ids": [
+      "chunk-982fdc171e24d19c2286c2a017fe7f13"
+    ],
+    "count": 1,
+    "create_time": 1773711775,
+    "update_time": 1773711775,
+    "_id": "Compulsory Education<SEP>Special Craft Units"
+  },
+  "Article Fifteen<SEP>Cultural and Artistic Units": {
+    "chunk_ids": [
+      "chunk-982fdc171e24d19c2286c2a017fe7f13"
+    ],
+    "count": 1,
+    "create_time": 1773711776,
+    "update_time": 1773711776,
+    "_id": "Article Fifteen<SEP>Cultural and Artistic Units"
+  },
+  "Article Fifteen<SEP>Sports Units": {
+    "chunk_ids": [
+      "chunk-982fdc171e24d19c2286c2a017fe7f13"
+    ],
+    "count": 1,
+    "create_time": 1773711776,
+    "update_time": 1773711776,
+    "_id": "Article Fifteen<SEP>Sports Units"
+  },
+  "Article Fifteen<SEP>Special Craft Units": {
+    "chunk_ids": [
+      "chunk-982fdc171e24d19c2286c2a017fe7f13"
+    ],
+    "count": 1,
+    "create_time": 1773711776,
+    "update_time": 1773711776,
+    "_id": "Article Fifteen<SEP>Special Craft Units"
+  },
+  "Article Fifteen<SEP>Compulsory Education": {
+    "chunk_ids": [
+      "chunk-982fdc171e24d19c2286c2a017fe7f13"
+    ],
+    "count": 1,
+    "create_time": 1773711777,
+    "update_time": 1773711777,
+    "_id": "Article Fifteen<SEP>Compulsory Education"
+  },
+  "Article Fifteen<SEP>National Regulations": {
+    "chunk_ids": [
+      "chunk-982fdc171e24d19c2286c2a017fe7f13"
+    ],
+    "count": 1,
+    "create_time": 1773711777,
+    "update_time": 1773711777,
+    "_id": "Article Fifteen<SEP>National Regulations"
+  },
+  "Laborer<SEP>Trade Union": {
+    "chunk_ids": [
+      "chunk-7772034814a251985224602f1dd80c02"
+    ],
+    "count": 1,
+    "create_time": 1773711786,
+    "update_time": 1773711786,
+    "_id": "Laborer<SEP>Trade Union"
+  },
+  "Article Seven<SEP>Laborer": {
+    "chunk_ids": [
+      "chunk-7772034814a251985224602f1dd80c02"
+    ],
+    "count": 1,
+    "create_time": 1773711787,
+    "update_time": 1773711787,
+    "_id": "Article Seven<SEP>Laborer"
+  },
+  "Article Seven<SEP>Trade Union": {
+    "chunk_ids": [
+      "chunk-7772034814a251985224602f1dd80c02"
+    ],
+    "count": 1,
+    "create_time": 1773711787,
+    "update_time": 1773711787,
+    "_id": "Article Seven<SEP>Trade Union"
+  },
+  "Employer<SEP>Market Regulation Department": {
+    "chunk_ids": [
+      "chunk-49dfcfe749ae5b7a3d964afb5d16559b"
+    ],
+    "count": 1,
+    "create_time": 1773711793,
+    "update_time": 1773711793,
+    "_id": "Employer<SEP>Market Regulation Department"
+  },
+  "Article 94<SEP>Employer": {
+    "chunk_ids": [
+      "chunk-49dfcfe749ae5b7a3d964afb5d16559b"
+    ],
+    "count": 1,
+    "create_time": 1773711794,
+    "update_time": 1773711794,
+    "_id": "Article 94<SEP>Employer"
+  },
+  "Article 94<SEP>Labor Administration Department": {
+    "chunk_ids": [
+      "chunk-49dfcfe749ae5b7a3d964afb5d16559b"
+    ],
+    "count": 1,
+    "create_time": 1773711794,
+    "update_time": 1773711794,
+    "_id": "Article 94<SEP>Labor Administration Department"
+  },
+  "Article 94<SEP>Market Regulation Department": {
+    "chunk_ids": [
+      "chunk-49dfcfe749ae5b7a3d964afb5d16559b"
+    ],
+    "count": 1,
+    "create_time": 1773711795,
+    "update_time": 1773711795,
+    "_id": "Article 94<SEP>Market Regulation Department"
+  },
+  "Article 94<SEP>Labor Law of the People's Republic of China": {
+    "chunk_ids": [
+      "chunk-49dfcfe749ae5b7a3d964afb5d16559b"
+    ],
+    "count": 1,
+    "create_time": 1773711795,
+    "update_time": 1773711795,
+    "_id": "Article 94<SEP>Labor Law of the People's Republic of China"
+  },
+  "Living Expenses<SEP>Minimum Wage Standard": {
+    "chunk_ids": [
+      "chunk-add1965d088b328f8a7f228f9ba5c825"
+    ],
+    "count": 1,
+    "create_time": 1773711805,
+    "update_time": 1773711805,
+    "_id": "Living Expenses<SEP>Minimum Wage Standard"
+  },
+  "Minimum Wage Standard<SEP>Social Average Wage Level": {
+    "chunk_ids": [
+      "chunk-add1965d088b328f8a7f228f9ba5c825"
+    ],
+    "count": 1,
+    "create_time": 1773711805,
+    "update_time": 1773711805,
+    "_id": "Minimum Wage Standard<SEP>Social Average Wage Level"
+  },
+  "Labor Productivity<SEP>Minimum Wage Standard": {
+    "chunk_ids": [
+      "chunk-add1965d088b328f8a7f228f9ba5c825"
+    ],
+    "count": 1,
+    "create_time": 1773711806,
+    "update_time": 1773711806,
+    "_id": "Labor Productivity<SEP>Minimum Wage Standard"
+  },
+  "Employment Situation<SEP>Minimum Wage Standard": {
+    "chunk_ids": [
+      "chunk-add1965d088b328f8a7f228f9ba5c825"
+    ],
+    "count": 1,
+    "create_time": 1773711806,
+    "update_time": 1773711806,
+    "_id": "Employment Situation<SEP>Minimum Wage Standard"
+  },
+  "Minimum Wage Standard<SEP>Regional Economic Development Disparities": {
+    "chunk_ids": [
+      "chunk-add1965d088b328f8a7f228f9ba5c825"
+    ],
+    "count": 1,
+    "create_time": 1773711806,
+    "update_time": 1773711806,
+    "_id": "Minimum Wage Standard<SEP>Regional Economic Development Disparities"
+  },
+  "Article 49<SEP>Minimum Wage Standard": {
+    "chunk_ids": [
+      "chunk-add1965d088b328f8a7f228f9ba5c825"
+    ],
+    "count": 1,
+    "create_time": 1773711807,
+    "update_time": 1773711807,
+    "_id": "Article 49<SEP>Minimum Wage Standard"
+  },
+  "Laborer<SEP>Statutory Holiday": {
+    "chunk_ids": [
+      "chunk-29625ec97f3aa262c09d4aa1c862291b"
+    ],
+    "count": 1,
+    "create_time": 1773711823,
+    "update_time": 1773711823,
+    "_id": "Laborer<SEP>Statutory Holiday"
+  },
+  "Chapter Six<SEP>Labor Safety and Health": {
+    "chunk_ids": [
+      "chunk-29625ec97f3aa262c09d4aa1c862291b"
+    ],
+    "count": 1,
+    "create_time": 1773711823,
+    "update_time": 1773711823,
+    "_id": "Chapter Six<SEP>Labor Safety and Health"
+  },
+  "Article 98<SEP>Labor Law": {
+    "chunk_ids": [
+      "chunk-5f221ff98ea22e9acb2603a0162c0526"
+    ],
+    "count": 1,
+    "create_time": 1773711823,
+    "update_time": 1773711823,
+    "_id": "Article 98<SEP>Labor Law"
+  },
+  "Laborer<SEP>Marriage Leave": {
+    "chunk_ids": [
+      "chunk-29625ec97f3aa262c09d4aa1c862291b"
+    ],
+    "count": 1,
+    "create_time": 1773711824,
+    "update_time": 1773711824,
+    "_id": "Laborer<SEP>Marriage Leave"
+  },
+  "Bereavement Leave<SEP>Laborer": {
+    "chunk_ids": [
+      "chunk-29625ec97f3aa262c09d4aa1c862291b"
+    ],
+    "count": 1,
+    "create_time": 1773711824,
+    "update_time": 1773711824,
+    "_id": "Bereavement Leave<SEP>Laborer"
+  },
+  "Laborer<SEP>Lawful Social Activity": {
+    "chunk_ids": [
+      "chunk-29625ec97f3aa262c09d4aa1c862291b"
+    ],
+    "count": 1,
+    "create_time": 1773711825,
+    "update_time": 1773711825,
+    "_id": "Laborer<SEP>Lawful Social Activity"
+  },
+  "Article Fifty-One<SEP>Laborer": {
+    "chunk_ids": [
+      "chunk-29625ec97f3aa262c09d4aa1c862291b"
+    ],
+    "count": 1,
+    "create_time": 1773711825,
+    "update_time": 1773711825,
+    "_id": "Article Fifty-One<SEP>Laborer"
+  },
+  "Employer<SEP>Labor Law": {
+    "chunk_ids": [
+      "chunk-5f221ff98ea22e9acb2603a0162c0526",
+      "chunk-5a7d21f4dbacb9974d96f6a4b7cd73aa",
+      "chunk-2dd1fd3462e1832af7cfde4c6f880f76"
+    ],
+    "count": 3,
+    "update_time": 1773712105,
+    "_id": "Employer<SEP>Labor Law"
+  },
+  "Article Fifty-One<SEP>Employer": {
+    "chunk_ids": [
+      "chunk-29625ec97f3aa262c09d4aa1c862291b"
+    ],
+    "count": 1,
+    "create_time": 1773711828,
+    "update_time": 1773711828,
+    "_id": "Article Fifty-One<SEP>Employer"
+  },
+  "Article Fifty-One<SEP>Statutory Holiday": {
+    "chunk_ids": [
+      "chunk-29625ec97f3aa262c09d4aa1c862291b"
+    ],
+    "count": 1,
+    "create_time": 1773711828,
+    "update_time": 1773711828,
+    "_id": "Article Fifty-One<SEP>Statutory Holiday"
+  },
+  "Article Fifty-One<SEP>Marriage Leave": {
+    "chunk_ids": [
+      "chunk-29625ec97f3aa262c09d4aa1c862291b"
+    ],
+    "count": 1,
+    "create_time": 1773711829,
+    "update_time": 1773711829,
+    "_id": "Article Fifty-One<SEP>Marriage Leave"
+  },
+  "Article Fifty-One<SEP>Bereavement Leave": {
+    "chunk_ids": [
+      "chunk-29625ec97f3aa262c09d4aa1c862291b"
+    ],
+    "count": 1,
+    "create_time": 1773711830,
+    "update_time": 1773711830,
+    "_id": "Article Fifty-One<SEP>Bereavement Leave"
+  },
+  "Article Fifty-One<SEP>Lawful Social Activity": {
+    "chunk_ids": [
+      "chunk-29625ec97f3aa262c09d4aa1c862291b"
+    ],
+    "count": 1,
+    "create_time": 1773711830,
+    "update_time": 1773711830,
+    "_id": "Article Fifty-One<SEP>Lawful Social Activity"
+  },
+  "Fixed-Term Labor Contract<SEP>Labor Contract": {
+    "chunk_ids": [
+      "chunk-d8dbf846bb0ff55e508ce6be270bcf82"
+    ],
+    "count": 1,
+    "create_time": 1773711843,
+    "update_time": 1773711843,
+    "_id": "Fixed-Term Labor Contract<SEP>Labor Contract"
+  },
+  "Open-Ended Labor Contract<SEP>Ten-Year Continuous Employment": {
+    "chunk_ids": [
+      "chunk-d8dbf846bb0ff55e508ce6be270bcf82"
+    ],
+    "count": 1,
+    "create_time": 1773711843,
+    "update_time": 1773711843,
+    "_id": "Open-Ended Labor Contract<SEP>Ten-Year Continuous Employment"
+  },
+  "Labor Contract<SEP>Open-Ended Labor Contract": {
+    "chunk_ids": [
+      "chunk-d8dbf846bb0ff55e508ce6be270bcf82"
+    ],
+    "count": 1,
+    "create_time": 1773711843,
+    "update_time": 1773711843,
+    "_id": "Labor Contract<SEP>Open-Ended Labor Contract"
+  },
+  "Labor Contract<SEP>Task-Based Labor Contract": {
+    "chunk_ids": [
+      "chunk-d8dbf846bb0ff55e508ce6be270bcf82"
+    ],
+    "count": 1,
+    "create_time": 1773711844,
+    "update_time": 1773711844,
+    "_id": "Labor Contract<SEP>Task-Based Labor Contract"
+  },
+  "Article 20<SEP>Labor Contract": {
+    "chunk_ids": [
+      "chunk-d8dbf846bb0ff55e508ce6be270bcf82"
+    ],
+    "count": 1,
+    "create_time": 1773711844,
+    "update_time": 1773711844,
+    "_id": "Article 20<SEP>Labor Contract"
+  },
+  "Employer<SEP>Wage Distribution Method": {
+    "chunk_ids": [
+      "chunk-35ee711c6a1d7e90851eb7505f271fc1"
+    ],
+    "count": 1,
+    "create_time": 1773711859,
+    "update_time": 1773711859,
+    "_id": "Employer<SEP>Wage Distribution Method"
+  },
+  "Employer<SEP>Wage Level": {
+    "chunk_ids": [
+      "chunk-35ee711c6a1d7e90851eb7505f271fc1"
+    ],
+    "count": 1,
+    "create_time": 1773711860,
+    "update_time": 1773711860,
+    "_id": "Employer<SEP>Wage Level"
+  },
+  "Employer<SEP>Production And Operation Characteristics": {
+    "chunk_ids": [
+      "chunk-35ee711c6a1d7e90851eb7505f271fc1"
+    ],
+    "count": 1,
+    "create_time": 1773711860,
+    "update_time": 1773711860,
+    "_id": "Employer<SEP>Production And Operation Characteristics"
+  },
+  "Economic Benefits<SEP>Employer": {
+    "chunk_ids": [
+      "chunk-35ee711c6a1d7e90851eb7505f271fc1"
+    ],
+    "count": 1,
+    "create_time": 1773711861,
+    "update_time": 1773711861,
+    "_id": "Economic Benefits<SEP>Employer"
+  },
+  "Article 47<SEP>Employer": {
+    "chunk_ids": [
+      "chunk-35ee711c6a1d7e90851eb7505f271fc1"
+    ],
+    "count": 1,
+    "create_time": 1773711861,
+    "update_time": 1773711861,
+    "_id": "Article 47<SEP>Employer"
+  },
+  "Laborer<SEP>Social Insurance Benefit": {
+    "chunk_ids": [
+      "chunk-e1005fcbd1306706f050d1a4d82ca943"
+    ],
+    "count": 1,
+    "create_time": 1773711868,
+    "update_time": 1773711868,
+    "_id": "Laborer<SEP>Social Insurance Benefit"
+  },
+  "Laborer<SEP>Retirement": {
+    "chunk_ids": [
+      "chunk-e1005fcbd1306706f050d1a4d82ca943"
+    ],
+    "count": 1,
+    "create_time": 1773711869,
+    "update_time": 1773711869,
+    "_id": "Laborer<SEP>Retirement"
+  },
+  "Illness<SEP>Laborer": {
+    "chunk_ids": [
+      "chunk-e1005fcbd1306706f050d1a4d82ca943"
+    ],
+    "count": 1,
+    "create_time": 1773711869,
+    "update_time": 1773711869,
+    "_id": "Illness<SEP>Laborer"
+  },
+  "Law and Regulation<SEP>Social Insurance Benefit": {
+    "chunk_ids": [
+      "chunk-e1005fcbd1306706f050d1a4d82ca943"
+    ],
+    "count": 1,
+    "create_time": 1773711869,
+    "update_time": 1773711869,
+    "_id": "Law and Regulation<SEP>Social Insurance Benefit"
+  },
+  "Social Insurance Benefit<SEP>Social Insurance Payment": {
+    "chunk_ids": [
+      "chunk-e1005fcbd1306706f050d1a4d82ca943"
+    ],
+    "count": 1,
+    "create_time": 1773711870,
+    "update_time": 1773711870,
+    "_id": "Social Insurance Benefit<SEP>Social Insurance Payment"
+  },
+  "Laborer<SEP>Unemployment": {
+    "chunk_ids": [
+      "chunk-e1005fcbd1306706f050d1a4d82ca943"
+    ],
+    "count": 1,
+    "create_time": 1773711871,
+    "update_time": 1773711871,
+    "_id": "Laborer<SEP>Unemployment"
+  },
+  "Childbirth<SEP>Laborer": {
+    "chunk_ids": [
+      "chunk-e1005fcbd1306706f050d1a4d82ca943"
+    ],
+    "count": 1,
+    "create_time": 1773711872,
+    "update_time": 1773711872,
+    "_id": "Childbirth<SEP>Laborer"
+  },
+  "Dependent<SEP>Laborer": {
+    "chunk_ids": [
+      "chunk-e1005fcbd1306706f050d1a4d82ca943"
+    ],
+    "count": 1,
+    "create_time": 1773711872,
+    "update_time": 1773711872,
+    "_id": "Dependent<SEP>Laborer"
+  },
+  "Article Seventy-Three<SEP>Laborer": {
+    "chunk_ids": [
+      "chunk-e1005fcbd1306706f050d1a4d82ca943"
+    ],
+    "count": 1,
+    "create_time": 1773711872,
+    "update_time": 1773711872,
+    "_id": "Article Seventy-Three<SEP>Laborer"
+  },
+  "Dependent<SEP>Survivor Allowance": {
+    "chunk_ids": [
+      "chunk-e1005fcbd1306706f050d1a4d82ca943"
+    ],
+    "count": 1,
+    "create_time": 1773711872,
+    "update_time": 1773711872,
+    "_id": "Dependent<SEP>Survivor Allowance"
+  },
+  "Article Seventy-Three<SEP>Social Insurance Benefit": {
+    "chunk_ids": [
+      "chunk-e1005fcbd1306706f050d1a4d82ca943"
+    ],
+    "count": 1,
+    "create_time": 1773711873,
+    "update_time": 1773711873,
+    "_id": "Article Seventy-Three<SEP>Social Insurance Benefit"
+  },
+  "Article Seventy-Three<SEP>Survivor Allowance": {
+    "chunk_ids": [
+      "chunk-e1005fcbd1306706f050d1a4d82ca943"
+    ],
+    "count": 1,
+    "create_time": 1773711873,
+    "update_time": 1773711873,
+    "_id": "Article Seventy-Three<SEP>Survivor Allowance"
+  },
+  "Article Seventy-Three<SEP>Social Insurance Payment": {
+    "chunk_ids": [
+      "chunk-e1005fcbd1306706f050d1a4d82ca943"
+    ],
+    "count": 1,
+    "create_time": 1773711874,
+    "update_time": 1773711874,
+    "_id": "Article Seventy-Three<SEP>Social Insurance Payment"
+  },
+  "Employer<SEP>Female Worker": {
+    "chunk_ids": [
+      "chunk-add3425ac8339584dcc65694586b9a03"
+    ],
+    "count": 1,
+    "create_time": 1773711877,
+    "update_time": 1773711877,
+    "_id": "Employer<SEP>Female Worker"
+  },
+  "Employer<SEP>Minor Worker": {
+    "chunk_ids": [
+      "chunk-add3425ac8339584dcc65694586b9a03"
+    ],
+    "count": 1,
+    "create_time": 1773711877,
+    "update_time": 1773711877,
+    "_id": "Employer<SEP>Minor Worker"
+  },
+  "Article 95<SEP>Employer": {
+    "chunk_ids": [
+      "chunk-add3425ac8339584dcc65694586b9a03"
+    ],
+    "count": 1,
+    "create_time": 1773711878,
+    "update_time": 1773711878,
+    "_id": "Article 95<SEP>Employer"
+  },
+  "Minimum Wage Guarantee System<SEP>Minimum Wage Standard": {
+    "chunk_ids": [
+      "chunk-9a17dbf9d68b3a46e25ed3308c88ffbf"
+    ],
+    "count": 1,
+    "create_time": 1773711894,
+    "update_time": 1773711894,
+    "_id": "Minimum Wage Guarantee System<SEP>Minimum Wage Standard"
+  },
+  "Provincial, Autonomous Region, and Municipal People's Governments<SEP>State Council": {
+    "chunk_ids": [
+      "chunk-9a17dbf9d68b3a46e25ed3308c88ffbf"
+    ],
+    "count": 1,
+    "create_time": 1773711894,
+    "update_time": 1773711894,
+    "_id": "Provincial, Autonomous Region, and Municipal People's Governments<SEP>State Council"
+  },
+  "Employers<SEP>Workers": {
+    "chunk_ids": [
+      "chunk-9a17dbf9d68b3a46e25ed3308c88ffbf"
+    ],
+    "count": 1,
+    "create_time": 1773711894,
+    "update_time": 1773711894,
+    "_id": "Employers<SEP>Workers"
+  },
+  "Article 48<SEP>Minimum Wage Guarantee System": {
+    "chunk_ids": [
+      "chunk-9a17dbf9d68b3a46e25ed3308c88ffbf"
+    ],
+    "count": 1,
+    "create_time": 1773711895,
+    "update_time": 1773711895,
+    "_id": "Article 48<SEP>Minimum Wage Guarantee System"
+  },
+  "Minimum Wage Standard<SEP>Provincial, Autonomous Region, and Municipal People's Governments": {
+    "chunk_ids": [
+      "chunk-9a17dbf9d68b3a46e25ed3308c88ffbf"
+    ],
+    "count": 1,
+    "create_time": 1773711895,
+    "update_time": 1773711895,
+    "_id": "Minimum Wage Standard<SEP>Provincial, Autonomous Region, and Municipal People's Governments"
+  },
+  "Article 48<SEP>Provincial, Autonomous Region, and Municipal People's Governments": {
+    "chunk_ids": [
+      "chunk-9a17dbf9d68b3a46e25ed3308c88ffbf"
+    ],
+    "count": 1,
+    "create_time": 1773711895,
+    "update_time": 1773711895,
+    "_id": "Article 48<SEP>Provincial, Autonomous Region, and Municipal People's Governments"
+  },
+  "Employers<SEP>Minimum Wage Standard": {
+    "chunk_ids": [
+      "chunk-9a17dbf9d68b3a46e25ed3308c88ffbf"
+    ],
+    "count": 1,
+    "create_time": 1773711895,
+    "update_time": 1773711895,
+    "_id": "Employers<SEP>Minimum Wage Standard"
+  },
+  "Article 48<SEP>State Council": {
+    "chunk_ids": [
+      "chunk-9a17dbf9d68b3a46e25ed3308c88ffbf"
+    ],
+    "count": 1,
+    "create_time": 1773711896,
+    "update_time": 1773711896,
+    "_id": "Article 48<SEP>State Council"
+  },
+  "Article 48<SEP>Employers": {
+    "chunk_ids": [
+      "chunk-9a17dbf9d68b3a46e25ed3308c88ffbf"
+    ],
+    "count": 1,
+    "create_time": 1773711896,
+    "update_time": 1773711896,
+    "_id": "Article 48<SEP>Employers"
+  },
+  "Labor Administrative Department<SEP>Wage Deduction or Unpaid Wages": {
+    "chunk_ids": [
+      "chunk-5a7d21f4dbacb9974d96f6a4b7cd73aa"
+    ],
+    "count": 1,
+    "create_time": 1773711908,
+    "update_time": 1773711908,
+    "_id": "Labor Administrative Department<SEP>Wage Deduction or Unpaid Wages"
+  },
+  "Compensation Liability<SEP>Labor Administrative Department": {
+    "chunk_ids": [
+      "chunk-5a7d21f4dbacb9974d96f6a4b7cd73aa"
+    ],
+    "count": 1,
+    "create_time": 1773711908,
+    "update_time": 1773711908,
+    "_id": "Compensation Liability<SEP>Labor Administrative Department"
+  },
+  "Administrative Warning<SEP>Labor Administrative Department": {
+    "chunk_ids": [
+      "chunk-5a7d21f4dbacb9974d96f6a4b7cd73aa"
+    ],
+    "count": 1,
+    "create_time": 1773711908,
+    "update_time": 1773711908,
+    "_id": "Administrative Warning<SEP>Labor Administrative Department"
+  },
+  "Fine<SEP>Labor Administrative Department": {
+    "chunk_ids": [
+      "chunk-5a7d21f4dbacb9974d96f6a4b7cd73aa"
+    ],
+    "count": 1,
+    "create_time": 1773711909,
+    "update_time": 1773711909,
+    "_id": "Fine<SEP>Labor Administrative Department"
+  },
+  "Article 89<SEP>Employer": {
+    "chunk_ids": [
+      "chunk-5a7d21f4dbacb9974d96f6a4b7cd73aa"
+    ],
+    "count": 1,
+    "create_time": 1773711910,
+    "update_time": 1773711910,
+    "_id": "Article 89<SEP>Employer"
+  },
+  "Article 90<SEP>Employer": {
+    "chunk_ids": [
+      "chunk-5a7d21f4dbacb9974d96f6a4b7cd73aa"
+    ],
+    "count": 1,
+    "create_time": 1773711911,
+    "update_time": 1773711911,
+    "_id": "Article 90<SEP>Employer"
+  },
+  "Article 91<SEP>Employer": {
+    "chunk_ids": [
+      "chunk-5a7d21f4dbacb9974d96f6a4b7cd73aa"
+    ],
+    "count": 1,
+    "create_time": 1773711911,
+    "update_time": 1773711911,
+    "_id": "Article 91<SEP>Employer"
+  },
+  "Article 91<SEP>Wage Deduction or Unpaid Wages": {
+    "chunk_ids": [
+      "chunk-5a7d21f4dbacb9974d96f6a4b7cd73aa"
+    ],
+    "count": 1,
+    "create_time": 1773711912,
+    "update_time": 1773711912,
+    "_id": "Article 91<SEP>Wage Deduction or Unpaid Wages"
+  },
+  "Safety Operating Procedures<SEP>Worker": {
+    "chunk_ids": [
+      "chunk-900f9424a8f6a615634cfe7eb308739e"
+    ],
+    "count": 1,
+    "create_time": 1773711920,
+    "update_time": 1773711920,
+    "_id": "Safety Operating Procedures<SEP>Worker"
+  },
+  "Violation of Command<SEP>Worker": {
+    "chunk_ids": [
+      "chunk-900f9424a8f6a615634cfe7eb308739e"
+    ],
+    "count": 1,
+    "create_time": 1773711921,
+    "update_time": 1773711921,
+    "_id": "Violation of Command<SEP>Worker"
+  },
+  "Forced Risky Work<SEP>Worker": {
+    "chunk_ids": [
+      "chunk-900f9424a8f6a615634cfe7eb308739e"
+    ],
+    "count": 1,
+    "create_time": 1773711921,
+    "update_time": 1773711921,
+    "_id": "Forced Risky Work<SEP>Worker"
+  },
+  "Right to Refuse Execution<SEP>Violation of Command": {
+    "chunk_ids": [
+      "chunk-900f9424a8f6a615634cfe7eb308739e"
+    ],
+    "count": 1,
+    "create_time": 1773711921,
+    "update_time": 1773711921,
+    "_id": "Right to Refuse Execution<SEP>Violation of Command"
+  },
+  "Hazard to Life Safety and Physical Health<SEP>Worker": {
+    "chunk_ids": [
+      "chunk-900f9424a8f6a615634cfe7eb308739e"
+    ],
+    "count": 1,
+    "create_time": 1773711921,
+    "update_time": 1773711921,
+    "_id": "Hazard to Life Safety and Physical Health<SEP>Worker"
+  },
+  "Forced Risky Work<SEP>Right to Refuse Execution": {
+    "chunk_ids": [
+      "chunk-900f9424a8f6a615634cfe7eb308739e"
+    ],
+    "count": 1,
+    "create_time": 1773711921,
+    "update_time": 1773711921,
+    "_id": "Forced Risky Work<SEP>Right to Refuse Execution"
+  },
+  "Article 56<SEP>Worker": {
+    "chunk_ids": [
+      "chunk-900f9424a8f6a615634cfe7eb308739e"
+    ],
+    "count": 1,
+    "create_time": 1773711922,
+    "update_time": 1773711922,
+    "_id": "Article 56<SEP>Worker"
+  },
+  "Hazard to Life Safety and Physical Health<SEP>Right to Criticize, Report, and Accuse": {
+    "chunk_ids": [
+      "chunk-900f9424a8f6a615634cfe7eb308739e"
+    ],
+    "count": 1,
+    "create_time": 1773711922,
+    "update_time": 1773711922,
+    "_id": "Hazard to Life Safety and Physical Health<SEP>Right to Criticize, Report, and Accuse"
+  },
+  "Article 56<SEP>Employer": {
+    "chunk_ids": [
+      "chunk-900f9424a8f6a615634cfe7eb308739e"
+    ],
+    "count": 1,
+    "create_time": 1773711922,
+    "update_time": 1773711922,
+    "_id": "Article 56<SEP>Employer"
+  },
+  "Social Insurance Fund<SEP>Social Insurance Premiums": {
+    "chunk_ids": [
+      "chunk-f6caf56110d85965c35a028c39252a52"
+    ],
+    "count": 1,
+    "create_time": 1773711939,
+    "update_time": 1773711939,
+    "_id": "Social Insurance Fund<SEP>Social Insurance Premiums"
+  },
+  "Employers<SEP>Social Insurance Premiums": {
+    "chunk_ids": [
+      "chunk-f6caf56110d85965c35a028c39252a52"
+    ],
+    "count": 1,
+    "create_time": 1773711939,
+    "update_time": 1773711939,
+    "_id": "Employers<SEP>Social Insurance Premiums"
+  },
+  "Social Insurance Fund<SEP>Social Pooling": {
+    "chunk_ids": [
+      "chunk-f6caf56110d85965c35a028c39252a52"
+    ],
+    "count": 1,
+    "create_time": 1773711939,
+    "update_time": 1773711939,
+    "_id": "Social Insurance Fund<SEP>Social Pooling"
+  },
+  "Article 72<SEP>Social Insurance Fund": {
+    "chunk_ids": [
+      "chunk-f6caf56110d85965c35a028c39252a52"
+    ],
+    "count": 1,
+    "create_time": 1773711939,
+    "update_time": 1773711939,
+    "_id": "Article 72<SEP>Social Insurance Fund"
+  },
+  "Social Insurance Premiums<SEP>Workers": {
+    "chunk_ids": [
+      "chunk-f6caf56110d85965c35a028c39252a52"
+    ],
+    "count": 1,
+    "create_time": 1773711939,
+    "update_time": 1773711939,
+    "_id": "Social Insurance Premiums<SEP>Workers"
+  },
+  "Article 72<SEP>Employers": {
+    "chunk_ids": [
+      "chunk-f6caf56110d85965c35a028c39252a52"
+    ],
+    "count": 1,
+    "create_time": 1773711940,
+    "update_time": 1773711940,
+    "_id": "Article 72<SEP>Employers"
+  },
+  "Article 72<SEP>Workers": {
+    "chunk_ids": [
+      "chunk-f6caf56110d85965c35a028c39252a52"
+    ],
+    "count": 1,
+    "create_time": 1773711940,
+    "update_time": 1773711940,
+    "_id": "Article 72<SEP>Workers"
+  },
+  "State<SEP>Vocational Training": {
+    "chunk_ids": [
+      "chunk-302371bc27545b04a86a89dc8b5a11c5"
+    ],
+    "count": 1,
+    "create_time": 1773711944,
+    "update_time": 1773711944,
+    "_id": "State<SEP>Vocational Training"
+  },
+  "Employers<SEP>Vocational Training": {
+    "chunk_ids": [
+      "chunk-302371bc27545b04a86a89dc8b5a11c5"
+    ],
+    "count": 1,
+    "create_time": 1773711944,
+    "update_time": 1773711944,
+    "_id": "Employers<SEP>Vocational Training"
+  },
+  "Social Insurance System<SEP>State": {
+    "chunk_ids": [
+      "chunk-302371bc27545b04a86a89dc8b5a11c5"
+    ],
+    "count": 1,
+    "create_time": 1773711944,
+    "update_time": 1773711944,
+    "_id": "Social Insurance System<SEP>State"
+  },
+  "Technical Workers<SEP>Vocational Training": {
+    "chunk_ids": [
+      "chunk-302371bc27545b04a86a89dc8b5a11c5"
+    ],
+    "count": 1,
+    "create_time": 1773711944,
+    "update_time": 1773711944,
+    "_id": "Technical Workers<SEP>Vocational Training"
+  },
+  "Occupational Classification<SEP>State": {
+    "chunk_ids": [
+      "chunk-302371bc27545b04a86a89dc8b5a11c5"
+    ],
+    "count": 1,
+    "create_time": 1773711944,
+    "update_time": 1773711944,
+    "_id": "Occupational Classification<SEP>State"
+  },
+  "Social Insurance Level<SEP>Social Insurance System": {
+    "chunk_ids": [
+      "chunk-302371bc27545b04a86a89dc8b5a11c5"
+    ],
+    "count": 1,
+    "create_time": 1773711944,
+    "update_time": 1773711944,
+    "_id": "Social Insurance Level<SEP>Social Insurance System"
+  },
+  "People's Governments at All Levels<SEP>Vocational Training": {
+    "chunk_ids": [
+      "chunk-302371bc27545b04a86a89dc8b5a11c5"
+    ],
+    "count": 1,
+    "create_time": 1773711945,
+    "update_time": 1773711945,
+    "_id": "People's Governments at All Levels<SEP>Vocational Training"
+  },
+  "State<SEP>Vocational Skill Standards": {
+    "chunk_ids": [
+      "chunk-302371bc27545b04a86a89dc8b5a11c5"
+    ],
+    "count": 1,
+    "create_time": 1773711945,
+    "update_time": 1773711945,
+    "_id": "State<SEP>Vocational Skill Standards"
+  },
+  "Professional Qualification Certificate System<SEP>State": {
+    "chunk_ids": [
+      "chunk-302371bc27545b04a86a89dc8b5a11c5"
+    ],
+    "count": 1,
+    "create_time": 1773711946,
+    "update_time": 1773711946,
+    "_id": "Professional Qualification Certificate System<SEP>State"
+  },
+  "Social Insurance Fund<SEP>State": {
+    "chunk_ids": [
+      "chunk-302371bc27545b04a86a89dc8b5a11c5"
+    ],
+    "count": 1,
+    "create_time": 1773711946,
+    "update_time": 1773711946,
+    "_id": "Social Insurance Fund<SEP>State"
+  },
+  "Assessment and Appraisal Institutions<SEP>Professional Qualification Certificate System": {
+    "chunk_ids": [
+      "chunk-302371bc27545b04a86a89dc8b5a11c5"
+    ],
+    "count": 1,
+    "create_time": 1773711946,
+    "update_time": 1773711946,
+    "_id": "Assessment and Appraisal Institutions<SEP>Professional Qualification Certificate System"
+  },
+  "Collective Labor Contract<SEP>Labor Administration Department": {
+    "chunk_ids": [
+      "chunk-7352b9127a22f0a9251386f17f0f9768"
+    ],
+    "count": 1,
+    "create_time": 1773711962,
+    "update_time": 1773711962,
+    "_id": "Collective Labor Contract<SEP>Labor Administration Department"
+  },
+  "Fifteen-Day Review Period<SEP>Labor Administration Department": {
+    "chunk_ids": [
+      "chunk-7352b9127a22f0a9251386f17f0f9768"
+    ],
+    "count": 1,
+    "create_time": 1773711963,
+    "update_time": 1773711963,
+    "_id": "Fifteen-Day Review Period<SEP>Labor Administration Department"
+  },
+  "Collective Labor Contract<SEP>Contract Effectiveness": {
+    "chunk_ids": [
+      "chunk-7352b9127a22f0a9251386f17f0f9768"
+    ],
+    "count": 1,
+    "create_time": 1773711963,
+    "update_time": 1773711963,
+    "_id": "Collective Labor Contract<SEP>Contract Effectiveness"
+  },
+  "Article 34<SEP>Collective Labor Contract": {
+    "chunk_ids": [
+      "chunk-7352b9127a22f0a9251386f17f0f9768"
+    ],
+    "count": 1,
+    "create_time": 1773711963,
+    "update_time": 1773711963,
+    "_id": "Article 34<SEP>Collective Labor Contract"
+  },
+  "Article 34<SEP>Labor Administration Department": {
+    "chunk_ids": [
+      "chunk-7352b9127a22f0a9251386f17f0f9768"
+    ],
+    "count": 1,
+    "create_time": 1773711964,
+    "update_time": 1773711964,
+    "_id": "Article 34<SEP>Labor Administration Department"
+  },
+  "Employer<SEP>Weekly Rest Requirement": {
+    "chunk_ids": [
+      "chunk-c1b224bc392defbea2ebc9ea123f70db"
+    ],
+    "count": 1,
+    "create_time": 1773711965,
+    "update_time": 1773711965,
+    "_id": "Employer<SEP>Weekly Rest Requirement"
+  },
+  "Article 38<SEP>Employer": {
+    "chunk_ids": [
+      "chunk-c1b224bc392defbea2ebc9ea123f70db"
+    ],
+    "count": 1,
+    "create_time": 1773711965,
+    "update_time": 1773711965,
+    "_id": "Article 38<SEP>Employer"
+  },
+  "Article 38<SEP>Worker": {
+    "chunk_ids": [
+      "chunk-c1b224bc392defbea2ebc9ea123f70db"
+    ],
+    "count": 1,
+    "create_time": 1773711966,
+    "update_time": 1773711966,
+    "_id": "Article 38<SEP>Worker"
+  },
+  "Chapter Eight<SEP>Vocational Training": {
+    "chunk_ids": [
+      "chunk-12cdd7ef2f5ab7ae8af0f7aa527a5494"
+    ],
+    "count": 1,
+    "create_time": 1773711972,
+    "update_time": 1773711972,
+    "_id": "Chapter Eight<SEP>Vocational Training"
+  },
+  "Employers<SEP>State": {
+    "chunk_ids": [
+      "chunk-1833eb6307e64f230db692d0cf7279ca"
+    ],
+    "count": 1,
+    "create_time": 1773711988,
+    "update_time": 1773711988,
+    "_id": "Employers<SEP>State"
+  },
+  "Savings-Based Insurance<SEP>Workers": {
+    "chunk_ids": [
+      "chunk-1833eb6307e64f230db692d0cf7279ca"
+    ],
+    "count": 1,
+    "create_time": 1773711988,
+    "update_time": 1773711988,
+    "_id": "Savings-Based Insurance<SEP>Workers"
+  },
+  "Employers<SEP>Supplementary Insurance": {
+    "chunk_ids": [
+      "chunk-1833eb6307e64f230db692d0cf7279ca"
+    ],
+    "count": 1,
+    "create_time": 1773711989,
+    "update_time": 1773711989,
+    "_id": "Employers<SEP>Supplementary Insurance"
+  },
+  "Article 75<SEP>State": {
+    "chunk_ids": [
+      "chunk-1833eb6307e64f230db692d0cf7279ca"
+    ],
+    "count": 1,
+    "create_time": 1773711989,
+    "update_time": 1773711989,
+    "_id": "Article 75<SEP>State"
+  },
+  "Article 75<SEP>Employers": {
+    "chunk_ids": [
+      "chunk-1833eb6307e64f230db692d0cf7279ca"
+    ],
+    "count": 1,
+    "create_time": 1773711990,
+    "update_time": 1773711990,
+    "_id": "Article 75<SEP>Employers"
+  },
+  "Article 75<SEP>Workers": {
+    "chunk_ids": [
+      "chunk-1833eb6307e64f230db692d0cf7279ca"
+    ],
+    "count": 1,
+    "create_time": 1773711990,
+    "update_time": 1773711990,
+    "_id": "Article 75<SEP>Workers"
+  },
+  "Labor Administration Department<SEP>Staff Members": {
+    "chunk_ids": [
+      "chunk-534cee49a6033035c2c5393b14d42b64"
+    ],
+    "count": 1,
+    "create_time": 1773711991,
+    "update_time": 1773711991,
+    "_id": "Labor Administration Department<SEP>Staff Members"
+  },
+  "Relevant Departments<SEP>Staff Members": {
+    "chunk_ids": [
+      "chunk-534cee49a6033035c2c5393b14d42b64"
+    ],
+    "count": 1,
+    "create_time": 1773711992,
+    "update_time": 1773711992,
+    "_id": "Relevant Departments<SEP>Staff Members"
+  },
+  "Abuse of Power<SEP>Staff Members": {
+    "chunk_ids": [
+      "chunk-534cee49a6033035c2c5393b14d42b64"
+    ],
+    "count": 1,
+    "create_time": 1773711993,
+    "update_time": 1773711993,
+    "_id": "Abuse of Power<SEP>Staff Members"
+  },
+  "Negligence in Duty<SEP>Staff Members": {
+    "chunk_ids": [
+      "chunk-534cee49a6033035c2c5393b14d42b64"
+    ],
+    "count": 1,
+    "create_time": 1773711993,
+    "update_time": 1773711993,
+    "_id": "Negligence in Duty<SEP>Staff Members"
+  },
+  "Malpractice for Personal Gain<SEP>Staff Members": {
+    "chunk_ids": [
+      "chunk-534cee49a6033035c2c5393b14d42b64"
+    ],
+    "count": 1,
+    "create_time": 1773711994,
+    "update_time": 1773711994,
+    "_id": "Malpractice for Personal Gain<SEP>Staff Members"
+  },
+  "Criminal Liability<SEP>Negligence in Duty": {
+    "chunk_ids": [
+      "chunk-534cee49a6033035c2c5393b14d42b64"
+    ],
+    "count": 1,
+    "create_time": 1773711994,
+    "update_time": 1773711994,
+    "_id": "Criminal Liability<SEP>Negligence in Duty"
+  },
+  "Article 103<SEP>Labor Administration Department": {
+    "chunk_ids": [
+      "chunk-534cee49a6033035c2c5393b14d42b64"
+    ],
+    "count": 1,
+    "create_time": 1773711994,
+    "update_time": 1773711994,
+    "_id": "Article 103<SEP>Labor Administration Department"
+  },
+  "Article 103<SEP>Relevant Departments": {
+    "chunk_ids": [
+      "chunk-534cee49a6033035c2c5393b14d42b64"
+    ],
+    "count": 1,
+    "create_time": 1773711994,
+    "update_time": 1773711994,
+    "_id": "Article 103<SEP>Relevant Departments"
+  },
+  "Administrative Punishment<SEP>Negligence in Duty": {
+    "chunk_ids": [
+      "chunk-534cee49a6033035c2c5393b14d42b64"
+    ],
+    "count": 1,
+    "create_time": 1773711994,
+    "update_time": 1773711994,
+    "_id": "Administrative Punishment<SEP>Negligence in Duty"
+  },
+  "Criminal Liability<SEP>Malpractice for Personal Gain": {
+    "chunk_ids": [
+      "chunk-534cee49a6033035c2c5393b14d42b64"
+    ],
+    "count": 1,
+    "create_time": 1773711994,
+    "update_time": 1773711994,
+    "_id": "Criminal Liability<SEP>Malpractice for Personal Gain"
+  },
+  "Article 103<SEP>Staff Members": {
+    "chunk_ids": [
+      "chunk-534cee49a6033035c2c5393b14d42b64"
+    ],
+    "count": 1,
+    "create_time": 1773711995,
+    "update_time": 1773711995,
+    "_id": "Article 103<SEP>Staff Members"
+  },
+  "Abuse of Power<SEP>Criminal Liability": {
+    "chunk_ids": [
+      "chunk-534cee49a6033035c2c5393b14d42b64"
+    ],
+    "count": 1,
+    "create_time": 1773711995,
+    "update_time": 1773711995,
+    "_id": "Abuse of Power<SEP>Criminal Liability"
+  },
+  "Administrative Punishment<SEP>Malpractice for Personal Gain": {
+    "chunk_ids": [
+      "chunk-534cee49a6033035c2c5393b14d42b64"
+    ],
+    "count": 1,
+    "create_time": 1773711995,
+    "update_time": 1773711995,
+    "_id": "Administrative Punishment<SEP>Malpractice for Personal Gain"
+  },
+  "Abuse of Power<SEP>Administrative Punishment": {
+    "chunk_ids": [
+      "chunk-534cee49a6033035c2c5393b14d42b64"
+    ],
+    "count": 1,
+    "create_time": 1773711995,
+    "update_time": 1773711995,
+    "_id": "Abuse of Power<SEP>Administrative Punishment"
+  },
+  "Employer<SEP>Forced Labor": {
+    "chunk_ids": [
+      "chunk-fc2cc869b28e0784bd829a72850245ab"
+    ],
+    "count": 1,
+    "create_time": 1773712009,
+    "update_time": 1773712009,
+    "_id": "Employer<SEP>Forced Labor"
+  },
+  "Public Security Organs<SEP>Responsible Personnel": {
+    "chunk_ids": [
+      "chunk-fc2cc869b28e0784bd829a72850245ab"
+    ],
+    "count": 1,
+    "create_time": 1773712009,
+    "update_time": 1773712009,
+    "_id": "Public Security Organs<SEP>Responsible Personnel"
+  },
+  "Article 96<SEP>Forced Labor": {
+    "chunk_ids": [
+      "chunk-fc2cc869b28e0784bd829a72850245ab"
+    ],
+    "count": 1,
+    "create_time": 1773712010,
+    "update_time": 1773712010,
+    "_id": "Article 96<SEP>Forced Labor"
+  },
+  "Forced Labor<SEP>Violent Means": {
+    "chunk_ids": [
+      "chunk-fc2cc869b28e0784bd829a72850245ab"
+    ],
+    "count": 1,
+    "create_time": 1773712010,
+    "update_time": 1773712010,
+    "_id": "Forced Labor<SEP>Violent Means"
+  },
+  "Article 96<SEP>Public Security Organs": {
+    "chunk_ids": [
+      "chunk-fc2cc869b28e0784bd829a72850245ab"
+    ],
+    "count": 1,
+    "create_time": 1773712010,
+    "update_time": 1773712010,
+    "_id": "Article 96<SEP>Public Security Organs"
+  },
+  "Forced Labor<SEP>Threatening Means": {
+    "chunk_ids": [
+      "chunk-fc2cc869b28e0784bd829a72850245ab"
+    ],
+    "count": 1,
+    "create_time": 1773712010,
+    "update_time": 1773712010,
+    "_id": "Forced Labor<SEP>Threatening Means"
+  },
+  "Forced Labor<SEP>Illegal Restriction of Personal Freedom": {
+    "chunk_ids": [
+      "chunk-fc2cc869b28e0784bd829a72850245ab"
+    ],
+    "count": 1,
+    "create_time": 1773712011,
+    "update_time": 1773712011,
+    "_id": "Forced Labor<SEP>Illegal Restriction of Personal Freedom"
+  },
+  "Article 36<SEP>Article 37": {
+    "chunk_ids": [
+      "chunk-db161f575c0e9349bf3b18d1733f159c"
+    ],
+    "count": 1,
+    "create_time": 1773712015,
+    "update_time": 1773712015,
+    "_id": "Article 36<SEP>Article 37"
+  },
+  "Employer<SEP>Labor Quota": {
+    "chunk_ids": [
+      "chunk-db161f575c0e9349bf3b18d1733f159c"
+    ],
+    "count": 1,
+    "create_time": 1773712015,
+    "update_time": 1773712015,
+    "_id": "Employer<SEP>Labor Quota"
+  },
+  "Article 36<SEP>Chinese Labor Law": {
+    "chunk_ids": [
+      "chunk-db161f575c0e9349bf3b18d1733f159c"
+    ],
+    "count": 1,
+    "create_time": 1773712016,
+    "update_time": 1773712016,
+    "_id": "Article 36<SEP>Chinese Labor Law"
+  },
+  "Employer<SEP>Piece-Rate Remuneration Standard": {
+    "chunk_ids": [
+      "chunk-db161f575c0e9349bf3b18d1733f159c"
+    ],
+    "count": 1,
+    "create_time": 1773712016,
+    "update_time": 1773712016,
+    "_id": "Employer<SEP>Piece-Rate Remuneration Standard"
+  },
+  "Article 37<SEP>Employer": {
+    "chunk_ids": [
+      "chunk-db161f575c0e9349bf3b18d1733f159c"
+    ],
+    "count": 1,
+    "create_time": 1773712017,
+    "update_time": 1773712017,
+    "_id": "Article 37<SEP>Employer"
+  },
+  "Article 37<SEP>Worker": {
+    "chunk_ids": [
+      "chunk-db161f575c0e9349bf3b18d1733f159c"
+    ],
+    "count": 1,
+    "create_time": 1773712017,
+    "update_time": 1773712017,
+    "_id": "Article 37<SEP>Worker"
+  },
+  "Article 37<SEP>Chinese Labor Law": {
+    "chunk_ids": [
+      "chunk-db161f575c0e9349bf3b18d1733f159c"
+    ],
+    "count": 1,
+    "create_time": 1773712017,
+    "update_time": 1773712017,
+    "_id": "Article 37<SEP>Chinese Labor Law"
+  },
+  "Article 50<SEP>Wage Payment": {
+    "chunk_ids": [
+      "chunk-6f58679d44bde34664e3b2b1d8d81021"
+    ],
+    "count": 1,
+    "create_time": 1773712023,
+    "update_time": 1773712023,
+    "_id": "Article 50<SEP>Wage Payment"
+  },
+  "Laborer<SEP>Wage Payment": {
+    "chunk_ids": [
+      "chunk-6f58679d44bde34664e3b2b1d8d81021"
+    ],
+    "count": 1,
+    "create_time": 1773712023,
+    "update_time": 1773712023,
+    "_id": "Laborer<SEP>Wage Payment"
+  },
+  "Article 50<SEP>Labor Law": {
+    "chunk_ids": [
+      "chunk-6f58679d44bde34664e3b2b1d8d81021"
+    ],
+    "count": 1,
+    "create_time": 1773712023,
+    "update_time": 1773712023,
+    "_id": "Article 50<SEP>Labor Law"
+  },
+  "China<SEP>Labor Hour System": {
+    "chunk_ids": [
+      "chunk-225b307bc1363ee71949e25c8ac697f3"
+    ],
+    "count": 1,
+    "create_time": 1773712032,
+    "update_time": 1773712032,
+    "_id": "China<SEP>Labor Hour System"
+  },
+  "Eight-Hour Workday<SEP>Labor Hour System": {
+    "chunk_ids": [
+      "chunk-225b307bc1363ee71949e25c8ac697f3"
+    ],
+    "count": 1,
+    "create_time": 1773712032,
+    "update_time": 1773712032,
+    "_id": "Eight-Hour Workday<SEP>Labor Hour System"
+  },
+  "Forty-Four-Hour Workweek<SEP>Labor Hour System": {
+    "chunk_ids": [
+      "chunk-225b307bc1363ee71949e25c8ac697f3"
+    ],
+    "count": 1,
+    "create_time": 1773712032,
+    "update_time": 1773712032,
+    "_id": "Forty-Four-Hour Workweek<SEP>Labor Hour System"
+  },
+  "Labor Hour System<SEP>Workers": {
+    "chunk_ids": [
+      "chunk-225b307bc1363ee71949e25c8ac697f3"
+    ],
+    "count": 1,
+    "create_time": 1773712033,
+    "update_time": 1773712033,
+    "_id": "Labor Hour System<SEP>Workers"
+  },
+  "Article 36<SEP>Labor Hour System": {
+    "chunk_ids": [
+      "chunk-225b307bc1363ee71949e25c8ac697f3"
+    ],
+    "count": 1,
+    "create_time": 1773712033,
+    "update_time": 1773712033,
+    "_id": "Article 36<SEP>Labor Hour System"
+  },
+  "Article 12<SEP>Laborer": {
+    "chunk_ids": [
+      "chunk-2f9cf51a71d05c5aaeae0c910ea62a37"
+    ],
+    "count": 1,
+    "create_time": 1773712039,
+    "update_time": 1773712039,
+    "_id": "Article 12<SEP>Laborer"
+  },
+  "Article 12<SEP>Ethnicity": {
+    "chunk_ids": [
+      "chunk-2f9cf51a71d05c5aaeae0c910ea62a37"
+    ],
+    "count": 1,
+    "create_time": 1773712039,
+    "update_time": 1773712039,
+    "_id": "Article 12<SEP>Ethnicity"
+  },
+  "Article 12<SEP>Race": {
+    "chunk_ids": [
+      "chunk-2f9cf51a71d05c5aaeae0c910ea62a37"
+    ],
+    "count": 1,
+    "create_time": 1773712040,
+    "update_time": 1773712040,
+    "_id": "Article 12<SEP>Race"
+  },
+  "Article 12<SEP>Gender": {
+    "chunk_ids": [
+      "chunk-2f9cf51a71d05c5aaeae0c910ea62a37"
+    ],
+    "count": 1,
+    "create_time": 1773712040,
+    "update_time": 1773712040,
+    "_id": "Article 12<SEP>Gender"
+  },
+  "Article 12<SEP>Religious Belief": {
+    "chunk_ids": [
+      "chunk-2f9cf51a71d05c5aaeae0c910ea62a37"
+    ],
+    "count": 1,
+    "create_time": 1773712040,
+    "update_time": 1773712040,
+    "_id": "Article 12<SEP>Religious Belief"
+  },
+  "Article 12<SEP>Employment Discrimination": {
+    "chunk_ids": [
+      "chunk-2f9cf51a71d05c5aaeae0c910ea62a37"
+    ],
+    "count": 1,
+    "create_time": 1773712041,
+    "update_time": 1773712041,
+    "_id": "Article 12<SEP>Employment Discrimination"
+  },
+  "Article 101<SEP>Labor Administrative Department": {
+    "chunk_ids": [
+      "chunk-55fedf8879833ede48386f292722cc7d"
+    ],
+    "count": 1,
+    "create_time": 1773712063,
+    "update_time": 1773712063,
+    "_id": "Article 101<SEP>Labor Administrative Department"
+  },
+  "Employer<SEP>Relevant Departments": {
+    "chunk_ids": [
+      "chunk-55fedf8879833ede48386f292722cc7d"
+    ],
+    "count": 1,
+    "create_time": 1773712063,
+    "update_time": 1773712063,
+    "_id": "Employer<SEP>Relevant Departments"
+  },
+  "Article 101<SEP>Relevant Departments": {
+    "chunk_ids": [
+      "chunk-55fedf8879833ede48386f292722cc7d"
+    ],
+    "count": 1,
+    "create_time": 1773712064,
+    "update_time": 1773712064,
+    "_id": "Article 101<SEP>Relevant Departments"
+  },
+  "Employer<SEP>Staff Members": {
+    "chunk_ids": [
+      "chunk-55fedf8879833ede48386f292722cc7d"
+    ],
+    "count": 1,
+    "create_time": 1773712064,
+    "update_time": 1773712064,
+    "_id": "Employer<SEP>Staff Members"
+  },
+  "Employer<SEP>Whistleblowers": {
+    "chunk_ids": [
+      "chunk-55fedf8879833ede48386f292722cc7d"
+    ],
+    "count": 1,
+    "create_time": 1773712065,
+    "update_time": 1773712065,
+    "_id": "Employer<SEP>Whistleblowers"
+  },
+  "Criminal Liability<SEP>Employer": {
+    "chunk_ids": [
+      "chunk-55fedf8879833ede48386f292722cc7d",
+      "chunk-11661d5949c7a4c46892595299c2a3db"
+    ],
+    "count": 2,
+    "update_time": 1773712205,
+    "_id": "Criminal Liability<SEP>Employer"
+  },
+  "Labor Contract System<SEP>Provincial People's Government": {
+    "chunk_ids": [
+      "chunk-391c9ac1a44dcff50d59e13e3dd208b6"
+    ],
+    "count": 1,
+    "create_time": 1773712087,
+    "update_time": 1773712087,
+    "_id": "Labor Contract System<SEP>Provincial People's Government"
+  },
+  "Employer<SEP>State": {
+    "chunk_ids": [
+      "chunk-8bca3d7a5b26e41a901895456edf1d72"
+    ],
+    "count": 1,
+    "create_time": 1773712087,
+    "update_time": 1773712087,
+    "_id": "Employer<SEP>State"
+  },
+  "Labor Dispute Mediation Committee<SEP>Trade Union": {
+    "chunk_ids": [
+      "chunk-8bca3d7a5b26e41a901895456edf1d72"
+    ],
+    "count": 1,
+    "create_time": 1773712087,
+    "update_time": 1773712087,
+    "_id": "Labor Dispute Mediation Committee<SEP>Trade Union"
+  },
+  "Labor Administrative Department<SEP>Labor Dispute Arbitration Committee": {
+    "chunk_ids": [
+      "chunk-8bca3d7a5b26e41a901895456edf1d72"
+    ],
+    "count": 1,
+    "create_time": 1773712087,
+    "update_time": 1773712087,
+    "_id": "Labor Administrative Department<SEP>Labor Dispute Arbitration Committee"
+  },
+  "Provincial People's Government<SEP>State Council": {
+    "chunk_ids": [
+      "chunk-391c9ac1a44dcff50d59e13e3dd208b6"
+    ],
+    "count": 1,
+    "create_time": 1773712088,
+    "update_time": 1773712088,
+    "_id": "Provincial People's Government<SEP>State Council"
+  },
+  "Arbitration<SEP>Mediation": {
+    "chunk_ids": [
+      "chunk-8bca3d7a5b26e41a901895456edf1d72"
+    ],
+    "count": 1,
+    "create_time": 1773712088,
+    "update_time": 1773712088,
+    "_id": "Arbitration<SEP>Mediation"
+  },
+  "Labor Dispute<SEP>Labor Dispute Mediation Committee": {
+    "chunk_ids": [
+      "chunk-8bca3d7a5b26e41a901895456edf1d72"
+    ],
+    "count": 1,
+    "create_time": 1773712088,
+    "update_time": 1773712088,
+    "_id": "Labor Dispute<SEP>Labor Dispute Mediation Committee"
+  },
+  "Article 76<SEP>State": {
+    "chunk_ids": [
+      "chunk-8bca3d7a5b26e41a901895456edf1d72"
+    ],
+    "count": 1,
+    "create_time": 1773712088,
+    "update_time": 1773712088,
+    "_id": "Article 76<SEP>State"
+  },
+  "Article 106<SEP>Provincial People's Government": {
+    "chunk_ids": [
+      "chunk-391c9ac1a44dcff50d59e13e3dd208b6"
+    ],
+    "count": 1,
+    "create_time": 1773712088,
+    "update_time": 1773712088,
+    "_id": "Article 106<SEP>Provincial People's Government"
+  },
+  "Arbitration<SEP>Litigation": {
+    "chunk_ids": [
+      "chunk-8bca3d7a5b26e41a901895456edf1d72"
+    ],
+    "count": 1,
+    "create_time": 1773712088,
+    "update_time": 1773712088,
+    "_id": "Arbitration<SEP>Litigation"
+  },
+  "Article 77<SEP>Mediation": {
+    "chunk_ids": [
+      "chunk-8bca3d7a5b26e41a901895456edf1d72"
+    ],
+    "count": 1,
+    "create_time": 1773712088,
+    "update_time": 1773712088,
+    "_id": "Article 77<SEP>Mediation"
+  },
+  "Employer<SEP>Labor Dispute Mediation Committee": {
+    "chunk_ids": [
+      "chunk-8bca3d7a5b26e41a901895456edf1d72"
+    ],
+    "count": 1,
+    "create_time": 1773712089,
+    "update_time": 1773712089,
+    "_id": "Employer<SEP>Labor Dispute Mediation Committee"
+  },
+  "Labor Dispute<SEP>Labor Dispute Arbitration Committee": {
+    "chunk_ids": [
+      "chunk-8bca3d7a5b26e41a901895456edf1d72"
+    ],
+    "count": 1,
+    "create_time": 1773712089,
+    "update_time": 1773712089,
+    "_id": "Labor Dispute<SEP>Labor Dispute Arbitration Committee"
+  },
+  "Article 106<SEP>State Council": {
+    "chunk_ids": [
+      "chunk-391c9ac1a44dcff50d59e13e3dd208b6"
+    ],
+    "count": 1,
+    "create_time": 1773712089,
+    "update_time": 1773712089,
+    "_id": "Article 106<SEP>State Council"
+  },
+  "Article 77<SEP>Litigation": {
+    "chunk_ids": [
+      "chunk-8bca3d7a5b26e41a901895456edf1d72"
+    ],
+    "count": 1,
+    "create_time": 1773712089,
+    "update_time": 1773712089,
+    "_id": "Article 77<SEP>Litigation"
+  },
+  "Labor Dispute<SEP>People's Court": {
+    "chunk_ids": [
+      "chunk-8bca3d7a5b26e41a901895456edf1d72"
+    ],
+    "count": 1,
+    "create_time": 1773712089,
+    "update_time": 1773712089,
+    "_id": "Labor Dispute<SEP>People's Court"
+  },
+  "Article 79<SEP>Labor Dispute Mediation Committee": {
+    "chunk_ids": [
+      "chunk-8bca3d7a5b26e41a901895456edf1d72"
+    ],
+    "count": 1,
+    "create_time": 1773712089,
+    "update_time": 1773712089,
+    "_id": "Article 79<SEP>Labor Dispute Mediation Committee"
+  },
+  "Article 77<SEP>Negotiation": {
+    "chunk_ids": [
+      "chunk-8bca3d7a5b26e41a901895456edf1d72"
+    ],
+    "count": 1,
+    "create_time": 1773712090,
+    "update_time": 1773712090,
+    "_id": "Article 77<SEP>Negotiation"
+  },
+  "Article 78<SEP>Labor Dispute": {
+    "chunk_ids": [
+      "chunk-8bca3d7a5b26e41a901895456edf1d72"
+    ],
+    "count": 1,
+    "create_time": 1773712090,
+    "update_time": 1773712090,
+    "_id": "Article 78<SEP>Labor Dispute"
+  },
+  "Article 81<SEP>Labor Dispute Arbitration Committee": {
+    "chunk_ids": [
+      "chunk-8bca3d7a5b26e41a901895456edf1d72"
+    ],
+    "count": 1,
+    "create_time": 1773712090,
+    "update_time": 1773712090,
+    "_id": "Article 81<SEP>Labor Dispute Arbitration Committee"
+  },
+  "Article 80<SEP>Labor Dispute Mediation Committee": {
+    "chunk_ids": [
+      "chunk-8bca3d7a5b26e41a901895456edf1d72"
+    ],
+    "count": 1,
+    "create_time": 1773712090,
+    "update_time": 1773712090,
+    "_id": "Article 80<SEP>Labor Dispute Mediation Committee"
+  },
+  "Article 79<SEP>Labor Dispute Arbitration Committee": {
+    "chunk_ids": [
+      "chunk-8bca3d7a5b26e41a901895456edf1d72"
+    ],
+    "count": 1,
+    "create_time": 1773712090,
+    "update_time": 1773712090,
+    "_id": "Article 79<SEP>Labor Dispute Arbitration Committee"
+  },
+  "Arbitration<SEP>Article 77": {
+    "chunk_ids": [
+      "chunk-8bca3d7a5b26e41a901895456edf1d72"
+    ],
+    "count": 1,
+    "create_time": 1773712091,
+    "update_time": 1773712091,
+    "_id": "Arbitration<SEP>Article 77"
+  },
+  "Article 79<SEP>People's Court": {
+    "chunk_ids": [
+      "chunk-8bca3d7a5b26e41a901895456edf1d72"
+    ],
+    "count": 1,
+    "create_time": 1773712091,
+    "update_time": 1773712091,
+    "_id": "Article 79<SEP>People's Court"
+  },
+  "Article 24<SEP>Labor Contract": {
+    "chunk_ids": [
+      "chunk-16710c0d4227925f557982746f69c1b2"
+    ],
+    "count": 1,
+    "create_time": 1773712099,
+    "update_time": 1773712099,
+    "_id": "Article 24<SEP>Labor Contract"
+  },
+  "Contract Parties<SEP>Labor Contract": {
+    "chunk_ids": [
+      "chunk-16710c0d4227925f557982746f69c1b2"
+    ],
+    "count": 1,
+    "create_time": 1773712099,
+    "update_time": 1773712099,
+    "_id": "Contract Parties<SEP>Labor Contract"
+  },
+  "Contract Parties<SEP>Mutual Agreement": {
+    "chunk_ids": [
+      "chunk-16710c0d4227925f557982746f69c1b2"
+    ],
+    "count": 1,
+    "create_time": 1773712100,
+    "update_time": 1773712100,
+    "_id": "Contract Parties<SEP>Mutual Agreement"
+  },
+  "Employer<SEP>Working Hours": {
+    "chunk_ids": [
+      "chunk-2dd1fd3462e1832af7cfde4c6f880f76"
+    ],
+    "count": 1,
+    "create_time": 1773712103,
+    "update_time": 1773712103,
+    "_id": "Employer<SEP>Working Hours"
+  },
+  "Worker<SEP>Working Hours": {
+    "chunk_ids": [
+      "chunk-2dd1fd3462e1832af7cfde4c6f880f76"
+    ],
+    "count": 1,
+    "create_time": 1773712104,
+    "update_time": 1773712104,
+    "_id": "Worker<SEP>Working Hours"
+  },
+  "Labor Law<SEP>Worker": {
+    "chunk_ids": [
+      "chunk-2dd1fd3462e1832af7cfde4c6f880f76"
+    ],
+    "count": 1,
+    "create_time": 1773712104,
+    "update_time": 1773712104,
+    "_id": "Labor Law<SEP>Worker"
+  },
+  "Article 43<SEP>Labor Law": {
+    "chunk_ids": [
+      "chunk-2dd1fd3462e1832af7cfde4c6f880f76"
+    ],
+    "count": 1,
+    "create_time": 1773712105,
+    "update_time": 1773712105,
+    "_id": "Article 43<SEP>Labor Law"
+  },
+  "Chapter Seven<SEP>Female Workers": {
+    "chunk_ids": [
+      "chunk-cdfe4fd7432c0c1b10d2636d5f862da7"
+    ],
+    "count": 1,
+    "create_time": 1773712110,
+    "update_time": 1773712110,
+    "_id": "Chapter Seven<SEP>Female Workers"
+  },
+  "Chapter Seven<SEP>Minor Workers": {
+    "chunk_ids": [
+      "chunk-cdfe4fd7432c0c1b10d2636d5f862da7"
+    ],
+    "count": 1,
+    "create_time": 1773712110,
+    "update_time": 1773712110,
+    "_id": "Chapter Seven<SEP>Minor Workers"
+  },
+  "Chapter Seven<SEP>Special Protection": {
+    "chunk_ids": [
+      "chunk-cdfe4fd7432c0c1b10d2636d5f862da7"
+    ],
+    "count": 1,
+    "create_time": 1773712111,
+    "update_time": 1773712111,
+    "_id": "Chapter Seven<SEP>Special Protection"
+  },
+  "Chapter Nine<SEP>Chapter Ten": {
+    "chunk_ids": [
+      "chunk-ebd08f8b818641fd5c206645935abc5f"
+    ],
+    "count": 1,
+    "create_time": 1773712121,
+    "update_time": 1773712121,
+    "_id": "Chapter Nine<SEP>Chapter Ten"
+  },
+  "Chapter Thirteen<SEP>Chapter Twelve": {
+    "chunk_ids": [
+      "chunk-ebd08f8b818641fd5c206645935abc5f"
+    ],
+    "count": 1,
+    "create_time": 1773712121,
+    "update_time": 1773712121,
+    "_id": "Chapter Thirteen<SEP>Chapter Twelve"
+  },
+  "Chapter Eleven<SEP>Chapter Ten": {
+    "chunk_ids": [
+      "chunk-ebd08f8b818641fd5c206645935abc5f"
+    ],
+    "count": 1,
+    "create_time": 1773712122,
+    "update_time": 1773712122,
+    "_id": "Chapter Eleven<SEP>Chapter Ten"
+  },
+  "Chapter Eleven<SEP>Chapter Twelve": {
+    "chunk_ids": [
+      "chunk-ebd08f8b818641fd5c206645935abc5f"
+    ],
+    "count": 1,
+    "create_time": 1773712122,
+    "update_time": 1773712122,
+    "_id": "Chapter Eleven<SEP>Chapter Twelve"
+  },
+  "Health Protection<SEP>Working Hour Extension": {
+    "chunk_ids": [
+      "chunk-484ec462bb336f0faad2e38a9ab16421"
+    ],
+    "count": 1,
+    "create_time": 1773712126,
+    "update_time": 1773712126,
+    "_id": "Health Protection<SEP>Working Hour Extension"
+  },
+  "Article 41<SEP>Employer": {
+    "chunk_ids": [
+      "chunk-484ec462bb336f0faad2e38a9ab16421"
+    ],
+    "count": 1,
+    "create_time": 1773712127,
+    "update_time": 1773712127,
+    "_id": "Article 41<SEP>Employer"
+  },
+  "Article 41<SEP>Trade Union": {
+    "chunk_ids": [
+      "chunk-484ec462bb336f0faad2e38a9ab16421"
+    ],
+    "count": 1,
+    "create_time": 1773712127,
+    "update_time": 1773712127,
+    "_id": "Article 41<SEP>Trade Union"
+  },
+  "Article 41<SEP>Worker": {
+    "chunk_ids": [
+      "chunk-484ec462bb336f0faad2e38a9ab16421"
+    ],
+    "count": 1,
+    "create_time": 1773712128,
+    "update_time": 1773712128,
+    "_id": "Article 41<SEP>Worker"
+  },
+  "Labor Contract<SEP>Labor Contract Termination": {
+    "chunk_ids": [
+      "chunk-8312a3dee9750ae6ed96f0944844f476"
+    ],
+    "count": 1,
+    "create_time": 1773712144,
+    "update_time": 1773712144,
+    "_id": "Labor Contract<SEP>Labor Contract Termination"
+  },
+  "Article 23<SEP>Labor Contract": {
+    "chunk_ids": [
+      "chunk-8312a3dee9750ae6ed96f0944844f476"
+    ],
+    "count": 1,
+    "create_time": 1773712145,
+    "update_time": 1773712145,
+    "_id": "Article 23<SEP>Labor Contract"
+  },
+  "Article 23<SEP>Labor Contract Termination": {
+    "chunk_ids": [
+      "chunk-8312a3dee9750ae6ed96f0944844f476"
+    ],
+    "count": 1,
+    "create_time": 1773712145,
+    "update_time": 1773712145,
+    "_id": "Article 23<SEP>Labor Contract Termination"
+  },
+  "Labor Contract<SEP>Probationary Period": {
+    "chunk_ids": [
+      "chunk-f1a27b67d73b4ed3925ff3ffe1e99ca3"
+    ],
+    "count": 1,
+    "create_time": 1773712161,
+    "update_time": 1773712161,
+    "_id": "Labor Contract<SEP>Probationary Period"
+  },
+  "Probationary Period<SEP>Six Months": {
+    "chunk_ids": [
+      "chunk-f1a27b67d73b4ed3925ff3ffe1e99ca3"
+    ],
+    "count": 1,
+    "create_time": 1773712162,
+    "update_time": 1773712162,
+    "_id": "Probationary Period<SEP>Six Months"
+  },
+  "Article Twenty-One<SEP>Labor Contract": {
+    "chunk_ids": [
+      "chunk-f1a27b67d73b4ed3925ff3ffe1e99ca3"
+    ],
+    "count": 1,
+    "create_time": 1773712162,
+    "update_time": 1773712162,
+    "_id": "Article Twenty-One<SEP>Labor Contract"
+  },
+  "Employer<SEP>Labor Safety Facilities": {
+    "chunk_ids": [
+      "chunk-4d8030db75e52bd9e7110fb8f615de79"
+    ],
+    "count": 1,
+    "create_time": 1773712162,
+    "update_time": 1773712162,
+    "_id": "Employer<SEP>Labor Safety Facilities"
+  },
+  "Major Accident<SEP>Responsible Personnel": {
+    "chunk_ids": [
+      "chunk-4d8030db75e52bd9e7110fb8f615de79"
+    ],
+    "count": 1,
+    "create_time": 1773712162,
+    "update_time": 1773712162,
+    "_id": "Major Accident<SEP>Responsible Personnel"
+  },
+  "Labor Protection Equipment<SEP>Workers": {
+    "chunk_ids": [
+      "chunk-4d8030db75e52bd9e7110fb8f615de79"
+    ],
+    "count": 1,
+    "create_time": 1773712162,
+    "update_time": 1773712162,
+    "_id": "Labor Protection Equipment<SEP>Workers"
+  },
+  "Employer<SEP>Labor Hygiene Conditions": {
+    "chunk_ids": [
+      "chunk-4d8030db75e52bd9e7110fb8f615de79"
+    ],
+    "count": 1,
+    "create_time": 1773712162,
+    "update_time": 1773712162,
+    "_id": "Employer<SEP>Labor Hygiene Conditions"
+  },
+  "Labor Safety Facilities<SEP>Workers": {
+    "chunk_ids": [
+      "chunk-4d8030db75e52bd9e7110fb8f615de79"
+    ],
+    "count": 1,
+    "create_time": 1773712162,
+    "update_time": 1773712162,
+    "_id": "Labor Safety Facilities<SEP>Workers"
+  },
+  "Article Twenty-One<SEP>Probationary Period": {
+    "chunk_ids": [
+      "chunk-f1a27b67d73b4ed3925ff3ffe1e99ca3"
+    ],
+    "count": 1,
+    "create_time": 1773712162,
+    "update_time": 1773712162,
+    "_id": "Article Twenty-One<SEP>Probationary Period"
+  },
+  "Employer<SEP>Labor Protection Equipment": {
+    "chunk_ids": [
+      "chunk-4d8030db75e52bd9e7110fb8f615de79"
+    ],
+    "count": 1,
+    "create_time": 1773712163,
+    "update_time": 1773712163,
+    "_id": "Employer<SEP>Labor Protection Equipment"
+  },
+  "County-Level or Higher People's Government<SEP>Employer": {
+    "chunk_ids": [
+      "chunk-4d8030db75e52bd9e7110fb8f615de79"
+    ],
+    "count": 1,
+    "create_time": 1773712164,
+    "update_time": 1773712164,
+    "_id": "County-Level or Higher People's Government<SEP>Employer"
+  },
+  "Article 92<SEP>Employer": {
+    "chunk_ids": [
+      "chunk-4d8030db75e52bd9e7110fb8f615de79"
+    ],
+    "count": 1,
+    "create_time": 1773712164,
+    "update_time": 1773712164,
+    "_id": "Article 92<SEP>Employer"
+  },
+  "Article 92<SEP>Labor Administrative Department": {
+    "chunk_ids": [
+      "chunk-4d8030db75e52bd9e7110fb8f615de79"
+    ],
+    "count": 1,
+    "create_time": 1773712165,
+    "update_time": 1773712165,
+    "_id": "Article 92<SEP>Labor Administrative Department"
+  },
+  "Article 92<SEP>County-Level or Higher People's Government": {
+    "chunk_ids": [
+      "chunk-4d8030db75e52bd9e7110fb8f615de79"
+    ],
+    "count": 1,
+    "create_time": 1773712165,
+    "update_time": 1773712165,
+    "_id": "Article 92<SEP>County-Level or Higher People's Government"
+  },
+  "Article 92<SEP>Responsible Personnel": {
+    "chunk_ids": [
+      "chunk-4d8030db75e52bd9e7110fb8f615de79"
+    ],
+    "count": 1,
+    "create_time": 1773712166,
+    "update_time": 1773712166,
+    "_id": "Article 92<SEP>Responsible Personnel"
+  },
+  "Employee Congress<SEP>Laborer": {
+    "chunk_ids": [
+      "chunk-c6768f8c1f0e359974ecafdba6b02c7c"
+    ],
+    "count": 1,
+    "create_time": 1773712185,
+    "update_time": 1773712185,
+    "_id": "Employee Congress<SEP>Laborer"
+  },
+  "Employee Representative Congress<SEP>Laborer": {
+    "chunk_ids": [
+      "chunk-c6768f8c1f0e359974ecafdba6b02c7c"
+    ],
+    "count": 1,
+    "create_time": 1773712186,
+    "update_time": 1773712186,
+    "_id": "Employee Representative Congress<SEP>Laborer"
+  },
+  "Democratic Management<SEP>Laborer": {
+    "chunk_ids": [
+      "chunk-c6768f8c1f0e359974ecafdba6b02c7c"
+    ],
+    "count": 1,
+    "create_time": 1773712187,
+    "update_time": 1773712187,
+    "_id": "Democratic Management<SEP>Laborer"
+  },
+  "Equal Consultation<SEP>Laborer": {
+    "chunk_ids": [
+      "chunk-c6768f8c1f0e359974ecafdba6b02c7c"
+    ],
+    "count": 1,
+    "create_time": 1773712187,
+    "update_time": 1773712187,
+    "_id": "Equal Consultation<SEP>Laborer"
+  },
+  "Article Eight<SEP>Laborer": {
+    "chunk_ids": [
+      "chunk-c6768f8c1f0e359974ecafdba6b02c7c"
+    ],
+    "count": 1,
+    "create_time": 1773712187,
+    "update_time": 1773712187,
+    "_id": "Article Eight<SEP>Laborer"
+  },
+  "Employer<SEP>Equal Consultation": {
+    "chunk_ids": [
+      "chunk-c6768f8c1f0e359974ecafdba6b02c7c"
+    ],
+    "count": 1,
+    "create_time": 1773712187,
+    "update_time": 1773712187,
+    "_id": "Employer<SEP>Equal Consultation"
+  },
+  "Article Eight<SEP>Employer": {
+    "chunk_ids": [
+      "chunk-c6768f8c1f0e359974ecafdba6b02c7c"
+    ],
+    "count": 1,
+    "create_time": 1773712188,
+    "update_time": 1773712188,
+    "_id": "Article Eight<SEP>Employer"
+  },
+  "Major Casualty Accident<SEP>Serious Consequences": {
+    "chunk_ids": [
+      "chunk-11661d5949c7a4c46892595299c2a3db"
+    ],
+    "count": 1,
+    "create_time": 1773712204,
+    "update_time": 1773712204,
+    "_id": "Major Casualty Accident<SEP>Serious Consequences"
+  },
+  "Employer<SEP>Major Casualty Accident": {
+    "chunk_ids": [
+      "chunk-11661d5949c7a4c46892595299c2a3db"
+    ],
+    "count": 1,
+    "create_time": 1773712205,
+    "update_time": 1773712205,
+    "_id": "Employer<SEP>Major Casualty Accident"
+  },
+  "Article Ninety-Three<SEP>Employer": {
+    "chunk_ids": [
+      "chunk-11661d5949c7a4c46892595299c2a3db"
+    ],
+    "count": 1,
+    "create_time": 1773712206,
+    "update_time": 1773712206,
+    "_id": "Article Ninety-Three<SEP>Employer"
+  },
+  "Article Ninety-Three<SEP>Worker": {
+    "chunk_ids": [
+      "chunk-11661d5949c7a4c46892595299c2a3db"
+    ],
+    "count": 1,
+    "create_time": 1773712206,
+    "update_time": 1773712206,
+    "_id": "Article Ninety-Three<SEP>Worker"
+  },
+  "Female Workers<SEP>Labor Protection Law": {
+    "chunk_ids": [
+      "chunk-c5e2a3fc3ae04a7ea467816a16c1b275"
+    ],
+    "count": 1,
+    "create_time": 1773712223,
+    "update_time": 1773712223,
+    "_id": "Female Workers<SEP>Labor Protection Law"
+  },
+  "Mine Underground Work<SEP>Minority Workers": {
+    "chunk_ids": [
+      "chunk-c5e2a3fc3ae04a7ea467816a16c1b275"
+    ],
+    "count": 1,
+    "create_time": 1773712223,
+    "update_time": 1773712223,
+    "_id": "Mine Underground Work<SEP>Minority Workers"
+  },
+  "Minority Workers<SEP>Toxic and Harmful Work": {
+    "chunk_ids": [
+      "chunk-c5e2a3fc3ae04a7ea467816a16c1b275"
+    ],
+    "count": 1,
+    "create_time": 1773712223,
+    "update_time": 1773712223,
+    "_id": "Minority Workers<SEP>Toxic and Harmful Work"
+  },
+  "Female Workers<SEP>Menstruation Period": {
+    "chunk_ids": [
+      "chunk-c5e2a3fc3ae04a7ea467816a16c1b275"
+    ],
+    "count": 1,
+    "create_time": 1773712223,
+    "update_time": 1773712223,
+    "_id": "Female Workers<SEP>Menstruation Period"
+  },
+  "Fourth-Level Physical Labor Intensity<SEP>Minority Workers": {
+    "chunk_ids": [
+      "chunk-c5e2a3fc3ae04a7ea467816a16c1b275"
+    ],
+    "count": 1,
+    "create_time": 1773712224,
+    "update_time": 1773712224,
+    "_id": "Fourth-Level Physical Labor Intensity<SEP>Minority Workers"
+  },
+  "Female Workers<SEP>Pregnancy Period": {
+    "chunk_ids": [
+      "chunk-c5e2a3fc3ae04a7ea467816a16c1b275"
+    ],
+    "count": 1,
+    "create_time": 1773712224,
+    "update_time": 1773712224,
+    "_id": "Female Workers<SEP>Pregnancy Period"
+  },
+  "Labor Protection Law<SEP>Minority Workers": {
+    "chunk_ids": [
+      "chunk-c5e2a3fc3ae04a7ea467816a16c1b275"
+    ],
+    "count": 1,
+    "create_time": 1773712224,
+    "update_time": 1773712224,
+    "_id": "Labor Protection Law<SEP>Minority Workers"
+  },
+  "Female Workers<SEP>Maternity Leave": {
+    "chunk_ids": [
+      "chunk-c5e2a3fc3ae04a7ea467816a16c1b275"
+    ],
+    "count": 1,
+    "create_time": 1773712224,
+    "update_time": 1773712224,
+    "_id": "Female Workers<SEP>Maternity Leave"
+  },
+  "Employer<SEP>Minority Workers": {
+    "chunk_ids": [
+      "chunk-c5e2a3fc3ae04a7ea467816a16c1b275"
+    ],
+    "count": 1,
+    "create_time": 1773712225,
+    "update_time": 1773712225,
+    "_id": "Employer<SEP>Minority Workers"
+  },
+  "China<SEP>Labor Protection Law": {
+    "chunk_ids": [
+      "chunk-c5e2a3fc3ae04a7ea467816a16c1b275"
+    ],
+    "count": 1,
+    "create_time": 1773712225,
+    "update_time": 1773712225,
+    "_id": "China<SEP>Labor Protection Law"
+  },
+  "Female Workers<SEP>Lactation Period": {
+    "chunk_ids": [
+      "chunk-c5e2a3fc3ae04a7ea467816a16c1b275"
+    ],
+    "count": 1,
+    "create_time": 1773712225,
+    "update_time": 1773712225,
+    "_id": "Female Workers<SEP>Lactation Period"
+  },
+  "Article 58<SEP>Labor Protection Law": {
+    "chunk_ids": [
+      "chunk-c5e2a3fc3ae04a7ea467816a16c1b275"
+    ],
+    "count": 1,
+    "create_time": 1773712225,
+    "update_time": 1773712225,
+    "_id": "Article 58<SEP>Labor Protection Law"
+  },
+  "Article 64<SEP>Minority Workers": {
+    "chunk_ids": [
+      "chunk-c5e2a3fc3ae04a7ea467816a16c1b275"
+    ],
+    "count": 1,
+    "create_time": 1773712225,
+    "update_time": 1773712225,
+    "_id": "Article 64<SEP>Minority Workers"
+  },
+  "Article 59<SEP>Female Workers": {
+    "chunk_ids": [
+      "chunk-c5e2a3fc3ae04a7ea467816a16c1b275"
+    ],
+    "count": 1,
+    "create_time": 1773712225,
+    "update_time": 1773712225,
+    "_id": "Article 59<SEP>Female Workers"
+  },
+  "Article 65<SEP>Employer": {
+    "chunk_ids": [
+      "chunk-c5e2a3fc3ae04a7ea467816a16c1b275"
+    ],
+    "count": 1,
+    "create_time": 1773712225,
+    "update_time": 1773712225,
+    "_id": "Article 65<SEP>Employer"
+  },
+  "Article 60<SEP>Female Workers": {
+    "chunk_ids": [
+      "chunk-c5e2a3fc3ae04a7ea467816a16c1b275"
+    ],
+    "count": 1,
+    "create_time": 1773712226,
+    "update_time": 1773712226,
+    "_id": "Article 60<SEP>Female Workers"
+  },
+  "Article 61<SEP>Female Workers": {
+    "chunk_ids": [
+      "chunk-c5e2a3fc3ae04a7ea467816a16c1b275"
+    ],
+    "count": 1,
+    "create_time": 1773712226,
+    "update_time": 1773712226,
+    "_id": "Article 61<SEP>Female Workers"
+  },
+  "Article 62<SEP>Female Workers": {
+    "chunk_ids": [
+      "chunk-c5e2a3fc3ae04a7ea467816a16c1b275"
+    ],
+    "count": 1,
+    "create_time": 1773712227,
+    "update_time": 1773712227,
+    "_id": "Article 62<SEP>Female Workers"
+  },
+  "Article 63<SEP>Female Workers": {
+    "chunk_ids": [
+      "chunk-c5e2a3fc3ae04a7ea467816a16c1b275"
+    ],
+    "count": 1,
+    "create_time": 1773712227,
+    "update_time": 1773712227,
+    "_id": "Article 63<SEP>Female Workers"
+  },
+  "Enterprise<SEP>Enterprise Employee Party": {
+    "chunk_ids": [
+      "chunk-31e42e6a06e7bc74c1fb5360756f9132"
+    ],
+    "count": 1,
+    "create_time": 1773712232,
+    "update_time": 1773712232,
+    "_id": "Enterprise<SEP>Enterprise Employee Party"
+  },
+  "Collective Contract<SEP>Enterprise Employee Party": {
+    "chunk_ids": [
+      "chunk-31e42e6a06e7bc74c1fb5360756f9132"
+    ],
+    "count": 1,
+    "create_time": 1773712232,
+    "update_time": 1773712232,
+    "_id": "Collective Contract<SEP>Enterprise Employee Party"
+  },
+  "Collective Contract<SEP>Employee Congress": {
+    "chunk_ids": [
+      "chunk-31e42e6a06e7bc74c1fb5360756f9132"
+    ],
+    "count": 1,
+    "create_time": 1773712233,
+    "update_time": 1773712233,
+    "_id": "Collective Contract<SEP>Employee Congress"
+  },
+  "All Employees<SEP>Collective Contract": {
+    "chunk_ids": [
+      "chunk-31e42e6a06e7bc74c1fb5360756f9132"
+    ],
+    "count": 1,
+    "create_time": 1773712234,
+    "update_time": 1773712234,
+    "_id": "All Employees<SEP>Collective Contract"
+  },
+  "Collective Contract<SEP>Trade Union": {
+    "chunk_ids": [
+      "chunk-31e42e6a06e7bc74c1fb5360756f9132"
+    ],
+    "count": 1,
+    "create_time": 1773712234,
+    "update_time": 1773712234,
+    "_id": "Collective Contract<SEP>Trade Union"
+  },
+  "Collective Contract<SEP>Employee Representatives": {
+    "chunk_ids": [
+      "chunk-31e42e6a06e7bc74c1fb5360756f9132"
+    ],
+    "count": 1,
+    "create_time": 1773712235,
+    "update_time": 1773712235,
+    "_id": "Collective Contract<SEP>Employee Representatives"
+  },
+  "Collective Contract<SEP>Labor Remuneration": {
+    "chunk_ids": [
+      "chunk-31e42e6a06e7bc74c1fb5360756f9132"
+    ],
+    "count": 1,
+    "create_time": 1773712235,
+    "update_time": 1773712235,
+    "_id": "Collective Contract<SEP>Labor Remuneration"
+  },
+  "Collective Contract<SEP>Working Hours": {
+    "chunk_ids": [
+      "chunk-31e42e6a06e7bc74c1fb5360756f9132"
+    ],
+    "count": 1,
+    "create_time": 1773712236,
+    "update_time": 1773712236,
+    "_id": "Collective Contract<SEP>Working Hours"
+  },
+  "Collective Contract<SEP>Rest And Vacation": {
+    "chunk_ids": [
+      "chunk-31e42e6a06e7bc74c1fb5360756f9132"
+    ],
+    "count": 1,
+    "create_time": 1773712236,
+    "update_time": 1773712236,
+    "_id": "Collective Contract<SEP>Rest And Vacation"
+  },
+  "Collective Contract<SEP>Occupational Safety And Health": {
+    "chunk_ids": [
+      "chunk-31e42e6a06e7bc74c1fb5360756f9132"
+    ],
+    "count": 1,
+    "create_time": 1773712236,
+    "update_time": 1773712236,
+    "_id": "Collective Contract<SEP>Occupational Safety And Health"
+  },
+  "Collective Contract<SEP>Insurance And Welfare": {
+    "chunk_ids": [
+      "chunk-31e42e6a06e7bc74c1fb5360756f9132"
+    ],
+    "count": 1,
+    "create_time": 1773712237,
+    "update_time": 1773712237,
+    "_id": "Collective Contract<SEP>Insurance And Welfare"
+  },
+  "Article 86<SEP>Labor Administrative Department": {
+    "chunk_ids": [
+      "chunk-8ee12e2672dfb9fc10f84edd44b67880"
+    ],
+    "count": 1,
+    "create_time": 1773712238,
+    "update_time": 1773712238,
+    "_id": "Article 86<SEP>Labor Administrative Department"
+  },
+  "County-Level Government<SEP>Labor Administrative Department": {
+    "chunk_ids": [
+      "chunk-8ee12e2672dfb9fc10f84edd44b67880"
+    ],
+    "count": 1,
+    "create_time": 1773712239,
+    "update_time": 1773712239,
+    "_id": "County-Level Government<SEP>Labor Administrative Department"
+  },
+  "Article 86<SEP>People's Republic Of China Labor Law": {
+    "chunk_ids": [
+      "chunk-8ee12e2672dfb9fc10f84edd44b67880"
+    ],
+    "count": 1,
+    "create_time": 1773712239,
+    "update_time": 1773712239,
+    "_id": "Article 86<SEP>People's Republic Of China Labor Law"
+  },
+  "Article 22<SEP>Labor Contract": {
+    "chunk_ids": [
+      "chunk-c1a4ebf44debb9e60481cc178f07fa11"
+    ],
+    "count": 1,
+    "create_time": 1773712252,
+    "update_time": 1773712252,
+    "_id": "Article 22<SEP>Labor Contract"
+  },
+  "Business Secret<SEP>Employer": {
+    "chunk_ids": [
+      "chunk-c1a4ebf44debb9e60481cc178f07fa11"
+    ],
+    "count": 1,
+    "create_time": 1773712252,
+    "update_time": 1773712252,
+    "_id": "Business Secret<SEP>Employer"
+  },
+  "Article 22<SEP>Labor Contract Law of the People's Republic of China": {
+    "chunk_ids": [
+      "chunk-c1a4ebf44debb9e60481cc178f07fa11"
+    ],
+    "count": 1,
+    "create_time": 1773712253,
+    "update_time": 1773712253,
+    "_id": "Article 22<SEP>Labor Contract Law of the People's Republic of China"
+  },
+  "Business Secret<SEP>Employee": {
+    "chunk_ids": [
+      "chunk-c1a4ebf44debb9e60481cc178f07fa11"
+    ],
+    "count": 1,
+    "create_time": 1773712253,
+    "update_time": 1773712253,
+    "_id": "Business Secret<SEP>Employee"
+  },
+  "Social Insurance Fund<SEP>Social Insurance Fund Administration Agency": {
+    "chunk_ids": [
+      "chunk-d4778fa05214fc08dae5f90c37126391"
+    ],
+    "count": 1,
+    "create_time": 1773712256,
+    "update_time": 1773712256,
+    "_id": "Social Insurance Fund<SEP>Social Insurance Fund Administration Agency"
+  },
+  "Social Insurance Fund Administration Agency<SEP>Social Insurance Fund Supervisory Agency": {
+    "chunk_ids": [
+      "chunk-d4778fa05214fc08dae5f90c37126391"
+    ],
+    "count": 1,
+    "create_time": 1773712257,
+    "update_time": 1773712257,
+    "_id": "Social Insurance Fund Administration Agency<SEP>Social Insurance Fund Supervisory Agency"
+  },
+  "Social Insurance Fund<SEP>Social Insurance Fund Supervisory Agency": {
+    "chunk_ids": [
+      "chunk-d4778fa05214fc08dae5f90c37126391"
+    ],
+    "count": 1,
+    "create_time": 1773712257,
+    "update_time": 1773712257,
+    "_id": "Social Insurance Fund<SEP>Social Insurance Fund Supervisory Agency"
+  },
+  "Article Seventy-Four<SEP>Social Insurance Fund Administration Agency": {
+    "chunk_ids": [
+      "chunk-d4778fa05214fc08dae5f90c37126391"
+    ],
+    "count": 1,
+    "create_time": 1773712257,
+    "update_time": 1773712257,
+    "_id": "Article Seventy-Four<SEP>Social Insurance Fund Administration Agency"
+  },
+  "Article Seventy-Four<SEP>Social Insurance Fund Supervisory Agency": {
+    "chunk_ids": [
+      "chunk-d4778fa05214fc08dae5f90c37126391"
+    ],
+    "count": 1,
+    "create_time": 1773712258,
+    "update_time": 1773712258,
+    "_id": "Article Seventy-Four<SEP>Social Insurance Fund Supervisory Agency"
+  },
+  "Article Seventy-Four<SEP>Social Insurance Fund": {
+    "chunk_ids": [
+      "chunk-d4778fa05214fc08dae5f90c37126391"
+    ],
+    "count": 1,
+    "create_time": 1773712258,
+    "update_time": 1773712258,
+    "_id": "Article Seventy-Four<SEP>Social Insurance Fund"
+  },
+  "Article 39<SEP>Enterprise": {
+    "chunk_ids": [
+      "chunk-8091f80b54e6c94fc8302e0ea487ae6e"
+    ],
+    "count": 1,
+    "create_time": 1773712275,
+    "update_time": 1773712275,
+    "_id": "Article 39<SEP>Enterprise"
+  },
+  "Article 39<SEP>Labor Administration Department": {
+    "chunk_ids": [
+      "chunk-8091f80b54e6c94fc8302e0ea487ae6e"
+    ],
+    "count": 1,
+    "create_time": 1773712276,
+    "update_time": 1773712276,
+    "_id": "Article 39<SEP>Labor Administration Department"
+  },
+  "Article 36<SEP>Article 39": {
+    "chunk_ids": [
+      "chunk-8091f80b54e6c94fc8302e0ea487ae6e"
+    ],
+    "count": 1,
+    "create_time": 1773712276,
+    "update_time": 1773712276,
+    "_id": "Article 36<SEP>Article 39"
+  },
+  "Article 38<SEP>Article 39": {
+    "chunk_ids": [
+      "chunk-8091f80b54e6c94fc8302e0ea487ae6e"
+    ],
+    "count": 1,
+    "create_time": 1773712277,
+    "update_time": 1773712277,
+    "_id": "Article 38<SEP>Article 39"
+  },
+  "Article 36<SEP>Labor Law": {
+    "chunk_ids": [
+      "chunk-8091f80b54e6c94fc8302e0ea487ae6e"
+    ],
+    "count": 1,
+    "create_time": 1773712277,
+    "update_time": 1773712277,
+    "_id": "Article 36<SEP>Labor Law"
+  },
+  "Article 39<SEP>Labor Law": {
+    "chunk_ids": [
+      "chunk-8091f80b54e6c94fc8302e0ea487ae6e"
+    ],
+    "count": 1,
+    "create_time": 1773712277,
+    "update_time": 1773712277,
+    "_id": "Article 39<SEP>Labor Law"
+  },
+  "Article 38<SEP>Labor Law": {
+    "chunk_ids": [
+      "chunk-8091f80b54e6c94fc8302e0ea487ae6e"
+    ],
+    "count": 1,
+    "create_time": 1773712278,
+    "update_time": 1773712278,
+    "_id": "Article 38<SEP>Labor Law"
+  },
+  "Labor Employment<SEP>State": {
+    "chunk_ids": [
+      "chunk-37520b7460881d90be5e94afa5fee4c5"
+    ],
+    "count": 1,
+    "create_time": 1773712294,
+    "update_time": 1773712294,
+    "_id": "Labor Employment<SEP>State"
+  },
+  "State<SEP>Vocational Education": {
+    "chunk_ids": [
+      "chunk-37520b7460881d90be5e94afa5fee4c5"
+    ],
+    "count": 1,
+    "create_time": 1773712295,
+    "update_time": 1773712295,
+    "_id": "State<SEP>Vocational Education"
+  },
+  "Labor Standards<SEP>State": {
+    "chunk_ids": [
+      "chunk-37520b7460881d90be5e94afa5fee4c5"
+    ],
+    "count": 1,
+    "create_time": 1773712295,
+    "update_time": 1773712295,
+    "_id": "Labor Standards<SEP>State"
+  },
+  "Social Income Regulation<SEP>State": {
+    "chunk_ids": [
+      "chunk-37520b7460881d90be5e94afa5fee4c5"
+    ],
+    "count": 1,
+    "create_time": 1773712296,
+    "update_time": 1773712296,
+    "_id": "Social Income Regulation<SEP>State"
+  },
+  "Social Insurance<SEP>State": {
+    "chunk_ids": [
+      "chunk-37520b7460881d90be5e94afa5fee4c5"
+    ],
+    "count": 1,
+    "create_time": 1773712296,
+    "update_time": 1773712296,
+    "_id": "Social Insurance<SEP>State"
+  },
+  "Labor Relations Coordination<SEP>State": {
+    "chunk_ids": [
+      "chunk-37520b7460881d90be5e94afa5fee4c5"
+    ],
+    "count": 1,
+    "create_time": 1773712296,
+    "update_time": 1773712296,
+    "_id": "Labor Relations Coordination<SEP>State"
+  },
+  "Living Standards of Workers<SEP>State": {
+    "chunk_ids": [
+      "chunk-37520b7460881d90be5e94afa5fee4c5"
+    ],
+    "count": 1,
+    "create_time": 1773712297,
+    "update_time": 1773712297,
+    "_id": "Living Standards of Workers<SEP>State"
+  },
+  "Article Five<SEP>State": {
+    "chunk_ids": [
+      "chunk-37520b7460881d90be5e94afa5fee4c5"
+    ],
+    "count": 1,
+    "create_time": 1773712297,
+    "update_time": 1773712297,
+    "_id": "Article Five<SEP>State"
+  },
+  "Invalid Labor Contract<SEP>Law and Administrative Regulations": {
+    "chunk_ids": [
+      "chunk-3b0d980fa13701d98c8fef09e4c134b5"
+    ],
+    "count": 1,
+    "create_time": 1773712307,
+    "update_time": 1773712307,
+    "_id": "Invalid Labor Contract<SEP>Law and Administrative Regulations"
+  },
+  "Fraud<SEP>Invalid Labor Contract": {
+    "chunk_ids": [
+      "chunk-3b0d980fa13701d98c8fef09e4c134b5"
+    ],
+    "count": 1,
+    "create_time": 1773712308,
+    "update_time": 1773712308,
+    "_id": "Fraud<SEP>Invalid Labor Contract"
+  },
+  "Coercion<SEP>Invalid Labor Contract": {
+    "chunk_ids": [
+      "chunk-3b0d980fa13701d98c8fef09e4c134b5"
+    ],
+    "count": 1,
+    "create_time": 1773712308,
+    "update_time": 1773712308,
+    "_id": "Coercion<SEP>Invalid Labor Contract"
+  },
+  "Invalid Labor Contract<SEP>Labor Dispute Arbitration Committee": {
+    "chunk_ids": [
+      "chunk-3b0d980fa13701d98c8fef09e4c134b5"
+    ],
+    "count": 1,
+    "create_time": 1773712309,
+    "update_time": 1773712309,
+    "_id": "Invalid Labor Contract<SEP>Labor Dispute Arbitration Committee"
+  },
+  "Invalid Labor Contract<SEP>People's Court": {
+    "chunk_ids": [
+      "chunk-3b0d980fa13701d98c8fef09e4c134b5"
+    ],
+    "count": 1,
+    "create_time": 1773712309,
+    "update_time": 1773712309,
+    "_id": "Invalid Labor Contract<SEP>People's Court"
+  },
+  "Article 18<SEP>Invalid Labor Contract": {
+    "chunk_ids": [
+      "chunk-3b0d980fa13701d98c8fef09e4c134b5"
+    ],
+    "count": 1,
+    "create_time": 1773712310,
+    "update_time": 1773712310,
+    "_id": "Article 18<SEP>Invalid Labor Contract"
+  },
+  "Article 18<SEP>Law and Administrative Regulations": {
+    "chunk_ids": [
+      "chunk-3b0d980fa13701d98c8fef09e4c134b5"
+    ],
+    "count": 1,
+    "create_time": 1773712310,
+    "update_time": 1773712310,
+    "_id": "Article 18<SEP>Law and Administrative Regulations"
+  },
+  "Special Operations Workers<SEP>Specialized Training": {
+    "chunk_ids": [
+      "chunk-532fb6a3f85ff55e73d76c3c0830e0c0"
+    ],
+    "count": 1,
+    "create_time": 1773712310,
+    "update_time": 1773712310,
+    "_id": "Special Operations Workers<SEP>Specialized Training"
+  },
+  "Article 18<SEP>Fraud": {
+    "chunk_ids": [
+      "chunk-3b0d980fa13701d98c8fef09e4c134b5"
+    ],
+    "count": 1,
+    "create_time": 1773712311,
+    "update_time": 1773712311,
+    "_id": "Article 18<SEP>Fraud"
+  },
+  "Special Operations Qualification<SEP>Special Operations Workers": {
+    "chunk_ids": [
+      "chunk-532fb6a3f85ff55e73d76c3c0830e0c0"
+    ],
+    "count": 1,
+    "create_time": 1773712311,
+    "update_time": 1773712311,
+    "_id": "Special Operations Qualification<SEP>Special Operations Workers"
+  },
+  "Article 18<SEP>Coercion": {
+    "chunk_ids": [
+      "chunk-3b0d980fa13701d98c8fef09e4c134b5"
+    ],
+    "count": 1,
+    "create_time": 1773712311,
+    "update_time": 1773712311,
+    "_id": "Article 18<SEP>Coercion"
+  },
+  "Article 55<SEP>Special Operations Workers": {
+    "chunk_ids": [
+      "chunk-532fb6a3f85ff55e73d76c3c0830e0c0"
+    ],
+    "count": 1,
+    "create_time": 1773712311,
+    "update_time": 1773712311,
+    "_id": "Article 55<SEP>Special Operations Workers"
+  },
+  "Article 18<SEP>Labor Dispute Arbitration Committee": {
+    "chunk_ids": [
+      "chunk-3b0d980fa13701d98c8fef09e4c134b5"
+    ],
+    "count": 1,
+    "create_time": 1773712311,
+    "update_time": 1773712311,
+    "_id": "Article 18<SEP>Labor Dispute Arbitration Committee"
+  },
+  "Article 55<SEP>Specialized Training": {
+    "chunk_ids": [
+      "chunk-532fb6a3f85ff55e73d76c3c0830e0c0"
+    ],
+    "count": 1,
+    "create_time": 1773712312,
+    "update_time": 1773712312,
+    "_id": "Article 55<SEP>Specialized Training"
+  },
+  "Article 18<SEP>People's Court": {
+    "chunk_ids": [
+      "chunk-3b0d980fa13701d98c8fef09e4c134b5"
+    ],
+    "count": 1,
+    "create_time": 1773712312,
+    "update_time": 1773712312,
+    "_id": "Article 18<SEP>People's Court"
+  },
+  "Article 55<SEP>Special Operations Qualification": {
+    "chunk_ids": [
+      "chunk-532fb6a3f85ff55e73d76c3c0830e0c0"
+    ],
+    "count": 1,
+    "create_time": 1773712312,
+    "update_time": 1773712312,
+    "_id": "Article 55<SEP>Special Operations Qualification"
+  },
+  "Chapter Four<SEP>Working Hours": {
+    "chunk_ids": [
+      "chunk-58cdd101c942cf6d953d675aa6fecbb1"
+    ],
+    "count": 1,
+    "create_time": 1773712332,
+    "update_time": 1773712332,
+    "_id": "Chapter Four<SEP>Working Hours"
+  },
+  "Chapter Four<SEP>Rest Holidays": {
+    "chunk_ids": [
+      "chunk-58cdd101c942cf6d953d675aa6fecbb1"
+    ],
+    "count": 1,
+    "create_time": 1773712332,
+    "update_time": 1773712332,
+    "_id": "Chapter Four<SEP>Rest Holidays"
+  },
+  "Social Voluntary Labor<SEP>State": {
+    "chunk_ids": [
+      "chunk-4854ca3e86ea91f91e6984abe5fcda52"
+    ],
+    "count": 1,
+    "create_time": 1773712338,
+    "update_time": 1773712338,
+    "_id": "Social Voluntary Labor<SEP>State"
+  },
+  "Labor Competition<SEP>State": {
+    "chunk_ids": [
+      "chunk-4854ca3e86ea91f91e6984abe5fcda52"
+    ],
+    "count": 1,
+    "create_time": 1773712339,
+    "update_time": 1773712339,
+    "_id": "Labor Competition<SEP>State"
+  },
+  "Rationalization Proposal Activity<SEP>State": {
+    "chunk_ids": [
+      "chunk-4854ca3e86ea91f91e6984abe5fcda52"
+    ],
+    "count": 1,
+    "create_time": 1773712339,
+    "update_time": 1773712339,
+    "_id": "Rationalization Proposal Activity<SEP>State"
+  },
+  "Scientific Research<SEP>State": {
+    "chunk_ids": [
+      "chunk-4854ca3e86ea91f91e6984abe5fcda52"
+    ],
+    "count": 1,
+    "create_time": 1773712340,
+    "update_time": 1773712340,
+    "_id": "Scientific Research<SEP>State"
+  },
+  "State<SEP>Technological Innovation": {
+    "chunk_ids": [
+      "chunk-4854ca3e86ea91f91e6984abe5fcda52"
+    ],
+    "count": 1,
+    "create_time": 1773712340,
+    "update_time": 1773712340,
+    "_id": "State<SEP>Technological Innovation"
+  },
+  "Invention Creation<SEP>State": {
+    "chunk_ids": [
+      "chunk-4854ca3e86ea91f91e6984abe5fcda52"
+    ],
+    "count": 1,
+    "create_time": 1773712341,
+    "update_time": 1773712341,
+    "_id": "Invention Creation<SEP>State"
+  },
+  "Labor Model<SEP>State": {
+    "chunk_ids": [
+      "chunk-4854ca3e86ea91f91e6984abe5fcda52"
+    ],
+    "count": 1,
+    "create_time": 1773712341,
+    "update_time": 1773712341,
+    "_id": "Labor Model<SEP>State"
+  },
+  "Advanced Worker<SEP>State": {
+    "chunk_ids": [
+      "chunk-4854ca3e86ea91f91e6984abe5fcda52"
+    ],
+    "count": 1,
+    "create_time": 1773712342,
+    "update_time": 1773712342,
+    "_id": "Advanced Worker<SEP>State"
+  },
+  "Labor Model<SEP>Workers": {
+    "chunk_ids": [
+      "chunk-4854ca3e86ea91f91e6984abe5fcda52"
+    ],
+    "count": 1,
+    "create_time": 1773712342,
+    "update_time": 1773712342,
+    "_id": "Labor Model<SEP>Workers"
+  },
+  "Article Six<SEP>State": {
+    "chunk_ids": [
+      "chunk-4854ca3e86ea91f91e6984abe5fcda52"
+    ],
+    "count": 1,
+    "create_time": 1773712342,
+    "update_time": 1773712342,
+    "_id": "Article Six<SEP>State"
+  },
+  "Advanced Worker<SEP>Workers": {
+    "chunk_ids": [
+      "chunk-4854ca3e86ea91f91e6984abe5fcda52"
+    ],
+    "count": 1,
+    "create_time": 1773712342,
+    "update_time": 1773712342,
+    "_id": "Advanced Worker<SEP>Workers"
   }
 }

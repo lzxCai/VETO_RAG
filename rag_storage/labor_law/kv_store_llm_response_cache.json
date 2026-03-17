@@ -2174,5 +2174,341 @@
     "create_time": 1773382665,
     "update_time": 1773382665,
     "_id": "hybrid:query:893d063026f1640eaa166a2b09a8fc16"
+  },
+  "hybrid:keywords:59e6b0dbc7e3da700d834230e92b9054": {
+    "return": "{\"high_level_keywords\": [\"Part-time employment\", \"Employment contract\", \"Legal risks\"], \"low_level_keywords\": [\"Labor rights\", \"Wage disputes\", \"Social insurance\", \"Termination protection\", \"Labor arbitration\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "兼职不签合同有什么风险",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773673847,
+    "update_time": 1773673847,
+    "_id": "hybrid:keywords:59e6b0dbc7e3da700d834230e92b9054"
+  },
+  "hybrid:query:e96450b82062addf9df43afae0f367b9": {
+    "return": "When an employer engages a worker on a part-time or casual basis without signing a formal **labor contract**, both parties face significant legal and practical risks under China’s labor law framework. These risks stem from statutory requirements, enforceable rights, and institutional enforcement mechanisms.\n\n### Legal Obligations and Employer Liability  \nUnder **Article Sixteen** of the *Labor Law of the People's Republic of China*, a labor contract **must be concluded** to formally establish a labor relationship between a worker and an employer. Failure to do so violates this mandatory provision. As confirmed in **Article 98**, if an employer “intentionally delays concluding a labor contract”, the labor administrative department shall order rectification; and if such delay causes damage to the worker, the employer **must bear compensation liability**. This includes not only back wages but also potential economic losses arising from lack of social insurance coverage, unpaid overtime, or denial of statutory leave entitlements.\n\nMoreover, the absence of a written contract undermines the enforceability of core terms—such as wage standards, working hours, job content, and conditions for termination—which are all **mandatory clauses** under **Article 19**. Without these, disputes become harder to resolve objectively, increasing exposure to arbitration or litigation where the employer bears the burden of proof.\n\n### Worker Protections and Vulnerabilities  \nAlthough informal employment may appear flexible, workers retain statutory rights regardless of contract formalities. For instance, **Article 32** allows a worker to terminate the de facto labor relationship immediately—and claim compensation—if the employer fails to provide agreed labor conditions or pay remuneration. Similarly, **Article 29** prohibits termination during medical leave, pregnancy, or occupational injury recovery—even without a signed contract—because protections attach to the *existence* of a labor relationship, not its documentation.\n\nHowever, lacking a written contract places the worker at a disadvantage in proving employment status, duration, wage agreements, or working conditions—especially in cases involving **workplace accidents**, **occupational diseases**, or claims for **social insurance benefits** (e.g., medical, unemployment, or maternity insurance). Since **Article 72** mandates that both employer and worker must legally participate in social insurance, non-compliance due to missing contracts directly jeopardizes the worker’s access to statutory welfare.\n\n### Regulatory and Enforcement Consequences  \nThe **Labor Administrative Department** is empowered—under **Articles 85, 86, and 98**—to inspect employers, order corrections, impose fines, and mandate compensation for violations related to unsigned contracts. In severe cases, such as repeated or systemic non-compliance, penalties may escalate, including public disclosure or business license implications (e.g., under **Article 94**, illegal hiring of minors triggers market supervision intervention).\n\nAdditionally, if a worker later signs with another employer while still maintaining an unrecorded relationship with the original employer, the new employer may incur **joint and several liability** under **Article 99**, exposing them to claims for economic loss suffered by the original employer.\n\n### Conclusion  \nIn summary, operating without a signed labor contract does not eliminate legal obligations—it merely increases uncertainty, compliance risk, and exposure to administrative penalties, civil liability, and reputational harm. Both employers and workers forfeit procedural clarity, evidentiary protection, and statutory safeguards designed to ensure fairness, safety, and stability in labor relations.\n\n### References\n\n- [1] /Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "cache_type": "query",
+    "chunk_id": null,
+    "original_prompt": "兼职不签合同有什么风险",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "hl_keywords": "Part-time employment, Employment contract, Legal risks",
+      "ll_keywords": "Labor rights, Wage disputes, Social insurance, Termination protection, Labor arbitration",
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773673866,
+    "update_time": 1773673866,
+    "_id": "hybrid:query:e96450b82062addf9df43afae0f367b9"
+  },
+  "hybrid:keywords:321b9c8c06de61f8f7cbabad94a224dd": {
+    "return": "{\"high_level_keywords\": [\"Employment contract\", \"Part-time work\", \"Legal risks\"], \"low_level_keywords\": [\"Labor rights\", \"Social insurance\", \"Wage disputes\", \"Termination compensation\", \"Labor arbitration\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "兼职不签合同有什么风险,用中文回答我",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773674158,
+    "update_time": 1773674158,
+    "_id": "hybrid:keywords:321b9c8c06de61f8f7cbabad94a224dd"
+  },
+  "hybrid:query:92fa03cd3bae6feaeeeb70c878e7d850": {
+    "return": "兼职用工若不签订书面劳动合同，将对**劳动者（兼职人员）**和**用人单位**双方均带来显著法律风险。根据中国《劳动法》《劳动合同法》及相关规定，具体风险如下：\n\n---\n\n### 一、对劳动者的风险\n\n1. **劳动关系难以认定，维权缺乏依据**  \n   若未签订书面合同，一旦发生工资拖欠、工伤、解雇纠纷等，劳动者需自行举证存在事实劳动关系（如工资支付记录、考勤、工作安排通知等）。若证据不足，可能被认定为劳务关系而非劳动关系，从而无法享受《劳动法》规定的法定保护，如经济补偿、社会保险、最低工资保障、工伤认定等。\n\n2. **工资权益无保障**  \n   《劳动合同法》第10条及第82条规定，建立劳动关系应当订立书面劳动合同；自用工之日起超过一个月不满一年未订立的，用人单位应向劳动者每月支付**二倍工资**。但若劳动者无法证明劳动关系存在，该权利难以主张。此外，口头约定的工资标准、支付时间等易生争议，缺乏合同约束力。\n\n3. **社会保险权益落空**  \n   根据《社会保险法》及《劳动法》第72条，用人单位必须为建立劳动关系的职工（含符合劳动关系要件的兼职人员）依法缴纳养老、医疗、失业、工伤、生育五项社会保险。未签合同往往伴随不缴或少缴社保，导致劳动者在患病、受伤、失业或退休时无法享受法定待遇。\n\n4. **工伤认定困难，赔偿无着落**  \n   兼职人员若在工作中受伤，需先确认劳动关系才能申请工伤认定。无书面合同将大幅增加举证难度；即使认定为工伤，因单位未参保，全部工伤待遇（如医疗费、伤残补助金）须由用人单位自行承担——而单位可能以“非正式员工”为由拒赔。\n\n5. **休息休假、加班费等权利被忽视**  \n   《劳动法》第36–45条明确规定工作时间、休息休假及加班报酬标准（如延时加班不低于150%工资）。无合同则难以主张加班费、法定节假日工资、带薪年休假等法定权益。\n\n---\n\n### 二、对用人单位的风险\n\n1. **面临“双倍工资”赔偿责任**  \n   依据《劳动合同法》第82条，用人单位自用工之日起**超过一个月不满一年未订立书面劳动合同的，应当向劳动者每月支付二倍工资**。此义务不以劳动者是否为兼职为豁免条件，只要构成事实劳动关系即适用。\n\n2. **被推定为无固定期限劳动合同**  \n   《劳动合同法》第14条第三款规定：用人单位自用工之日起满一年不与劳动者订立书面劳动合同的，视为已订立**无固定期限劳动合同**。此后单方解除将面临更严格的法定条件和更高的违法解除赔偿风险（2N经济补偿）。\n\n3. **连带赔偿责任风险**  \n   若该兼职人员尚未与原单位解除劳动合同（如在校学生实习、其他单位兼职），而新单位招用时未核实并签约，可能依据《劳动法》第99条承担**连带赔偿责任**，赔偿原单位因此遭受的经济损失。\n\n4. **行政处罚风险**  \n   劳动行政部门可依据《劳动保障监察条例》第30条，对拒不签订劳动合同的用人单位处以警告、责令改正；逾期不改的，可处以罚款。同时，《劳动法》第98条明确：故意拖延不订立劳动合同，对劳动者造成损害的，应承担赔偿责任。\n\n5. **管理混乱与用工性质混淆**  \n   未签合同易导致岗位职责不清、保密义务缺失、知识产权归属不明等问题。若实际管理方式具备人身隶属性（如接受考勤、服从指令、纳入绩效考核），即使名义为“兼职”或“劳务”，司法实践中仍可能被认定为劳动关系，使单位丧失以“承揽”“委托”等名义规避责任的空间。\n\n---\n\n### 三、特别提示：兼职 ≠ 必然排除劳动关系\n\n是否构成劳动关系，关键在于**实质用工特征**，而非名称。若兼职人员：\n- 接受用人单位管理（如打卡、汇报、考核）；\n- 提供的劳动是单位业务组成部分；\n- 获得相对稳定、持续的报酬；\n- 用人单位提供劳动工具或场所；  \n则极可能被认定为事实劳动关系，从而触发上述全部法定义务与风险。\n\n反之，若属真正民事劳务（如一次性技术咨询、短期项目外包），应签订**劳务协议**而非回避合同，明确服务内容、报酬、税费承担、成果归属及免责条款，以厘清法律性质。\n\n---\n\n### 结论  \n不签合同绝非“省事”，而是将双方置于不确定的法律风险之中。对劳动者而言，是放弃法定保障；对用人单位而言，是埋下赔偿、处罚与声誉隐患。依法订立书面劳动合同（或合规劳务协议），既是法定义务，更是权责明晰、风险可控的基础。\n\n### References\n\n- [1] /Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "cache_type": "query",
+    "chunk_id": null,
+    "original_prompt": "兼职不签合同有什么风险,用中文回答我",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "hl_keywords": "Employment contract, Part-time work, Legal risks",
+      "ll_keywords": "Labor rights, Social insurance, Wage disputes, Termination compensation, Labor arbitration",
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773674186,
+    "update_time": 1773674186,
+    "_id": "hybrid:query:92fa03cd3bae6feaeeeb70c878e7d850"
+  },
+  "hybrid:keywords:da23b60bfd86fee3fc72d8d0e5ae0ebf": {
+    "return": "{\"high_level_keywords\": [\"Conda environment activation\", \"RAG system setup\"], \"low_level_keywords\": [\"conda\", \"rag_env\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "conda activate rag_env",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773675429,
+    "update_time": 1773675429,
+    "_id": "hybrid:keywords:da23b60bfd86fee3fc72d8d0e5ae0ebf"
+  },
+  "hybrid:query:2074a804f5127b7f8093e63e839cd4d8": {
+    "return": "The command `conda activate rag_env` is a terminal instruction used to activate a Conda environment named `rag_env`. This command is not related to labor law, employment regulations, or the knowledge base provided in the context. It pertains to Python package and environment management using Anaconda or Miniconda.\n\nSince your query does not pertain to labor legislation, worker protections, employer obligations, or any of the statutory concepts (e.g., Article 39, Occupational Disease Reporting System, Minimum Wage Standard, etc.) described in the **Context**, no factual grounding from the provided knowledge graph or document chunks is possible.\n\nTherefore, I cannot generate a response tied to the **Context**, as the query falls entirely outside its scope.\n\n### References",
+    "cache_type": "query",
+    "chunk_id": null,
+    "original_prompt": "conda activate rag_env",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "hl_keywords": "Conda environment activation, RAG system setup",
+      "ll_keywords": "conda, rag_env",
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773675436,
+    "update_time": 1773675436,
+    "_id": "hybrid:query:2074a804f5127b7f8093e63e839cd4d8"
+  },
+  "hybrid:keywords:76cfd424c24ea179069f895e778b311f": {
+    "return": "{\"high_level_keywords\": [\"Employment contract\", \"Part-time work\", \"Legal risks\"], \"low_level_keywords\": [\"Labor rights\", \"Social insurance\", \"Wage disputes\", \"Termination compensation\", \"Labor arbitration\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "兼职不签合同有什么风险用中文回答我",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773675938,
+    "update_time": 1773675938,
+    "_id": "hybrid:keywords:76cfd424c24ea179069f895e778b311f"
+  },
+  "hybrid:query:80d8e0b2d11b9006e7d145c514e0bdaf": {
+    "return": "兼职用工若未签订书面劳动合同，将对**劳动者（兼职人员）**和**用人单位**双方均带来显著法律风险，依据《中华人民共和国劳动法》《劳动合同法》及相关规定，主要风险如下：\n\n---\n\n### 一、对劳动者的风险\n\n1. **劳动关系难以认定，维权缺乏证据支撑**  \n   根据《劳动合同法》第十六条和第十九条，建立劳动关系应当订立书面劳动合同；劳动合同自订立之日起即具有法律约束力。若未签合同，一旦发生工资拖欠、工伤、解雇争议等情形，劳动者需自行举证存在事实劳动关系（如工资转账记录、考勤、工作沟通记录等），举证难度大，易被认定为“劳务关系”而非“劳动关系”，从而丧失劳动法保护。\n\n2. **无法主张双倍工资赔偿**  \n   《劳动合同法》第八十二条明确规定：用人单位自用工之日起超过一个月不满一年未与劳动者订立书面劳动合同的，应当向劳动者每月支付**二倍工资**。未签合同的兼职人员若符合劳动关系特征（如接受单位管理、按月领取报酬、工作内容属单位业务组成部分），即有权主张此项法定赔偿；但若无合同及充分证据，该权利将难以实现。\n\n3. **社会保险权益受损**  \n   劳动关系下，用人单位必须依法为劳动者缴纳养老、医疗、失业、工伤、生育五项社会保险（《劳动法》第七十二条、第一百条）。未签合同往往伴随不缴或少缴社保，导致兼职人员在患病、受伤、失业时无法享受社保待遇，且补缴困难。\n\n4. **工时、休假、经济补偿等法定权益落空**  \n   例如：加班无加班费（违反《劳动法》第四十四条）、法定节假日工作无三倍工资、解除用工时无经济补偿（《劳动合同法》第二十八条、第四十六条）、遭遇违法解雇难以索赔等。\n\n5. **遭遇强迫劳动或违章指挥时缺乏法律屏障**  \n   若单位强令冒险作业（《劳动法》第九十三条）或以暴力、威胁手段强迫劳动（第九十六条），劳动者本可立即解除合同并索赔；但无合同则更难固定单位违法事实，维权路径受阻。\n\n---\n\n### 二、对用人单位的风险\n\n1. **面临行政处罚与赔偿责任**  \n   - 劳动行政部门可依据《劳动合同法》第八十二条、第九十八条责令改正，并对劳动者造成损害的承担赔偿责任；  \n   - 若因未签合同导致工伤事故无法认定，单位须按《工伤保险条例》承担全部赔偿（远高于参保成本）；  \n   - 拖延或拒缴社保，将被加收滞纳金并处以罚款（《劳动法》第一百条）。\n\n2. **承担连带赔偿责任的风险**  \n   若招用尚与其他单位存续劳动关系的兼职人员（如在校学生、退休返聘人员以外的双重劳动关系），且未签合同、未核实状态，可能被原单位追究连带赔偿责任（《劳动法》第九十九条）。\n\n3. **管理风险上升，易引发群体性纠纷**  \n   无合同导致用工标准模糊，易在工资、职责、考核等方面产生分歧；一旦多名兼职人员集体主张权益，将严重冲击企业声誉与正常运营。\n\n---\n\n### 三、特别提示：兼职≠必然排除劳动关系  \n是否构成劳动关系，关键在于**实际用工性质**，而非“兼职”名义：  \n- 若兼职人员接受单位管理、遵守规章制度、工作内容属于单位业务组成部分、报酬按周期固定发放，则很可能被认定为事实劳动关系；  \n- 仅提供临时性、辅助性、一次性的劳务（如单次活动主持、短期翻译），且不受单位日常管理，则更倾向认定为民事劳务关系，此时不适用劳动合同法规制，但也意味着无劳动法保障。\n\n---\n\n综上，无论对劳动者还是用人单位，**规范签订书面劳动合同是防范法律风险的首要前提**。对于确属非劳动关系的灵活用工，也建议签署书面协议，明确服务内容、报酬、安全责任等核心条款，以保障各方合法权益。\n\n### References\n\n- [1] /Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "cache_type": "query",
+    "chunk_id": null,
+    "original_prompt": "兼职不签合同有什么风险用中文回答我",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "hl_keywords": "Employment contract, Part-time work, Legal risks",
+      "ll_keywords": "Labor rights, Social insurance, Wage disputes, Termination compensation, Labor arbitration",
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773675964,
+    "update_time": 1773675964,
+    "_id": "hybrid:query:80d8e0b2d11b9006e7d145c514e0bdaf"
+  },
+  "hybrid:keywords:f4a0247756f8fc89106b564b71d72b6d": {
+    "return": "{\"high_level_keywords\": [\"Employment contract\", \"Part-time work\", \"Legal risks\"], \"low_level_keywords\": [\"Labor rights\", \"Social insurance\", \"Wage disputes\", \"Termination compensation\", \"Labor arbitration\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "兼职不签合同有什么风险?",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773676624,
+    "update_time": 1773676624,
+    "_id": "hybrid:keywords:f4a0247756f8fc89106b564b71d72b6d"
+  },
+  "hybrid:query:4173df4b9eca54221f724b5e41ef9cd1": {
+    "return": "When an employer engages a worker on a part-time or informal basis without concluding a written labor contract, multiple legal risks arise for both parties—though the employer bears the primary statutory liabilities under China’s Labor Law and related regulations.\n\nFirst and foremost, **failure to sign a written labor contract violates Article 16 and Article 19** of the Labor Law of the People's Republic of China, which mandate that a labor relationship must be formalized through a written contract. This omission exposes the employer to administrative enforcement actions: the labor administrative department may order rectification, issue warnings, or impose fines (Article 98). Moreover, if the absence of a contract causes harm to the worker—such as loss of social insurance coverage, unpaid wages, or denial of statutory leave—the employer is legally obligated to provide compensation (Article 97).\n\nA particularly significant risk arises from the **presumption of an indefinite-term labor contract** after one year of employment without a written agreement. Under judicial interpretation and consistent enforcement practice, failure to conclude a written contract within one month of employment triggers double-wage liability for the employer; beyond one year, the law deems an open-ended (non-fixed-term) labor contract to have been established automatically—even in the absence of documentation—thereby strengthening the worker’s job security and entitling them to full statutory protections, including economic compensation upon termination.\n\nAdditionally, the lack of a written contract undermines clarity on core terms such as **labor remuneration, working hours, rest periods, labor protection, and conditions for termination**, increasing the likelihood of disputes. Without agreed-upon clauses, statutory defaults apply—but proving the actual working arrangement becomes difficult, especially in litigation or arbitration. For instance, if wage payment is disputed, Article 50 requires timely and full monetary payment; without a written record, the employer may struggle to demonstrate compliance, risking orders to pay back wages plus additional economic compensation (Article 91).\n\nFrom the worker’s perspective, the absence of a signed contract jeopardizes access to **social insurance benefits**, as enrollment and premium contributions depend on documented employment (Article 72). It also weakens enforceability of rights related to occupational safety, paid leave (e.g., marriage leave, bereavement leave), and protection against unlawful dismissal—especially under safeguarded circumstances outlined in Article 29 (e.g., medical leave, pregnancy, work-related disability).\n\nFinally, in cases where the worker simultaneously maintains another valid labor contract, the new informal engagement may trigger **joint and several liability for the new employer** under Article 99—particularly if the original employer suffers economic loss due to breach of contract by the worker.\n\nIn summary, omitting a written labor contract does not eliminate legal obligations—it merely increases exposure to administrative penalties, financial liability, evidentiary challenges, and systemic noncompliance with China’s labor regulatory framework.\n\n### References\n\n- [1] /Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "cache_type": "query",
+    "chunk_id": null,
+    "original_prompt": "兼职不签合同有什么风险?",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "hl_keywords": "Employment contract, Part-time work, Legal risks",
+      "ll_keywords": "Labor rights, Social insurance, Wage disputes, Termination compensation, Labor arbitration",
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773676642,
+    "update_time": 1773676642,
+    "_id": "hybrid:query:4173df4b9eca54221f724b5e41ef9cd1"
+  },
+  "hybrid:keywords:4ad199c1791546722cb0dee9ce345a14": {
+    "return": "{\"high_level_keywords\": [\"Employment contract\", \"Part-time work\", \"Labor rights\"], \"low_level_keywords\": [\"China Labor Law\", \"Written contract\", \"Part-time employment\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "兼职不签合同可以吗？",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773676728,
+    "update_time": 1773676728,
+    "_id": "hybrid:keywords:4ad199c1791546722cb0dee9ce345a14"
+  },
+  "hybrid:query:ce2a196a2a42c615a2774bd590376499": {
+    "return": "根据中国现行劳动法律法规，**兼职用工也必须签订劳动合同**，不能因用工形式为“兼职”而免除签订书面合同的法定义务。这一要求源于《中华人民共和国劳动法》和《中华人民共和国劳动合同法》的强制性规定。\n\n首先，《劳动法》第十六条明确规定：“**劳动合同是劳动者与用人单位确立劳动关系、明确双方权利和义务的协议。建立劳动关系应当订立劳动合同。**”此处“劳动者”与“用人单位”的界定不区分全职、兼职或临时用工——只要实际建立了**用工事实**（即劳动者接受用人单位管理、从事有报酬的劳动、工作内容属于用人单位业务组成部分），即构成法定劳动关系，必须订立劳动合同。\n\n其次，《劳动合同法》第十九条进一步强化该义务，规定：“**劳动合同应当以书面形式订立，并具备以下条款……**”并列举了包括合同期限、工作内容、劳动报酬、劳动保护等七项必备条款。该条款未设置例外情形，意味着无论用工时间长短、工作频次高低（如每周仅工作数小时的兼职），只要符合劳动关系本质特征，就须以**书面形式**订立合同。实践中，部分用人单位以“劳务关系”“实习”或“非全日制用工”为由规避签约，但法律对非全日制用工亦有专门规范——《劳动合同法》第六十九条规定，**非全日制用工双方当事人可以订立口头协议**，但前提是严格满足“平均每日工作时间不超过四小时，每周工作时间累计不超过二十四小时”的法定标准；即便如此，用人单位仍须为其缴纳工伤保险，且不得约定试用期。若实际用工超出该时限，即应认定为全日制劳动关系，必须签订书面劳动合同。\n\n此外，未签劳动合同将触发严厉法律责任。《劳动合同法》第八十二条明确：“用人单位自用工之日起超过一个月不满一年未与劳动者订立书面劳动合同的，应当向劳动者每月支付二倍的工资。”同时，《劳动法》第九十八条亦规定，用人单位故意拖延不订立劳动合同的，由劳动行政部门责令改正；对劳动者造成损害的，应当承担赔偿责任。\n\n综上，所谓“兼职不签合同”既不符合法律规定，也使用人单位面临双倍工资赔偿、行政查处及劳动争议败诉等多重风险；对劳动者而言，则可能在发生工伤、欠薪或解雇纠纷时因缺乏书面凭证而难以维权。\n\n### References\n\n- [1] /Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "cache_type": "query",
+    "chunk_id": null,
+    "original_prompt": "兼职不签合同可以吗？",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "hl_keywords": "Employment contract, Part-time work, Labor rights",
+      "ll_keywords": "China Labor Law, Written contract, Part-time employment",
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773676744,
+    "update_time": 1773676744,
+    "_id": "hybrid:query:ce2a196a2a42c615a2774bd590376499"
+  },
+  "hybrid:keywords:ed669cb029a794474e13d13ca38e0915": {
+    "return": "{\"high_level_keywords\": [\"Wage arrears\", \"Labor rights\", \"Employee compensation\"], \"low_level_keywords\": [\"Employer\", \"Unpaid wages\", \"Labor dispute\", \"Salary payment\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "老板拖欠工资怎么办",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773677326,
+    "update_time": 1773677326,
+    "_id": "hybrid:keywords:ed669cb029a794474e13d13ca38e0915"
+  },
+  "hybrid:query:d9d2a8689bef5da7ace7900d858fa51f": {
+    "return": "当用人单位（俗称“老板”）拖欠工资时，劳动者依法享有明确的救济途径和程序保障。根据中国《劳动法》及相关法规，拖欠工资属于严重侵害劳动者合法权益的行为，法律设定了多层次、可操作的维权机制，涵盖行政干预、争议调解、仲裁及司法诉讼等环节。\n\n首先，**法律明确禁止拖欠工资**。《劳动法》第五十条规定：“工资应当以货币形式按月支付给劳动者本人。不得克扣或者无故拖欠劳动者的工资。”同时，第九十一条进一步列举该行为为典型违法情形，并授权劳动行政部门介入处理。具体而言，若用人单位存在“克扣或者无故拖欠劳动者工资”的行为，劳动行政部门有权责令其**立即支付工资报酬、经济补偿，并可责令加付赔偿金**。这一规定赋予劳动者向劳动行政主管部门（即人力资源和社会保障局）投诉举报的法定权利，且无需事先经过调解或仲裁。\n\n其次，劳动者可依据《劳动争议调解仲裁法》启动争议解决程序。根据《劳动法》第七十七条与第七十九条，劳动争议发生后，当事人可依法选择**协商、调解、仲裁或诉讼**。实践中，劳动者既可先向本单位劳动争议调解委员会申请调解，也可**直接向劳动争议仲裁委员会申请仲裁**——这是提起诉讼的法定前置程序。仲裁裁决具有法律效力；如对裁决不服，可在收到裁决书之日起十五日内向人民法院提起诉讼。\n\n此外，针对恶意拖欠、情节严重的情形，法律还设置了更严厉的约束。例如，《劳动法》第一百条明确规定：用人单位无故不缴纳社会保险费的，由劳动行政部门责令限期缴纳；逾期不缴的，可加收滞纳金。虽然该条直接指向社保，但其背后的执法逻辑同样适用于工资拖欠——即行政强制力可有效督促用人单位履行金钱给付义务。另需注意，若拖欠工资伴随其他违法行为（如以暴力、威胁手段强迫劳动），则可能触发《劳动法》第九十六条等条款，相关责任人甚至须承担刑事责任。\n\n综上，劳动者面对工资拖欠，应优先收集并保存劳动合同、考勤记录、工资条、银行流水等关键证据，随后及时向当地劳动保障监察机构投诉，或同步申请劳动仲裁，以高效、合法地维护自身核心财产权益。\n\n### References\n\n- [1] /Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "cache_type": "query",
+    "chunk_id": null,
+    "original_prompt": "老板拖欠工资怎么办",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "hl_keywords": "Wage arrears, Labor rights, Employee compensation",
+      "ll_keywords": "Employer, Unpaid wages, Labor dispute, Salary payment",
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773677342,
+    "update_time": 1773677342,
+    "_id": "hybrid:query:d9d2a8689bef5da7ace7900d858fa51f"
+  },
+  "hybrid:keywords:066ee25a3f99cf72e60a86564b54b572": {
+    "return": "{\"high_level_keywords\": [\"Labor law\", \"Employment risks\", \"Worker rights\"], \"low_level_keywords\": [\"Part-time work\", \"Employment contract\", \"Legal protection\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "兼职不签合同有什么风险，根据劳动法",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773710928,
+    "update_time": 1773710928,
+    "_id": "hybrid:keywords:066ee25a3f99cf72e60a86564b54b572"
+  },
+  "hybrid:query:da5b40abc725b4642962425b69a364f5": {
+    "return": "根据中国《劳动法》及相关规定，兼职工作若未签订书面劳动合同，对劳动者和用人单位均存在显著法律风险。以下是主要风险分析：\n\n### 对劳动者的风险\n\n1.  **劳动关系难以确认**：没有书面合同，劳动者在发生纠纷时（如追讨工资、工伤赔偿等）将面临举证困难，难以证明与用人单位之间存在合法的劳动关系。\n2.  **核心权益缺乏保障**：劳动合同是明确工作内容、劳动报酬、工作时间、劳动保护和劳动条件等核心条款的法定载体。不签合同，这些基本权利就失去了最直接的书面依据，容易被侵害。\n3.  **经济补偿难以主张**：如果用人单位违法解除劳动关系或存在其他违法行为，劳动者因缺乏合同证明，可能无法顺利主张经济补偿或赔偿。\n\n### 对用人单位的风险\n\n1.  **承担行政责任**：根据《劳动法》第九十八条规定，用人单位如果故意拖延不订立劳动合同，将由劳动行政部门责令改正。\n2.  **承担赔偿责任**：同样依据第九十八条，如果因未签订合同对劳动者造成了损害（例如，因无合同导致社保无法缴纳而使劳动者受损），用人单位应当承担赔偿责任。\n3.  **连带赔偿责任风险**：如果用人单位招用了尚未与其他单位解除劳动合同的兼职人员，并因此给原单位造成经济损失，根据第九十九条，该用人单位需依法承担连带赔偿责任。\n4.  **事实劳动关系的约束**：即使没有签订书面合同，只要存在用工事实，法律上仍可能认定为事实劳动关系。这意味着用人单位仍需履行支付工资、缴纳社保（如适用）、提供劳动保护等法定义务，却因缺乏书面约定而更容易陷入被动。\n\n综上所述，无论对于兼职者还是用人单位，不签订劳动合同都意味着将自身置于法律保护的灰色地带，极易引发纠纷并承担不利后果。\n\n### References\n\n- [1] /Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "cache_type": "query",
+    "chunk_id": null,
+    "original_prompt": "兼职不签合同有什么风险，根据劳动法",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "hl_keywords": "Labor law, Employment risks, Worker rights",
+      "ll_keywords": "Part-time work, Employment contract, Legal protection",
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773710947,
+    "update_time": 1773710947,
+    "_id": "hybrid:query:da5b40abc725b4642962425b69a364f5"
   }
 }

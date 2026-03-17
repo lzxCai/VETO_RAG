@@ -7,6 +7,7 @@ import inspect
 import urllib.request
 import urllib.error
 from pathlib import Path
+from datetime import datetime
 from typing import Any, Optional
 
 from dotenv import load_dotenv
@@ -16,7 +17,8 @@ from lightrag.utils import setup_logger, wrap_embedding_func_with_attrs
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
 ENV_PATH = Path(__file__).resolve().parent / ".env"
-DEFAULT_WORKING_DIR = ROOT_DIR / "rag_storage" / "labor_law"
+DEFAULT_WORKING_DIR = ROOT_DIR / "rag_storage" / "civil_code"
+DEFAULT_ZH_SYSTEM_PROMPT = "你是一个只说中文的助手，必须使用中文回答。"
 
 
 def _get_env_int(name: str, default: int) -> int:
@@ -109,7 +111,7 @@ def _build_llm_func():
     if provider == "openai_like":
         from lightrag.llm.openai import openai_complete_if_cache
 
-        llm_model = os.getenv("LR_LLM_MODEL", "qwen-plus")
+        llm_model = os.getenv("LR_LLM_MODEL", "qwen3-max")
         base_url = os.getenv("LR_LLM_BASE_URL", "https://dashscope.aliyuncs.com/compatible-mode/v1")
         api_key = os.getenv("LR_LLM_API_KEY", os.getenv("DASHSCOPE_API_KEY", ""))
         if not api_key:
@@ -166,8 +168,11 @@ def _build_llm_func():
 
 def _build_prompt(query: str, context: str) -> str:
     return (
-        "你现在是一个专业的只会说中文的法律助手\n"
-        "请你根据上下文做出详细的中文回答\n"
+        "你现在是一个专业的合同分析助手。\n"
+        "请你根据上下文做出详细的中文回答。\n"
+        "请你使用严谨且严肃的口吻。\n"
+        "适当使用markdown语法，使输出更加美观，但不要使用表情符号。\n"
+        "请不要输出任何与合同分析无关的内容。\n"
         "如果上下文不足以提供足够的信息，请明确说明。\n\n"
         f"Context:\n{context}\n\n"
         f"Question: {query}\n"
@@ -228,6 +233,40 @@ def _parse_rerank_response(resp: dict) -> list[int]:
     return []
 
 
+def _format_output_content(result: Any) -> str:
+    if isinstance(result, str):
+        return result
+    try:
+        return json.dumps(result, ensure_ascii=False, indent=2)
+    except TypeError:
+        return str(result)
+
+
+def _save_output(content: str) -> Path:
+    output_dir = ROOT_DIR / "MDoutput"
+    output_dir.mkdir(parents=True, exist_ok=True)
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    output_path = output_dir / f"{timestamp}.md"
+    output_path.write_text(content, encoding="utf-8")
+    return output_path
+
+
+def _normalize_working_dirs(multi_dirs: str | None, single_dir: str) -> list[Path]:
+    if multi_dirs:
+        parts = [p.strip() for p in multi_dirs.split(",") if p.strip()]
+        if parts:
+            return [Path(p) for p in parts]
+    return [Path(single_dir)]
+
+
+def _ensure_context_list(result: Any) -> list[str]:
+    contexts = _extract_context_list(result)
+    if not contexts:
+        context = _extract_context(result) or str(result)
+        contexts = [context]
+    return contexts
+
+
 async def _dashscope_rerank(
     query: str,
     documents: list[str],
@@ -274,25 +313,25 @@ async def main():
     parser = argparse.ArgumentParser(description="Query LightRAG (hybrid mode by default)")
     parser.add_argument("query", type=str, nargs="?", default=os.getenv("LR_QUERY", ""), help="user question")
     parser.add_argument("--mode", type=str, default=os.getenv("LR_QUERY_MODE", "hybrid"))
+    parser.add_argument(
+        "--working-dir",
+        type=str,
+        default=os.getenv("LR_WORKING_DIR", str(DEFAULT_WORKING_DIR)),
+        help="LightRAG working directory (storage path)",
+    )
+    parser.add_argument(
+        "--working-dirs",
+        type=str,
+        default=os.getenv("LR_WORKING_DIRS", ""),
+        help="comma-separated working dirs for multi-store retrieval",
+    )
     parser.add_argument("--only-context", action="store_true", default=os.getenv("LR_ONLY_CONTEXT", "") != "")
-    parser.add_argument("--rerank", action="store_true", default=os.getenv("LR_RERANK", "") != "")
-    parser.add_argument("--rerank-model", type=str, default=os.getenv("LR_RERANK_MODEL", "gte-rerank-v2"))
     parser.add_argument(
-        "--rerank-url",
-        type=str,
-        default=os.getenv(
-            "LR_RERANK_URL",
-            "https://dashscope.aliyuncs.com/api/v1/services/rerank/text-rerank/text-rerank",
-        ),
+        "--use-built-prompt",
+        action="store_true",
+        default=os.getenv("LR_USE_BUILT_PROMPT", "") != "",
+        help="use local _build_prompt to generate final answer",
     )
-    parser.add_argument(
-        "--rerank-api-style",
-        type=str,
-        default=os.getenv("LR_RERANK_API_STYLE", "dashscope"),
-        choices=["dashscope", "openai"],
-    )
-    parser.add_argument("--rerank-top-n", type=int, default=_get_env_int("LR_RERANK_TOP_N", 5))
-    parser.add_argument("--rerank-instruct", type=str, default=os.getenv("LR_RERANK_INSTRUCT", ""))
     args = parser.parse_args()
     if not args.query:
         if sys.stdin and sys.stdin.isatty():
@@ -302,6 +341,7 @@ async def main():
             return
 
     setup_logger("lightrag", level=os.getenv("LR_LOG_LEVEL", "INFO"))
+    zh_system_prompt = os.getenv("LR_SYSTEM_PROMPT", DEFAULT_ZH_SYSTEM_PROMPT)
 
     llm_model_func, llm_model_name = _build_llm_func()
     embedding_func = _build_embedding_func()
@@ -314,7 +354,7 @@ async def main():
 
     # LightRAG constructor args vary by version. Only pass supported kwargs.
     rag_kwargs = dict(
-        working_dir=str(Path(os.getenv("LR_WORKING_DIR", str(DEFAULT_WORKING_DIR)))),
+        working_dir="",
         llm_model_func=llm_model_func,
         llm_model_name=llm_model_name,
         embedding_func=embedding_func,
@@ -334,62 +374,66 @@ async def main():
                 rag_kwargs[key] = graph_kwargs
                 break
 
-    rag = LightRAG(**rag_kwargs)
+    working_dirs = _normalize_working_dirs(args.working_dirs, args.working_dir)
+    results: list[tuple[Path, Any]] = []
 
-    await rag.initialize_storages()
-    try:
-        param = QueryParam(mode=args.mode)
-        # Disable LightRAG built-in rerank to avoid warnings; we use DashScope rerank here.
-        if hasattr(param, "enable_rerank"):
-            try:
-                param.enable_rerank = False
-            except Exception:
-                pass
-        if args.only_context or args.rerank:
-            try:
-                param.only_need_context = True
-            except Exception:
-                pass
-
-        result = await rag.aquery(args.query, param=param)
-
-        if args.only_context or args.rerank:
-            contexts = _extract_context_list(result)
-            if args.rerank and not contexts:
-                print("[rerank warning] no contexts returned by LightRAG; falling back to original result.")
-                print(result)
-                return
-            if not contexts:
-                context = _extract_context(result) or str(result)
-                contexts = [context]
-
-            if args.rerank and len(contexts) > 1:
-                api_key = os.getenv("DASHSCOPE_API_KEY", "")
-                top_n = min(args.rerank_top_n, len(contexts))
+    for working_dir in working_dirs:
+        rag_kwargs["working_dir"] = str(working_dir)
+        rag = LightRAG(**rag_kwargs)
+        await rag.initialize_storages()
+        try:
+            param = QueryParam(mode=args.mode)
+            if hasattr(param, "system_prompt"):
                 try:
-                    ranked = await _dashscope_rerank(
-                        args.query,
-                        contexts,
-                        top_n=top_n,
-                        model=args.rerank_model,
-                        api_key=api_key,
-                        url=args.rerank_url,
-                        api_style=args.rerank_api_style,
-                        instruct=args.rerank_instruct,
-                    )
-                    if ranked:
-                        contexts = [contexts[i] for i in ranked if 0 <= i < len(contexts)]
-                except (urllib.error.URLError, urllib.error.HTTPError, ValueError) as e:
-                    print(f"[rerank warning] {e}")
+                    param.system_prompt = zh_system_prompt
+                except Exception:
+                    pass
+            if hasattr(param, "prompt"):
+                try:
+                    param.prompt = zh_system_prompt
+                except Exception:
+                    pass
+            if hasattr(param, "response_language"):
+                try:
+                    param.response_language = "zh"
+                except Exception:
+                    pass
+            # Disable LightRAG built-in rerank to avoid warnings; we use DashScope rerank here.
+            if hasattr(param, "enable_rerank"):
+                try:
+                    param.enable_rerank = False
+                except Exception:
+                    pass
 
-            context = "\n\n".join(contexts)
-            prompt = _build_prompt(args.query, context)
-            answer = await llm_model_func(prompt)
-            print(answer)
-        else:
-            print(result)
-    finally:
-        await rag.finalize_storages()
+            result = await rag.aquery(args.query, param=param)
+            results.append((working_dir, result))
+        finally:
+            await rag.finalize_storages()
+
+    use_built_prompt = args.only_context or args.use_built_prompt or len(working_dirs) > 1
+    if use_built_prompt:
+        contexts_all: list[str] = []
+        for working_dir, result in results:
+            contexts = _ensure_context_list(result)
+            if len(working_dirs) > 1:
+                source = Path(working_dir).name
+                meaningful = [
+                    c for c in contexts if c and c.strip() and c.strip() not in ("{}", "[]", "None")
+                ]
+                if not meaningful:
+                    meaningful = ["(未检索到相关内容)"]
+                contexts_all.extend([f"来源：{source}\n{c}" for c in meaningful])
+            else:
+                contexts_all.extend(contexts)
+
+        context = "\n\n".join(contexts_all)
+        prompt = _build_prompt(args.query, context)
+        answer = await llm_model_func(prompt, system_prompt=zh_system_prompt)
+        output_text = _format_output_content(answer)
+    else:
+        output_text = _format_output_content(results[0][1])
+    print(output_text)
+    _save_output(output_text)
 
 
 if __name__ == "__main__":
