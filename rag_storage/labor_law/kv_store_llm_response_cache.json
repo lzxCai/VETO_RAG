@@ -2468,5 +2468,47 @@
     "create_time": 1773677342,
     "update_time": 1773677342,
     "_id": "hybrid:query:d9d2a8689bef5da7ace7900d858fa51f"
+  },
+  "hybrid:keywords:066ee25a3f99cf72e60a86564b54b572": {
+    "return": "{\"high_level_keywords\": [\"Labor law\", \"Employment risks\", \"Worker rights\"], \"low_level_keywords\": [\"Part-time work\", \"Employment contract\", \"Legal protection\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "兼职不签合同有什么风险，根据劳动法",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773710928,
+    "update_time": 1773710928,
+    "_id": "hybrid:keywords:066ee25a3f99cf72e60a86564b54b572"
+  },
+  "hybrid:query:da5b40abc725b4642962425b69a364f5": {
+    "return": "根据中国《劳动法》及相关规定，兼职工作若未签订书面劳动合同，对劳动者和用人单位均存在显著法律风险。以下是主要风险分析：\n\n### 对劳动者的风险\n\n1.  **劳动关系难以确认**：没有书面合同，劳动者在发生纠纷时（如追讨工资、工伤赔偿等）将面临举证困难，难以证明与用人单位之间存在合法的劳动关系。\n2.  **核心权益缺乏保障**：劳动合同是明确工作内容、劳动报酬、工作时间、劳动保护和劳动条件等核心条款的法定载体。不签合同，这些基本权利就失去了最直接的书面依据，容易被侵害。\n3.  **经济补偿难以主张**：如果用人单位违法解除劳动关系或存在其他违法行为，劳动者因缺乏合同证明，可能无法顺利主张经济补偿或赔偿。\n\n### 对用人单位的风险\n\n1.  **承担行政责任**：根据《劳动法》第九十八条规定，用人单位如果故意拖延不订立劳动合同，将由劳动行政部门责令改正。\n2.  **承担赔偿责任**：同样依据第九十八条，如果因未签订合同对劳动者造成了损害（例如，因无合同导致社保无法缴纳而使劳动者受损），用人单位应当承担赔偿责任。\n3.  **连带赔偿责任风险**：如果用人单位招用了尚未与其他单位解除劳动合同的兼职人员，并因此给原单位造成经济损失，根据第九十九条，该用人单位需依法承担连带赔偿责任。\n4.  **事实劳动关系的约束**：即使没有签订书面合同，只要存在用工事实，法律上仍可能认定为事实劳动关系。这意味着用人单位仍需履行支付工资、缴纳社保（如适用）、提供劳动保护等法定义务，却因缺乏书面约定而更容易陷入被动。\n\n综上所述，无论对于兼职者还是用人单位，不签订劳动合同都意味着将自身置于法律保护的灰色地带，极易引发纠纷并承担不利后果。\n\n### References\n\n- [1] /Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "cache_type": "query",
+    "chunk_id": null,
+    "original_prompt": "兼职不签合同有什么风险，根据劳动法",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "hl_keywords": "Labor law, Employment risks, Worker rights",
+      "ll_keywords": "Part-time work, Employment contract, Legal protection",
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773710947,
+    "update_time": 1773710947,
+    "_id": "hybrid:query:da5b40abc725b4642962425b69a364f5"
   }
 }

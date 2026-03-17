@@ -17974,5 +17974,1349 @@
     "create_time": 1773377005,
     "update_time": 1773377012,
     "_id": "chunk-31d81ddbf6fc1076de0d70a496d6a52f"
+  },
+  "chunk-7b6eb7df22cbf1e6b2dcf127e89cc5b3": {
+    "tokens": 28,
+    "content": "# 第十一条\n\n地方各级人民政府应当采取措施，发展多种类型的职业介绍机构，提供就业服务。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-7b6eb7df22cbf1e6b2dcf127e89cc5b3",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:b5be6a89b15712eeda148373eb47b4e9",
+      "default:extract:dd86ca1439f2a5fcb46445d4dedffe72"
+    ],
+    "create_time": 1773711345,
+    "update_time": 1773711356,
+    "_id": "chunk-7b6eb7df22cbf1e6b2dcf127e89cc5b3"
+  },
+  "chunk-c1affc2633f7ab17127fc986e6c20944": {
+    "tokens": 29,
+    "content": "# 劳动合同\n\n劳动合同依法订立即具有法律约束力，当事人必须履行劳动合同规定的义务。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-c1affc2633f7ab17127fc986e6c20944",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:6dc3ed22087f6d6957bebab5a4b4110e",
+      "default:extract:10656ecd2096ed6946a03ff9ec4369f9"
+    ],
+    "create_time": 1773711345,
+    "update_time": 1773711352,
+    "_id": "chunk-c1affc2633f7ab17127fc986e6c20944"
+  },
+  "chunk-09d777684aee4aa08ce23008df6295e7": {
+    "tokens": 103,
+    "content": "# 第二十七条\n\n用人单位濒临破产进行法定整顿期间或者生产经营状况发生严重困难，确需裁减人员的，应当提前三十日向工会或者全体职工说明情况，听取工会或者职工的意见，经向劳动行政部门报告后，可以裁减人员。\n\n用人单位依据本条规定裁减人员，在六个月内录用人员的，应当优先录用被裁减的人员。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-09d777684aee4aa08ce23008df6295e7",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:b0e0c6b043ef9f5941ef015b05c6941b",
+      "default:extract:7427a2dbccbac2f41a88e77f8eae5f96"
+    ],
+    "create_time": 1773711359,
+    "update_time": 1773711381,
+    "_id": "chunk-09d777684aee4aa08ce23008df6295e7"
+  },
+  "chunk-3a9a9dcc3ac3704b4d67491e918541f1": {
+    "tokens": 8,
+    "content": "# 第十三章 附 则",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-3a9a9dcc3ac3704b4d67491e918541f1",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:674a39985e0888d400b6b238b8556940",
+      "default:extract:ea8f588e5175abae0de00994f4c8f370"
+    ],
+    "create_time": 1773711359,
+    "update_time": 1773711362,
+    "_id": "chunk-3a9a9dcc3ac3704b4d67491e918541f1"
+  },
+  "chunk-1c3f29bba2e48ace661e0e106cd6c106": {
+    "tokens": 43,
+    "content": "# 第一百条\n\n用人单位无故不缴纳社会保险费的，由劳动行政部门责令其限期缴纳；逾期不缴的，可以加收滞纳金。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-1c3f29bba2e48ace661e0e106cd6c106",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:9276f57f6019452ca9b8e39ac28c5d26",
+      "default:extract:d3eccf8828500a5fe115d4d8d7c5df51"
+    ],
+    "create_time": 1773711363,
+    "update_time": 1773711378,
+    "_id": "chunk-1c3f29bba2e48ace661e0e106cd6c106"
+  },
+  "chunk-ceb37133f3e224a3a753772003f89e9e": {
+    "tokens": 12,
+    "content": "# 第八章 职业培训\n\n－13－",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-ceb37133f3e224a3a753772003f89e9e",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:ac298879f7ae0052ac37d1224ce0d3e6",
+      "default:extract:a06fe034a86ca71d0a9c60108d739333"
+    ],
+    "create_time": 1773711381,
+    "update_time": 1773711385,
+    "_id": "chunk-ceb37133f3e224a3a753772003f89e9e"
+  },
+  "chunk-c6a093f2a713e82a84a2df8dea3ab064": {
+    "tokens": 90,
+    "content": "# 第三十二条\n\n有下列情形之一的，劳动者可以随时通知用人单位解除劳动合同：\n\n- （一）在试用期内的；\n- （二）用人单位以暴力、威胁或者非法限制人身自由的手段强迫劳动的；\n- （三）用人单位未按照劳动合同约定支付劳动报酬或者提供劳动条件的。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-c6a093f2a713e82a84a2df8dea3ab064",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:eb0f27f9d47fa66af85bd586ccc50c6f",
+      "default:extract:57f0dd7ce8a978299fe966fbc19d2eee"
+    ],
+    "create_time": 1773711386,
+    "update_time": 1773711405,
+    "_id": "chunk-c6a093f2a713e82a84a2df8dea3ab064"
+  },
+  "chunk-9e1896276de0d9340c0ef6a2e907293b": {
+    "tokens": 52,
+    "content": "# 第十条\n\n国家通过促进经济和社会发展，创造就业条件，扩大就业机会。国家鼓励企业、事业组织、社会团体在法律、行政法规规定的范围内兴办产业或者拓展经营，增加就业。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-9e1896276de0d9340c0ef6a2e907293b",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:e165a058012a736e0421b33f52210ded",
+      "default:extract:8bfd9a6c35b084eefd8172e270a38ed5"
+    ],
+    "create_time": 1773711387,
+    "update_time": 1773711403,
+    "_id": "chunk-9e1896276de0d9340c0ef6a2e907293b"
+  },
+  "chunk-1b31fb50320a0aa42681462a5892c534": {
+    "tokens": 61,
+    "content": "# 第五十七条\n\n国家建立伤亡事故和职业病统计报告和处理制度。县级以上各级人民政府劳动行政部门、有关部门和用人单位应当依法对劳动者在劳动过程中发生的伤亡事故和劳动者的职\n\n－12－",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-1b31fb50320a0aa42681462a5892c534",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:7da72d60ef3d3e7c72e3fddef3240eba",
+      "default:extract:a4f0b283a3a5aec587681fbc5f88371d"
+    ],
+    "create_time": 1773711407,
+    "update_time": 1773711422,
+    "_id": "chunk-1b31fb50320a0aa42681462a5892c534"
+  },
+  "chunk-3ef7680c783357332f2ef093d817c7f2": {
+    "tokens": 251,
+    "content": "# 第一章 总 则\n\n第一条 为了保护劳动者的合法权益，调整劳动关系，建立和维护适应社会主义市场经济的劳动制度，促进经济发展和社会进步，根据宪法，制定本法。\n\n第二条 在中华人民共和国境内的企业、个体经济组织（以下统称用人单位）和与之形成劳动关系的劳动者，适用本法。国家机关、事业组织、社会团体和与之建立劳动合同关系的劳动者，依照本法执行。\n\n第三条 劳动者享有平等就业和选择职业的权利、取得劳动报酬的权利、休息休假的权利、获得劳动安全卫生保护的权利、接受职业技能培训的权利、享受社会保险和福利的权利、提请劳动争议处理的权利以及法律规定的其他劳动权利。劳动者应当完成劳动任务，提高职业技能，执行劳动安全卫生规程，遵守劳动纪律和职业道德。\n\n第四条 用人单位应当依法建立和完善规章制度，保障劳动者享有劳动权利和履行劳动义务。\n\n－2－",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-3ef7680c783357332f2ef093d817c7f2",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:d266e244c73715513ea60b2ca00da1f5",
+      "default:extract:f9dc53cb8a9ec649b7ebebb5aee4e202"
+    ],
+    "create_time": 1773711411,
+    "update_time": 1773711437,
+    "_id": "chunk-3ef7680c783357332f2ef093d817c7f2"
+  },
+  "chunk-eb26be1be6719b2d63eda122721b5d68": {
+    "tokens": 127,
+    "content": "# 第四十四条\n\n有下列情形之一的，用人单位应当按照下列标准支付高于劳动者正常工作时间工资的工资报酬：\n\n1. 安排劳动者延长工作时间的，支付不低于工资的百分之一百五十的工资报酬；\n2. 休息日安排劳动者工作又不能安排补休的，支付不低于工资的百分之二百的工资报酬；\n3. 法定休假日安排劳动者工作的，支付不低于工资的百分之三百的工资报酬。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-eb26be1be6719b2d63eda122721b5d68",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:0e40e2c1e0716d38691df7ceff93742b",
+      "default:extract:b5bf51aeb9cb7f8116c4ca282ae7d7ea"
+    ],
+    "create_time": 1773711425,
+    "update_time": 1773711441,
+    "_id": "chunk-eb26be1be6719b2d63eda122721b5d68"
+  },
+  "chunk-15db89e812c6ec17f40e3e2ae7f1d0cd": {
+    "tokens": 43,
+    "content": "# 第九十九条\n\n用人单位招用尚未解除劳动合同的劳动者，对原用人单位造成经济损失的，该用人单位应当依法承担连带赔偿责任。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-15db89e812c6ec17f40e3e2ae7f1d0cd",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:c69884dee8f091f3828387cead7a71b0",
+      "default:extract:ea750d558586e28b2e27258697f2c135"
+    ],
+    "create_time": 1773711442,
+    "update_time": 1773711460,
+    "_id": "chunk-15db89e812c6ec17f40e3e2ae7f1d0cd"
+  },
+  "chunk-f1e934469e0af82604f570bd7744c5cb": {
+    "tokens": 38,
+    "content": "# 第三十条\n\n用人单位解除劳动合同，工会认为不适当的，有权提出意见。如果用人单位违反法律、法规或者劳动合同，工会",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-f1e934469e0af82604f570bd7744c5cb",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:23a4061e13c150b43aed6694e329c341",
+      "default:extract:1732d42eb4bf9ada76c708d0b374af73"
+    ],
+    "create_time": 1773711445,
+    "update_time": 1773711458,
+    "_id": "chunk-f1e934469e0af82604f570bd7744c5cb"
+  },
+  "chunk-304f106d130307ad6bf0bdf62f720f8c": {
+    "tokens": 39,
+    "content": "# 第一百零五条\n\n违反本法规定侵害劳动者合法权益，其他法律、行政法规已规定处罚的，依照该法律、行政法规的规定处罚。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-304f106d130307ad6bf0bdf62f720f8c",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:444bf859fc45162a6720d0f732474024",
+      "default:extract:304005efc62f294faf66322fab9c94c3"
+    ],
+    "create_time": 1773711461,
+    "update_time": 1773711471,
+    "_id": "chunk-304f106d130307ad6bf0bdf62f720f8c"
+  },
+  "chunk-01ab560573c5cd878f4442fcbbac6cef": {
+    "tokens": 46,
+    "content": "# 第一百零二条\n\n劳动者违反本法规定的条件解除劳动合同或者违反劳动合同中约定的保密事项，对用人单位造成经济损失的，应当依法承担赔偿责任。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-01ab560573c5cd878f4442fcbbac6cef",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:4e112809f3826caaa8eda3fb35883228",
+      "default:extract:4833668554450e6a5892a20d877cd0a5"
+    ],
+    "create_time": 1773711473,
+    "update_time": 1773711492,
+    "_id": "chunk-01ab560573c5cd878f4442fcbbac6cef"
+  },
+  "chunk-9ade40507636905dbb256fde347d4c4d": {
+    "tokens": 68,
+    "content": "# 第四十条\n\n用人单位在下列节日期间应当依法安排劳动者休假：\n\n- （一）元旦；\n- （二）春节；\n- （三）国际劳动节；\n- （四）国庆节；\n- （五）法律、法规规定的其他休假节日。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-9ade40507636905dbb256fde347d4c4d",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:d067bb75594164e1986d906720e72e89",
+      "default:extract:22779f5dcaf8e00ca495601734a43400"
+    ],
+    "create_time": 1773711477,
+    "update_time": 1773711498,
+    "_id": "chunk-9ade40507636905dbb256fde347d4c4d"
+  },
+  "chunk-a8b98b69c20324f8a16d939573b5b8f0": {
+    "tokens": 37,
+    "content": "# 第四十五条\n\n国家实行带薪年休假制度。劳动者连续工作一年以上的，享受带薪年休假。具体办法由国务院规定。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-a8b98b69c20324f8a16d939573b5b8f0",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:bba48d0af76c685b475310a21b68f376",
+      "default:extract:b1e06e0dc93f564e2537965d018d7152"
+    ],
+    "create_time": 1773711505,
+    "update_time": 1773711514,
+    "_id": "chunk-a8b98b69c20324f8a16d939573b5b8f0"
+  },
+  "chunk-25702dd54870df07d3bedb29b9496851": {
+    "tokens": 42,
+    "content": "# 第二十八条\n\n用人单位依据本法第二十四条、第二十六条、第二十七条的规定解除劳动合同的，应当依照国家有关规定给予经济补偿。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-25702dd54870df07d3bedb29b9496851",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:ac048a179b62ce77072be138fd3cb9a5",
+      "default:extract:a19a682a75dc0c878bd525d2c962fa78"
+    ],
+    "create_time": 1773711505,
+    "update_time": 1773711518,
+    "_id": "chunk-25702dd54870df07d3bedb29b9496851"
+  },
+  "chunk-2d2a159d9b1412be4e967ad2b4cb30cf": {
+    "tokens": 6,
+    "content": "# 目  录",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-2d2a159d9b1412be4e967ad2b4cb30cf",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:1ee6c2300947c6b819adf0dc777cafcc",
+      "default:extract:93f7bcc0ece34638fc0e01aeda0c8e5f"
+    ],
+    "create_time": 1773711517,
+    "update_time": 1773711519,
+    "_id": "chunk-2d2a159d9b1412be4e967ad2b4cb30cf"
+  },
+  "chunk-ff0cf62a6db3fe1d75880bb84131de82": {
+    "tokens": 47,
+    "content": "# 第五十三条\n\n劳动安全卫生设施必须符合国家规定的标准。新建、改建、扩建工程的劳动安全卫生设施必须与主体工程同时设计、同时施工、同时投入生产和使用。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-ff0cf62a6db3fe1d75880bb84131de82",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:69e3d464f696cdb350c643ea028565d2",
+      "default:extract:8e3969703b3ea19cc4ae0d0e9c27c71c"
+    ],
+    "create_time": 1773711519,
+    "update_time": 1773711540,
+    "_id": "chunk-ff0cf62a6db3fe1d75880bb84131de82"
+  },
+  "chunk-f5cd7ed5505461fd7709fa8b54316269": {
+    "tokens": 93,
+    "content": "# 第二十六条\n\n有下列情形之一的，用人单位可以解除劳动合同，但是应当提前三十日以书面形式通知劳动者本人：\n\n- （一）劳动者患病或者非因工负伤，医疗期满后，不能从事原工作也不能从事由用人单位另行安排的工作的；\n- （二）劳动者不能胜任工作，经过培训或者调整工作岗位，",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-f5cd7ed5505461fd7709fa8b54316269",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:8319de33d488b7d9d00f0e9942d0486e",
+      "default:extract:52674eaa1187bcd611de01b3609b339a"
+    ],
+    "create_time": 1773711520,
+    "update_time": 1773711541,
+    "_id": "chunk-f5cd7ed5505461fd7709fa8b54316269"
+  },
+  "chunk-82eedbfc6978ce7b8284768afbfab33f": {
+    "tokens": 26,
+    "content": "# 第三十一条\n\n劳动者解除劳动合同，应当提前三十日以书面形式通知用人单位。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-82eedbfc6978ce7b8284768afbfab33f",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:3ebfa0322614a71ada7f6c84d7b8955a",
+      "default:extract:d58d8ce3c73ad266610a98ab3adbadbd"
+    ],
+    "create_time": 1773711545,
+    "update_time": 1773711558,
+    "_id": "chunk-82eedbfc6978ce7b8284768afbfab33f"
+  },
+  "chunk-6446a7689e729164af31e8ab0faafc8b": {
+    "tokens": 50,
+    "content": "# 第八十五条\n\n县级以上各级人民政府劳动行政部门依法对用人单位遵守劳动法律、法规的情况进行监督检查，对违反劳动法律、法规的行为有权制止，并责令改正。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-6446a7689e729164af31e8ab0faafc8b",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:cb3035a9d006b4c9ef6766924d802fa9",
+      "default:extract:ad43c4f7d34e1ec7d9b63417a8e28789"
+    ],
+    "create_time": 1773711551,
+    "update_time": 1773711565,
+    "_id": "chunk-6446a7689e729164af31e8ab0faafc8b"
+  },
+  "chunk-5144d09ac2f1a1e98af0cc571325d656": {
+    "tokens": 101,
+    "content": "# 第四十二条\n\n有下列情形之一的，延长工作时间不受本法第四十一条规定的限制：\n\n1. 发生自然灾害、事故或者因其他原因，威胁劳动者生命健康和财产安全，需要紧急处理的；\n2. 生产设备、交通运输线路、公共设施发生故障，影响生产和公众利益，必须及时抢修的；\n3. 法律、行政法规规定的其他情形。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-5144d09ac2f1a1e98af0cc571325d656",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:5dfcfa8aaa8a218e5a2c446395fa42f9",
+      "default:extract:8de864422998536f0eb0e2efa0979745"
+    ],
+    "create_time": 1773711561,
+    "update_time": 1773711585,
+    "_id": "chunk-5144d09ac2f1a1e98af0cc571325d656"
+  },
+  "chunk-7004834ddf8cb3cb622e200c88004183": {
+    "tokens": 7,
+    "content": "# 第五章 工 资",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-7004834ddf8cb3cb622e200c88004183",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:a2726982ed533e9010710751ae618b30",
+      "default:extract:3c3cef109441e14c4d6696af9d26c2e0"
+    ],
+    "create_time": 1773711568,
+    "update_time": 1773711572,
+    "_id": "chunk-7004834ddf8cb3cb622e200c88004183"
+  },
+  "chunk-0c42492e507d3ed5394992be8206bb0c": {
+    "tokens": 33,
+    "content": "# 第十四条\n\n残疾人、少数民族人员、退出现役的军人的就业，法律、法规有特别规定的，从其规定。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-0c42492e507d3ed5394992be8206bb0c",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:dd8d16f33d0cc011e20afdaf5747ee6b",
+      "default:extract:f25e47b65c2a21e5d2d182abc720c89e"
+    ],
+    "create_time": 1773711580,
+    "update_time": 1773711595,
+    "_id": "chunk-0c42492e507d3ed5394992be8206bb0c"
+  },
+  "chunk-e07869d7cd11d05487d341eeabe67b63": {
+    "tokens": 115,
+    "content": "# 第二十九条\n\n劳动者有下列情形之一的，用人单位不得依据本法第二十六条、第二十七条的规定解除劳动合同：\n\n- （一）患职业病或者因工负伤并被确认丧失或者部分丧失劳动能力的；\n- （二）患病或者负伤，在规定的医疗期内的；\n- （三）女职工在孕期、产期、哺乳期内的；\n- （四）法律、行政法规规定的其他情形。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-e07869d7cd11d05487d341eeabe67b63",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:4433185edaaaf39e33a87aabe8d5da80",
+      "default:extract:7410d99a2619ef635ef4a3189e4250c5"
+    ],
+    "create_time": 1773711589,
+    "update_time": 1773711615,
+    "_id": "chunk-e07869d7cd11d05487d341eeabe67b63"
+  },
+  "chunk-7a84ae174a5d852490f9ffb8bbcec291": {
+    "tokens": 31,
+    "content": "# 第三章 劳动合同和集体合同\n\n国家支持劳动者自愿组织起来就业和从事个体经营实现就业。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-7a84ae174a5d852490f9ffb8bbcec291",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:22c484b8005be1e5b2182a61d4dbb3f5",
+      "default:extract:ad75179f2f741dcf4b63750500c07d2b"
+    ],
+    "create_time": 1773711599,
+    "update_time": 1773711611,
+    "_id": "chunk-7a84ae174a5d852490f9ffb8bbcec291"
+  },
+  "chunk-d7f12b62d488f4ca39157007ee023697": {
+    "tokens": 37,
+    "content": "# 第一百零四条\n\n国家工作人员和社会保险基金经办机构的工作人员挪用社会保险基金，构成犯罪的，依法追究刑事责任。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-d7f12b62d488f4ca39157007ee023697",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:849186373ad4664de8daa2f5d8793dbe",
+      "default:extract:fa8cbe7203b2c1c181934fcc335525cc"
+    ],
+    "create_time": 1773711613,
+    "update_time": 1773711628,
+    "_id": "chunk-d7f12b62d488f4ca39157007ee023697"
+  },
+  "chunk-c60e5be371dfa1f9ec2c3f41c6c51bea": {
+    "tokens": 37,
+    "content": "# 第十七条\n\n订立和变更劳动合同，应当遵循平等自愿、协商一致的原则，不得违反法律、行政法规的规定。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-c60e5be371dfa1f9ec2c3f41c6c51bea",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:676c335a16fbc4cecc273ced69d08d5a",
+      "default:extract:e7d6484a8d393f74575ad0bace09dca5"
+    ],
+    "create_time": 1773711631,
+    "update_time": 1773711643,
+    "_id": "chunk-c60e5be371dfa1f9ec2c3f41c6c51bea"
+  },
+  "chunk-3ccd272c055ffadcfc0230544b262015": {
+    "tokens": 49,
+    "content": "# 第四十六条\n\n工资分配应当遵循按劳分配原则，实行同工同酬。\n\n工资水平在经济发展的基础上逐步提高。国家对工资总量实行宏观调控。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-3ccd272c055ffadcfc0230544b262015",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:bcfe3a417c6873f3b4b5f48618680654",
+      "default:extract:19a608924d8eca7717177f12081f588a"
+    ],
+    "create_time": 1773711632,
+    "update_time": 1773711645,
+    "_id": "chunk-3ccd272c055ffadcfc0230544b262015"
+  },
+  "chunk-d2c130666c9b8351b89ec909dc97396f": {
+    "tokens": 104,
+    "content": "# 第十九条\n\n劳动合同应当以书面形式订立，并具备以下条款：\n\n1. 劳动合同期限；\n2. 工作内容；\n3. 劳动保护和劳动条件；\n4. 劳动报酬；\n5. 劳动纪律；\n6. 劳动合同终止的条件；\n7. 违反劳动合同的责任。\n\n劳动合同除前款规定的必备条款外，当事人可以协商约定其他内容。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-d2c130666c9b8351b89ec909dc97396f",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:930ff652032c7706f68b4ad1539794d5",
+      "default:extract:b214e2c3e35ca2cea7d2528f38a9b13f"
+    ],
+    "create_time": 1773711649,
+    "update_time": 1773711668,
+    "_id": "chunk-d2c130666c9b8351b89ec909dc97396f"
+  },
+  "chunk-5e04f20b8b7b250ab2854ffab0ad26c2": {
+    "tokens": 49,
+    "content": "# 第五十四条\n\n用人单位必须为劳动者提供符合国家规定的劳动安全卫生条件和必要的劳动防护用品，对从事有职业危害作业的劳动者应当定期进行健康检查。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-5e04f20b8b7b250ab2854ffab0ad26c2",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:52c21e5eb13f13ab4c76f4f45a784619",
+      "default:extract:ce25de8180c20a49801d040f20d3e484"
+    ],
+    "create_time": 1773711652,
+    "update_time": 1773711669,
+    "_id": "chunk-5e04f20b8b7b250ab2854ffab0ad26c2"
+  },
+  "chunk-e890e90dedc2136610b35e3511ee4bff": {
+    "tokens": 32,
+    "content": "# 第九条\n\n国务院劳动行政部门主管全国劳动工作。县级以上地方人民政府劳动行政部门主管本行政区域内的劳动工作。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-e890e90dedc2136610b35e3511ee4bff",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:d3f11a677a7a751b32573d0c86a2a19f",
+      "default:extract:04933d37e4ab393719b7b9b9b2c173bd"
+    ],
+    "create_time": 1773711674,
+    "update_time": 1773711686,
+    "_id": "chunk-e890e90dedc2136610b35e3511ee4bff"
+  },
+  "chunk-73b6c9297c7a7da453da3a92e368350a": {
+    "tokens": 33,
+    "content": "# 第九十七条\n\n由于用人单位的原因订立的无效合同，对劳动者造成损害的，应当承担赔偿责任。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-73b6c9297c7a7da453da3a92e368350a",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:8e2a38812493ec6f7ceb5eb7d6820e7e",
+      "default:extract:a424e99f83ecf310a18a3792dad69da1"
+    ],
+    "create_time": 1773711675,
+    "update_time": 1773711689,
+    "_id": "chunk-73b6c9297c7a7da453da3a92e368350a"
+  },
+  "chunk-0f133335b434209fb07a50ad3e0a2f33": {
+    "tokens": 92,
+    "content": "# 第二十五条\n\n劳动者有下列情形之一的，用人单位可以解除劳动合同：\n\n- （一）在试用期间被证明不符合录用条件的；\n- （二）严重违反劳动纪律或者用人单位规章制度的；\n- （三）严重失职，营私舞弊，对用人单位利益造成重大损害的；\n- （四）被依法追究刑事责任的。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-0f133335b434209fb07a50ad3e0a2f33",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:2d7783827ac4088122bb1c08ab03903e",
+      "default:extract:8861fa1b00b398c928d028b34c2fcabd"
+    ],
+    "create_time": 1773711689,
+    "update_time": 1773711713,
+    "_id": "chunk-0f133335b434209fb07a50ad3e0a2f33"
+  },
+  "chunk-96ddd1389a8d1afebfed70b7a0051cd8": {
+    "tokens": 55,
+    "content": "# 第三十五条\n\n依法签订的集体合同对企业和企业全体职工具有约束力。职工个人与企业订立的劳动合同中劳动条件和劳动报酬等标准不得低于集体合同的规定。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-96ddd1389a8d1afebfed70b7a0051cd8",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:35bcaf39241984bdc9b87fa25416f9e2",
+      "default:extract:3c700d2acbad2159a899be00d91dda27"
+    ],
+    "create_time": 1773711698,
+    "update_time": 1773711711,
+    "_id": "chunk-96ddd1389a8d1afebfed70b7a0051cd8"
+  },
+  "chunk-0025690c407466c1d21fda9ca2cd0b52": {
+    "tokens": 61,
+    "content": "# 第十三条\n\n妇女享有与男子平等的就业权利。在录用职工时，除国家规定的不适合妇女的工种或者岗位外，不得以性别为由拒绝录用妇女或者提高对妇女的录用标准。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-0025690c407466c1d21fda9ca2cd0b52",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:47654c2c78cc2b965b77962b537076ff",
+      "default:extract:1b8b5a83e15da16327dca42cb1fdecf8"
+    ],
+    "create_time": 1773711715,
+    "update_time": 1773711728,
+    "_id": "chunk-0025690c407466c1d21fda9ca2cd0b52"
+  },
+  "chunk-1ee1394b419d5bc0695ef81391d0c4b8": {
+    "tokens": 6,
+    "content": "# 第二章 促进就业",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-1ee1394b419d5bc0695ef81391d0c4b8",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:5613e254808d8881ca7e6f30ea98606f",
+      "default:extract:162a290b0120a623326763cb1e507efd"
+    ],
+    "create_time": 1773711718,
+    "update_time": 1773711723,
+    "_id": "chunk-1ee1394b419d5bc0695ef81391d0c4b8"
+  },
+  "chunk-a07aa9ee7ca74e51c0e67e4531d28af0": {
+    "tokens": 50,
+    "content": "# 第五十二条\n\n用人单位必须建立、健全劳动安全卫生制度，严格执行国家劳动安全卫生规程和标准，对劳动者进行劳动安全卫生教育，防止劳动过程中的事故，减少职业危害。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-a07aa9ee7ca74e51c0e67e4531d28af0",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:aa19cdc85aec8c033869b8f6ac4f39ee",
+      "default:extract:6a8453bb754b829c8dea5fe060a89fd7"
+    ],
+    "create_time": 1773711725,
+    "update_time": 1773711740,
+    "_id": "chunk-a07aa9ee7ca74e51c0e67e4531d28af0"
+  },
+  "chunk-d7bbdc9c932c7302eba4fe28c810a8b7": {
+    "tokens": 24,
+    "content": "# 第一百零七条\n\n本法自 1995 年 1 月 1 日起施行。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-d7bbdc9c932c7302eba4fe28c810a8b7",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:ffd0b4a2a54d4c1be28caeb1cd233202",
+      "default:extract:6609a2836e9fd8ec179dadb930d311b6"
+    ],
+    "create_time": 1773711731,
+    "update_time": 1773711744,
+    "_id": "chunk-d7bbdc9c932c7302eba4fe28c810a8b7"
+  },
+  "chunk-982fdc171e24d19c2286c2a017fe7f13": {
+    "tokens": 58,
+    "content": "# 第十五条\n\n禁止用人单位招用未满十六周岁的未成年人。文艺、体育和特种工艺单位招用未满十六周岁的未成年人，必须遵守国家有关规定，并保障其接受义务教育的权利。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-982fdc171e24d19c2286c2a017fe7f13",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:2856676d5bfa2505799e000bc15fe7ad",
+      "default:extract:14b4f68b0542cbcc1aa836570618d26f"
+    ],
+    "create_time": 1773711744,
+    "update_time": 1773711772,
+    "_id": "chunk-982fdc171e24d19c2286c2a017fe7f13"
+  },
+  "chunk-7440e9a9d68a40eb06fc88eaf48bf3a0": {
+    "tokens": 40,
+    "content": "# 第十六条\n\n劳动合同是劳动者与用人单位确立劳动关系、明确双方权利和义务的协议。建立劳动关系应当订立劳动合同。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-7440e9a9d68a40eb06fc88eaf48bf3a0",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:206a413a391be05e87784879522ad38c",
+      "default:extract:5a21cc0cd624e52ec03126ae947a16c6"
+    ],
+    "create_time": 1773711746,
+    "update_time": 1773711759,
+    "_id": "chunk-7440e9a9d68a40eb06fc88eaf48bf3a0"
+  },
+  "chunk-49dfcfe749ae5b7a3d964afb5d16559b": {
+    "tokens": 50,
+    "content": "# 第九十四条\n\n用人单位非法招用未满十六周岁的未成年人的，由劳动行政部门责令改正，处以罚款；情节严重的，由市场监督管理部门吊销营业执照。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-49dfcfe749ae5b7a3d964afb5d16559b",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:1e25b8eea95f31d88f1f826d0ec506a8",
+      "default:extract:cb0ada3927ab71ecde21176bd4d88e74"
+    ],
+    "create_time": 1773711763,
+    "update_time": 1773711781,
+    "_id": "chunk-49dfcfe749ae5b7a3d964afb5d16559b"
+  },
+  "chunk-7772034814a251985224602f1dd80c02": {
+    "tokens": 35,
+    "content": "# 第七条\n\n劳动者有权依法参加和组织工会。工会代表和维护劳动者的合法权益，依法独立自主地开展活动。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-7772034814a251985224602f1dd80c02",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:3042a0571d1978afa8e10494f09ca2a6",
+      "default:extract:772e8c74ac1a756b7586ef23803292b4"
+    ],
+    "create_time": 1773711778,
+    "update_time": 1773711786,
+    "_id": "chunk-7772034814a251985224602f1dd80c02"
+  },
+  "chunk-add1965d088b328f8a7f228f9ba5c825": {
+    "tokens": 73,
+    "content": "# 第四十九条\n\n确定和调整最低工资标准应当综合参考下列因素：\n\n1. 劳动者本人及平均赡养人口的最低生活费用；\n2. 社会平均工资水平；\n3. 劳动生产率；\n4. 就业状况；\n5. 地区之间经济发展水平的差异。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-add1965d088b328f8a7f228f9ba5c825",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:d2e39c4b9c96a949efe5bead74510a78",
+      "default:extract:e4f9a8cd47e14de81cbcf2c5e0a839bf"
+    ],
+    "create_time": 1773711788,
+    "update_time": 1773711804,
+    "_id": "chunk-add1965d088b328f8a7f228f9ba5c825"
+  },
+  "chunk-29625ec97f3aa262c09d4aa1c862291b": {
+    "tokens": 47,
+    "content": "# 第五十一条\n\n劳动者在法定休假日和婚丧假期间以及依法参加社会活动期间，用人单位应当依法支付工资。\n\n－11－\n\n\n\n第六章 劳动安全卫生",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-29625ec97f3aa262c09d4aa1c862291b",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:0e1464fdf7dbad3ff568f36edc9c437d",
+      "default:extract:043f571de9e009d5d78b7fa46df5f8cd"
+    ],
+    "create_time": 1773711796,
+    "update_time": 1773711820,
+    "_id": "chunk-29625ec97f3aa262c09d4aa1c862291b"
+  },
+  "chunk-5f221ff98ea22e9acb2603a0162c0526": {
+    "tokens": 52,
+    "content": "# 第九十八条\n\n用人单位违反本法规定的条件解除劳动合同或者故意拖延不订立劳动合同的，由劳动行政部门责令改正；对劳动者造成损害的，应当承担赔偿责任。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-5f221ff98ea22e9acb2603a0162c0526",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:e8ffdb593f66abb98a3f72b1b1e30c4a",
+      "default:extract:96d4d9d299567fe9e35f5ce5ecac99c0"
+    ],
+    "create_time": 1773711808,
+    "update_time": 1773711822,
+    "_id": "chunk-5f221ff98ea22e9acb2603a0162c0526"
+  },
+  "chunk-d8dbf846bb0ff55e508ce6be270bcf82": {
+    "tokens": 45,
+    "content": "# 第二十条\n\n劳动合同的期限分为有固定期限、无固定期限和以完成一定的工作为期限。\n\n劳动者在同一用人单位连续工作满十年以上，当事人双方同",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-d8dbf846bb0ff55e508ce6be270bcf82",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:f5f7ad0ca1101ea5bf9e4e9daa256701",
+      "default:extract:cadeed63a3855baeccae5279e2800438"
+    ],
+    "create_time": 1773711829,
+    "update_time": 1773711842,
+    "_id": "chunk-d8dbf846bb0ff55e508ce6be270bcf82"
+  },
+  "chunk-e1005fcbd1306706f050d1a4d82ca943": {
+    "tokens": 112,
+    "content": "# 第七十三条\n\n劳动者在下列情形下，依法享受社会保险待遇：\n\n- （一）退休；\n- （二）患病、负伤；\n- （三）因工伤残或者患职业病；\n- （四）失业；\n- （五）生育。\n\n劳动者死亡后，其遗属依法享受遗属津贴。\n\n劳动者享受社会保险待遇的条件和标准由法律、法规规定。\n\n劳动者享受的社会保险金必须按时足额支付。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-e1005fcbd1306706f050d1a4d82ca943",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:00a31cb78e28e8cad735681d711a79fb",
+      "default:extract:19cb5c595b847d3f509b8d4fc81b31a4"
+    ],
+    "create_time": 1773711831,
+    "update_time": 1773711861,
+    "_id": "chunk-e1005fcbd1306706f050d1a4d82ca943"
+  },
+  "chunk-35ee711c6a1d7e90851eb7505f271fc1": {
+    "tokens": 36,
+    "content": "# 第四十七条\n\n用人单位根据本单位的生产经营特点和经济效益，依法自主确定本单位的工资分配方式和工资水平。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-35ee711c6a1d7e90851eb7505f271fc1",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:f88e9d5dcd7343dfb61e05198c80c9d8",
+      "default:extract:300c66107de6c8071db0e5ea3dfd7e99"
+    ],
+    "create_time": 1773711845,
+    "update_time": 1773711859,
+    "_id": "chunk-35ee711c6a1d7e90851eb7505f271fc1"
+  },
+  "chunk-add3425ac8339584dcc65694586b9a03": {
+    "tokens": 63,
+    "content": "# 第九十五条\n\n用人单位违反本法对女职工和未成年工的保护规定，侵害其合法权益的，由劳动行政部门责令改正，处以罚款；对女职工或者未成年工造成损害的，应当承担赔偿责任。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-add3425ac8339584dcc65694586b9a03",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:919ed95b4fb8b218a1c0ec5abbe1682a",
+      "default:extract:0f5dcf1267248e0edbe32a857814108b"
+    ],
+    "create_time": 1773711862,
+    "update_time": 1773711876,
+    "_id": "chunk-add3425ac8339584dcc65694586b9a03"
+  },
+  "chunk-9a17dbf9d68b3a46e25ed3308c88ffbf": {
+    "tokens": 50,
+    "content": "# 第四十八条\n\n国家实行最低工资保障制度。最低工资的具体标准由省、自治区、直辖市人民政府规定，报国务院备案。用人单位支付劳动者的工资不得低于当地最低工资标准。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-9a17dbf9d68b3a46e25ed3308c88ffbf",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:a7e09e38bc4846fc440220b09fbf3478",
+      "default:extract:ee352a7c29e90054972e1f4359f61114"
+    ],
+    "create_time": 1773711875,
+    "update_time": 1773711894,
+    "_id": "chunk-9a17dbf9d68b3a46e25ed3308c88ffbf"
+  },
+  "chunk-5a7d21f4dbacb9974d96f6a4b7cd73aa": {
+    "tokens": 153,
+    "content": "# 第十二章 法律责任\n\n第八十九条 用人单位制定的劳动规章制度违反法律、法规规定的，由劳动行政部门给予警告，责令改正；对劳动者造成损害的，应当承担赔偿责任。\n\n第九十条 用人单位违反本法规定，延长劳动者工作时间的，由劳动行政部门给予警告，责令改正，并可以处以罚款。\n\n第九十一条 用人单位有下列侵害劳动者合法权益情形之一的，由劳动行政部门责令支付劳动者的工资报酬、经济补偿，并可以责令支付赔偿金：\n\n1. 克扣或者无故拖欠劳动者工资的；",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-5a7d21f4dbacb9974d96f6a4b7cd73aa",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:2dfa2b1ec8a55bcab45cb0e857f864f6",
+      "default:extract:b2c2e56c7221674773b8085ebe8d8d8b"
+    ],
+    "create_time": 1773711880,
+    "update_time": 1773711907,
+    "_id": "chunk-5a7d21f4dbacb9974d96f6a4b7cd73aa"
+  },
+  "chunk-900f9424a8f6a615634cfe7eb308739e": {
+    "tokens": 68,
+    "content": "# 第五十六条\n\n劳动者在劳动过程中必须严格遵守安全操作规程。劳动者对用人单位管理人员违章指挥、强令冒险作业，有权拒绝执行；对危害生命安全和身体健康的行为，有权提出批评、检举和控告。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-900f9424a8f6a615634cfe7eb308739e",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:051976aebc4f34ba3a4e502095866462",
+      "default:extract:0dd590389744c1c7609ce29f1d234d4e"
+    ],
+    "create_time": 1773711897,
+    "update_time": 1773711919,
+    "_id": "chunk-900f9424a8f6a615634cfe7eb308739e"
+  },
+  "chunk-3f0be1676ba7fec8784a0fe982f264bd": {
+    "tokens": 7,
+    "content": "# 第十一章 监督检查",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-3f0be1676ba7fec8784a0fe982f264bd",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:9355e6f206097510989ba3e3fbdb144e",
+      "default:extract:f92b2b99a738dfcce6d0850ec5414852"
+    ],
+    "create_time": 1773711913,
+    "update_time": 1773711916,
+    "_id": "chunk-3f0be1676ba7fec8784a0fe982f264bd"
+  },
+  "chunk-302371bc27545b04a86a89dc8b5a11c5": {
+    "tokens": 266,
+    "content": "# 第九章 社会保险和福利\n\n第六十六条 国家通过各种途径，采取各种措施，发展职业培训事业，开发劳动者的职业技能，提高劳动者素质，增强劳动者的就业能力和工作能力。\n\n第六十七条 各级人民政府应当把发展职业培训纳入社会经济发展的规划，鼓励和支持有条件的企业、事业组织、社会团体和个人进行各种形式的职业培训。\n\n第六十八条 用人单位应当建立职业培训制度，按照国家规定提取和使用职业培训经费，根据本单位实际，有计划地对劳动者进行职业培训。\n\n从事技术工种的劳动者，上岗前必须经过培训。\n\n第六十九条 国家确定职业分类，对规定的职业制定职业技能标准，实行职业资格证书制度，由经备案的考核鉴定机构负责对劳动者实施职业技能考核鉴定。\n\n第七十条 国家发展社会保险事业，建立社会保险制度，设立社会保险基金，使劳动者在年老、患病、工伤、失业、生育等情况下获得帮助和补偿。\n\n第七十一条 社会保险水平应当与社会经济发展水平和社会承受能力相适应。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-302371bc27545b04a86a89dc8b5a11c5",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:8f70cf42c2359d6fcdaef414d4db203a",
+      "default:extract:003dffdec7d3b6e683fcac84ab9c4065"
+    ],
+    "create_time": 1773711917,
+    "update_time": 1773711942,
+    "_id": "chunk-302371bc27545b04a86a89dc8b5a11c5"
+  },
+  "chunk-f6caf56110d85965c35a028c39252a52": {
+    "tokens": 41,
+    "content": "# 第七十二条\n\n社会保险基金按照保险类型确定资金来源，逐步实行社会统筹。用人单位和劳动者必须依法参加社会保险，缴纳社会保险费。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-f6caf56110d85965c35a028c39252a52",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:d0a8991b030497a638f6779681069a60",
+      "default:extract:93ea43c8fa275e4fbe2536d770709f55"
+    ],
+    "create_time": 1773711923,
+    "update_time": 1773711938,
+    "_id": "chunk-f6caf56110d85965c35a028c39252a52"
+  },
+  "chunk-c1b224bc392defbea2ebc9ea123f70db": {
+    "tokens": 22,
+    "content": "# 第三十八条\n\n用人单位应当保证劳动者每周至少休息一日。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-c1b224bc392defbea2ebc9ea123f70db",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:edcbe4b94246a94c3f990592f4047065",
+      "default:extract:d60c368d7848be7135bc4bb150a87733"
+    ],
+    "create_time": 1773711941,
+    "update_time": 1773711951,
+    "_id": "chunk-c1b224bc392defbea2ebc9ea123f70db"
+  },
+  "chunk-7352b9127a22f0a9251386f17f0f9768": {
+    "tokens": 48,
+    "content": "# 第三十四条\n\n集体合同签订后应当报送劳动行政部门；劳动行政部门自收到集体合同文本之日起十五日内未提出异议的，集体合同即行生效。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-7352b9127a22f0a9251386f17f0f9768",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:d724cbb57630c881a3440ccd8f77355a",
+      "default:extract:4cc8b140e44445973a6bb0ab32c2463e"
+    ],
+    "create_time": 1773711947,
+    "update_time": 1773711962,
+    "_id": "chunk-7352b9127a22f0a9251386f17f0f9768"
+  },
+  "chunk-534cee49a6033035c2c5393b14d42b64": {
+    "tokens": 54,
+    "content": "# 第一百零三条\n\n劳动行政部门或者有关部门的工作人员滥用职权、玩忽职守、徇私舞弊，构成犯罪的，依法追究刑事责任；不构成犯罪的，给予行政处分。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-534cee49a6033035c2c5393b14d42b64",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:1bfe840b7736b15a7dc2c99113b08bcc",
+      "default:extract:bcf46f929eefd0d33d042171264f1e14"
+    ],
+    "create_time": 1773711965,
+    "update_time": 1773711990,
+    "_id": "chunk-534cee49a6033035c2c5393b14d42b64"
+  },
+  "chunk-12cdd7ef2f5ab7ae8af0f7aa527a5494": {
+    "tokens": 8,
+    "content": "# 第八章 职业培训",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-12cdd7ef2f5ab7ae8af0f7aa527a5494",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:746b27802278c1a82d7ac7b800933e89",
+      "default:extract:8e023a9a08ab167533e83a88ba886383"
+    ],
+    "create_time": 1773711967,
+    "update_time": 1773711971,
+    "_id": "chunk-12cdd7ef2f5ab7ae8af0f7aa527a5494"
+  },
+  "chunk-1833eb6307e64f230db692d0cf7279ca": {
+    "tokens": 38,
+    "content": "# 第七十五条\n\n国家鼓励用人单位根据本单位实际情况为劳动者建立补充保险。\n\n国家提倡劳动者个人进行储蓄性保险。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-1833eb6307e64f230db692d0cf7279ca",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:3398dfc79e2635d4be22d2b0844118f9",
+      "default:extract:75905bfb89e378261057a0a12ff398a8"
+    ],
+    "create_time": 1773711973,
+    "update_time": 1773711988,
+    "_id": "chunk-1833eb6307e64f230db692d0cf7279ca"
+  },
+  "chunk-fc2cc869b28e0784bd829a72850245ab": {
+    "tokens": 72,
+    "content": "# 第九十六条\n\n用人单位有下列行为之一，由公安机关对责任人员处以十五日以下拘留、罚款或者警告；构成犯罪的，对责任人员依法追究刑事责任：\n\n- （一）以暴力、威胁或者非法限制人身自由的手段强迫劳动",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-fc2cc869b28e0784bd829a72850245ab",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:fb56ae5358458697be6df2113d7ff4c6",
+      "default:extract:639f99cf7289f457e773efb2d5161377"
+    ],
+    "create_time": 1773711992,
+    "update_time": 1773712008,
+    "_id": "chunk-fc2cc869b28e0784bd829a72850245ab"
+  },
+  "chunk-db161f575c0e9349bf3b18d1733f159c": {
+    "tokens": 45,
+    "content": "# 第三十七条\n\n对实行计件工作的劳动者，用人单位应当根据本法第三十六条规定的工时制度合理确定其劳动定额和计件报酬标准。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-db161f575c0e9349bf3b18d1733f159c",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:05ea4585130c77759fad2ac806137c50",
+      "default:extract:caab820ffb3b9841f8e83bf4bd4b25a0"
+    ],
+    "create_time": 1773711996,
+    "update_time": 1773712015,
+    "_id": "chunk-db161f575c0e9349bf3b18d1733f159c"
+  },
+  "chunk-6f58679d44bde34664e3b2b1d8d81021": {
+    "tokens": 34,
+    "content": "# 第五十条\n\n工资应当以货币形式按月支付给劳动者本人。不得克扣或者无故拖欠劳动者的工资。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-6f58679d44bde34664e3b2b1d8d81021",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:8e89d30a16dc242abc0129f4b91b2d35",
+      "default:extract:973576727ebb60df6b47ecc8ea63bf48"
+    ],
+    "create_time": 1773712012,
+    "update_time": 1773712022,
+    "_id": "chunk-6f58679d44bde34664e3b2b1d8d81021"
+  },
+  "chunk-225b307bc1363ee71949e25c8ac697f3": {
+    "tokens": 34,
+    "content": "# 第三十六条\n\n国家实行劳动者每日工作时间不超过八小时、平均每周工作时间不超过四十四小时的工时制度。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-225b307bc1363ee71949e25c8ac697f3",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:26dd567b5c403cd0e840786e5201a221",
+      "default:extract:8204a73ae3a6e8304a655b7848a0f4f0"
+    ],
+    "create_time": 1773712018,
+    "update_time": 1773712031,
+    "_id": "chunk-225b307bc1363ee71949e25c8ac697f3"
+  },
+  "chunk-2f9cf51a71d05c5aaeae0c910ea62a37": {
+    "tokens": 30,
+    "content": "# 第十二条\n\n劳动者就业，不因民族、种族、性别、宗教信仰不同而受歧视。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-2f9cf51a71d05c5aaeae0c910ea62a37",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:456a36d6d5d64d57b70ab17b6755735e",
+      "default:extract:9930b004cb2d4bf271574333880065c3"
+    ],
+    "create_time": 1773712024,
+    "update_time": 1773712038,
+    "_id": "chunk-2f9cf51a71d05c5aaeae0c910ea62a37"
+  },
+  "chunk-8bca3d7a5b26e41a901895456edf1d72": {
+    "tokens": 322,
+    "content": "# 第十章 劳动争议\n\n第七十六条 国家发展社会福利事业，兴建公共福利设施，为劳动者休息、休养和疗养提供条件。用人单位应当创造条件，改善集体福利，提高劳动者的福利待遇。\n\n第七十七条 用人单位与劳动者发生劳动争议，当事人可以依法申请调解、仲裁、提起诉讼，也可以协商解决。调解原则适用于仲裁和诉讼程序。\n\n第七十八条 解决劳动争议，应当根据合法、公正、及时处理的原则，依法维护劳动争议当事人的合法权益。\n\n第七十九条 劳动争议发生后，当事人可以向本单位劳动争议调解委员会申请调解；调解不成，当事人一方要求仲裁的，可以向劳动争议仲裁委员会申请仲裁。当事人一方也可以直接向劳动争议仲裁委员会申请仲裁。对仲裁裁决不服的，可以向人民法院提起诉讼。\n\n第八十条 在用人单位内，可以设立劳动争议调解委员会。劳动争议调解委员会由职工代表、用人单位代表和工会代表组成。劳动争议调解委员会主任由工会代表担任。劳动争议经调解达成协议的，当事人应当履行。\n\n第八十一条 劳动争议仲裁委员会由劳动行政部门代表、同",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-8bca3d7a5b26e41a901895456edf1d72",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:c7ddc77ac29948804657a6e9ba6de263",
+      "default:extract:51b61e9428fd5fbe0a98f33079336a70"
+    ],
+    "create_time": 1773712034,
+    "update_time": 1773712080,
+    "_id": "chunk-8bca3d7a5b26e41a901895456edf1d72"
+  },
+  "chunk-d3655737d1346d3b8f895dafbf249462": {
+    "tokens": 3,
+    "content": "中华人民共和国劳动法",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-d3655737d1346d3b8f895dafbf249462",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:0ef1d96c3b9bcd84225b526859cd510e",
+      "default:extract:d6afd1717e5c05510d2ab00d60f4b1dc"
+    ],
+    "create_time": 1773712042,
+    "update_time": 1773712046,
+    "_id": "chunk-d3655737d1346d3b8f895dafbf249462"
+  },
+  "chunk-55fedf8879833ede48386f292722cc7d": {
+    "tokens": 63,
+    "content": "# 第一百零一条\n\n用人单位无理阻挠劳动行政部门、有关部门及其工作人员行使监督检查权，打击报复举报人员的，由劳动行政部门或者有关部门处以罚款；构成犯罪的，对责任人员依法追究刑事责任。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-55fedf8879833ede48386f292722cc7d",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:3831149ce87e2af1ba9e3ceddcd79c68",
+      "default:extract:164e99d786a943fb43608aea3ddde06d"
+    ],
+    "create_time": 1773712047,
+    "update_time": 1773712062,
+    "_id": "chunk-55fedf8879833ede48386f292722cc7d"
+  },
+  "chunk-391c9ac1a44dcff50d59e13e3dd208b6": {
+    "tokens": 38,
+    "content": "# 第一百零六条\n\n省、自治区、直辖市人民政府根据本法和本地区的实际情况，规定劳动合同制度的实施步骤，报国务院备案。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-391c9ac1a44dcff50d59e13e3dd208b6",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:443dd2224f2d3aa26191a57068b750af",
+      "default:extract:2c1889782b65c0d11f12d246f2beae45"
+    ],
+    "create_time": 1773712066,
+    "update_time": 1773712079,
+    "_id": "chunk-391c9ac1a44dcff50d59e13e3dd208b6"
+  },
+  "chunk-16710c0d4227925f557982746f69c1b2": {
+    "tokens": 20,
+    "content": "# 第二十四条\n\n经劳动合同当事人协商一致，劳动合同可以解除。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-16710c0d4227925f557982746f69c1b2",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:3da63ab7cafbbe67daddb2b3f6ed16a2",
+      "default:extract:5aa57ffd5798a36b1a1c94738d0d9ce0"
+    ],
+    "create_time": 1773712090,
+    "update_time": 1773712098,
+    "_id": "chunk-16710c0d4227925f557982746f69c1b2"
+  },
+  "chunk-2dd1fd3462e1832af7cfde4c6f880f76": {
+    "tokens": 22,
+    "content": "# 第四十三条\n\n用人单位不得违反本法规定延长劳动者的工作时间。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-2dd1fd3462e1832af7cfde4c6f880f76",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:ff70344cb566b71f706bd48ff9235091",
+      "default:extract:9cbbbbe3417a8b1bfa5b32d62c42c2bd"
+    ],
+    "create_time": 1773712092,
+    "update_time": 1773712103,
+    "_id": "chunk-2dd1fd3462e1832af7cfde4c6f880f76"
+  },
+  "chunk-cdfe4fd7432c0c1b10d2636d5f862da7": {
+    "tokens": 13,
+    "content": "# 第七章 女职工和未成年工特殊保护",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-cdfe4fd7432c0c1b10d2636d5f862da7",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:ccd4dee2edf8429e4529de9b59e083c7",
+      "default:extract:ae7e1474ce135416b238a49f10a8163b"
+    ],
+    "create_time": 1773712101,
+    "update_time": 1773712109,
+    "_id": "chunk-cdfe4fd7432c0c1b10d2636d5f862da7"
+  },
+  "chunk-ebd08f8b818641fd5c206645935abc5f": {
+    "tokens": 69,
+    "content": "# 第九章 社会保险和福利\n\n－1－\n\n\n\n第十章 劳动争议\n<page_header>第十一章  监督检查</page_header>\n<page_header>第十二章  法律责任</page_header>\n<page_header>第十三章  附 则</page_header>",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-ebd08f8b818641fd5c206645935abc5f",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:d00a1e5a5eccf8c1fd6f5455de1dfc63",
+      "default:extract:303c4f910cd745681686274c7ae0cce4"
+    ],
+    "create_time": 1773712106,
+    "update_time": 1773712120,
+    "_id": "chunk-ebd08f8b818641fd5c206645935abc5f"
+  },
+  "chunk-484ec462bb336f0faad2e38a9ab16421": {
+    "tokens": 57,
+    "content": "# 第四十一条\n\n用人单位由于生产经营需要，经与工会和劳动者协商后可以延长工作时间，一般每日不得超过一小时；因特殊原因需要延长工作时间的，在保障劳动者身体健康的条件下延长。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-484ec462bb336f0faad2e38a9ab16421",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:ab7910041168fdb250a2da5af33fd5cd",
+      "default:extract:98a895f9b67c9a93b03fa6631a434e21"
+    ],
+    "create_time": 1773712112,
+    "update_time": 1773712125,
+    "_id": "chunk-484ec462bb336f0faad2e38a9ab16421"
+  },
+  "chunk-4d8030db75e52bd9e7110fb8f615de79": {
+    "tokens": 114,
+    "content": "# 第九十二条\n\n用人单位的劳动安全设施和劳动卫生条件不符合国家规定或者未向劳动者提供必要的劳动防护用品和劳动保护设施的，由劳动行政部门或者有关部门责令改正，可以处以罚款；情节严重的，提请县级以上人民政府决定责令停产整顿；对事故隐患不采取措施，致使发生重大事故，造成劳动者生命和财产损失的，对责任人员依照刑法有关规定追究刑事责任。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-4d8030db75e52bd9e7110fb8f615de79",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:1a812bc3cd4b12930664a177c69fc260",
+      "default:extract:b3d16142f863f81c691763cb861780ff"
+    ],
+    "create_time": 1773712123,
+    "update_time": 1773712147,
+    "_id": "chunk-4d8030db75e52bd9e7110fb8f615de79"
+  },
+  "chunk-8312a3dee9750ae6ed96f0944844f476": {
+    "tokens": 30,
+    "content": "# 第二十三条\n\n劳动合同期满或者当事人约定的劳动合同终止条件出现，劳动合同即行终止。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-8312a3dee9750ae6ed96f0944844f476",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:1f133b0cad00d715dd269a09a6bdec04",
+      "default:extract:cd45e86ff83f40d1aa5877f9c247b436"
+    ],
+    "create_time": 1773712129,
+    "update_time": 1773712137,
+    "_id": "chunk-8312a3dee9750ae6ed96f0944844f476"
+  },
+  "chunk-22d5330489b1dbcbefb33a429cb22bde": {
+    "tokens": 9,
+    "content": "# 第六章 劳动安全卫生",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-22d5330489b1dbcbefb33a429cb22bde",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:d670c740c76e41eb4c82e0d42677c384",
+      "default:extract:64f408e7474982232f10ffa43c163afc"
+    ],
+    "create_time": 1773712146,
+    "update_time": 1773712151,
+    "_id": "chunk-22d5330489b1dbcbefb33a429cb22bde"
+  },
+  "chunk-f1a27b67d73b4ed3925ff3ffe1e99ca3": {
+    "tokens": 23,
+    "content": "# 第二十一条\n\n劳动合同可以约定试用期。试用期最长不得超过六个月。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-f1a27b67d73b4ed3925ff3ffe1e99ca3",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:f88b298e2e09d3915984be7984537095",
+      "default:extract:a177f705c430097e4b3f8fc718809bdb"
+    ],
+    "create_time": 1773712152,
+    "update_time": 1773712161,
+    "_id": "chunk-f1a27b67d73b4ed3925ff3ffe1e99ca3"
+  },
+  "chunk-d41ba7cc39eba05754bf473088deb752": {
+    "tokens": 12,
+    "content": "# 第三章 劳动合同和集体合同",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-d41ba7cc39eba05754bf473088deb752",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:9a2ba988a4d3b254de19c3344b0bc3a9",
+      "default:extract:ea541c890c7d5343177813e04d60d0b7"
+    ],
+    "create_time": 1773712164,
+    "update_time": 1773712170,
+    "_id": "chunk-d41ba7cc39eba05754bf473088deb752"
+  },
+  "chunk-c6768f8c1f0e359974ecafdba6b02c7c": {
+    "tokens": 45,
+    "content": "# 第八条\n\n劳动者依照法律规定，通过职工大会、职工代表大会或者其他形式，参与民主管理或者就保护劳动者合法权益与用人单位进行平等协商。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-c6768f8c1f0e359974ecafdba6b02c7c",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:d1a9ffb2c1d02468a398554046df602f",
+      "default:extract:4481ff4a33c08de230d77b45a5665343"
+    ],
+    "create_time": 1773712167,
+    "update_time": 1773712185,
+    "_id": "chunk-c6768f8c1f0e359974ecafdba6b02c7c"
+  },
+  "chunk-d60861271237a642dd0bdd4c53075907": {
+    "tokens": 6,
+    "content": "# 第一章 总 则",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-d60861271237a642dd0bdd4c53075907",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:aa3285b8e33cf6e8aa1840f91b5f7b33",
+      "default:extract:f51328636bb6147ac46ba23db3cc1ba4"
+    ],
+    "create_time": 1773712172,
+    "update_time": 1773712175,
+    "_id": "chunk-d60861271237a642dd0bdd4c53075907"
+  },
+  "chunk-c5e2a3fc3ae04a7ea467816a16c1b275": {
+    "tokens": 334,
+    "content": "# 第七章 女职工和未成年工特殊保护\n\n第五十八条 国家对女职工和未成年工实行特殊劳动保护。未成年工是指年满十六周岁未满十八周岁的劳动者。\n\n第五十九条 禁止安排女职工从事矿山井下、国家规定的第四级体力劳动强度的劳动和其他禁忌从事的劳动。\n\n第六十条 不得安排女职工在经期从事高处、低温、冷水作业和国家规定的第三级体力劳动强度的劳动。\n\n第六十一条 不得安排女职工在怀孕期间从事国家规定的第三级体力劳动强度的劳动和孕期禁忌从事的劳动。对怀孕七个以上的女职工，不得安排其延长工作时间和夜班劳动。\n\n第六十二条 女职工生育享受不少于九十天的产假。\n\n第六十三条 不得安排女职工在哺乳未满一周岁的婴儿期间从事国家规定的第三级体力劳动强度的劳动和哺乳期禁忌从事的其他劳动，不得安排其延长工作时间和夜班劳动。\n\n第六十四条 不得安排未成年工从事矿山井下、有毒有害、国家规定的第四级体力劳动强度的劳动和其他禁忌从事的劳动。\n\n第六十五条 用人单位应当对未成年工定期进行健康检查。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-c5e2a3fc3ae04a7ea467816a16c1b275",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:1395a7d1f4fb6fba4ea7d954642d9167",
+      "default:extract:724ad70d03c6379b582302f01291ee76"
+    ],
+    "create_time": 1773712176,
+    "update_time": 1773712221,
+    "_id": "chunk-c5e2a3fc3ae04a7ea467816a16c1b275"
+  },
+  "chunk-11661d5949c7a4c46892595299c2a3db": {
+    "tokens": 41,
+    "content": "# 第九十三条\n\n用人单位强令劳动者违章冒险作业，发生重大伤亡事故，造成严重后果的，对责任人员依法追究刑事责任。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-11661d5949c7a4c46892595299c2a3db",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:7f983dfbb97ec5b215ae77d43b223a9b",
+      "default:extract:09f383a4c42d508ea245fb229c66d642"
+    ],
+    "create_time": 1773712189,
+    "update_time": 1773712203,
+    "_id": "chunk-11661d5949c7a4c46892595299c2a3db"
+  },
+  "chunk-31e42e6a06e7bc74c1fb5360756f9132": {
+    "tokens": 95,
+    "content": "# 第三十三条\n\n企业职工一方与企业可以就劳动报酬、工作时间、休息休假、劳动安全卫生、保险福利等事项，签订集体合同。集体合同草案应当提交职工代表大会或者全体职工讨论通过。集体合同由工会代表职工与企业签订；没有建立工会的企业，由职工推举的代表与企业签订。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-31e42e6a06e7bc74c1fb5360756f9132",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:b56d180209f0bc40c21cbd03523c9264",
+      "default:extract:b789dc00d0a6c238e60ecd494383222f"
+    ],
+    "create_time": 1773712207,
+    "update_time": 1773712231,
+    "_id": "chunk-31e42e6a06e7bc74c1fb5360756f9132"
+  },
+  "chunk-8ee12e2672dfb9fc10f84edd44b67880": {
+    "tokens": 19,
+    "content": "# 第八十六条\n\n县级以上各级人民政府劳动行政部门监督检",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-8ee12e2672dfb9fc10f84edd44b67880",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:e6f95f3865ea250f4a93eef5b189f4d5",
+      "default:extract:d20d391833de9112320138d33b3744bb"
+    ],
+    "create_time": 1773712228,
+    "update_time": 1773712238,
+    "_id": "chunk-8ee12e2672dfb9fc10f84edd44b67880"
+  },
+  "chunk-c1a4ebf44debb9e60481cc178f07fa11": {
+    "tokens": 28,
+    "content": "# 第二十二条\n\n劳动合同当事人可以在劳动合同中约定保守用人单位商业秘密的有关事项。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-c1a4ebf44debb9e60481cc178f07fa11",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:cff842cac41252dced97f14653d3c7bb",
+      "default:extract:dae164a2a4c68765df531bfd791dd860"
+    ],
+    "create_time": 1773712238,
+    "update_time": 1773712252,
+    "_id": "chunk-c1a4ebf44debb9e60481cc178f07fa11"
+  },
+  "chunk-d4778fa05214fc08dae5f90c37126391": {
+    "tokens": 96,
+    "content": "# 第七十四条\n\n社会保险基金经办机构依照法律规定收支、管理和运营社会保险基金，并负有使社会保险基金保值增值的责任。\n\n社会保险基金监督机构依照法律规定，对社会保险基金的收支、管理和运营实施监督。\n\n社会保险基金经办机构和社会保险基金监督机构的设立和职能由法律规定。\n\n任何组织和个人不得挪用社会保险基金。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-d4778fa05214fc08dae5f90c37126391",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:50168f7fef514bda20d60f8dc56e9b88",
+      "default:extract:8699fa757b3b87e6ad3cead8a6ce179c"
+    ],
+    "create_time": 1773712240,
+    "update_time": 1773712255,
+    "_id": "chunk-d4778fa05214fc08dae5f90c37126391"
+  },
+  "chunk-8091f80b54e6c94fc8302e0ea487ae6e": {
+    "tokens": 38,
+    "content": "# 第三十九条\n\n企业因生产特点不能实行本法第三十六条、第三十八条规定的，经劳动行政部门批准，可以实行其他工作和休息办法。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-8091f80b54e6c94fc8302e0ea487ae6e",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:e615ad4c76f54f4583fa4b9c8ddfcf6b",
+      "default:extract:67fa2f7ac0480d5742012470df6e9a20"
+    ],
+    "create_time": 1773712259,
+    "update_time": 1773712275,
+    "_id": "chunk-8091f80b54e6c94fc8302e0ea487ae6e"
+  },
+  "chunk-37520b7460881d90be5e94afa5fee4c5": {
+    "tokens": 44,
+    "content": "# 第五条\n\n国家采取各种措施，促进劳动就业，发展职业教育，制定劳动标准，调节社会收入，完善社会保险，协调劳动关系，逐步提高劳动者的生活水平。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-37520b7460881d90be5e94afa5fee4c5",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:18a23702e4e085a06a3d4fd248f4aa86",
+      "default:extract:8a5169c227ad278fda7863ff6a079b96"
+    ],
+    "create_time": 1773712262,
+    "update_time": 1773712283,
+    "_id": "chunk-37520b7460881d90be5e94afa5fee4c5"
+  },
+  "chunk-3b0d980fa13701d98c8fef09e4c134b5": {
+    "tokens": 100,
+    "content": "# 第十八条\n\n下列劳动合同无效：\n\n1. 违反法律、行政法规的劳动合同；\n2. 采取欺诈、威胁等手段订立的劳动合同。\n\n无效的劳动合同，从订立的时候起，就没有法律约束力。确认劳动合同部分无效的，如果不影响其余部分的效力，其余部分仍然有效。\n\n劳动合同的无效，由劳动争议仲裁委员会或者人民法院确认。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-3b0d980fa13701d98c8fef09e4c134b5",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:eeb9c551e59de50c439eec6137b189c2",
+      "default:extract:f2efb346be505707226e71b7af97297f"
+    ],
+    "create_time": 1773712279,
+    "update_time": 1773712300,
+    "_id": "chunk-3b0d980fa13701d98c8fef09e4c134b5"
+  },
+  "chunk-532fb6a3f85ff55e73d76c3c0830e0c0": {
+    "tokens": 28,
+    "content": "# 第五十五条\n\n从事特种作业的劳动者必须经过专门培训并取得特种作业资格。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-532fb6a3f85ff55e73d76c3c0830e0c0",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:04799175710a31b189e6bd5e2d253c0d",
+      "default:extract:ebac945acde7d7d149c46f9c4541e207"
+    ],
+    "create_time": 1773712298,
+    "update_time": 1773712310,
+    "_id": "chunk-532fb6a3f85ff55e73d76c3c0830e0c0"
+  },
+  "chunk-4854ca3e86ea91f91e6984abe5fcda52": {
+    "tokens": 56,
+    "content": "# 第六条\n\n国家提倡劳动者参加社会义务劳动，开展劳动竞赛和合理化建议活动，鼓励和保护劳动者进行科学研究、技术革新和发明创造，表彰和奖励劳动模范和先进工作者。",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-4854ca3e86ea91f91e6984abe5fcda52",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:5147a454af390bc3d64b0836385b9795",
+      "default:extract:b7c595c748a2db93489aa732369ba151"
+    ],
+    "create_time": 1773712313,
+    "update_time": 1773712337,
+    "_id": "chunk-4854ca3e86ea91f91e6984abe5fcda52"
+  },
+  "chunk-58cdd101c942cf6d953d675aa6fecbb1": {
+    "tokens": 11,
+    "content": "# 第四章 工作时间和休息休假",
+    "chunk_order_index": 0,
+    "full_doc_id": "doc-58cdd101c942cf6d953d675aa6fecbb1",
+    "file_path": "/Users/pysama/first_prize_RAG/dataset/labor_law.md",
+    "llm_cache_list": [
+      "default:extract:92c2562e8b50baa65bc3fa208452ca4f",
+      "default:extract:637a693eb92167f2b08f4a594ee0985b"
+    ],
+    "create_time": 1773712314,
+    "update_time": 1773712320,
+    "_id": "chunk-58cdd101c942cf6d953d675aa6fecbb1"
   }
 }

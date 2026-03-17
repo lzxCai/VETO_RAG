@@ -111,7 +111,7 @@ def _build_llm_func():
     if provider == "openai_like":
         from lightrag.llm.openai import openai_complete_if_cache
 
-        llm_model = os.getenv("LR_LLM_MODEL", "qwen-plus")
+        llm_model = os.getenv("LR_LLM_MODEL", "qwen3-max")
         base_url = os.getenv("LR_LLM_BASE_URL", "https://dashscope.aliyuncs.com/compatible-mode/v1")
         api_key = os.getenv("LR_LLM_API_KEY", os.getenv("DASHSCOPE_API_KEY", ""))
         if not api_key:
@@ -171,7 +171,7 @@ def _build_prompt(query: str, context: str) -> str:
         "你现在是一个专业的合同分析助手。\n"
         "请你根据上下文做出详细的中文回答。\n"
         "请你使用严谨且严肃的口吻。\n"
-        "适当使用markdown语法，使输出更加美观，但不要使用表情符号"
+        "适当使用markdown语法，使输出更加美观，但不要使用表情符号。\n"
         "请不要输出任何与合同分析无关的内容。\n"
         "如果上下文不足以提供足够的信息，请明确说明。\n\n"
         f"Context:\n{context}\n\n"
@@ -417,7 +417,12 @@ async def main():
             contexts = _ensure_context_list(result)
             if len(working_dirs) > 1:
                 source = Path(working_dir).name
-                contexts_all.extend([f"来源：{source}\n{c}" for c in contexts])
+                meaningful = [
+                    c for c in contexts if c and c.strip() and c.strip() not in ("{}", "[]", "None")
+                ]
+                if not meaningful:
+                    meaningful = ["(未检索到相关内容)"]
+                contexts_all.extend([f"来源：{source}\n{c}" for c in meaningful])
             else:
                 contexts_all.extend(contexts)
 

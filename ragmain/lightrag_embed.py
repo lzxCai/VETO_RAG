@@ -15,7 +15,7 @@ from dotenv import load_dotenv
 ROOT_DIR = Path(__file__).resolve().parent.parent
 ENV_PATH = Path(__file__).resolve().parent / ".env"
 load_dotenv(dotenv_path=ENV_PATH)
-DEFAULT_MD_PATH = ROOT_DIR / "dataset" / "civil_code.md"
+DEFAULT_MD_PATH = ROOT_DIR / "dataset" / "labor_law.md"
 DEFAULT_WORKING_DIR = ROOT_DIR / "rag_storage" / "civil_code"
 
 
