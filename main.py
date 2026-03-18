@@ -1,275 +1,179 @@
-import argparse
-import re
-import shutil
-import subprocess
-import sys
-import textwrap
-from pathlib import Path
+from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
+from typing import Optional, List
+from datetime import datetime
+import uvicorn
+import os
+from dotenv import load_dotenv
 
-ROOT_DIR = Path(__file__).resolve().parent
-MD_DIR = ROOT_DIR / "MDoutput"
-PDF_DIR = ROOT_DIR / "PDFoutput"
-QUERY_SCRIPT = ROOT_DIR / "ragmain" / "lightrag_query.py"
-REPORT_STYLE_PATH = ROOT_DIR / "report_style.css"
-LOCAL_WKHTMLTOPDF = ROOT_DIR / "tools" / "wkhtmltox" / "wkhtmltox" / "bin" / "wkhtmltopdf.exe"
+# 导入自定义模块
+from auth import register_user, login_user, get_user, UserCreate, UserLogin
+from supabase_client import get_supabase
+from rag_wrapper import query_rag
+
+# 加载环境变量
+load_dotenv()
+
+# 创建FastAPI应用
+app = FastAPI(
+    title="法律助手后端API",
+    description="提供用户认证、聊天历史和RAG调用功能",
+    version="1.0.0"
+)
+
+# 配置CORS（允许前端调用）
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # 生产环境需要限制
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
-def _latest_md_file(exclude: set[Path]) -> Path | None:
-    if not MD_DIR.exists():
-        return None
-    candidates = [p for p in MD_DIR.glob("*.md") if p not in exclude]
-    if not candidates:
-        return None
-    return max(candidates, key=lambda p: p.stat().st_mtime)
+# 请求/响应模型
+class ChatRequest(BaseModel):
+    question: str
+    mode: str = "hybrid"
+    use_rerank: bool = False
 
 
-def _run_query(content: str, report_context: str = "") -> int:
-    cmd = [sys.executable, str(QUERY_SCRIPT)]
-    if report_context:
-        cmd.extend(["--report-context", report_context])
-    else:
-        cmd.extend([content, "--use-built-prompt"])
-    return subprocess.call(cmd)
+class ChatResponse(BaseModel):
+    answer: str
+    conversation_id: Optional[str] = None
 
 
-def _find_pandoc() -> str | None:
-    pandoc = shutil.which("pandoc")
-    if pandoc:
-        return pandoc
-    try:
-        import pypandoc
+class HistoryItem(BaseModel):
+    id: str
+    question: str
+    answer: str
+    created_at: str
+    mode: str = "hybrid"
 
-        pandoc_path = pypandoc.get_pandoc_path()
-        if pandoc_path and Path(pandoc_path).exists():
-            return pandoc_path
-        package_root = Path(pypandoc.__file__).resolve().parent
-        bundled_candidates = [
-            package_root / "files" / "pandoc.exe",
-            package_root / "files" / "pandoc",
+
+class HistoryResponse(BaseModel):
+    history: List[HistoryItem]
+
+
+# API路由
+@app.get("/")
+async def root():
+    return {
+        "message": "法律助手API运行中",
+        "version": "1.0.0",
+        "endpoints": [
+            "/docs - API文档",
+            "/register - 用户注册",
+            "/login - 用户登录",
+            "/chat - 聊天",
+            "/history/{user_id} - 聊天历史"
         ]
-        for candidate in bundled_candidates:
-            if candidate.exists():
-                return str(candidate)
-    except Exception:
-        return None
-    return None
+    }
 
 
-def _find_weasyprint_engine() -> str | None:
-    engine = shutil.which("weasyprint")
-    if engine:
-        return engine
-
-    python_dir = Path(sys.executable).resolve().parent
-    candidates = [
-        python_dir / "Scripts" / "weasyprint.exe",
-        python_dir / "weasyprint.exe",
-    ]
-    for candidate in candidates:
-        if candidate.exists():
-            return str(candidate)
-    return None
+@app.post("/register")
+async def register(user: UserCreate):
+    """用户注册"""
+    new_user, error = await register_user(user)
+    if error:
+        raise HTTPException(status_code=400, detail=error)
+    return {"message": "注册成功", "user": new_user}
 
 
-def _find_wkhtmltopdf_engine() -> str | None:
-    if LOCAL_WKHTMLTOPDF.exists():
-        return str(LOCAL_WKHTMLTOPDF)
-    engine = shutil.which("wkhtmltopdf")
-    if engine:
-        return engine
-    return None
+@app.post("/login")
+async def login(user: UserLogin):
+    """用户登录"""
+    user_data, error = await login_user(user)
+    if error:
+        raise HTTPException(status_code=401, detail=error)
+    return {"message": "登录成功", "user": user_data}
 
 
-def _markdown_to_plain_text(md_text: str) -> str:
-    text = md_text.replace("\r\n", "\n")
-    text = re.sub(r"```.*?```", lambda m: m.group(0).replace("```", ""), text, flags=re.S)
-    text = re.sub(r"^\s{0,3}#{1,6}\s*", "", text, flags=re.M)
-    text = re.sub(r"\*\*(.*?)\*\*", r"\1", text)
-    text = re.sub(r"\*(.*?)\*", r"\1", text)
-    text = re.sub(r"`([^`]*)`", r"\1", text)
-    text = re.sub(r"^\s*[-*+]\s+", "• ", text, flags=re.M)
-    text = re.sub(r"\|", "  |  ", text)
-    text = re.sub(r"\n{3,}", "\n\n", text)
-    return text.strip()
-
-
-def _wrap_text_for_pdf(text: str, width: int = 48) -> list[str]:
-    lines: list[str] = []
-    for paragraph in text.split("\n"):
-        paragraph = paragraph.rstrip()
-        if not paragraph:
-            lines.append("")
-            continue
-        indent = ""
-        content = paragraph
-        if paragraph.startswith("• "):
-            indent = "  "
-            content = paragraph[2:]
-            wrapped = textwrap.wrap(content, width=max(12, width - 2), break_long_words=False, break_on_hyphens=False)
-            if not wrapped:
-                lines.append("•")
-                continue
-            lines.append(f"• {wrapped[0]}")
-            for extra in wrapped[1:]:
-                lines.append(f"{indent}{extra}")
-            continue
-
-        wrapped = textwrap.wrap(content, width=width, break_long_words=False, break_on_hyphens=False)
-        if wrapped:
-            lines.extend(wrapped)
-        else:
-            lines.append(content)
-    return lines
-
-
-def _convert_md_to_pdf_with_pymupdf(md_path: Path, pdf_path: Path) -> bool:
+@app.post("/chat", response_model=ChatResponse)
+async def chat(request: ChatRequest, user_id: Optional[str] = None):
+    """
+    聊天接口
+    - 如果提供user_id，会保存聊天历史
+    - 如果不提供user_id，只返回回答不保存
+    """
     try:
-        import fitz
-    except ImportError as exc:
-        print(f"PyMuPDF 导出依赖不可用：{exc}")
-        return False
+        # 1. 调用RAG
+        answer = await query_rag(request.question)
 
-    font_path = Path(r"C:\Windows\Fonts\msyh.ttc")
-    if not font_path.exists():
-        font_path = Path(r"C:\Windows\Fonts\simsun.ttc")
-    if not font_path.exists():
-        print("未找到可用的中文字体文件，无法导出 PDF。")
-        return False
+        conversation_id = None
 
-    md_text = md_path.read_text(encoding="utf-8")
-    plain_text = _markdown_to_plain_text(md_text)
-    lines = _wrap_text_for_pdf(plain_text, width=48)
+        # 2. 如果提供了user_id，保存到数据库
+        if user_id:
+            supabase = get_supabase()
+            conv_data = {
+                "user_id": user_id,
+                "question": request.question,
+                "answer": answer,
+                "mode": request.mode,
+                "created_at": datetime.now().isoformat()
+            }
+            result = supabase.table("conversations").insert(conv_data).execute()
+            if result.data:
+                conversation_id = result.data[0]["id"]
 
-    try:
-        doc = fitz.open()
-        rect = fitz.paper_rect("a4")
-        margin = 40
-        line_height = 18
-        max_lines = max(1, int((rect.height - margin * 2) // line_height))
+        return ChatResponse(
+            answer=answer,
+            conversation_id=conversation_id
+        )
 
-        for start in range(0, len(lines), max_lines):
-            page = doc.new_page(width=rect.width, height=rect.height)
-            page.insert_font(fontname="F0", fontfile=str(font_path))
-            chunk = "\n".join(lines[start : start + max_lines])
-            text_rect = fitz.Rect(margin, margin, rect.width - margin, rect.height - margin)
-            page.insert_textbox(
-                text_rect,
-                chunk,
-                fontsize=11,
-                fontname="F0",
-                lineheight=1.5,
-                color=(0, 0, 0),
-                align=fitz.TEXT_ALIGN_LEFT,
-            )
-
-        doc.save(pdf_path)
-        doc.close()
-        return True
-    except Exception as exc:
-        print(f"PyMuPDF PDF 导出失败：{exc}")
-        return False
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 
-def _convert_md_to_pdf(md_path: Path, pdf_path: Path) -> bool:
-    pandoc = _find_pandoc()
-    if pandoc:
-        engine = _find_wkhtmltopdf_engine()
-        if not engine:
-            engine = _find_weasyprint_engine()
-        if not engine:
-            for candidate in ("xelatex", "pdflatex"):
-                located = shutil.which(candidate)
-                if located:
-                    engine = located
-                    break
+@app.get("/history/{user_id}", response_model=HistoryResponse)
+async def get_history(user_id: str, limit: int = 50):
+    """获取用户的聊天历史"""
+    supabase = get_supabase()
 
-        if engine:
-            cmd = [
-                pandoc,
-                str(md_path),
-                "-o",
-                str(pdf_path),
-                f"--pdf-engine={engine}",
-                "--standalone",
-            ]
-            if REPORT_STYLE_PATH.exists():
-                cmd.extend(["--css", REPORT_STYLE_PATH.resolve().as_uri()])
-            if "wkhtmltopdf" in str(engine).lower():
-                cmd.extend(
-                    [
-                        "--pdf-engine-opt=--enable-local-file-access",
-                        "--pdf-engine-opt=--encoding",
-                        "--pdf-engine-opt=utf-8",
-                        "--pdf-engine-opt=--margin-top",
-                        "--pdf-engine-opt=18mm",
-                        "--pdf-engine-opt=--margin-bottom",
-                        "--pdf-engine-opt=18mm",
-                        "--pdf-engine-opt=--margin-left",
-                        "--pdf-engine-opt=16mm",
-                        "--pdf-engine-opt=--margin-right",
-                        "--pdf-engine-opt=16mm",
-                        "--pdf-engine-opt=--footer-right",
-                        "--pdf-engine-opt=[page]/[toPage]",
-                        "--pdf-engine-opt=--footer-font-name",
-                        "--pdf-engine-opt=Microsoft YaHei",
-                        "--pdf-engine-opt=--footer-font-size",
-                        "--pdf-engine-opt=9",
-                        "--pdf-engine-opt=--footer-spacing",
-                        "--pdf-engine-opt=6",
-                    ]
-                )
-            result = subprocess.run(cmd, capture_output=True, text=True)
-            if result.returncode == 0:
-                return True
-            print("Pandoc PDF 转换失败，改用 PyMuPDF 纯 Python 导出。")
-            if result.stderr:
-                print(result.stderr.strip())
-        else:
-            print("未找到可用的 pandoc PDF 引擎，改用 PyMuPDF 纯 Python 导出。")
-    else:
-        print("未找到 pandoc，改用 PyMuPDF 纯 Python 导出。")
+    # 验证用户存在
+    user = await get_user(user_id)
+    if not user:
+        raise HTTPException(status_code=404, detail="用户不存在")
 
-    return _convert_md_to_pdf_with_pymupdf(md_path, pdf_path)
+    # 查询历史
+    result = supabase.table("conversations") \
+        .select("*") \
+        .eq("user_id", user_id) \
+        .order("created_at", desc=True) \
+        .limit(limit) \
+        .execute()
+
+    return HistoryResponse(history=result.data or [])
 
 
-def main() -> int:
-    parser = argparse.ArgumentParser(
-        description="Run lightrag_query and convert the latest MDoutput markdown to PDFoutput."
-    )
-    parser.add_argument("content", nargs="?", default="", help="query content")
-    parser.add_argument("--report-context", default="", help="prebuilt report context json path")
-    args = parser.parse_args()
+@app.delete("/history/{conversation_id}")
+async def delete_history(conversation_id: str, user_id: str):
+    """删除单条历史记录（需要验证用户）"""
+    supabase = get_supabase()
 
-    content = args.content.strip()
-    report_context = args.report_context.strip()
-    if not content and not report_context:
-        try:
-            content = input("请输入内容：").strip()
-        except EOFError:
-            content = ""
-    if not content and not report_context:
-        print("缺少输入内容。")
-        return 1
+    # 验证这条记录属于该用户
+    result = supabase.table("conversations") \
+        .select("*") \
+        .eq("id", conversation_id) \
+        .eq("user_id", user_id) \
+        .execute()
 
-    before = set(MD_DIR.glob("*.md")) if MD_DIR.exists() else set()
-    ret = _run_query(content, report_context=report_context)
-    if ret != 0:
-        print("查询失败，未生成 MD 文件。")
-        return ret
+    if not result.data:
+        raise HTTPException(status_code=404, detail="记录不存在或无权限")
 
-    md_path = _latest_md_file(before)
-    if not md_path:
-        print("未找到新生成的 MD 文件。")
-        return 1
+    # 删除
+    supabase.table("conversations").delete().eq("id", conversation_id).execute()
 
-    PDF_DIR.mkdir(parents=True, exist_ok=True)
-    pdf_path = PDF_DIR / f"{md_path.stem}.pdf"
-    if not _convert_md_to_pdf(md_path, pdf_path):
-        return 1
-
-    print(f"PDF 已生成：{pdf_path}")
-    return 0
+    return {"message": "删除成功"}
 
 
+# 启动服务
 if __name__ == "__main__":
-    raise SystemExit(main())
+    port = int(os.getenv("PORT", 8000))
+    uvicorn.run(
+        "main:app",
+        host="0.0.0.0",
+        port=port,
+        reload=True  # 开发模式，代码修改后自动重启
+    )
