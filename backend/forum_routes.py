@@ -47,7 +47,6 @@ class CreateCommentRequest(BaseModel):
 
 @router.get("/posts", response_model=List[ForumPostResponse])
 async def get_forum_posts():
-    """获取所有帖子及其评论，按创建时间倒序排列。"""
     try:
         supabase = get_supabase()
         result = (
@@ -59,13 +58,12 @@ async def get_forum_posts():
         return result.data or []
     except HTTPException:
         raise
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"获取论坛帖子失败: {str(e)}")
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=f"获取论坛帖子失败: {str(exc)}") from exc
 
 
 @router.post("/posts", response_model=ForumPostResponse)
 async def create_forum_post(request: CreatePostRequest):
-    """创建帖子。"""
     try:
         user = await get_user(request.user_id)
         if not user:
@@ -88,13 +86,12 @@ async def create_forum_post(request: CreatePostRequest):
         return created_post
     except HTTPException:
         raise
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"创建帖子失败: {str(e)}")
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=f"创建帖子失败: {str(exc)}") from exc
 
 
 @router.post("/posts/{post_id}/comments", response_model=ForumCommentResponse)
 async def create_forum_comment(post_id: str, request: CreateCommentRequest):
-    """为指定帖子创建评论。"""
     try:
         user = await get_user(request.user_id)
         if not user:
@@ -115,5 +112,5 @@ async def create_forum_comment(post_id: str, request: CreateCommentRequest):
         return result.data[0]
     except HTTPException:
         raise
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"创建评论失败: {str(e)}")
+    except Exception as exc:
+        raise HTTPException(status_code=500, detail=f"创建评论失败: {str(exc)}") from exc

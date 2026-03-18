@@ -9,7 +9,6 @@ _supabase: Client | None = None
 
 
 def get_supabase() -> Client:
-    """延迟初始化 Supabase，避免应用启动时因缺少环境变量直接崩溃。"""
     global _supabase
 
     if _supabase is not None:
