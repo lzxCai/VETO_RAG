@@ -9,6 +9,7 @@ from dotenv import load_dotenv
 
 # 导入自定义模块
 from auth import register_user, login_user, get_user, UserCreate, UserLogin
+from forum_routes import router as forum_router
 from supabase_client import get_supabase
 from rag_wrapper import query_rag
 
@@ -30,6 +31,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.include_router(forum_router)
 
 
 # 请求/响应模型
