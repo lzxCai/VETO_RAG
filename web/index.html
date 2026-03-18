@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RAG 报告生成器</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #f6f4ef;
+        --ink: #1b1b1b;
+        --muted: #5c5c5c;
+        --accent: #0f766e;
+        --accent-2: #f97316;
+        --panel: #ffffff;
+        --border: #e4e0d8;
+        --shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Space Grotesk", "Noto Sans", "Segoe UI", sans-serif;
+        color: var(--ink);
+        background: radial-gradient(1200px 700px at 10% -10%, #fde68a33, transparent),
+          radial-gradient(900px 600px at 90% 0%, #5eead433, transparent),
+          radial-gradient(900px 600px at 10% 100%, #fb718533, transparent),
+          var(--bg);
+        min-height: 100vh;
+      }
+
+      .page {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 48px 24px 64px;
+      }
+
+      .hero {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 32px;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #111827;
+        color: #fff;
+        border-radius: 999px;
+        padding: 6px 14px;
+        font-size: 12px;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        font-size: clamp(28px, 4vw, 44px);
+        margin: 0;
+      }
+
+      .sub {
+        margin: 0;
+        color: var(--muted);
+        max-width: 680px;
+      }
+
+      .card {
+        background: var(--panel);
+        border-radius: 22px;
+        padding: 28px;
+        box-shadow: var(--shadow);
+        border: 1px solid var(--border);
+      }
+
+      form {
+        display: grid;
+        gap: 18px;
+      }
+
+      label {
+        font-weight: 600;
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      input[type="file"],
+      select,
+      input[type="number"] {
+        width: 100%;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        padding: 12px 14px;
+        font-size: 14px;
+      }
+
+      .row {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      }
+
+      .toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 600;
+      }
+
+      .toggle input {
+        width: 18px;
+        height: 18px;
+      }
+
+      button {
+        border: none;
+        padding: 14px 20px;
+        border-radius: 14px;
+        font-weight: 700;
+        font-size: 15px;
+        background: linear-gradient(120deg, var(--accent), #22c55e);
+        color: white;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 12px 24px rgba(15, 118, 110, 0.3);
+      }
+
+      button:disabled {
+        cursor: not-allowed;
+        opacity: 0.6;
+        transform: none;
+        box-shadow: none;
+      }
+
+      .status {
+        display: grid;
+        gap: 10px;
+        font-size: 14px;
+        color: var(--muted);
+      }
+
+      .status strong {
+        color: var(--ink);
+      }
+
+      .download {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 14px;
+        border-radius: 12px;
+        background: #111827;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+        width: fit-content;
+      }
+
+      .log {
+        background: #111827;
+        color: #e2e8f0;
+        border-radius: 14px;
+        padding: 14px;
+        font-size: 12px;
+        white-space: pre-wrap;
+        max-height: 200px;
+        overflow: auto;
+        display: none;
+      }
+
+      .footer {
+        margin-top: 32px;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      @media (max-width: 600px) {
+        .card {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header class="hero">
+        <span class="badge">RAG Report Test</span>
+        <h1>上传合同文件，生成风险报告</h1>
+        <p class="sub">支持 PDF 或图片（可多选）。提交后将调用后端链路并返回 PDF，自动保存到本地。</p>
+      </header>
+
+      <section class="card">
+        <form id="upload-form">
+          <div>
+            <label for="files">选择文件（PDF / 图片）</label>
+            <input id="files" name="files" type="file" multiple required />
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="parser">解析器</label>
+              <select id="parser" name="parser">
+                <option value="auto">auto</option>
+                <option value="bailian">bailian</option>
+                <option value="llamaparse">llamaparse</option>
+              </select>
+            </div>
+            <div>
+              <label for="top_k_per_kb">每库 Top-K</label>
+              <input id="top_k_per_kb" name="top_k_per_kb" type="number" min="1" value="3" />
+            </div>
+            <div class="toggle">
+              <input id="enable_image_preprocess" name="enable_image_preprocess" type="checkbox" />
+              <label for="enable_image_preprocess">启用图片预处理</label>
+            </div>
+          </div>
+
+          <button id="submit-btn" type="submit">生成 PDF 报告</button>
+        </form>
+
+        <div class="status" id="status">
+          <div><strong>状态：</strong><span id="status-text">等待上传</span></div>
+          <a id="download-link" class="download" style="display: none" download>下载生成的 PDF</a>
+        </div>
+
+        <div class="log" id="log"></div>
+      </section>
+
+      <div class="footer">提示：生成时间取决于模型与文档复杂度，请耐心等待。</div>
+    </div>
+
+    <script>
+      const form = document.getElementById("upload-form");
+      const statusText = document.getElementById("status-text");
+      const downloadLink = document.getElementById("download-link");
+      const submitBtn = document.getElementById("submit-btn");
+      const logBox = document.getElementById("log");
+
+      const setStatus = (text, options = {}) => {
+        statusText.textContent = text;
+        if (options.showLog) {
+          logBox.style.display = "block";
+          logBox.textContent = options.log || "";
+        } else {
+          logBox.style.display = "none";
+          logBox.textContent = "";
+        }
+      };
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const filesInput = document.getElementById("files");
+        if (!filesInput.files.length) {
+          setStatus("请先选择文件。", { showLog: false });
+          return;
+        }
+
+        submitBtn.disabled = true;
+        downloadLink.style.display = "none";
+        setStatus("上传中，正在生成 PDF...");
+
+        const formData = new FormData(form);
+
+        try {
+          const response = await fetch("/api/run", {
+            method: "POST",
+            body: formData,
+          });
+
+          if (!response.ok) {
+            const errorData = await response.json().catch(() => null);
+            const message = errorData?.detail?.message || errorData?.detail || "处理失败";
+            const logText = [errorData?.detail?.stdout, errorData?.detail?.stderr]
+              .filter(Boolean)
+              .join("\n\n");
+            setStatus(message, { showLog: true, log: logText });
+            return;
+          }
+
+          const blob = await response.blob();
+          const url = URL.createObjectURL(blob);
+          downloadLink.href = url;
+          downloadLink.style.display = "inline-flex";
+          setStatus("已生成 PDF，可点击下载。", { showLog: false });
+          downloadLink.click();
+        } catch (err) {
+          setStatus("请求失败，请检查服务是否启动。", { showLog: true, log: String(err) });
+        } finally {
+          submitBtn.disabled = false;
+        }
+      });
+    </script>
+  </body>
+</html>

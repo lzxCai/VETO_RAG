@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <title>VETO | 维权地图</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        
+        body { font-family: 'Inter', sans-serif; background-color: #000; color: #fff; overflow: hidden; }
+
+        /* 模拟地图底色 */
+        .map-bg {
+            background-color: #111111;
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* 律所标注点动效 */
+        .pin-point {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: #ffffff;
+            border: 2px solid #000;
+            transform: rotate(45deg);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .pin-point:hover {
+            background: #10b981;
+            transform: rotate(45deg) scale(1.5);
+            box-shadow: 0 0 20px rgba(16, 185, 129, 0.6);
+        }
+
+        /* 底部抽屉动画 */
+        .drawer {
+            transform: translateY(100%);
+            transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .drawer.active { transform: translateY(0); }
+
+        .border-white-thin { border: 1px solid rgba(255, 255, 255, 0.1); }
+    </style>
+</head>
+<body class="h-screen relative">
+
+    <div class="absolute inset-0 map-bg flex items-center justify-center">
+        <div class="pin-point" style="top: 30%; left: 40%;" onclick="toggleDrawer('诚正律师事务所', '距离 1.2km', '擅长：劳动合同纠纷、兼职维权')"></div>
+        <div class="pin-point" style="top: 50%; left: 60%;" onclick="toggleDrawer('大学城法律援助中心', '距离 500m', '校园公益项目，免费咨询')"></div>
+        <div class="pin-point" style="top: 25%; left: 75%;" onclick="toggleDrawer('致远法律工作室', '距离 2.4km', '资深劳动法专家')"></div>
+        
+        <span class="text-[10px] text-zinc-700 font-black uppercase tracking-[0.5em]">Map Engine Active</span>
+    </div>
+
+    <div class="absolute top-10 left-6 right-6 z-50">
+        <div class="bg-black/80 backdrop-blur-xl border border-white/20 p-4 flex items-center gap-4">
+            <i class="fa-solid fa-magnifying-glass text-zinc-500"></i>
+            <input type="text" placeholder="搜索附近律所、援助中心..." class="bg-transparent border-none outline-none text-sm w-full font-medium">
+            <div class="w-8 h-8 bg-white text-black flex items-center justify-center text-xs">
+                <i class="fa-solid fa-sliders"></i>
+            </div>
+        </div>
+        
+        <div class="flex gap-2 mt-4 overflow-x-auto no-scrollbar">
+            <button class="px-4 py-2 bg-white text-black text-[10px] font-black uppercase tracking-widest whitespace-nowrap">全部</button>
+            <button class="px-4 py-2 bg-black/50 backdrop-blur-md border border-white/10 text-white text-[10px] font-black uppercase tracking-widest whitespace-nowrap hover:bg-white hover:text-black transition-all">律所</button>
+            <button class="px-4 py-2 bg-black/50 backdrop-blur-md border border-white/10 text-white text-[10px] font-black uppercase tracking-widest whitespace-nowrap hover:bg-white hover:text-black transition-all">校园援助</button>
+        </div>
+    </div>
+
+    <button class="absolute bottom-32 right-6 w-12 h-12 bg-white text-black flex items-center justify-center shadow-2xl z-40 active:scale-90 transition-all">
+        <i class="fa-solid fa-location-crosshairs"></i>
+    </button>
+
+    <div id="drawer" class="drawer fixed bottom-0 left-0 right-0 z-50 bg-zinc-900 border-t border-white/20 p-8 pt-4 pb-24 shadow-[0_-20px_50px_rgba(0,0,0,0.5)]">
+        <div class="w-12 h-1 bg-white/10 rounded-full mx-auto mb-6"></div>
+        
+        <div class="flex justify-between items-start mb-6">
+            <div>
+                <span id="drawer-tag" class="text-[9px] font-black bg-emerald-500 text-black px-2 py-0.5 uppercase tracking-widest mb-2 inline-block">Verified</span>
+                <h4 id="drawer-name" class="text-2xl font-black uppercase tracking-tighter">律所名称</h4>
+                <p id="drawer-dist" class="text-xs text-zinc-500 mt-1">距离计算中...</p>
+            </div>
+            <button onclick="closeDrawer()" class="text-zinc-500 hover:text-white"><i class="fa-solid fa-xmark text-xl"></i></button>
+        </div>
+
+        <p id="drawer-desc" class="text-sm text-zinc-400 leading-relaxed mb-8">
+            详细介绍加载中...
+        </p>
+
+        <div class="grid grid-cols-2 gap-4">
+            <button class="py-4 bg-white text-black font-black text-xs uppercase tracking-widest flex items-center justify-center gap-2 hover:bg-emerald-400 transition-colors">
+                <i class="fa-solid fa-phone"></i> 拨打电话
+            </button>
+            <button class="py-4 border border-white text-white font-black text-xs uppercase tracking-widest flex items-center justify-center gap-2 hover:bg-white hover:text-black transition-colors">
+                <i class="fa-solid fa-route"></i> 导航路线
+            </button>
+        </div>
+    </div>
+
+    <nav class="fixed bottom-0 left-0 right-0 bg-black border-t border-white/10 px-10 py-6 flex justify-between items-center z-[100]">
+        <button class="flex flex-col items-center gap-1 opacity-25 hover:opacity-100 transition-opacity">
+            <i class="fa-solid fa-house text-sm"></i>
+            <span class="text-[8px] font-black uppercase tracking-[0.2em]">首页</span>
+        </button>
+        <button class="flex flex-col items-center gap-1 opacity-25 hover:opacity-100 transition-opacity">
+            <i class="fa-solid fa-compass text-sm"></i>
+            <span class="text-[8px] font-black uppercase tracking-[0.2em]">发现</span>
+        </button>
+        <div class="absolute left-1/2 -translate-x-1/2 -top-6">
+            <div class="w-14 h-14 bg-white text-black flex items-center justify-center shadow-2xl active:scale-90 transition-transform cursor-pointer">
+                <i class="fa-solid fa-plus text-xl"></i>
+            </div>
+        </div>
+        <button class="flex flex-col items-center gap-1 text-white">
+            <i class="fa-solid fa-map-marked-alt text-sm"></i>
+            <span class="text-[8px] font-black uppercase tracking-[0.2em]">地图</span>
+        </button>
+        <button class="flex flex-col items-center gap-1 opacity-25 hover:opacity-100 transition-opacity">
+            <i class="fa-solid fa-user text-sm"></i>
+            <span class="text-[8px] font-black uppercase tracking-[0.2em]">我的</span>
+        </button>
+    </nav>
+
+    <script>
+        function toggleDrawer(name, dist, desc) {
+            document.getElementById('drawer-name').innerText = name;
+            document.getElementById('drawer-dist').innerText = dist;
+            document.getElementById('drawer-desc').innerText = desc;
+            document.getElementById('drawer').classList.add('active');
+        }
+
+        function closeDrawer() {
+            document.getElementById('drawer').classList.remove('active');
+        }
+    </script>
+</body>
+</html>

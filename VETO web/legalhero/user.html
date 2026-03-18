@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <title>VETO | 用户控制台</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@900&display=swap');
+        
+        body { background-color: #000; color: #fff; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+        .mono { font-family: 'Fira Code', monospace; }
+
+        /* 极细绿线边框 */
+        .b-accent { border: 1px solid rgba(16, 185, 129, 0.3); }
+        
+        /* 折线图动画：描边效果 */
+        @keyframes lineDraw {
+            to { stroke-dashoffset: 0; }
+        }
+        .chart-line {
+            stroke-dasharray: 500;
+            stroke-dashoffset: 500;
+            animation: lineDraw 2s ease-out forwards;
+        }
+
+        /* 呼吸背景 */
+        .bg-grid {
+            background-image: radial-gradient(rgba(16, 185, 129, 0.1) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+    </style>
+</head>
+<body class="pb-32 bg-grid">
+
+    <header class="p-8 border-b border-white/10 flex justify-between items-start">
+        <div class="space-y-4">
+            <div class="flex items-center gap-2">
+                <span class="w-2 h-2 bg-emerald-500 rounded-full animate-ping"></span>
+                <span class="mono text-[10px] text-emerald-500 tracking-[0.3em] uppercase">用户已认证</span>
+            </div>
+            <h2 class="text-5xl font-black tracking-tighter uppercase italic leading-none">控制台 /<br>Admin_09</h2>
+        </div>
+        <div class="w-16 h-16 border border-white/10 flex items-center justify-center relative">
+            <i class="fa-solid fa-circle-notch animate-spin text-zinc-800 text-5xl"></i>
+            <i class="fa-solid fa-user-shield absolute text-white text-xl"></i>
+        </div>
+    </header>
+
+    <section class="grid grid-cols-2 border-b border-white/10">
+        <div class="p-6 border-r border-white/10 space-y-1">
+            <p class="mono text-[9px] text-zinc-500 uppercase tracking-widest">用户编号</p>
+            <p class="font-bold text-lg uppercase tracking-tight italic text-emerald-400">CHEN_YU_FAN</p>
+        </div>
+        <div class="p-6 space-y-1">
+            <p class="mono text-[9px] text-zinc-500 uppercase tracking-widest">院系代码</p>
+            <p class="font-bold text-lg uppercase tracking-tight italic">LAW_SCH_03</p>
+        </div>
+    </section>
+
+    <section class="p-8 border-b border-white/10">
+        <div class="flex justify-between items-end mb-8">
+            <div>
+                <h3 class="mono text-[10px] text-zinc-400 uppercase tracking-[0.4em] mb-2">安全指数趋势</h3>
+                <div class="text-4xl font-black italic tracking-tighter">98.4<span class="text-sm opacity-30 ml-2">%</span></div>
+            </div>
+            <div class="text-right">
+                <span class="mono text-[9px] text-emerald-500 bg-emerald-500/10 px-2 py-1">+2.4% 提升</span>
+            </div>
+        </div>
+
+        <div class="w-full h-32 relative">
+            <svg class="w-full h-full overflow-visible" viewBox="0 0 400 100">
+                <line x1="0" y1="20" x2="400" y2="20" stroke="white" stroke-opacity="0.05" />
+                <line x1="0" y1="50" x2="400" y2="50" stroke="white" stroke-opacity="0.05" />
+                <line x1="0" y1="80" x2="400" y2="80" stroke="white" stroke-opacity="0.05" />
+                
+                <polyline
+                    class="chart-line"
+                    fill="none"
+                    stroke="#10b981"
+                    stroke-width="3"
+                    points="0,80 50,75 100,85 150,40 200,45 250,20 300,30 350,15 400,20"
+                />
+                <circle cx="400" cy="20" r="4" fill="#10b981">
+                    <animate attributeName="r" values="4;6;4" dur="1s" repeatCount="indefinite" />
+                </circle>
+            </svg>
+        </div>
+    </section>
+
+    <main class="p-8 space-y-6">
+        <div class="flex items-center gap-4 mb-4">
+            <i class="fa-solid fa-terminal text-[10px] text-emerald-500"></i>
+            <span class="mono text-[9px] text-zinc-500 uppercase tracking-widest leading-none">操作日志</span>
+        </div>
+
+        <div class="b-accent p-6 flex justify-between items-center group cursor-pointer hover:bg-emerald-500 hover:text-black transition-all">
+            <div class="space-y-1">
+                <h4 class="text-sm font-black uppercase tracking-widest">合同归档</h4>
+                <p class="mono text-[9px] opacity-40 group-hover:opacity-100">总计：12 份 / 已核验</p>
+            </div>
+            <i class="fa-solid fa-chevron-right text-xs"></i>
+        </div>
+
+        <div class="b-accent p-6 flex justify-between items-center group cursor-pointer hover:bg-emerald-500 hover:text-black transition-all">
+            <div class="space-y-1">
+                <h4 class="text-sm font-black uppercase tracking-widest">风险监控</h4>
+                <p class="mono text-[9px] opacity-40 group-hover:opacity-100">状态：进行中 [75%]</p>
+            </div>
+            <div class="w-10 h-1 text-zinc-800 bg-zinc-800 relative group-hover:bg-black/20">
+                <div class="absolute inset-y-0 left-0 bg-emerald-500 group-hover:bg-black w-3/4"></div>
+            </div>
+        </div>
+
+        <button class="w-full py-5 border border-white/10 mono text-[10px] font-bold tracking-[0.5em] uppercase hover:bg-white hover:text-black transition-all mt-10">
+            结束会话 [退出登录]
+        </button>
+    </main>
+
+    <nav class="fixed bottom-0 left-0 right-0 bg-black/80 backdrop-blur-xl border-t border-white/10 px-10 py-6 flex justify-between items-center z-[100]">
+        <button onclick="location.href='index.html'" class="flex flex-col items中心 gap-1 opacity-25">
+            <i class="fa-solid fa-house text-sm"></i>
+            <span class="text-[8px] font-black uppercase tracking-[0.2em]">首页</span>
+        </button>
+        <button class="flex flex-col items-center gap-1 opacity-25">
+            <i class="fa-solid fa-compass text-sm"></i>
+            <span class="text-[8px] font-black uppercase tracking-[0.2em]">发现</span>
+        </button>
+        <div class="absolute left-1/2 -translate-x-1/2 -top-6">
+            <div class="w-14 h-14 bg-white text-black flex items-center justify-center shadow-2xl active:scale-90 transition-transform cursor-pointer">
+                <i class="fa-solid fa-plus text-xl"></i>
+            </div>
+        </div>
+        <button class="flex flex-col items-center gap-1 opacity-25">
+            <i class="fa-solid fa-map-marked-alt text-sm"></i>
+            <span class="text-[8px] font-black uppercase tracking-[0.2em]">地图</span>
+        </button>
+        <button class="flex flex-col items-center gap-1 text-emerald-400">
+            <i class="fa-solid fa-user text-sm"></i>
+            <span class="text-[8px] font-black uppercase tracking-[0.2em]">我的</span>
+        </button>
+    </nav>
+
+</body>
+</html>

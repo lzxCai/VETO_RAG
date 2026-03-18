@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://webapi.amap.com/maps?v=2.0&key=6481e53152984f1c49c0b6adfcd196a9&plugin=AMap.Geolocation"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <title>VETO | OS v9.7 Smart Routing</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;700;900&display=swap');
+        
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #000000; overflow-x: hidden; transition: background-color 0.3s, color 0.3s; -webkit-font-smoothing: antialiased; }
+        .mono { font-family: 'Fira Code', monospace; }
+
+        /* 核心架构 */
+        .page-node { display: none; min-height: 100vh; padding-bottom: 8rem; }
+        .page-node.active { display: block; animation: pageIn 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        @keyframes pageIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        #console-overlay, #post-modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.8); z-index: 999; backdrop-filter: blur(5px); }
+        #console-overlay.active, #post-modal.active { display: flex; animation: fadeIn 0.2s ease-out forwards; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .nav-link { opacity: 0.25; transition: 0.3s; }
+        .nav-link.active { opacity: 1; }
+        .tab-active { border-bottom: 4px solid currentColor; opacity: 1; }
+        .tab-inactive { opacity: 0.2; border-bottom: 4px solid transparent; }
+
+        /* 极客组件 */
+        .b-fine { border: 1px solid #000; }
+        .b-dashed { border: 1px dashed #000; }
+        .b-accent { border: 1px solid rgba(16, 185, 129, 0.3); }
+        
+        @keyframes scanMove { 0% { transform: translateY(-100%); } 100% { transform: translateY(100%); } }
+        .scan-effect { position: absolute; inset: 0; background: linear-gradient(to bottom, transparent, rgba(16, 185, 129, 0.1), transparent); animation: scanMove 3s infinite linear; pointer-events: none; }
+        
+        .drawer { transform: translateY(100%); transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1); z-index: 140; }
+        .drawer.active { transform: translateY(0); }
+
+        ::-webkit-scrollbar { display: none; }
+
+        /* 登录页特有过渡效果 */
+        .auth-panel { display: none; animation: fadeIn 0.3s ease-out; }
+        .auth-panel.active { display: block; }
+    </style>
+</head>
+<body>
+
+    <div id="console-overlay" class="items-center justify-center p-8 flex-col">
+        <button onclick="toggleConsole()" class="absolute top-10 right-10 text-white text-3xl hover:text-emerald-400"><i class="fa-solid fa-xmark"></i></button>
+        <div class="w-full max-w-md">
+            <h2 class="text-5xl font-black text-white italic uppercase mb-12">执行指令_</h2>
+            <button onclick="executeCommand('scan')" class="w-full p-6 border border-emerald-500/30 text-white flex justify-between items-center hover:bg-emerald-500 hover:text-black group transition-all">
+                <span class="font-bold tracking-widest text-xl">启动深度扫描</span><i class="fa-solid fa-bolt-lightning"></i>
+            </button>
+            <button onclick="executeCommand('post')" class="w-full p-6 border border-emerald-500/30 text-white flex justify-between items-center hover:bg-emerald-500 hover:text-black group transition-all mt-4">
+                <span class="font-bold tracking-widest text-xl">发布全网预警</span><i class="fa-solid fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="post-modal" class="items-center justify-center p-4 flex-col">
+        <div class="w-full max-w-2xl bg-white border-[4px] border-black p-8 relative shadow-[8px_8px_0px_rgba(0,0,0,1)]">
+            <button onclick="closePostModal()" class="absolute top-6 right-6 text-3xl hover:text-rose-600 transition-colors"><i class="fa-solid fa-xmark"></i></button>
+            <div class="flex items-center gap-3 mb-6">
+                <span class="w-3 h-3 bg-emerald-500 rounded-full animate-pulse shadow-[0_0_10px_#10b981]"></span>
+                <span class="mono text-xs font-bold text-emerald-600 uppercase tracking-[0.3em]">Network Broadcast</span>
+            </div>
+            <h2 class="text-4xl font-black uppercase italic mb-8">发布新帖_</h2>
+            
+            <input type="text" id="new-post-title" class="w-full border-2 border-black p-4 mb-6 font-black text-xl focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/30 transition-all placeholder-zinc-300" placeholder="一句话概括你的曝光/求助...">
+            
+            <textarea id="new-post-content" rows="6" class="w-full border-2 border-black p-4 mb-8 text-base font-bold text-zinc-800 focus:outline-none focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/30 transition-all placeholder-zinc-400 leading-relaxed" placeholder="详细描述你遇到的法律问题或兼职陷阱，支持长文..."></textarea>
+            
+            <button onclick="submitPost()" id="btn-submit-post" class="w-full py-5 bg-black text-white font-black text-lg tracking-[0.3em] hover:bg-emerald-500 hover:text-black transition-all shadow-[4px_4px_0px_rgba(0,0,0,0.3)] hover:shadow-[4px_4px_0px_rgba(0,0,0,1)] uppercase">
+                <i class="fa-solid fa-paper-plane mr-2"></i> 确认发送至全网
+            </button>
+        </div>
+    </div>
+
+    <section id="page-login" class="page-node active min-h-screen !pb-0">
+        <div class="flex flex-col lg:flex-row h-screen">
+            
+            <div class="w-full lg:w-1/2 bg-black text-white relative flex flex-col px-8 lg:px-20 py-12 overflow-hidden min-h-[50vh] lg:min-h-screen">
+                <div class="absolute inset-0 opacity-[0.1]" style="background-image: radial-gradient(rgba(255,255,255,0.5) 1px, transparent 0); background-size: 32px 32px;"></div>
+                
+                <div class="relative z-20 flex items-center gap-3">
+                    <div class="w-10 h-10 bg-emerald-500 flex items-center justify-center"><div class="w-4 h-4 bg-black rotate-45"></div></div>
+                    <span class="font-black text-3xl tracking-[0.2em] uppercase mt-1">VETO OS</span>
+                </div>
+
+                <div class="relative z-10 max-w-lg w-full mx-auto flex-grow flex flex-col justify-center mt-10 lg:mt-0">
+                    <div id="auth-left-login" class="auth-panel active">
+                        <div class="flex items-center gap-2 mb-6">
+                            <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse shadow-[0_0_8px_#10b981]"></span>
+                            <span class="mono text-xs font-bold text-emerald-500 tracking-[0.2em] uppercase">系统初始化</span>
+                        </div>
+                        <h1 class="text-6xl md:text-7xl font-black tracking-tighter leading-[1.1] mb-8">
+                            保护你的<br>第一份<br><span class="text-emerald-500 italic pr-2">职场契约</span>
+                        </h1>
+                        <p class="text-zinc-400 leading-relaxed font-medium text-sm max-w-sm">专为大学生打造的智能合同审核平台。三方协议、劳动合同、实习协议，一键 AI 排雷，让你的职场起步更安心。</p>
+                    </div>
+
+                    <div id="auth-left-register" class="auth-panel">
+                        <div class="flex items-center gap-2 mb-6">
+                            <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse shadow-[0_0_8px_#10b981]"></span>
+                            <span class="mono text-xs font-bold text-emerald-500 tracking-[0.2em] uppercase">节点分配</span>
+                        </div>
+                        <h1 class="text-6xl md:text-7xl font-black tracking-tighter leading-[1.1] mb-8">
+                            开启你的<br><span class="text-emerald-500 italic pr-2">职场护航</span><br>之旅
+                        </h1>
+                        <p class="text-zinc-400 leading-relaxed font-medium text-sm max-w-sm">注册专属账号，随时随地审核你的三方协议、劳动合同。AI 律师全天候在线，为你的合法权益保驾护航。</p>
+                    </div>
+
+                    <div id="auth-left-forgot" class="auth-panel">
+                        <div class="flex items-center gap-2 mb-6">
+                            <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse shadow-[0_0_8px_#10b981]"></span>
+                            <span class="mono text-xs font-bold text-emerald-500 tracking-[0.2em] uppercase">权限重置</span>
+                        </div>
+                        <h1 class="text-6xl md:text-7xl font-black tracking-tighter leading-[1.1] mb-8">
+                            找回你的<br><span class="text-emerald-500 italic pr-2">专属账号</span>
+                        </h1>
+                        <p class="text-zinc-400 leading-relaxed font-medium text-sm max-w-sm">忘记密码不用慌，通过学号和验证码即可快速重置密码，重新连接你的 AI 法律助手。</p>
+                    </div>
+                </div>
+                
+                <div class="h-10 lg:h-20"></div>
+            </div>
+
+            <div class="w-full lg:w-1/2 bg-white text-black relative flex flex-col justify-center items-center px-8 lg:px-24 py-12 lg:py-0 overflow-y-auto">
+                <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: radial-gradient(#000 1px, transparent 0); background-size: 32px 32px;"></div>
+
+                <div class="relative z-10 w-full max-w-md">
+                    
+                    <div id="auth-right-login" class="auth-panel active w-full">
+                        <div class="mb-12">
+                            <h2 class="text-4xl font-black tracking-tighter mb-3">身份核验</h2>
+                            <p class="text-sm font-bold text-zinc-500">请输入您的学号和密码进入系统</p>
+                        </div>
+                        <form onsubmit="handleAuth(event, 'login')" class="space-y-6">
+                            <div>
+                                <label class="mono text-xs font-bold text-black tracking-widest uppercase block mb-3">学号 / ID</label>
+                                <div class="w-full border-[3px] border-black flex items-center px-4 bg-white focus-within:border-emerald-500 focus-within:ring-4 focus-within:ring-emerald-500/30 transition-all shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+                                    <i class="fa-solid fa-graduation-cap text-zinc-300 mr-3"></i>
+                                    <input type="text" required class="w-full py-4 outline-none font-bold text-black bg-transparent placeholder-zinc-300" placeholder="请输入学号">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="mono text-xs font-bold text-black tracking-widest uppercase block mb-3">密码 / PASS</label>
+                                <div class="w-full border-[3px] border-black flex items-center px-4 bg-white focus-within:border-emerald-500 focus-within:ring-4 focus-within:ring-emerald-500/30 transition-all shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+                                    <i class="fa-solid fa-lock text-zinc-300 mr-3"></i>
+                                    <input type="password" required class="w-full py-4 outline-none font-bold text-black bg-transparent placeholder-zinc-300" placeholder="请输入密码">
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center pt-2">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="checkbox" class="w-4 h-4 border-2 border-black rounded-none outline-none checked:bg-black checked:before:content-['✓'] checked:before:text-white checked:before:text-xs checked:before:block checked:before:text-center">
+                                    <span class="text-xs font-bold text-zinc-500 hover:text-black transition-colors">保持连接</span>
+                                </label>
+                                <button type="button" onclick="switchAuthMode('forgot')" class="text-xs font-bold text-black hover:text-emerald-600 transition-colors">忘记密码？</button>
+                            </div>
+                            <button type="submit" id="btn-login" class="w-full py-5 mt-4 bg-black text-white font-black text-sm tracking-[0.2em] hover:bg-emerald-500 hover:text-black transition-all shadow-[4px_4px_0px_rgba(0,0,0,0.3)] hover:shadow-[6px_6px_0px_rgba(0,0,0,1)] uppercase">
+                                建立连接 [登录]
+                            </button>
+                        </form>
+                        <div class="mt-16 text-center border-t-2 border-zinc-100 pt-8">
+                            <p class="text-xs font-bold text-zinc-500">未分配权限节点？ <button onclick="switchAuthMode('register')" class="text-black hover:text-emerald-600 transition-colors">申请接入 [注册]</button></p>
+                        </div>
+                    </div>
+
+                    <div id="auth-right-register" class="auth-panel w-full">
+                        <div class="mb-10">
+                            <h2 class="text-4xl font-black tracking-tighter mb-3">申请接入</h2>
+                            <p class="text-sm font-bold text-zinc-500">创建您的操作员节点</p>
+                        </div>
+                        <form onsubmit="handleAuth(event, 'register')" class="space-y-5">
+                            <div>
+                                <label class="mono text-xs font-bold text-black tracking-widest uppercase block mb-2">姓名 / NAME</label>
+                                <div class="w-full border-[3px] border-black flex items-center px-4 bg-white focus-within:border-emerald-500 focus-within:ring-4 focus-within:ring-emerald-500/30 transition-all shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+                                    <i class="fa-regular fa-user text-zinc-300 mr-3"></i>
+                                    <input type="text" required class="w-full py-3 outline-none font-bold text-black bg-transparent placeholder-zinc-300" placeholder="请输入真实姓名">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="mono text-xs font-bold text-black tracking-widest uppercase block mb-2">学号 / ID</label>
+                                <div class="w-full border-[3px] border-black flex items-center px-4 bg-white focus-within:border-emerald-500 focus-within:ring-4 focus-within:ring-emerald-500/30 transition-all shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+                                    <i class="fa-solid fa-graduation-cap text-zinc-300 mr-3"></i>
+                                    <input type="text" required class="w-full py-3 outline-none font-bold text-black bg-transparent placeholder-zinc-300" placeholder="请输入学号">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="mono text-xs font-bold text-black tracking-widest uppercase block mb-2">设置密码 / PASS</label>
+                                <div class="w-full border-[3px] border-black flex items-center px-4 bg-white focus-within:border-emerald-500 focus-within:ring-4 focus-within:ring-emerald-500/30 transition-all shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+                                    <i class="fa-solid fa-lock text-zinc-300 mr-3"></i>
+                                    <input type="password" required class="w-full py-3 outline-none font-bold text-black bg-transparent placeholder-zinc-300" placeholder="请输入至少6位密码">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="mono text-xs font-bold text-black tracking-widest uppercase block mb-2">确认密码 / CONFIRM</label>
+                                <div class="w-full border-[3px] border-black flex items-center px-4 bg-white focus-within:border-emerald-500 focus-within:ring-4 focus-within:ring-emerald-500/30 transition-all shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+                                    <i class="fa-solid fa-lock text-zinc-300 mr-3"></i>
+                                    <input type="password" required class="w-full py-3 outline-none font-bold text-black bg-transparent placeholder-zinc-300" placeholder="请再次输入密码">
+                                </div>
+                            </div>
+                            <button type="submit" id="btn-register" class="w-full py-5 mt-6 bg-black text-white font-black text-sm tracking-[0.2em] hover:bg-emerald-500 hover:text-black transition-all shadow-[4px_4px_0px_rgba(0,0,0,0.3)] hover:shadow-[6px_6px_0px_rgba(0,0,0,1)] uppercase">
+                                初始化节点 [注册]
+                            </button>
+                        </form>
+                        <div class="mt-12 text-center border-t-2 border-zinc-100 pt-8">
+                            <p class="text-xs font-bold text-zinc-500">已有权限节点？ <button onclick="switchAuthMode('login')" class="text-black hover:text-emerald-600 transition-colors">返回连接 [登录]</button></p>
+                        </div>
+                    </div>
+
+                    <div id="auth-right-forgot" class="auth-panel w-full">
+                        <div class="mb-10">
+                            <h2 class="text-4xl font-black tracking-tighter mb-3">重置密码</h2>
+                            <p class="text-sm font-bold text-zinc-500">验证身份以设置新密码</p>
+                        </div>
+                        <form onsubmit="handleAuth(event, 'forgot')" class="space-y-5">
+                            <div>
+                                <label class="mono text-xs font-bold text-black tracking-widest uppercase block mb-2">学号 / ID</label>
+                                <div class="w-full border-[3px] border-black flex items-center px-4 bg-white focus-within:border-emerald-500 focus-within:ring-4 focus-within:ring-emerald-500/30 transition-all shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+                                    <i class="fa-solid fa-graduation-cap text-zinc-300 mr-3"></i>
+                                    <input type="text" required class="w-full py-3 outline-none font-bold text-black bg-transparent placeholder-zinc-300" placeholder="请输入学号">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="mono text-xs font-bold text-black tracking-widest uppercase block mb-2">手机号码 / PHONE</label>
+                                <div class="w-full border-[3px] border-black flex items-center px-4 bg-white focus-within:border-emerald-500 focus-within:ring-4 focus-within:ring-emerald-500/30 transition-all shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+                                    <i class="fa-solid fa-phone text-zinc-300 mr-3"></i>
+                                    <input type="text" required class="w-full py-3 outline-none font-bold text-black bg-transparent placeholder-zinc-300" placeholder="请输入11位手机号码">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="mono text-xs font-bold text-black tracking-widest uppercase block mb-2">验证码 / CODE</label>
+                                <div class="flex gap-4">
+                                    <div class="flex-grow border-[3px] border-black flex items-center px-4 bg-white focus-within:border-emerald-500 focus-within:ring-4 focus-within:ring-emerald-500/30 transition-all shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+                                        <i class="fa-solid fa-key text-zinc-300 mr-3"></i>
+                                        <input type="text" required class="w-full py-3 outline-none font-bold text-black bg-transparent placeholder-zinc-300" placeholder="请输入验证码">
+                                    </div>
+                                    <button type="button" class="w-32 bg-white border-[3px] border-black text-black font-black text-xs shrink-0 hover:bg-black hover:text-white transition-colors shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px]">获取验证码</button>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="mono text-xs font-bold text-black tracking-widest uppercase block mb-2">新密码 / NEW PASS</label>
+                                <div class="w-full border-[3px] border-black flex items-center px-4 bg-white focus-within:border-emerald-500 focus-within:ring-4 focus-within:ring-emerald-500/30 transition-all shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+                                    <i class="fa-solid fa-lock text-zinc-300 mr-3"></i>
+                                    <input type="password" required class="w-full py-3 outline-none font-bold text-black bg-transparent placeholder-zinc-300" placeholder="请输入新密码">
+                                </div>
+                            </div>
+                            <button type="submit" id="btn-forgot" class="w-full py-5 mt-6 bg-black text-white font-black text-sm tracking-[0.2em] hover:bg-emerald-500 hover:text-black transition-all shadow-[4px_4px_0px_rgba(0,0,0,0.3)] hover:shadow-[6px_6px_0px_rgba(0,0,0,1)] uppercase">
+                                确认重置 [执行]
+                            </button>
+                        </form>
+                        <div class="mt-12 text-center border-t-2 border-zinc-100 pt-8">
+                            <p class="text-xs font-bold text-zinc-500">记起密码了？ <button onclick="switchAuthMode('login')" class="text-black hover:text-emerald-600 transition-colors">返回连接 [登录]</button></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="page-home" class="page-node bg-white text-black">
+        <nav class="h-20 px-8 flex justify-between items-center border-b border-black sticky top-0 bg-white z-50">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-black flex items-center justify-center"><div class="w-3.5 h-3.5 bg-white rotate-45"></div></div>
+                <span class="font-black text-2xl tracking-[0.3em] uppercase mt-1 ml-1">VETO</span>
+            </div>
+            <div id="top-avatar-container" class="w-8 h-8 rounded-full border border-black p-0.5 cursor-pointer overflow-hidden shadow-sm hover:scale-105 transition-transform" onclick="showPage('user')"></div>
+        </nav>
+        <main class="px-8 mt-20">
+            <div class="mb-24">
+                <div id="sys-version" class="inline-block px-3 py-1 bg-black text-white text-[10px] font-bold tracking-[0.2em] uppercase mb-8">AI Powered / v9.7</div>
+                <h2 class="text-7xl md:text-8xl font-black tracking-tighter leading-[0.85] uppercase">合同<br>智能分析</h2>
+            </div>
+            <section onclick="showPage('upload')" class="group relative bg-black text-white p-12 md:p-16 overflow-hidden cursor-pointer border border-black shadow-2xl transition-transform active:scale-[0.99]">
+                <div class="scan-effect"></div>
+                <div class="relative z-10 flex flex-col md:flex-row justify-between items-end gap-10">
+                    <div class="max-w-xl">
+                        <div class="flex items-center gap-3 mb-8"><div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div><span class="text-xs font-bold tracking-[0.3em] uppercase text-emerald-400">System Ready</span></div>
+                        <h3 class="text-4xl md:text-5xl font-bold tracking-tight mb-4 leading-none uppercase">扫描合同漏洞</h3>
+                        <p class="text-zinc-500 font-light text-sm max-w-xs leading-relaxed">点击此处上传协议，AI 将进行实时多维风险评估。</p>
+                    </div>
+                    <div class="w-24 h-24 border border-zinc-800 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all duration-500"><i class="fa-solid fa-plus text-3xl"></i></div>
+                </div>
+            </section>
+            <div class="mt-28">
+                <div class="flex justify-between items-center border-b border-black pb-4 mb-10"><h3 class="text-xs font-black tracking-[0.5em] uppercase text-zinc-400">安全通告</h3><span class="text-[9px] font-bold text-zinc-400 uppercase tracking-widest italic">实时 / 2026</span></div>
+                <div id="home-bulletins-container" class="space-y-0"></div>
+            </div>
+        </main>
+    </section>
+
+    <section id="page-upload" class="page-node bg-white !pb-0 text-black">
+        <div class="min-h-screen flex flex-col">
+            <nav class="h-20 px-8 flex justify-between items-center border-b border-black sticky top-0 bg-white z-50">
+                <div class="flex items-center gap-2 cursor-pointer hover:opacity-50 transition-opacity" onclick="goBack()"><i class="fa-solid fa-arrow-left text-xl"></i><span class="font-black text-sm tracking-[0.2em] ml-2 mt-0.5">返回上一页</span></div>
+                <div class="flex items-center gap-2"><span class="mono text-[10px] text-emerald-500 tracking-widest">监听数据汇入_</span><div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div></div>
+            </nav>
+            <main class="flex-grow flex flex-col lg:flex-row">
+                <div class="w-full lg:w-2/3 p-8 md:p-12 border-b lg:border-b-0 lg:border-r border-black flex flex-col">
+                    <div class="mb-10"><h1 class="text-5xl md:text-6xl font-black tracking-tighter leading-none">卷宗<br>载入_</h1><p class="mono text-xs text-zinc-500 mt-4 tracking-widest">>> 仅支持实体文件解析 (PDF / 影像)</p></div>
+                    <input type="file" id="real-file-input" class="hidden" accept=".pdf, .jpg, .jpeg, .png, .docx" />
+                    <div id="drop-zone" class="flex-grow border-2 border-dashed border-black bg-zinc-50 flex flex-col items-center justify-center p-12 cursor-pointer hover:border-emerald-500 transition-all min-h-[400px]">
+                        <div class="w-20 h-20 bg-black text-white flex items-center justify-center mb-6 rounded-full shadow-2xl"><i class="fa-solid fa-file-arrow-up text-3xl"></i></div>
+                        <h3 class="text-3xl font-black mb-3 text-center">拖拽卷宗至此</h3>
+                        <p class="text-base font-medium text-zinc-500 text-center">或 <span class="text-black underline underline-offset-4 hover:text-emerald-500">点击浏览本地终端</span></p>
+                        <div class="mt-10 flex gap-4 opacity-40">
+                            <span class="mono text-[10px] border border-black px-3 py-1 font-bold">[ PDF ]</span>
+                            <span class="mono text-[10px] border border-black px-3 py-1 font-bold">[ JPG ]</span>
+                            <span class="mono text-[10px] border border-black px-3 py-1 font-bold">[ DOCX ]</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/3 bg-slate-50 p-8 md:p-12 flex flex-col">
+                    <h3 class="mono text-[10px] font-bold text-zinc-500 mb-8 border-b border-zinc-200 pb-4">>> 演算参数配置</h3>
+                    <div class="space-y-6 flex-grow">
+                        <label class="flex items-start gap-4 cursor-pointer group"><input type="checkbox" checked class="mt-1"><div><span class="block text-sm font-black group-hover:text-emerald-600 transition-colors">深层语义嗅探</span><span class="mono text-[9px] text-zinc-500 block mt-1">调用大模型排查隐性陷阱 [高耗能]</span></div></label>
+                        <label class="flex items-start gap-4 cursor-pointer group"><input type="checkbox" checked class="mt-1"><div><span class="block text-sm font-black group-hover:text-emerald-600 transition-colors">霸王条款高亮</span><span class="mono text-[9px] text-zinc-500 block mt-1">强制标识免责与剥夺权利声明</span></div></label>
+                        <label class="flex items-start gap-4 cursor-pointer group"><input type="checkbox" class="mt-1"><div><span class="block text-sm font-black group-hover:text-emerald-600 transition-colors">严格劳动法过滤</span><span class="mono text-[9px] text-zinc-500 block mt-1">仅套用《劳动合同法》专项规则匹配</span></div></label>
+                    </div>
+                    <div class="mt-12">
+                        <button onclick="startScan()" id="btn-execute" class="w-full py-6 bg-black text-white text-xl font-black tracking-[0.2em] hover:bg-emerald-500 hover:text-black transition-all shadow-2xl relative overflow-hidden group">
+                            <span class="relative z-10">执行解构_</span>
+                        </button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <section id="page-analysis" class="page-node bg-white !pb-0 text-black">
+        <div class="min-h-screen">
+            <nav class="h-20 px-8 flex justify-between items-center border-b border-black sticky top-0 bg-white z-50" data-html2canvas-ignore="true">
+                <div class="flex items-center gap-2 cursor-pointer hover:opacity-50 transition-opacity" onclick="goBack()"><i class="fa-solid fa-arrow-left text-xl"></i><span class="font-black text-sm tracking-[0.2em] ml-2 mt-0.5">返回上一页</span></div>
+                <div id="nav-status"></div>
+            </nav>
+            <main class="px-8 mt-12 mb-32 max-w-5xl mx-auto" id="pdf-export-area">
+                <header class="mb-16" id="analysis-header"></header>
+                <section class="mb-16 p-8 border border-black bg-zinc-50" id="analysis-summary"></section>
+                <section class="space-y-12" id="analysis-clauses"></section>
+            </main>
+            <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-black p-6 md:py-8 z-[100] flex items-center justify-center" data-html2canvas-ignore="true">
+                <button onclick="exportReport()" id="btn-export" class="w-full max-w-2xl h-14 md:h-16 bg-black text-white flex items-center justify-center gap-4 hover:bg-emerald-500 hover:text-black transition-all shadow-xl font-black tracking-[0.2em]">
+                    <i class="fa-solid fa-file-arrow-down text-xl"></i>导出完整风控卷宗
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="page-archive" class="page-node bg-white text-black">
+        <nav class="h-20 px-8 flex justify-between items-center border-b border-black sticky top-0 bg-white z-50">
+            <div class="flex items-center gap-2 cursor-pointer hover:opacity-50" onclick="goBack()">
+                <i class="fa-solid fa-arrow-left text-xl"></i><span class="font-black text-sm tracking-[0.2em] ml-2 mt-0.5">返回上一页</span>
+            </div>
+            <span class="mono text-[10px] font-black text-zinc-400 uppercase tracking-widest italic">History / 历史卷宗</span>
+        </nav>
+        <main class="px-8 py-12 max-w-4xl mx-auto">
+            <header class="mb-16">
+                <h1 class="text-5xl font-black tracking-tighter uppercase mb-4">归档<br>协议栈_</h1>
+                <p class="text-sm text-zinc-500 font-medium">>> 系统已封卷的所有解构档案</p>
+            </header>
+            <div id="archive-list-container" class="space-y-6"></div>
+        </main>
+    </section>
+
+    <section id="page-discover" class="page-node bg-white text-black">
+        <header class="px-8 pt-16 pb-6 border-b border-black sticky top-0 bg-white z-50">
+            <h2 class="text-5xl font-black uppercase tracking-tighter mb-10 text-center md:text-left">情报流</h2>
+            <div class="flex justify-center md:justify-start gap-12">
+                <button onclick="switchTab('news')" id="tab-news" class="text-xs font-black uppercase tracking-[0.2em] tab-active pb-2 transition-all">官方预警</button>
+                <button onclick="switchTab('forum')" id="tab-forum" class="text-xs font-black uppercase tracking-[0.2em] tab-inactive pb-2 transition-all">论坛交流</button>
+            </div>
+        </header>
+        <main class="px-8 mt-4 max-w-4xl mx-auto">
+            <div id="view-news" class="block"></div>
+            <div id="view-forum" class="hidden pt-6">
+                <button onclick="openPostModal()" class="w-full mb-8 py-5 bg-zinc-50 border-[3px] border-black text-black font-black text-sm tracking-widest hover:bg-emerald-500 transition-all shadow-[6px_6px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[6px] hover:translate-y-[6px] uppercase flex justify-center items-center gap-3">
+                    <i class="fa-solid fa-pen-to-square text-xl"></i> 发布新帖，向全网求助或曝光
+                </button>
+                <div id="forum-list-container" class="space-y-6"></div>
+            </div>
+        </main>
+    </section>
+
+    <section id="page-detail" class="page-node bg-white !pb-0 min-h-screen text-black">
+        <nav class="h-20 px-8 flex justify-between items-center border-b border-black sticky top-0 bg-white z-50">
+            <div class="flex items-center gap-2 cursor-pointer hover:opacity-50 transition-opacity" onclick="goBack()">
+                <i class="fa-solid fa-arrow-left text-xl"></i><span class="font-black text-sm tracking-[0.2em] ml-2 mt-0.5">返回上一页</span>
+            </div>
+            <div class="flex items-center gap-2"><span class="mono text-[10px] text-emerald-500 tracking-widest font-bold">阅读模式_</span></div>
+        </nav>
+        <main class="px-8 py-16 max-w-3xl mx-auto">
+            <header class="mb-10 border-b border-black pb-8"><div id="detail-meta" class="mb-4"></div><h1 id="detail-title" class="text-4xl md:text-5xl font-black tracking-tighter leading-tight"></h1></header>
+            <article id="detail-content" class="text-lg text-zinc-800 leading-relaxed space-y-6"></article>
+            
+            <div id="detail-interaction-area" class="hidden mt-16 pt-10 border-t-[4px] border-black">
+                <h3 class="text-2xl font-black mb-8 uppercase italic flex items-center gap-3"><i class="fa-solid fa-comments text-emerald-500"></i> 讨论区</h3>
+                <div id="comments-list" class="space-y-6 mb-10"></div>
+                <div class="flex flex-col sm:flex-row gap-4 bg-zinc-50 p-6 border-[3px] border-black shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+                    <input type="text" id="new-comment-input" class="flex-grow bg-transparent border-b-2 border-zinc-300 focus:border-black p-2 focus:outline-none font-bold text-sm transition-colors" placeholder="发表你的观点...">
+                    <button id="btn-submit-comment" class="px-8 py-3 bg-black text-white font-black hover:bg-emerald-500 hover:text-black transition-colors uppercase tracking-widest text-xs">回复</button>
+                </div>
+            </div>
+        </main>
+    </section>
+
+    <section id="page-maps" class="page-node h-screen overflow-hidden text-white relative !pb-0">
+        <div id="amap-container" class="absolute inset-0 bg-zinc-900"></div>
+        <div class="absolute top-10 left-6 right-6 z-50">
+            <div class="bg-black/80 backdrop-blur-xl border border-white/20 p-4 flex items-center gap-4 shadow-2xl">
+                <i class="fa-solid fa-magnifying-glass text-zinc-500"></i>
+                <input type="text" placeholder="检索周边法律援助节点..." class="bg-transparent border-none outline-none text-sm w-full font-medium text-white">
+                <div class="w-8 h-8 bg-white text-black flex items-center justify-center text-xs cursor-pointer"><i class="fa-solid fa-sliders"></i></div>
+            </div>
+        </div>
+        <button onclick="recenterToCurrentLocation()" class="absolute bottom-32 left-6 w-12 h-12 bg-white text-black flex items-center justify-center shadow-2xl z-40 active:scale-90 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+            <i class="fa-solid fa-location-crosshairs"></i>
+        </button>
+        <div id="drawer" class="drawer absolute bottom-0 left-0 right-0 bg-zinc-900 p-8 pt-4 pb-28 border-t border-white/10 shadow-2xl">
+            <div class="w-12 h-1 bg-white/10 rounded-full mx-auto mb-6"></div>
+            <div class="flex justify-between items-start mb-6">
+                <div>
+                    <span id="drawer-tag" class="text-[9px] font-black bg-emerald-500 text-black px-2 py-0.5 tracking-widest mb-2 inline-block">系统已认证</span>
+                    <h4 id="drawer-name" class="text-2xl font-black tracking-tighter">律所名称</h4>
+                    <p id="drawer-dist" class="text-xs text-zinc-500 mt-1">距离计算中...</p>
+                </div>
+                <button onclick="closeDrawer()" class="text-zinc-500 hover:text-white"><i class="fa-solid fa-xmark text-xl"></i></button>
+            </div>
+            <p id="drawer-desc" class="text-sm text-zinc-400 leading-relaxed mb-8">详细介绍加载中...</p>
+            <div class="grid grid-cols-2 gap-4">
+                <button class="py-4 bg-white text-black font-black text-xs tracking-widest flex items-center justify-center gap-2 hover:bg-emerald-400 transition-colors"><i class="fa-solid fa-phone"></i> 建立通讯</button>
+                <button class="py-4 border border-white text-white font-black text-xs tracking-widest flex items-center justify-center gap-2 hover:bg-white hover:text-black transition-colors"><i class="fa-solid fa-route"></i> 导航路线</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="page-user" class="page-node bg-white text-black min-h-screen relative pb-32">
+        <div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: radial-gradient(#000 1px, transparent 0); background-size: 32px 32px;"></div>
+        <input type="file" id="avatar-input" class="hidden" accept="image/*" onchange="handleAvatarPreview(this)">
+        
+        <div class="relative z-10 w-full max-w-7xl mx-auto px-8 lg:px-12 pt-16">
+            <div class="border-b-[4px] border-black pb-12 mb-12 flex flex-col md:flex-row items-end justify-between gap-8">
+                <div class="flex flex-col md:flex-row items-start md:items-end gap-8 w-full md:w-auto">
+                    <div class="relative group cursor-pointer w-32 h-32 md:w-40 md:h-40 shrink-0" onclick="document.getElementById('avatar-input').click()">
+                        <div id="user-avatar-main" class="w-full h-full rounded-2xl border-[4px] border-black p-1 bg-white overflow-hidden transition-transform group-hover:scale-105 shadow-[8px_8px_0px_rgba(0,0,0,1)]"></div>
+                        <div class="absolute inset-0 bg-white/60 backdrop-blur-sm rounded-2xl flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                            <i class="fa-solid fa-camera text-black text-3xl"></i>
+                        </div>
+                        <div class="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-black text-white px-6 py-2 text-xs font-black uppercase tracking-widest border-2 border-black shadow-[4px_4px_0px_rgba(0,0,0,0.5)] whitespace-nowrap">更换全局头像</div>
+                    </div>
+                    
+                    <div class="pb-2">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="w-3 h-3 bg-emerald-500 rounded-full animate-pulse shadow-[0_0_10px_#10b981]"></span>
+                            <span class="mono text-xs font-bold text-emerald-600 tracking-[0.4em] uppercase">Operator Terminal</span>
+                        </div>
+                        <h2 class="text-6xl md:text-8xl font-black tracking-tighter uppercase italic leading-[0.85]">权限核验 <span class="text-zinc-300">/ 09</span></h2>
+                    </div>
+                </div>
+                
+                <div class="flex flex-col gap-4 w-full md:w-auto">
+                    <button onclick="saveUserProfile()" class="w-full px-8 py-5 bg-black text-white font-black text-sm tracking-[0.3em] hover:bg-emerald-500 hover:text-black transition-all uppercase flex justify-center items-center gap-3 shadow-[8px_8px_0px_rgba(0,0,0,0.3)] hover:shadow-[8px_8px_0px_rgba(0,0,0,1)] border-2 border-black">
+                        <i class="fa-solid fa-arrows-rotate"></i> 封存档案配置
+                    </button>
+                    <button onclick="handleLogout()" class="w-full px-8 py-4 bg-white text-rose-600 font-black text-xs tracking-widest hover:bg-rose-600 hover:text-white transition-all uppercase flex justify-center items-center gap-2 border-2 border-black shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[4px] hover:translate-y-[4px]">
+                        <i class="fa-solid fa-power-off"></i> 切断系统连接
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">
+                <div class="lg:col-span-5 flex flex-col h-full">
+                    <div class="space-y-4 shrink-0 mb-8">
+                        <p class="mono text-[11px] font-bold text-zinc-500 tracking-widest uppercase flex items-center gap-2"><i class="fa-solid fa-fingerprint text-emerald-500"></i> Operator ID</p>
+                        <input type="text" id="input-username" class="w-full bg-white border-[3px] border-black p-5 font-black text-2xl text-black focus:outline-none focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/30 transition-all mono placeholder-zinc-300 shadow-[8px_8px_0px_rgba(0,0,0,1)]" placeholder="设置终端 ID...">
+                    </div>
+                    <div class="space-y-4 flex flex-col flex-grow">
+                        <p class="mono text-[11px] font-bold text-zinc-500 tracking-widest uppercase flex items-center gap-2 shrink-0"><i class="fa-solid fa-quote-left text-emerald-500"></i> Biography</p>
+                        <textarea id="input-signature" class="w-full bg-white border-[3px] border-black p-5 text-base font-bold text-zinc-800 focus:outline-none focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/30 transition-all leading-relaxed placeholder-zinc-300 resize-none shadow-[8px_8px_0px_rgba(0,0,0,1)] flex-grow" placeholder="写下你的防坑宣言..."></textarea>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 flex flex-col h-full justify-between">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-8 flex-grow">
+                        <div onclick="showPage('archive')" class="border-[3px] border-black p-8 bg-white cursor-pointer hover:bg-emerald-400 hover:text-black transition-all group flex flex-col justify-between shadow-[8px_8px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[8px] hover:translate-y-[8px]">
+                            <div class="flex justify-between items-start">
+                                <p class="mono text-xs text-zinc-500 uppercase font-black tracking-[0.2em] group-hover:text-black transition-colors">Archived<br>归档卷宗</p>
+                                <i class="fa-solid fa-folder-open text-3xl text-zinc-300 group-hover:text-black transition-colors"></i>
+                            </div>
+                            <div class="flex justify-between items-end mt-12">
+                                <p id="stat-archived" class="text-7xl font-black italic text-black leading-none">--</p>
+                                <i class="fa-solid fa-arrow-right text-3xl text-black opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all"></i>
+                            </div>
+                        </div>
+                        <div onclick="showPage('discover'); switchTab('forum');" class="border-[3px] border-black p-8 bg-zinc-50 cursor-pointer hover:bg-emerald-400 hover:text-black transition-all group flex flex-col justify-between shadow-[8px_8px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[8px] hover:translate-y-[8px]">
+                            <div class="flex justify-between items-start">
+                                <p class="mono text-xs text-zinc-500 uppercase font-black tracking-[0.2em] group-hover:text-black transition-colors">Forum Posts<br>论坛发言</p>
+                                <i class="fa-solid fa-comments text-3xl text-zinc-300 group-hover:text-black transition-colors"></i>
+                            </div>
+                            <div class="flex justify-between items-end mt-12">
+                                <p id="stat-posts" class="text-7xl font-black italic text-emerald-600 group-hover:text-black leading-none">--</p>
+                                <i class="fa-solid fa-arrow-right text-3xl text-black opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-[3px] border-black p-8 bg-white flex justify-between items-center shadow-[8px_8px_0px_rgba(0,0,0,1)] shrink-0 mt-auto">
+                        <div>
+                            <p class="mono text-xs text-zinc-500 uppercase tracking-widest mb-3 font-bold">System Status / 引擎状态</p>
+                            <p class="text-3xl font-black text-black tracking-widest uppercase">Active & Monitoring</p>
+                        </div>
+                        <div class="w-20 h-20 rounded-full border-[3px] border-emerald-500 flex items-center justify-center bg-emerald-50 shrink-0">
+                            <i class="fa-solid fa-shield-halved text-emerald-500 text-3xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <nav id="bottom-nav" class="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-xl border-t border-black px-8 py-6 flex justify-between items-center z-[150]">
+        <button onclick="showPage('home')" class="nav-link active flex flex-col items-center gap-1"><i class="fa-solid fa-house-chimney text-sm"></i><span class="text-[9px] font-black tracking-[0.2em] mt-1 uppercase">控制台</span></button>
+        <button onclick="showPage('discover')" class="nav-link flex flex-col items-center gap-1"><i class="fa-solid fa-compass text-sm"></i><span class="text-[9px] font-black tracking-[0.2em] mt-1 uppercase">情报流</span></button>
+        <div class="absolute left-1/2 -translate-x-1/2 -top-6">
+            <div id="btn-plus" onclick="toggleConsole()" class="w-14 h-14 bg-black text-white flex items-center justify-center shadow-2xl active:scale-90 transition-transform cursor-pointer border-2 border-transparent"><i class="fa-solid fa-plus text-xl"></i></div>
+        </div>
+        <button onclick="showPage('maps')" class="nav-link flex flex-col items-center gap-1"><i class="fa-solid fa-map-marked-alt text-sm"></i><span class="text-[9px] font-black tracking-[0.2em] mt-1 uppercase">雷达网</span></button>
+        <button onclick="showPage('user')" class="nav-link flex flex-col items-center gap-1"><i class="fa-solid fa-user text-sm"></i><span class="text-[9px] font-black tracking-[0.2em] mt-1 uppercase">操作员</span></button>
+    </nav>
+
+    <script>
+        const APIData = {
+            sysInfo: { version: "v9.7" },
+            user: { 
+                idName: "CHEN_YU", 
+                signature: "法律的生命不在于逻辑，而在于经验。保持警惕，否决一切不公。", 
+                avatar: "https://ui-avatars.com/api/?name=CY&background=10b981&color=fff", 
+            },
+            discoverNews: [
+                { id: "n1", tag: "首发 / 2026", title: "实习协议中的“竞业禁止”边界在哪？", content: "<p>根据《中华人民共和国劳动合同法》第二十四条，竞业限制的人员限于用人单位的高级管理人员、高级技术人员和其他负有保密义务的人员。<b>绝大多数实习生并不属于上述范畴。</b></p><div class='p-4 bg-emerald-50 border-l-4 border-emerald-500 my-4 text-emerald-900'><b>系统提示：</b>如果未约定任何补偿，您可以直接使用 VETO 的「一键否决」功能生成法律抗辩书。</div>" }, 
+                { id: "n2", tag: "指南", title: "电子合同签署的 3 个致命盲区", content: "<p>随着线上兼职的普及，越来越多的雇主通过第三方平台发送电子合同。以下是盲区：<br><br><b>盲区一：</b>未核实电子签名效力。<br><b>盲区二：</b>未下载保留副本。<br><b>盲区三：</b>忽视附加协议的隐藏链接。</p>" },
+                { id: "n3", tag: "提醒", title: "关于校外兼职平台“保证金”骗局的专项通报", content: "<p>近期多发兼职被骗取保证金的案件，请各位同学注意防范。</p>" }
+            ],
+            discoverForum: [
+                { 
+                    id: "f1", author: "匿名校友 / 计算机系", title: "避坑：南区外卖配送站点的劳务协议极其离谱！", 
+                    content: "<p>兄弟们千万别去南区那个众包配送站兼职！我昨天去面试，他们拿出来的根本不是劳动合同，而是一份《合作经营协议》。里面明确写了：在送餐过程中发生的一切交通事故，不仅医药费要自己全包，如果弄坏了商家的餐品，还要按照原价的三倍赔偿！</p>",
+                    likes: 412, 
+                    comments: [
+                        { id: "c1", author: "法学院老油条", text: "这是典型的规避用人单位责任，截图留证，直接举报到劳动监察大队！", time: "2小时前" },
+                        { id: "c2", author: "匿名路人", text: "感谢避雷，差点就去了...", time: "1小时前" }
+                    ] 
+                }
+            ],
+            archives: [
+                { id: "V-20260315-01", title: "某互联网大厂入职实习协议", date: "2026.03.15", level: "critical", levelText: "极危" },
+                { id: "V-20260312-04", title: "大学城兼职家教劳务合同", date: "2026.03.12", level: "warning", levelText: "高危" }
+            ],
+            analysis: { 
+                status: "critical", 
+                overview: { levelText: "极危", fatalTrapsCount: 7, missingGuaranteesCount: 4 }, 
+                summary: "本合同在试用期设置、薪酬支付机制、社会保险缴纳等存在合规性风险。<strong class='text-rose-600'>系统强烈建议：拒绝签署或要求重订核心条款。</strong>", 
+                clauses: [
+                    { id: "C1", severity: "critical", title: "试用期期限未限定法定上限", originalSnippet: "合同允许约定试用期,<span class='bg-rose-200 text-rose-900 font-bold px-1'>但未明确试用期不得超过六个月。</span>", aiAnalysis: "违反《劳动法》第二十一条：“试用期最长不得超过六个月”。" },
+                    { id: "C6", severity: "critical", title: "工资支付方式未涵盖加班报酬", originalSnippet: "仅列明基本工资等形式,<span class='bg-rose-200 text-rose-900 font-bold px-1'>未约定加班情形下的工资支付标准。</span>", aiAnalysis: "涉嫌违反《劳动法》第四十四条。未明确加班工资支付标准，易逃避支付义务。" },
+                    { id: "C7", severity: "critical", title: "试用期工资标准缺失", originalSnippet: "仅留空“试用期工资计发标准为_元”,<span class='bg-rose-200 text-rose-900 font-bold px-1'>未设定最低保障。</span>", aiAnalysis: "根据《劳动合同法》第二十条，试用期工资不得低于同岗位最低档或约定工资的80%。" }
+                ] 
+            }
+        };
+
+        // ★ 路由历史系统 ★
+        let pageHistory = [];
+        let currentPageId = 'login';
+        let currentOpenPostId = null;
+
+        function switchAuthMode(mode) {
+            const modes = ['login', 'register', 'forgot'];
+            modes.forEach(m => {
+                const leftPanel = document.getElementById('auth-left-' + m);
+                const rightPanel = document.getElementById('auth-right-' + m);
+                if (leftPanel) {
+                    if (m === mode) leftPanel.classList.add('active');
+                    else leftPanel.classList.remove('active');
+                }
+                if (rightPanel) {
+                    if (m === mode) rightPanel.classList.add('active');
+                    else rightPanel.classList.remove('active');
+                }
+            });
+        }
+
+        function handleAuth(e, type) {
+            e.preventDefault(); 
+            let btnId = '';
+            if (type === 'login') btnId = 'btn-login';
+            else if (type === 'register') btnId = 'btn-register';
+            else if (type === 'forgot') btnId = 'btn-forgot';
+
+            const btn = document.getElementById(btnId);
+            const originalText = btn.innerHTML;
+            
+            btn.innerHTML = '<i class="fa-solid fa-circle-notch animate-spin"></i> 处理中...';
+            btn.classList.add('pointer-events-none');
+
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fa-solid fa-check"></i> 执行成功';
+                btn.classList.replace('bg-black', 'bg-emerald-500');
+                btn.classList.replace('text-white', 'text-black');
+
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.classList.replace('bg-emerald-500', 'bg-black');
+                    btn.classList.replace('text-black', 'text-white');
+                    btn.classList.remove('pointer-events-none');
+
+                    if(type === 'login') {
+                        pageHistory = []; // 登录成功清空历史栈
+                        showPage('home');
+                    } else if (type === 'register' || type === 'forgot') {
+                        switchAuthMode('login');
+                    }
+                }, 600);
+            }, 1200);
+        }
+        
+        function handleLogout() {
+            if(confirm("确定要切断当前终端的连接吗？")) {
+                pageHistory = []; // 登出清空历史栈
+                showPage('login');
+                switchAuthMode('login');
+            }
+        }
+
+        function renderHome() {
+            try {
+                document.getElementById('sys-version').innerText = `AI 驱动 / ${APIData.sysInfo.version}`;
+                const topNews = APIData.discoverNews.slice(0, 2);
+                document.getElementById('home-bulletins-container').innerHTML = topNews.map((n, index) => `
+                    <div class="group flex items-center justify-between py-10 border-b border-zinc-100 hover:bg-zinc-50 transition-all cursor-pointer" onclick="openDetail('news', '${n.id}')">
+                        <div class="flex items-center gap-12">
+                            <span class="text-[10px] font-black text-zinc-300">0${index + 1}</span>
+                            <h4 class="text-xl font-bold tracking-tight group-hover:underline decoration-2">${n.title}</h4>
+                        </div>
+                        <i class="fa-solid fa-arrow-right-long opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </div>`).join('');
+                document.getElementById('top-avatar-container').innerHTML = `<img src="${APIData.user.avatar}" class="w-full h-full object-cover">`;
+            } catch(e) {}
+        }
+
+        function renderDiscover() {
+            try {
+                document.getElementById('view-news').innerHTML = APIData.discoverNews.map(n => `
+                    <div class="py-10 border-b border-black/5 group cursor-pointer" onclick="openDetail('news', '${n.id}')">
+                        <span class="text-[9px] font-bold text-emerald-500 italic uppercase tracking-widest block mb-4">${n.tag}</span>
+                        <h3 class="text-2xl font-black tracking-tighter uppercase leading-tight group-hover:underline italic">${n.title}</h3>
+                    </div>`).join('');
+                
+                document.getElementById('forum-list-container').innerHTML = APIData.discoverForum.map(f => `
+                    <div class="p-6 border-[3px] border-black bg-white hover:bg-emerald-400 hover:text-black transition-all group cursor-pointer shadow-[6px_6px_0px_rgba(0,0,0,1)] hover:shadow-none hover:translate-x-[6px] hover:translate-y-[6px]" onclick="openDetail('forum', '${f.id}')">
+                        <span class="text-[10px] font-bold tracking-widest uppercase block mb-4 opacity-60"><i class="fa-solid fa-user-astronaut mr-2"></i> ${f.author}</span>
+                        <h4 class="text-xl font-black mb-6 tracking-tight">${f.title}</h4>
+                        <div class="flex gap-6 text-xs font-bold opacity-60">
+                            <span><i class="fa-regular fa-heart"></i> ${f.likes}</span>
+                            <span><i class="fa-regular fa-comment"></i> ${f.comments.length} 讨论</span>
+                        </div>
+                    </div>`).join('');
+            } catch(e) {}
+        }
+
+        function renderUser() {
+            try {
+                const u = APIData.user;
+                document.getElementById('user-avatar-main').innerHTML = `<img src="${u.avatar}" class="w-full h-full object-cover rounded-xl">`;
+                document.getElementById('input-username').value = u.idName;
+                document.getElementById('input-signature').value = u.signature || "";
+                
+                document.getElementById('stat-archived').innerText = APIData.archives.length;
+                const myPostsCount = APIData.discoverForum.filter(p => p.author.includes(u.idName)).length;
+                document.getElementById('stat-posts').innerText = myPostsCount;
+            } catch(e) {}
+        }
+
+        function renderArchive() {
+            try {
+                const colorMap = { critical: "text-rose-600", warning: "text-amber-500", safe: "text-emerald-500" };
+                document.getElementById('archive-list-container').innerHTML = APIData.archives.map(a => `
+                    <div class="border-[3px] border-black p-6 flex flex-col md:flex-row justify-between items-start md:items-center group hover:bg-emerald-400 transition-all shadow-[6px_6px_0px_rgba(0,0,0,1)] mb-6">
+                        <div>
+                            <div class="flex items-center gap-3 mb-2">
+                                <span class="mono text-[10px] bg-black text-white px-2 py-0.5">V-ID: ${a.id}</span>
+                                <span class="mono text-[10px] font-bold ${colorMap[a.level]} group-hover:text-black uppercase">[ 评级: ${a.levelText} ]</span>
+                            </div>
+                            <h4 class="text-xl font-bold tracking-tight">${a.title}</h4>
+                            <p class="mono text-[9px] text-zinc-500 mt-2 group-hover:text-black font-bold">封卷时间: ${a.date}</p>
+                        </div>
+                        <button onclick="showPage('analysis')" class="mt-4 md:mt-0 px-6 py-3 border-[3px] border-black text-[10px] font-black uppercase tracking-widest hover:bg-black hover:text-white transition-all bg-white group-hover:shadow-[4px_4px_0px_rgba(0,0,0,1)]">重新载入数据</button>
+                    </div>`).join('');
+            } catch(e) {}
+        }
+
+        function renderAnalysis() {
+            try {
+                const data = APIData.analysis;
+                if (!data || !data.overview) return;
+                const themeMap = { critical: { color: "rose-600", bg: "rose-600", text: "text-rose-600", stripe: "danger-stripes", icon: "fa-gavel" }, warning: { color: "amber-500", bg: "amber-500", text: "text-amber-600", stripe: "warning-stripes", icon: "fa-scale-balanced" }, safe: { color: "emerald-500", bg: "emerald-500", text: "text-emerald-500", stripe: "", icon: "fa-check" } };
+                const theme = themeMap[data.status] || themeMap.safe;
+                document.getElementById('nav-status').innerHTML = `<span class="mono text-[10px] ${theme.text} tracking-widest font-bold">异常响应_</span><div class="w-2 h-2 bg-${theme.color} rounded-full animate-ping"></div>`;
+                document.getElementById('analysis-header').innerHTML = `<div class="flex items-center gap-3 mb-4"><i class="fa-solid fa-triangle-exclamation ${theme.text} text-xl"></i><span class="mono text-xs font-bold ${theme.text} tracking-widest uppercase">Threat_Level: ${data.status}</span></div><h1 class="text-6xl md:text-7xl font-black tracking-tighter leading-none mb-8">卷宗<br>解构报告_</h1><div class="grid grid-cols-3 border-[3px] border-black bg-black text-white shadow-[8px_8px_0px_rgba(0,0,0,1)]"><div class="p-6 md:p-8 border-r border-zinc-800"><p class="mono text-[9px] text-zinc-400 tracking-widest mb-2">综合风险指数</p><p class="text-4xl md:text-5xl font-black italic ${theme.text}">${data.overview.levelText}</p></div><div class="p-6 md:p-8 border-r border-zinc-800"><p class="mono text-[9px] text-zinc-400 tracking-widest mb-2">检出核心陷阱</p><p class="text-4xl md:text-5xl font-black italic">${data.overview.fatalTrapsCount < 10 ? '0'+data.overview.fatalTrapsCount : data.overview.fatalTrapsCount}<span class="text-lg text-zinc-500 ml-1">处</span></p></div><div class="p-6 md:p-8"><p class="mono text-[9px] text-zinc-400 tracking-widest mb-2">缺失关键保障</p><p class="text-4xl md:text-5xl font-black italic">${data.overview.missingGuaranteesCount < 10 ? '0'+data.overview.missingGuaranteesCount : data.overview.missingGuaranteesCount}<span class="text-lg text-zinc-500 ml-1">项</span></p></div></div>`;
+                document.getElementById('analysis-summary').innerHTML = `<h3 class="mono text-[10px] font-bold tracking-[0.3em] text-zinc-500 mb-4">>> 引擎总控摘要</h3><p class="text-base font-bold leading-relaxed text-zinc-800">${data.summary}</p>`;
+                document.getElementById('analysis-clauses').innerHTML = `<h3 class="mono text-[10px] font-bold tracking-[0.3em] text-zinc-500 border-b border-black pb-4">>> 异常条款切片阵列</h3>` + data.clauses.map(clause => { const cTheme = themeMap[clause.severity] || themeMap.warning; const textColor = clause.severity === 'warning' ? 'text-black' : 'text-white'; return `<div class="border-[3px] border-black group mt-12 break-inside-avoid shadow-[6px_6px_0px_rgba(0,0,0,1)]"><div class="bg-black text-white p-4 flex justify-between items-center"><div class="flex items-center gap-4"><span class="mono text-xs font-bold bg-${cTheme.bg} ${textColor} px-2 py-1">目标标号_${clause.id}</span><h4 class="font-black tracking-widest text-sm">${clause.title}</h4></div><i class="fa-solid fa-fingerprint text-zinc-600"></i></div><div class="p-6 md:p-8 space-y-6"><div><p class="mono text-[9px] text-zinc-400 tracking-widest mb-2">:: 捕获原始协议片段 ::</p><div class="p-4 b-dashed bg-zinc-50 text-sm text-zinc-700 font-bold ${cTheme.stripe}">${clause.originalSnippet}</div></div><div class="flex gap-4 items-start"><div class="w-8 h-8 bg-black text-white flex items-center justify-center shrink-0 mt-1"><i class="fa-solid ${cTheme.icon} text-xs"></i></div><div><p class="mono text-[9px] text-zinc-400 tracking-widest mb-1">:: 引擎法条映射结论 ::</p><p class="text-sm font-bold text-black leading-relaxed">${clause.aiAnalysis}</p></div></div></div></div>`; }).join('');
+            } catch(e){}
+        }
+
+        function openDetail(type, id) {
+            let item;
+            if (type === 'news') {
+                item = APIData.discoverNews.find(n => n.id === id);
+            } else if (type === 'forum') {
+                item = APIData.discoverForum.find(f => f.id === id);
+                currentOpenPostId = id; 
+            }
+            if (!item) return;
+
+            document.getElementById('detail-title').innerText = item.title;
+            
+            if (type === 'news') {
+                document.getElementById('detail-meta').innerHTML = `<span class="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-3 py-1 uppercase tracking-widest border border-emerald-200">${item.tag}</span>`;
+                document.getElementById('detail-interaction-area').classList.add('hidden');
+            } else {
+                document.getElementById('detail-meta').innerHTML = `<span class="text-[11px] font-bold tracking-widest uppercase text-zinc-500"><i class="fa-solid fa-user-astronaut mr-2"></i>${item.author}</span>`;
+                document.getElementById('detail-interaction-area').classList.remove('hidden');
+                renderComments(item.comments);
+                document.getElementById('btn-submit-comment').onclick = () => submitComment(id);
+            }
+
+            document.getElementById('detail-content').innerHTML = item.content;
+            showPage('detail');
+        }
+
+        function renderComments(commentsArray) {
+            const container = document.getElementById('comments-list');
+            if (commentsArray.length === 0) {
+                container.innerHTML = `<p class="text-sm text-zinc-400 font-bold italic">暂无讨论，来抢首屏沙发...</p>`;
+                return;
+            }
+            container.innerHTML = commentsArray.map(c => `
+                <div class="border-[3px] border-black p-4 bg-white shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+                    <div class="flex justify-between items-start mb-2">
+                        <span class="text-xs font-black uppercase"><i class="fa-solid fa-user-astronaut text-emerald-500 mr-1"></i> ${c.author}</span>
+                        <span class="mono text-[9px] text-zinc-400">${c.time}</span>
+                    </div>
+                    <p class="text-sm font-bold text-zinc-800">${c.text}</p>
+                </div>
+            `).join('');
+        }
+
+        function openPostModal() { document.getElementById('post-modal').classList.add('active'); }
+        function closePostModal() { document.getElementById('post-modal').classList.remove('active'); }
+
+        async function submitPost() {
+            const title = document.getElementById('new-post-title').value;
+            const content = document.getElementById('new-post-content').value;
+            const btn = document.getElementById('btn-submit-post');
+            
+            if(!title.trim() || !content.trim()) return alert("标题和内容不能为空！");
+            
+            btn.innerHTML = '<i class="fa-solid fa-circle-notch animate-spin"></i> 发送中...';
+            btn.classList.add('pointer-events-none');
+
+            const newPost = {
+                id: "f" + Date.now(), author: APIData.user.idName, title: title,
+                content: `<p>${content.replace(/\n/g, '<br>')}</p>`, likes: 0, comments: []
+            };
+
+            try {
+                await new Promise(r => setTimeout(r, 800)); 
+                APIData.discoverForum.unshift(newPost);
+                renderDiscover(); renderUser(); 
+                closePostModal();
+                document.getElementById('new-post-title').value = '';
+                document.getElementById('new-post-content').value = '';
+                alert("全网广播发送成功！");
+            } catch (error) { alert("发送失败。"); } 
+            finally {
+                btn.innerHTML = '<i class="fa-solid fa-paper-plane mr-2"></i> 确认发送至全网';
+                btn.classList.remove('pointer-events-none');
+            }
+        }
+
+        async function submitComment(postId) {
+            const input = document.getElementById('new-comment-input');
+            const text = input.value;
+            const btn = document.getElementById('btn-submit-comment');
+            if(!text.trim()) return;
+
+            btn.innerText = "发送中..."; btn.classList.add('pointer-events-none');
+
+            const newComment = { id: "c" + Date.now(), author: APIData.user.idName, text: text, time: "刚刚" };
+
+            try {
+                await new Promise(r => setTimeout(r, 500));
+                const targetPost = APIData.discoverForum.find(f => f.id === postId);
+                if(targetPost) {
+                    targetPost.comments.push(newComment);
+                    renderComments(targetPost.comments); 
+                    renderDiscover(); 
+                }
+                input.value = ''; 
+            } catch (error) { alert("回复失败，请重试。"); } 
+            finally { btn.innerText = "回复"; btn.classList.remove('pointer-events-none'); }
+        }
+
+        // ★ 核心功能：路由栈系统 ★
+        function showPage(pageId, isBack = false) {
+            if (pageId === currentPageId) return;
+
+            // 如果不是通过返回键触发，且当前不是登录页，压入历史栈
+            if (!isBack && currentPageId !== 'login' && pageId !== 'login') {
+                pageHistory.push(currentPageId);
+            }
+
+            document.querySelectorAll('.page-node').forEach(p => p.classList.remove('active'));
+            document.getElementById('page-' + pageId).classList.add('active');
+            
+            currentPageId = pageId; // 更新当前活跃页
+
+            const bottomNav = document.getElementById('bottom-nav');
+            if (['upload', 'analysis', 'detail', 'archive', 'login'].includes(pageId)) {
+                bottomNav.style.display = 'none';
+            } else {
+                bottomNav.style.display = 'flex';
+                document.querySelectorAll('.nav-link').forEach(l => {
+                    l.classList.remove('active');
+                    if (l.getAttribute('onclick').includes(pageId)) l.classList.add('active');
+                });
+            }
+
+            if (pageId === 'maps') {
+                if (!window._vetoMap) { setTimeout(initAmap, 50); } 
+                else { setTimeout(() => window._vetoMap.resize(), 50); }
+            }
+
+            const isDark = ['maps'].includes(pageId); 
+            document.body.style.backgroundColor = isDark ? '#000' : '#fff';
+            document.body.style.color = isDark ? '#fff' : '#000';
+            
+            if(bottomNav.style.display !== 'none') {
+                bottomNav.className = `fixed bottom-0 left-0 right-0 ${isDark ? 'bg-black/95 border-white/10 text-white' : 'bg-white/95 border-black text-black'} border-t px-8 py-6 flex justify-between items-center z-[150] transition-colors`;
+                document.getElementById('btn-plus').className = `w-14 h-14 ${isDark ? 'bg-white text-black' : 'bg-black text-white'} flex items-center justify-center shadow-2xl active:scale-90 transition-transform cursor-pointer border-2 border-transparent`;
+            }
+            
+            if(pageId === 'archive') renderArchive(); 
+            if(pageId === 'user') renderUser(); 
+            window.scrollTo(0, 0);
+        }
+
+        // ★ 核心功能：返回上一页逻辑 ★
+        function goBack() {
+            if (pageHistory.length > 0) {
+                const prevPage = pageHistory.pop();
+                showPage(prevPage, true); // true 表示是由返回键触发
+            } else {
+                showPage('home'); // 历史记录为空的兜底跳转
+            }
+        }
+
+        function switchTab(tabType) {
+            const isNews = (tabType === 'news');
+            document.getElementById('tab-news').className = isNews ? 'text-xs font-black uppercase tracking-[0.2em] tab-active pb-2 transition-all' : 'text-xs font-black uppercase tracking-[0.2em] tab-inactive pb-2 transition-all';
+            document.getElementById('tab-forum').className = !isNews ? 'text-xs font-black uppercase tracking-[0.2em] tab-active pb-2 transition-all' : 'text-xs font-black uppercase tracking-[0.2em] tab-inactive pb-2 transition-all';
+            document.getElementById('view-news').style.display = isNews ? 'block' : 'none';
+            document.getElementById('view-forum').style.display = !isNews ? 'block' : 'none';
+        }
+
+        function toggleConsole() { document.getElementById('console-overlay').classList.toggle('active'); }
+        function executeCommand(cmd) { 
+            toggleConsole(); 
+            if(cmd === 'scan') { showPage('upload'); } 
+            else if(cmd === 'post') { showPage('discover'); switchTab('forum'); openPostModal(); }
+        }
+
+        function handleAvatarPreview(input) {
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    APIData.user.avatar = e.target.result;
+                    renderUser();
+                    alert("本地图像数据流已挂载，请点击【封存档案配置】生效。");
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        function saveUserProfile() {
+            const newID = document.getElementById('input-username').value;
+            const newSig = document.getElementById('input-signature').value;
+            if(!newID.trim()) return alert("警告：Operator ID 不能为空。");
+
+            APIData.user.idName = newID;
+            APIData.user.signature = newSig;
+            renderHome(); renderUser();
+
+            const btn = document.querySelector('button[onclick="saveUserProfile()"]');
+            const origText = btn.innerHTML;
+            btn.innerHTML = '<i class="fa-solid fa-circle-notch animate-spin"></i> 数据同步中...';
+            setTimeout(() => { 
+                btn.innerHTML = '<i class="fa-solid fa-check"></i> 同步成功'; 
+                setTimeout(() => btn.innerHTML = origText, 1500); 
+            }, 800);
+        }
+
+        let selectedFile = null; 
+        const dropZone = document.getElementById('drop-zone');
+        const realFileInput = document.getElementById('real-file-input');
+        dropZone.addEventListener('dragover', (e) => { e.preventDefault(); dropZone.classList.add('drag-active'); });
+        dropZone.addEventListener('dragleave', () => { dropZone.classList.remove('drag-active'); });
+        dropZone.addEventListener('drop', (e) => { 
+            e.preventDefault(); dropZone.classList.remove('drag-active'); 
+            if (e.dataTransfer.files && e.dataTransfer.files.length > 0) handleFileMount(e.dataTransfer.files[0]);
+        });
+        dropZone.addEventListener('click', () => { realFileInput.click(); });
+        realFileInput.addEventListener('change', (e) => {
+            if (e.target.files && e.target.files.length > 0) handleFileMount(e.target.files[0]); 
+        });
+
+        function handleFileMount(file) {
+            selectedFile = file; 
+            dropZone.querySelector('h3').innerText = `卷宗已挂载: ${file.name}`;
+            dropZone.querySelector('h3').classList.add("text-emerald-500");
+            dropZone.querySelector('p').innerHTML = `文件大小: <span class="font-bold text-black">${(file.size / 1024 / 1024).toFixed(2)} MB</span>`;
+        }
+
+        async function startScan() {
+            if (!selectedFile) return alert("系统警告：尚未检测到目标卷宗，请先挂载实体文件！");
+            const btn = document.getElementById('btn-execute');
+            btn.innerHTML = '<i class="fa-solid fa-circle-notch animate-spin mr-2"></i> 数据传输与解构中...';
+            btn.classList.add('pointer-events-none');
+            
+            try {
+                const formData = new FormData();
+                formData.append('contract_file', selectedFile); 
+                const USE_REAL_BACKEND = false; 
+                if (USE_REAL_BACKEND) {
+                    const response = await fetch('http://127.0.0.1:8000/api/analyze-contract', { method: 'POST', body: formData });
+                    if (!response.ok) throw new Error('网络响应异常');
+                    const result = await response.json();
+                    APIData.analysis = result.data; 
+                } else { await new Promise(resolve => setTimeout(resolve, 2000)); }
+                renderAnalysis(); showPage('analysis'); 
+            } catch (error) {
+                alert("系统异常：未能连接到风控引擎核心，请检查网络或后端服务是否开启。");
+            } finally {
+                btn.innerHTML = '<span class="relative z-10">执行解构_</span>';
+                btn.classList.remove('pointer-events-none');
+                selectedFile = null; realFileInput.value = ''; 
+                dropZone.querySelector('h3').innerText = "拖拽卷宗至此";
+                dropZone.querySelector('h3').classList.remove("text-emerald-500");
+                dropZone.querySelector('p').innerHTML = `或 <span class="text-black underline underline-offset-4 hover:text-emerald-500">点击浏览本地终端</span>`;
+            }
+        }
+
+        // PDF 导出
+        function exportReport() {
+            const btn = document.getElementById('btn-export');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fa-solid fa-circle-notch animate-spin text-xl"></i><span class="font-black tracking-[0.2em] text-base md:text-lg">引擎封卷中...</span>';
+            btn.classList.add('pointer-events-none');
+            
+            const elementToExport = document.getElementById('pdf-export-area');
+            window.scrollTo(0, 0); // 解决截图截断问题
+
+            const opt = { 
+                margin: [15, 10, 15, 10], 
+                filename: 'VETO_卷宗解构报告.pdf', 
+                image: { type: 'jpeg', quality: 0.98 }, 
+                html2canvas: { scale: 2, useCORS: true, letterRendering: true, scrollY: 0, windowWidth: document.documentElement.offsetWidth }, 
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+            };
+
+            html2pdf().set(opt).from(elementToExport).save().then(() => {
+                btn.innerHTML = originalText; btn.classList.remove('pointer-events-none');
+            }).catch(err => {
+                alert("系统异常：风控卷宗导出失败。");
+                btn.innerHTML = originalText; btn.classList.remove('pointer-events-none');
+            });
+        }
+
+        // 高德地图
+        function toggleDrawer(name, dist, desc) { document.getElementById('drawer-name').innerText = name; document.getElementById('drawer-dist').innerText = dist; document.getElementById('drawer-desc').innerText = desc; document.getElementById('drawer').classList.add('active'); }
+        function closeDrawer() { document.getElementById('drawer').classList.remove('active'); }
+
+        async function initAmap() {
+            if (typeof AMap === 'undefined') return;
+            if (window._vetoMap) return; 
+
+            const map = new AMap.Map('amap-container', { zoom: 4, center: [104.0, 35.0] });
+            window._vetoMap = map;
+
+            AMap.plugin('AMap.Geolocation', function() {
+                const geolocation = new AMap.Geolocation({
+                    enableHighAccuracy: true, timeout: 10000, offset: [20, 40], zoomToAccuracy: true, position: 'LB',
+                    markerOptions: { content: '<div style="width:20px;height:20px;border-radius:50%;background:rgba(59,130,246,0.3);display:flex;align-items:center;justify-content:center;"><div style="width:10px;height:10px;border-radius:50%;background:#3B82F6;border:2px solid #FFF;box-shadow:0 0 10px #3B82F6;"></div></div>' }
+                });
+                map.addControl(geolocation);
+                window._vetoGeo = geolocation; 
+                geolocation.getCurrentPosition(function(status, result){
+                    if(status === 'complete') loadLawyersByCenter([result.position.lng, result.position.lat]);
+                }); 
+            });
+
+            let markers = []; let loading = false;
+            async function loadLawyersByCenter(centerLngLat) {
+                if (loading) return; loading = true;
+                if (markers.length > 0) { map.remove(markers); markers = []; }
+                try {
+                    let itemsToRender = [];
+                    const USE_REAL_MAP_BACKEND = false; 
+
+                    if (USE_REAL_MAP_BACKEND) {
+                        const resp = await fetch('http://127.0.0.1:8000/api/lawyer/search-by-location', {
+                            method: 'POST', headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ longitude: centerLngLat[0], latitude: centerLngLat[1], radius: 5000, keyword: '律师事务所' }),
+                        });
+                        const data = await resp.json();
+                        if (data.success && Array.isArray(data.items)) { itemsToRender = data.items; }
+                    } else {
+                        const lng = centerLngLat[0]; const lat = centerLngLat[1];
+                        itemsToRender = [
+                            { name: "诚正律师事务所", longitude: lng + 0.01, latitude: lat + 0.01, distance: 1200, address: "高新区科技路12号", tel: "028-88888888" },
+                            { name: "大学城法律援助中心", longitude: lng - 0.015, latitude: lat - 0.005, distance: 500, address: "大学城南路1号", tel: "028-66666666" }
+                        ];
+                    }
+
+                    itemsToRender.forEach((item) => {
+                        const marker = new AMap.Marker({ position: [item.longitude, item.latitude], title: item.name });
+                        marker.setMap(map);
+                        marker.on('click', () => toggleDrawer(item.name, item.distance != null ? `距离约 ${item.distance} 米` : '距离未知', item.tel ? `${item.address}｜电话：${item.tel}` : item.address || '暂无详细地址'));
+                        markers.push(marker);
+                    });
+                } catch (e) {} finally { loading = false; }
+            }
+            window._vetoLoadLawyersByCenter = loadLawyersByCenter;
+            loadLawyersByCenter([104.0, 35.0]);
+            map.on('moveend', () => { const center = map.getCenter(); loadLawyersByCenter([center.getLng(), center.getLat()]); });
+        }
+        function recenterToCurrentLocation() { if (window._vetoGeo) window._vetoGeo.getCurrentPosition(); }
+
+        window.addEventListener('load', () => {
+            showPage('login');
+            switchAuthMode('login');
+            try { renderHome(); } catch(e){}
+            try { renderDiscover(); } catch(e){}
+            try { renderUser(); } catch(e){}
+        });
+    </script>
+</body>
+</html>

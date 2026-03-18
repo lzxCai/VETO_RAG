@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <title>VETO | 发现</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #000000; -webkit-font-smoothing: antialiased; }
+
+        /* 选项卡切换效果 */
+        .tab-active { border-bottom: 4px solid #000; opacity: 1; }
+        .tab-inactive { opacity: 0.3; }
+
+        /* 隐藏滚动条 */
+        ::-webkit-scrollbar { display: none; }
+
+        /* 帖子卡片悬停 */
+        .post-hover:hover { background-color: #f9f9f9; }
+    </style>
+</head>
+<body class="pb-32">
+
+    <header class="px-8 pt-12 pb-6 border-b border-black sticky top-0 bg-white z-50">
+        <div class="flex justify-between items-end mb-8">
+            <h2 class="text-5xl font-black tracking-tighter uppercase leading-none">发现</h2>
+            <div class="w-10 h-10 bg-black flex items-center justify-center text-white">
+                <i class="fa-solid fa-magnifying-glass text-xs"></i>
+            </div>
+        </div>
+
+        <div class="flex gap-10">
+            <button onclick="switchTab('news')" id="tab-news" class="text-xs font-black uppercase tracking-[0.2em] pb-2 tab-active transition-all">
+                通告 / 资讯
+            </button>
+            <button onclick="switchTab('forum')" id="tab-forum" class="text-xs font-black uppercase tracking-[0.2em] pb-2 tab-inactive transition-all">
+                论坛 / 社区
+            </button>
+        </div>
+    </header>
+
+    <main class="px-8 mt-4">
+        
+        <div id="section-news" class="space-y-0">
+            <div class="group py-10 border-b border-black/5 cursor-pointer">
+                <div class="flex justify-between items-start mb-4">
+                    <span class="text-[10px] font-bold text-emerald-500 tracking-widest uppercase italic">New / 2026</span>
+                    <span class="text-[10px] font-bold text-zinc-300">03.17</span>
+                </div>
+                <h3 class="text-2xl font-bold tracking-tight group-hover:underline decoration-2 mb-2 uppercase leading-tight">
+                    关于暑期兼职“试岗期不发薪”的法律定性分析
+                </h3>
+                <p class="text-sm text-zinc-500 font-light line-clamp-2">根据最新司法解释，试岗期产生的劳动成果受法律保护，用人单位拒绝支付报酬属于违法行为...</p>
+            </div>
+
+            <div class="group py-10 border-b border-black/5 cursor-pointer">
+                <div class="flex justify-between items-start mb-4">
+                    <span class="text-[10px] font-bold text-zinc-400 tracking-widest uppercase italic">指南</span>
+                    <span class="text-[10px] font-bold text-zinc-300">03.15</span>
+                </div>
+                <h3 class="text-2xl font-bold tracking-tight group-hover:underline decoration-2 mb-2 uppercase leading-tight">
+                    五分钟看懂：电子劳动合同的法律效力与签署风险
+                </h3>
+                <p class="text-sm text-zinc-500 font-light line-clamp-2">电子签名法为远程签署提供了依据，但如何确认签署主体身份仍是学生维权中的难点...</p>
+            </div>
+        </div>
+
+        <div id="section-forum" class="hidden space-y-4 pt-6">
+            <div class="p-6 border border-black hover:bg-black hover:text-white transition-all group cursor-pointer">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-6 h-6 bg-zinc-100 group-hover:bg-zinc-800 rounded-full flex items-center justify-center text-[8px] font-black text-black group-hover:text-white">A1</div>
+                    <span class="text-[10px] font-bold tracking-widest uppercase">匿名校友 / 计算机系</span>
+                </div>
+                <h4 class="text-lg font-bold mb-3 tracking-tight">避坑：南区外卖配送站点的劳务协议极其离谱！</h4>
+                <div class="flex gap-4 text-[10px] font-bold uppercase opacity-40 group-hover:opacity-80">
+                    <span><i class="fa-regular fa-heart"></i> 412</span>
+                    <span><i class="fa-regular fa-comment"></i> 85</span>
+                </div>
+            </div>
+
+            <div class="p-6 border border-black hover:bg-black hover:text-white transition-all group cursor-pointer">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-6 h-6 bg-zinc-100 group-hover:bg-zinc-800 rounded-full flex items-center justify-center text-[8px] font-black text-black group-hover:text-white">A2</div>
+                    <span class="text-[10px] font-bold tracking-widest uppercase">陈同学 / 法学院</span>
+                </div>
+                <h4 class="text-lg font-bold mb-3 tracking-tight">我想成立一个兼职维权互助群，有感兴趣的同学吗？</h4>
+                <div class="flex gap-4 text-[10px] font-bold uppercase opacity-40 group-hover:opacity-80">
+                    <span><i class="fa-regular fa-heart"></i> 1.2k</span>
+                    <span><i class="fa-regular fa-comment"></i> 256</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-black px-10 py-6 flex justify-between items-center z-[100]">
+        <button onclick="location.href='index.html'" class="flex flex-col items-center gap-1 opacity-25">
+            <i class="fa-solid fa-house text-sm"></i>
+            <span class="text-[8px] font-black uppercase tracking-[0.2em]">首页</span>
+        </button>
+        <button class="flex flex-col items-center gap-1">
+            <i class="fa-solid fa-compass text-sm"></i>
+            <span class="text-[8px] font-black uppercase tracking-[0.2em]">发现</span>
+        </button>
+        <div class="absolute left-1/2 -translate-x-1/2 -top-6">
+            <div class="w-14 h-14 bg-black text-white flex items-center justify-center shadow-2xl active:scale-90 transition-transform cursor-pointer">
+                <i class="fa-solid fa-plus text-xl"></i>
+            </div>
+        </div>
+        <button class="flex flex-col items-center gap-1 opacity-25">
+            <i class="fa-solid fa-map-marked-alt text-sm"></i>
+            <span class="text-[8px] font-black uppercase tracking-[0.2em]">地图</span>
+        </button>
+        <button class="flex flex-col items-center gap-1 opacity-25">
+            <i class="fa-solid fa-user text-sm"></i>
+            <span class="text-[8px] font-black uppercase tracking-[0.2em]">我的</span>
+        </button>
+    </nav>
+
+    <script>
+        function switchTab(type) {
+            const newsTab = document.getElementById('tab-news');
+            const forumTab = document.getElementById('tab-forum');
+            const newsSection = document.getElementById('section-news');
+            const forumSection = document.getElementById('section-forum');
+
+            if (type === 'news') {
+                newsTab.className = 'text-xs font-black uppercase tracking-[0.2em] pb-2 tab-active transition-all';
+                forumTab.className = 'text-xs font-black uppercase tracking-[0.2em] pb-2 tab-inactive transition-all';
+                newsSection.classList.remove('hidden');
+                forumSection.classList.add('hidden');
+            } else {
+                forumTab.className = 'text-xs font-black uppercase tracking-[0.2em] pb-2 tab-active transition-all';
+                newsTab.className = 'text-xs font-black uppercase tracking-[0.2em] pb-2 tab-inactive transition-all';
+                newsSection.classList.add('hidden');
+                forumSection.classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+﻿.env
+.env.*
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Output artifacts
+MDoutput/
+PDFoutput/
+output/
+data/output/
+
+# Local tools
+tools/
+
+# Logs
+*.log
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+
+# OS files
+.DS_Store
