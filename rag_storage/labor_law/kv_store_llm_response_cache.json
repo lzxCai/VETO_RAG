@@ -2510,5 +2510,265 @@
     "create_time": 1773710947,
     "update_time": 1773710947,
     "_id": "hybrid:query:da5b40abc725b4642962425b69a364f5"
+  },
+  "hybrid:keywords:9040e545f16fccde721d6c8528c593aa": {
+    "return": "{\"high_level_keywords\": [\"Trial period risk\", \"Employment contract\", \"Contract duration\", \"Labor law compliance\"], \"low_level_keywords\": [\"Trial period\", \"Employment contract term\", \"Six months maximum\", \"Fixed-term contract\", \"Indefinite-term contract\", \"Task-based contract\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：试用期风险\n重点主题：试用期 劳动合同 期限 试用期 最长不得超过六个月 劳动合同可以约定试用期\n条款内容：一、劳动合同期限\n甲乙双方自用工之日起建立劳动关系，双\n第一条 甲乙双方自用工之日起建立劳动关系，双方约定按下列第____种方式确定劳动合同期限：\n1. 固定期限：自_____年____月____日起至____年____月____日止，其中，试用期从用工之日起至_____年____月____日止。\n2. 无固定期限：自_____年____月____日起至依法解除、终止劳动合同时止，其中，试用期从用工之日起至_____年____月____日止。\n3. 以完成一定工作任务为期限：自_____年____月____日起至工作任务完成时止。甲方应当以书面形式通知乙方工作任务完成。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773818374,
+    "update_time": 1773818374,
+    "_id": "hybrid:keywords:9040e545f16fccde721d6c8528c593aa"
+  },
+  "hybrid:keywords:c56e09de7b8bec1ab982f59d402bae91": {
+    "return": "{\"high_level_keywords\": [\"Compensation payment risk\", \"Labor remuneration\", \"Wage payment\", \"Overtime pay\"], \"low_level_keywords\": [\"Monthly wage\", \"Piece-rate wage\", \"Basic wage\", \"Performance-based wage\", \"Labor quota\", \"Monetary payment\", \"Article Four\", \"Article Six\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：薪酬支付风险\n重点主题：工资 劳动报酬 支付 劳动报酬 工资支付 加班工资\n条款内容：四、劳动报酬\n甲方采用以下第___种方式向乙方以货\n第六条 甲方采用以下第___种方式向乙方以货币形式支付工资，于每月___日前足额支付：\n1.月工资________元。\n2.计件工资。计件单价为______________________________，\n甲方应合理制定劳动定额，保证乙方在提供正常劳动情况下，获得合理的劳动报酬。\n3. 基本工资和绩效工资相结合的工资分配办法，乙方月基本工资________元，绩效工资计发办法为__________________________________。\n4. 双方约定的其他方式__________________________________。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773818380,
+    "update_time": 1773818380,
+    "_id": "hybrid:keywords:c56e09de7b8bec1ab982f59d402bae91"
+  },
+  "hybrid:keywords:2558a1dd4512034ea261f9823e9038b1": {
+    "return": "{\"high_level_keywords\": [\"Trial period risk\", \"Employment contract\", \"Labor remuneration\", \"Trial period duration\"], \"low_level_keywords\": [\"Trial period\", \"Employment contract\", \"Six months\", \"Labor remuneration clause\", \"Salary calculation standard\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：试用期风险\n重点主题：试用期 劳动合同 期限 试用期 最长不得超过六个月 劳动合同可以约定试用期\n条款内容：四、劳动报酬\n乙方在试用期期间的工资计发标准为__\n第七条 乙方在试用期期间的工资计发标准为____________________或________元。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773818386,
+    "update_time": 1773818386,
+    "_id": "hybrid:keywords:2558a1dd4512034ea261f9823e9038b1"
+  },
+  "hybrid:keywords:2e4290873ac5ad8226d9409d465aa23c": {
+    "return": "{\"high_level_keywords\": [\"Compensation payment risk\", \"Labor remuneration\", \"Wage payment\"], \"low_level_keywords\": [\"Overtime pay\", \"Personal income tax withholding\", \"Salary adjustment\", \"Article 8\", \"Section IV: Labor Remuneration\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：薪酬支付风险\n重点主题：工资 劳动报酬 支付 劳动报酬 工资支付 加班工资\n条款内容：四、劳动报酬\n甲方应合理调整乙方的工资待遇。乙方从\n第八条 甲方应合理调整乙方的工资待遇。乙方从甲方获得的工资依法承担的个人所得税由甲方从其工资中代扣代缴。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773818391,
+    "update_time": 1773818391,
+    "_id": "hybrid:keywords:2e4290873ac5ad8226d9409d465aa23c"
+  },
+  "hybrid:keywords:9334e89c88aab533f04520154816427d": {
+    "return": "{\"high_level_keywords\": [\"Social insurance risk\", \"Social insurance contributions\", \"Employer-employee social insurance obligations\"], \"low_level_keywords\": [\"Social insurance fund\", \"Housing provident fund\", \"Social insurance premium payment\", \"Legal participation in social insurance\", \"Social insurance procedures\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：社保公积金风险\n重点主题：社会保险 保险费 缴纳 社会保险 缴纳社会保险费 依法参加社会保险\n条款内容：五、社会保险和福利待遇\n甲乙双方依法参加社会保险，甲方为乙方\n第九条 甲乙双方依法参加社会保险，甲方为乙方办理有关社会保险手续，并承担相应社会保险义务，乙方应当缴纳的社会保险费由甲方从乙方的工资中代扣代缴。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773818397,
+    "update_time": 1773818397,
+    "_id": "hybrid:keywords:9334e89c88aab533f04520154816427d"
+  },
+  "hybrid:keywords:6a0a91112c483e91ae482cdef52c1114": {
+    "return": "{\"high_level_keywords\": [\"Competitive restriction risk\", \"Trade secret protection\", \"Confidentiality obligations\", \"Intellectual property confidentiality\"], \"low_level_keywords\": [\"Non-compete clause\", \"Trade secrets\", \"Confidentiality agreement\", \"Non-compete agreement\", \"Article 19\", \"Article 8\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：竞业限制风险\n重点主题：商业秘密 竞业限制 保密 商业秘密 竞业限制 保密\n条款内容：八、双方约定事项\n乙方工作涉及甲方商业秘密和与知识产权\n第十九条 乙方工作涉及甲方商业秘密和与知识产权相关的保密事项的，甲方可以与乙方依法协商约定保守商业秘密或竞业限制的事项，并签订保守商业秘密协议或竞业限制协议。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773818403,
+    "update_time": 1773818403,
+    "_id": "hybrid:keywords:6a0a91112c483e91ae482cdef52c1114"
+  },
+  "hybrid:keywords:09a958c440a0233dca9f9975d3876ed9": {
+    "return": "{\"high_level_keywords\": [\"Training service period risk\", \"Professional training agreement\", \"Employment contract terms\"], \"low_level_keywords\": [\"Training service period\", \"Specialized training\", \"Vocational training\", \"Article 20\", \"Employer-funded training\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：培训服务期风险\n重点主题：培训 服务期 协议 专项培训 服务期 职业培训\n条款内容：八、双方约定事项\n甲方出资对乙方进行专业技术培训，要求\n第二十条 甲方出资对乙方进行专业技术培训，要求与乙方约定服务期的，应当征得乙方同意，并签订协议，明确双方权利义务。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773818409,
+    "update_time": 1773818409,
+    "_id": "hybrid:keywords:09a958c440a0233dca9f9975d3876ed9"
+  },
+  "hybrid:keywords:a86b4264427a47f85668f5b6fe584ebd": {
+    "return": "{\"high_level_keywords\": [\"Training service period risk\", \"Legal liability\", \"Employment contract terms\"], \"low_level_keywords\": [\"Professional technical training\", \"Service period agreement\", \"Party A\", \"Party B\", \"Article 20\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：培训服务期风险\n法律主题：培训 服务期 职业培训\n条款内容：八、双方约定事项\n甲方出资对乙方进行专业技术培训，要求\n第二十条 甲方出资对乙方进行专业技术培训，要求与乙方约定服务期的，应当征得乙方同意，并签订协议，明确双方权利义务。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773818414,
+    "update_time": 1773818414,
+    "_id": "hybrid:keywords:a86b4264427a47f85668f5b6fe584ebd"
+  },
+  "hybrid:keywords:55e810bc6c0beb084e774cb98224ce26": {
+    "return": "{\"high_level_keywords\": [\"Trial period risk\", \"Employment contract\", \"Contract duration\", \"Labor law compliance\"], \"low_level_keywords\": [\"Trial period\", \"Employment contract term\", \"Six months maximum\", \"Fixed-term contract\", \"Indefinite-term contract\", \"Task-based contract\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：试用期风险\n重点主题：试用期 劳动合同 期限 试用期 最长不得超过六个月 劳动合同可以约定试用期\n条款内容：一、劳动合同期限\n甲乙双方自用工之日起建立劳动关系，双\n第一条 甲乙双方自用工之日起建立劳动关系，双方约定按下列第____种方式确定劳动合同期限：\n1. 固定期限：自_____年____月____日起至_____年____月____日止，其中，试用期从用工之日起至_____年____月____日止。\n2. 无固定期限：自_____年____月____日起至依法解除、终止劳动合同时止，其中，试用期从用工之日起至_____年____月____日止。\n3. 以完成一定工作任务为期限：自_____年____月____日起至工作任务完成时止。甲方应当以书面形式通知乙方工作任务完成。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773818767,
+    "update_time": 1773818767,
+    "_id": "hybrid:keywords:55e810bc6c0beb084e774cb98224ce26"
+  },
+  "hybrid:keywords:78a9752497dd073bcd1d1d145c94136f": {
+    "return": "{\"high_level_keywords\": [\"Compensation payment risk\", \"Labor remuneration\", \"Wage payment\", \"Overtime pay\", \"Labor contract terms\"], \"low_level_keywords\": [\"Salary\", \"Labor remuneration\", \"Payment\", \"Wage payment\", \"Overtime wage\", \"Article Four\", \"Article Six\", \"Monetary form\", \"Monthly payment\", \"Piece-rate wage\", \"Basic wage\", \"Performance wage\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：薪酬支付风险\n重点主题：工资 劳动报酬 支付 劳动报酬 工资支付 加班工资\n条款内容：四、劳动报酬\n甲方采用以下第___种方式向乙方以货\n第六条 甲方采用以下第___种方式向乙方以货币形式支付工资，于每月___日前足额支付：\n1.月工资________元。\n2.计件工资。计件单价为________________________________，\n甲方应合理制定劳动定额，保证乙方在提供正常劳动情况下，获得合理的劳动报酬。\n3. 基本工资和绩效工资相结合的工资分配办法，乙方月基本工资______元，绩效工资计发办法为________________________。\n4. 双方约定的其他方式__________________________________。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773818774,
+    "update_time": 1773818774,
+    "_id": "hybrid:keywords:78a9752497dd073bcd1d1d145c94136f"
+  },
+  "hybrid:keywords:7ccdba10bb0b697c35845e6b2a8e1ea2": {
+    "return": "{\"high_level_keywords\": [\"Trial period risk\", \"Employment contract\", \"Labor remuneration\", \"Trial period duration\"], \"low_level_keywords\": [\"Trial period\", \"Employment contract\", \"Six months\", \"Labor remuneration clause\", \"Salary calculation standard\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：试用期风险\n重点主题：试用期 劳动合同 期限 试用期 最长不得超过六个月 劳动合同可以约定试用期\n条款内容：四、劳动报酬\n乙方在试用期期间的工资计发标准为__\n第七条 乙方在试用期期间的工资计发标准为____________________或______元。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773818780,
+    "update_time": 1773818780,
+    "_id": "hybrid:keywords:7ccdba10bb0b697c35845e6b2a8e1ea2"
+  },
+  "hybrid:keywords:4b57dc4967195f988d3b86c9ec63021d": {
+    "return": "{\"high_level_keywords\": [\"Trial period risk\", \"Employment contract\", \"Contract duration\", \"Labor law compliance\"], \"low_level_keywords\": [\"Trial period\", \"Employment contract\", \"Six months maximum\", \"Fixed-term contract\", \"Indefinite-term contract\", \"Task-based contract\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：试用期风险\n重点主题：试用期 劳动合同 期限 试用期 最长不得超过六个月 劳动合同可以约定试用期\n条款内容：一、劳动合同期限\n甲乙双方自用工之日起建立劳动关系，双\n第一条 甲乙双方自用工之日起建立劳动关系，双方约定按下列第____种方式确定劳动合同期限：\n1. 固定期限：自_____年___月___日起至____年___月___日止，其中，试用期从用工之日起至_____年___月___日止。\n2. 无固定期限：自_____年___月___日起至依法解除、终止劳动合同时止，其中，试用期从用工之日起至_____年___月___日止。\n3. 以完成一定工作任务为期限：自_____年___月___日起至工作任务完成时止。甲方应当以书面形式通知乙方工作任务完成。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773821469,
+    "update_time": 1773821469,
+    "_id": "hybrid:keywords:4b57dc4967195f988d3b86c9ec63021d"
+  },
+  "hybrid:keywords:27d581717e60dafefd4daf79fda85277": {
+    "return": "{\"high_level_keywords\": [\"Compensation payment risk\", \"Labor remuneration\", \"Wage payment\"], \"low_level_keywords\": [\"Overtime pay\", \"Monthly wage\", \"Piece-rate wage\", \"Basic wage\", \"Performance-based wage\", \"Labor contract clause\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：薪酬支付风险\n重点主题：工资 劳动报酬 支付 劳动报酬 工资支付 加班工资\n条款内容：四、劳动报酬\n甲方采用以下第___种方式向乙方以货\n第六条 甲方采用以下第___种方式向乙方以货币形式支付工资，于每月___日前足额支付：\n1.月工资__________元。\n2.计件工资。计件单价为______________________________，\n甲方应合理制定劳动定额，保证乙方在提供正常劳动情况下，获得合理的劳动报酬。\n3. 基本工资和绩效工资相结合的工资分配办法，乙方月基本工资________元，绩效工资计发办法为__________________________________。\n4. 双方约定的其他方式__________________________________。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773821474,
+    "update_time": 1773821474,
+    "_id": "hybrid:keywords:27d581717e60dafefd4daf79fda85277"
   }
 }
