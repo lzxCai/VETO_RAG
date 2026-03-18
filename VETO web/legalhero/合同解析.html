@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <title>VETO | 动态卷宗解构报告</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;700;900&display=swap');
+        
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #000000; -webkit-font-smoothing: antialiased; }
+        .mono { font-family: 'Fira Code', monospace; }
+
+        .b-fine { border: 1px solid #000; }
+        .b-dashed { border: 1px dashed #000; }
+        
+        /* 风险条纹背景 */
+        .danger-stripes {
+            background-image: repeating-linear-gradient(
+                -45deg, transparent, transparent 10px,
+                rgba(225, 29, 72, 0.1) 10px, rgba(225, 29, 72, 0.1) 20px
+            );
+        }
+        .warning-stripes {
+            background-image: repeating-linear-gradient(
+                -45deg, transparent, transparent 10px,
+                rgba(245, 158, 11, 0.1) 10px, rgba(245, 158, 11, 0.1) 20px
+            );
+        }
+
+        ::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="pb-32">
+
+    <nav class="h-20 px-8 flex justify-between items-center border-b border-black sticky top-0 bg-white z-50">
+        <div class="flex items-center gap-2 cursor-pointer hover:opacity-50 transition-opacity" onclick="history.back()">
+            <i class="fa-solid fa-arrow-left text-xl"></i>
+            <span class="font-black text-sm tracking-[0.2em] ml-2 mt-0.5">返回中枢</span>
+        </div>
+        <div class="flex items-center gap-2" id="nav-status">
+            <span class="mono text-[10px] text-zinc-500 tracking-widest font-bold">Data_Fetching...</span>
+        </div>
+    </nav>
+
+    <main class="px-8 mt-12 max-w-5xl mx-auto">
+        
+        <header class="mb-16" id="header-container">
+            </header>
+
+        <section class="mb-16 p-8 border border-black bg-zinc-50" id="summary-container">
+            </section>
+
+        <section class="space-y-12" id="clauses-container">
+            </section>
+
+    </main>
+
+    <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-black p-6 md:py-8 z-[100] shadow-[0_-20px_50px_rgba(0,0,0,0.1)] flex items-center justify-center">
+        <button onclick="exportReport()" class="w-full max-w-2xl h-14 md:h-16 bg-black text-white flex items-center justify-center gap-4 hover:bg-emerald-500 hover:text-black transition-all shadow-xl group">
+            <i class="fa-solid fa-file-arrow-down text-xl group-hover:-translate-y-1 transition-transform"></i>
+            <span class="font-black tracking-[0.2em] text-base md:text-lg">导出完整风控卷宗</span>
+        </button>
+    </div>
+
+    <script>
+        // 【第一部分】模拟后端返回的 JSON 数据结构
+        // 以后后端同学只需要按照这个格式返回 API 数据即可
+        const mockBackendData = {
+            status: "critical", // 可选值: "critical" (极危, 红色), "warning" (高危, 黄色), "safe" (安全, 绿色)
+            overview: {
+                levelText: "极危",
+                fatalTrapsCount: 3,
+                missingGuaranteesCount: 2
+            },
+            summary: "这是一份名义上的<span class='border-b-2 border-black'>《兼职劳务协议》</span>，但其本质规避了用人单位应承担的劳动法义务。协议中存在高额违约金陷阱，并试图剥夺您的随时解除权。<strong class='text-rose-600'>系统强烈建议：拒绝签署。</strong>",
+            clauses: [
+                {
+                    id: "01",
+                    severity: "critical", // "critical" 会渲染成红色, "warning" 渲染成黄色
+                    title: "克扣工资与霸王违约金",
+                    originalSnippet: "“乙方若未满三个月单方面提出离职，<span class='bg-rose-200 text-rose-900 font-bold px-1'>甲方有权扣除当月全部工资作为违约金</span>，并要求乙方赔偿平台培训费 2000 元。”",
+                    aiAnalysis: "严重违反《劳动合同法》第25条。除专项培训和竞业限制外，<span class='text-rose-600 underline decoration-2 underline-offset-4'>用人单位不得与劳动者约定由劳动者承担违约金</span>。兼职试岗期的常规培训费用不能转嫁给学生。"
+                },
+                {
+                    id: "02",
+                    severity: "warning",
+                    title: "工伤责任完全免除",
+                    originalSnippet: "“乙方在工作期间发生的<span class='bg-amber-200 text-amber-900 font-bold px-1'>一切人身意外伤害及财产损失，均由乙方自行承担</span>，甲方不负任何法律责任。”",
+                    aiAnalysis: "典型无效免责条款。根据《民法典》及相关劳动法规，造成对方人身损害的免责条款属于<span class='text-amber-600 underline decoration-2 underline-offset-4'>法定无效</span>。即使签署，该条文也不具备法律效力，但表明该单位缺乏基本保障意识。"
+                }
+            ]
+        };
+
+        // 【第二部分】配置视觉映射字典 (根据状态自动匹配颜色)
+        const themeMap = {
+            critical: { color: "rose-600", bg: "rose-600", text: "text-rose-600", stripe: "danger-stripes", icon: "fa-gavel" },
+            warning: { color: "amber-500", bg: "amber-500", text: "text-amber-600", stripe: "warning-stripes", icon: "fa-scale-balanced" },
+            safe: { color: "emerald-500", bg: "emerald-500", text: "text-emerald-500", stripe: "", icon: "fa-check" }
+        };
+
+        // 【第三部分】核心渲染函数
+        function renderReport(data) {
+            const theme = themeMap[data.status] || themeMap.safe;
+
+            // 1. 渲染顶部状态指示器
+            document.getElementById('nav-status').innerHTML = `
+                <span class="mono text-[10px] ${theme.text} tracking-widest font-bold">异常响应_</span>
+                <div class="w-2 h-2 bg-${theme.color} rounded-full animate-ping"></div>
+            `;
+
+            // 2. 渲染头部看板
+            document.getElementById('header-container').innerHTML = `
+                <div class="flex items-center gap-3 mb-4">
+                    <i class="fa-solid fa-triangle-exclamation ${theme.text} text-xl"></i>
+                    <span class="mono text-xs font-bold ${theme.text} tracking-widest uppercase">Threat_Level: ${data.status}</span>
+                </div>
+                <h1 class="text-6xl md:text-7xl font-black tracking-tighter leading-none mb-8">
+                    卷宗<br>解构报告_
+                </h1>
+                <div class="grid grid-cols-3 border border-black bg-black text-white shadow-2xl">
+                    <div class="p-6 md:p-8 border-r border-zinc-800">
+                        <p class="mono text-[9px] text-zinc-400 tracking-widest mb-2">综合风险指数</p>
+                        <p class="text-4xl md:text-5xl font-black italic ${theme.text}">${data.overview.levelText}</p>
+                    </div>
+                    <div class="p-6 md:p-8 border-r border-zinc-800">
+                        <p class="mono text-[9px] text-zinc-400 tracking-widest mb-2">检出致命陷阱</p>
+                        <p class="text-4xl md:text-5xl font-black italic">${data.overview.fatalTrapsCount < 10 ? '0'+data.overview.fatalTrapsCount : data.overview.fatalTrapsCount}<span class="text-lg text-zinc-500 ml-1">处</span></p>
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <p class="mono text-[9px] text-zinc-400 tracking-widest mb-2">缺失关键保障</p>
+                        <p class="text-4xl md:text-5xl font-black italic">${data.overview.missingGuaranteesCount < 10 ? '0'+data.overview.missingGuaranteesCount : data.overview.missingGuaranteesCount}<span class="text-lg text-zinc-500 ml-1">项</span></p>
+                    </div>
+                </div>
+            `;
+
+            // 3. 渲染摘要
+            document.getElementById('summary-container').innerHTML = `
+                <h3 class="mono text-[10px] font-bold tracking-[0.3em] text-zinc-500 mb-4">>> 引擎总控摘要</h3>
+                <p class="text-base font-bold leading-relaxed text-zinc-800">${data.summary}</p>
+            `;
+
+            // 4. 动态遍历渲染异常条款卡片
+            const clausesHtml = data.clauses.map(clause => {
+                const cTheme = themeMap[clause.severity] || themeMap.warning;
+                const textColor = clause.severity === 'warning' ? 'text-black' : 'text-white';
+                
+                return `
+                <div class="border border-black group">
+                    <div class="bg-black text-white p-4 flex justify-between items-center">
+                        <div class="flex items-center gap-4">
+                            <span class="mono text-xs font-bold bg-${cTheme.bg} ${textColor} px-2 py-1">异常项_${clause.id}</span>
+                            <h4 class="font-black tracking-widest text-sm">${clause.title}</h4>
+                        </div>
+                        <i class="fa-solid fa-fingerprint text-zinc-600"></i>
+                    </div>
+                    
+                    <div class="p-6 md:p-8 space-y-6">
+                        <div>
+                            <p class="mono text-[9px] text-zinc-400 tracking-widest mb-2">:: 捕获原始协议片段 ::</p>
+                            <div class="p-4 b-dashed bg-zinc-50 text-sm text-zinc-700 font-medium ${cTheme.stripe}">
+                                ${clause.originalSnippet}
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="w-8 h-8 bg-black text-white flex items-center justify-center shrink-0 mt-1"><i class="fa-solid ${cTheme.icon} text-xs"></i></div>
+                            <div>
+                                <p class="mono text-[9px] text-zinc-400 tracking-widest mb-1">:: 引擎研判结论 ::</p>
+                                <p class="text-sm font-bold text-black leading-relaxed">
+                                    ${clause.aiAnalysis}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                `;
+            }).join(''); // 将数组拼接成完整 HTML 字符串
+
+            document.getElementById('clauses-container').innerHTML = `
+                <h3 class="mono text-[10px] font-bold tracking-[0.3em] text-zinc-500 border-b border-black pb-4">>> 异常条款阵列</h3>
+                ${clausesHtml}
+            `;
+        }
+
+        // 【第四部分】模拟页面加载完成，调用后端 API 获取数据并渲染
+        document.addEventListener('DOMContentLoaded', () => {
+            // 在实际开发中，这里会替换成类似: fetch('/api/getReport').then(res => renderReport(res.data))
+            renderReport(mockBackendData);
+        });
+
+        // 导出按钮逻辑
+        function exportReport() {
+            const btn = document.querySelector('button[onclick="exportReport()"]');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fa-solid fa-circle-notch animate-spin text-xl"></i><span class="font-black tracking-[0.2em] text-base md:text-lg">数据封卷中...</span>';
+            btn.classList.add('pointer-events-none');
+            setTimeout(() => {
+                alert("系统提示：风控卷宗已生成并下载。请妥善保管该法律证据。");
+                btn.innerHTML = originalText;
+                btn.classList.remove('pointer-events-none');
+            }, 1500);
+        }
+    </script>
+</body>
+</html>

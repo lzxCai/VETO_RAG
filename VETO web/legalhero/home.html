@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <title>VETO | 大学生智能法务引擎</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #ffffff; 
+            color: #000000;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 极致细线装饰 */
+        .border-fine { border: 1px solid #000000; }
+        
+        /* 扫描动画：黑白高级感 */
+        @keyframes scanMove {
+            0% { transform: translateY(-100%); opacity: 0; }
+            50% { opacity: 0.5; }
+            100% { transform: translateY(100%); opacity: 0; }
+        }
+        .scan-effect {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to bottom, transparent, rgba(16, 185, 129, 0.2), transparent);
+            animation: scanMove 3s infinite linear;
+            display: none;
+        }
+        .group:hover .scan-effect { display: block; }
+
+        /* 悬停反色效果 */
+        .hover-invert { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+        .hover-invert:hover { background-color: #000000; color: #ffffff; }
+
+        /* 隐藏滚动条 */
+        ::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="pb-32">
+
+    <nav class="h-20 px-8 flex justify-between items-center border-b border-black sticky top-0 bg-white z-50">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-black flex items-center justify-center">
+                <div class="w-3.5 h-3.5 bg-white rotate-45"></div>
+            </div>
+            <span class="font-black text-2xl tracking-[0.3em] uppercase leading-none mt-1 ml-1">VETO</span>
+        </div>
+        <div class="flex items-center gap-10">
+            <a href="#" class="text-[10px] font-bold tracking-[0.2em] uppercase border-b-2 border-black">引擎</a>
+            <a href="#" class="text-[10px] font-bold tracking-[0.2em] uppercase opacity-30 hover:opacity-100 transition-opacity">档案</a>
+            <div class="w-8 h-8 rounded-full border border-black p-0.5 relative">
+                <img src="https://ui-avatars.com/api/?name=用户&background=000&color=fff" class="rounded-full" alt="avatar">
+                <span class="absolute bottom-0 right-0 w-2.5 h-2.5 bg-emerald-400 rounded-full border-2 border-white"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="px-8 mt-16">
+        <div class="mb-20">
+            <div class="inline-block px-3 py-1 bg-black text-white text-[10px] font-bold tracking-[0.2em] uppercase mb-8">
+                AI 驱动 / v3.0
+            </div>
+            <h2 class="text-7xl md:text-8xl font-black tracking-tighter leading-[0.85] uppercase">
+                合同<br>智能分析
+            </h2>
+            <p class="mt-8 text-lg font-medium max-w-md leading-tight text-slate-700">
+                面向大学生的极简法律风控引擎。快速识别协议漏洞，用技术否决霸王条款。
+            </p>
+        </div>
+
+        <section class="group relative bg-black text-white p-12 md:p-16 overflow-hidden cursor-pointer transition-transform active:scale-[0.99] border border-black">
+            <div class="scan-effect"></div>
+            
+            <div class="relative z-10 flex flex-col md:flex-row justify-between items-start md:items-end gap-10">
+                <div class="max-w-xl">
+                    <div class="flex items-center gap-3 mb-8">
+                        <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse shadow-[0_0_10px_#10b981]"></div>
+                        <span class="text-xs font-bold tracking-[0.3em] uppercase text-emerald-400">系统在线</span>
+                    </div>
+                    <h3 class="text-4xl md:text-5xl font-bold tracking-tight mb-4 uppercase leading-none">扫描合同漏洞</h3>
+                    <p class="text-zinc-500 font-light text-sm max-w-xs leading-relaxed">
+                        支持 PDF、JPG 或 纯文本。通过深度卷积神经网络分析不公平条款。
+                    </p>
+                </div>
+                <div class="w-24 h-24 border border-zinc-800 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all duration-500">
+                    <i class="fa-solid fa-plus text-3xl"></i>
+                </div>
+            </div>
+        </section>
+
+        <section class="mt-24 grid grid-cols-1 md:grid-cols-2 gap-px bg-black border-l border-r border-b border-black">
+            <div class="bg-white p-10 hover-invert group cursor-pointer transition-all">
+                <div class="flex justify-between items-start mb-16">
+                    <span class="text-xs font-black tracking-widest uppercase italic">01 / 社区</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                </div>
+                <h4 class="text-3xl font-bold tracking-tighter uppercase mb-2">避坑论坛</h4>
+                <p class="text-sm opacity-50 font-medium">浏览校友真实维权案例，分享避坑心得</p>
+            </div>
+            <div class="bg-white p-10 hover-invert group cursor-pointer transition-all">
+                <div class="flex justify-between items-start mb-16">
+                    <span class="text-xs font-black tracking-widest uppercase italic">02 / 地图</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                </div>
+                <h4 class="text-3xl font-bold tracking-tighter uppercase mb-2">维权地图</h4>
+                <p class="text-sm opacity-50 font-medium">寻找你身边的校园公益法律援助点</p>
+            </div>
+        </section>
+
+        <section class="mt-24 mb-20">
+            <div class="flex justify-between items-center border-b border-black pb-4 mb-8">
+                <h3 class="text-xs font-black tracking-[0.5em] uppercase">最新通告</h3>
+                <span class="text-[10px] font-bold text-zinc-400 italic">2 分钟前更新</span>
+            </div>
+            
+            <div class="space-y-0">
+                <div class="group flex items-center justify-between py-8 border-b border-zinc-100 hover:px-4 transition-all cursor-pointer">
+                    <div class="flex items-center gap-12">
+                        <span class="text-[10px] font-black text-zinc-300">01</span>
+                        <h4 class="text-xl font-bold tracking-tight group-hover:line-through">关于“校外兼职平台”强制购买保险的预警</h4>
+                    </div>
+                    <span class="text-[10px] font-black uppercase tracking-widest bg-zinc-100 px-3 py-1.5 rounded-none b-fine border-slate-200 text-slate-500">风险</span>
+                </div>
+                <div class="group flex items-center justify-between py-8 border-b border-zinc-100 hover:px-4 transition-all cursor-pointer">
+                    <div class="flex items-center gap-12">
+                        <span class="text-[10px] font-black text-zinc-300">02</span>
+                        <h4 class="text-xl font-bold tracking-tight group-hover:line-through">陈同学诉某传媒公司“竞业协议”案胜诉解析报告</h4>
+                    </div>
+                    <span class="text-[10px] font-black uppercase tracking-widest bg-zinc-100 px-3 py-1.5 rounded-none b-fine border-slate-200 text-slate-500">案例</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-black px-10 py-6 flex justify-between items-center z-[100]">
+        <div class="flex items-center gap-12">
+            <button class="flex flex-col items-center gap-1">
+                <i class="fa-solid fa-square text-xs"></i>
+                <span class="text-[8px] font-black uppercase tracking-[0.2em]">首页</span>
+            </button>
+            <button class="flex flex-col items-center gap-1 opacity-20 hover:opacity-100 transition-opacity">
+                <i class="fa-solid fa-compass text-xs"></i>
+                <span class="text-[8px] font-black uppercase tracking-[0.2em]">地图</span>
+            </button>
+        </div>
+
+        <div class="absolute left-1/2 -translate-x-1/2 -top-6">
+            <div class="w-14 h-14 bg-black text-white flex items-center justify-center shadow-2xl shadow-black/10 active:scale-90 transition-transform cursor-pointer">
+                <i class="fa-solid fa-plus text-xl"></i>
+            </div>
+        </div>
+
+        <div class="flex items-center gap-12">
+            <button class="flex flex-col items-center gap-1 opacity-20 hover:opacity-100 transition-opacity">
+                <i class="fa-solid fa-message text-xs"></i>
+                <span class="text-[8px] font-black uppercase tracking-[0.2em]">消息</span>
+            </button>
+            <button class="flex flex-col items-center gap-1 opacity-20 hover:opacity-100 transition-opacity">
+                <i class="fa-solid fa-user text-xs"></i>
+                <span class="text-[8px] font-black uppercase tracking-[0.2em]">我的</span>
+            </button>
+        </div>
+    </nav>
+
+</body>
+</html>

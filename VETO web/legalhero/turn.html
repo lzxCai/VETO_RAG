@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <title>VETO | Integrated OS</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;700;900&display=swap');
+        
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; color: #000000; overflow-x: hidden; }
+        .mono { font-family: 'Fira Code', monospace; }
+
+        /* 页面切换动画 */
+        .page-node { display: none; }
+        .page-node.active { display: block; animation: pageIn 0.4s cubic-bezier(0.22, 1, 0.36, 1); }
+
+        @keyframes pageIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 导航栏激活状态 */
+        .nav-link { opacity: 0.25; transition: all 0.3s; }
+        .nav-link.active { opacity: 1; }
+
+        /* 极客元素 */
+        .scan-line { position: absolute; inset: 0; background: linear-gradient(to bottom, transparent, rgba(16, 185, 129, 0.1), transparent); animation: scanMove 3s infinite linear; pointer-events: none; }
+        @keyframes scanMove { 0% { transform: translateY(-100%); } 100% { transform: translateY(100%); } }
+        ::-webkit-scrollbar { display: none; }
+    </style>
+</head>
+<body class="pb-24">
+
+    <section id="page-home" class="page-node active">
+        <nav class="h-20 px-8 flex justify-between items-center border-b border-black sticky top-0 bg-white z-50">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-black flex items-center justify-center"><div class="w-3.5 h-3.5 bg-white rotate-45"></div></div>
+                <span class="font-black text-2xl tracking-[0.3em] uppercase mt-1 ml-1">VETO</span>
+            </div>
+        </nav>
+
+        <main class="px-8 mt-16">
+            <div class="mb-16">
+                <div class="inline-block px-3 py-1 bg-black text-white text-[10px] font-bold tracking-[0.2em] uppercase mb-8">AI Powered / v3.0</div>
+                <h2 class="text-7xl font-black tracking-tighter leading-[0.85] uppercase">Contract<br>Intelligence.</h2>
+                <p class="mt-8 text-lg font-medium max-w-sm text-slate-700">否决霸王条款，守护学生权益。</p>
+            </div>
+
+            <div class="group relative bg-black text-white p-12 overflow-hidden cursor-pointer active:scale-[0.99] transition-all border border-black shadow-2xl">
+                <div class="scan-line opacity-0 group-hover:opacity-100"></div>
+                <div class="relative z-10 flex flex-col md:flex-row justify-between items-end gap-10">
+                    <div class="max-w-xl">
+                        <div class="flex items-center gap-3 mb-8">
+                            <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                            <span class="text-xs font-bold tracking-[0.3em] text-emerald-400 uppercase">System Ready</span>
+                        </div>
+                        <h3 class="text-4xl font-bold tracking-tight uppercase leading-none">扫描合同漏洞</h3>
+                        <p class="text-zinc-500 font-light text-sm mt-4">点击此处上传协议，AI 将进行实时多维风险评估。</p>
+                    </div>
+                    <div class="w-20 h-20 border border-zinc-800 flex items-center justify-center group-hover:bg-white group-hover:text-black transition-all">
+                        <i class="fa-solid fa-plus text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-20 border-t border-black pt-4">
+                <h3 class="text-[10px] font-black tracking-[0.5em] uppercase text-zinc-400 mb-6">Security Bulletins</h3>
+                <div class="py-6 border-b border-zinc-100 flex justify-between items-center">
+                    <span class="text-lg font-bold">关于暑期兼职“预付押金”的风险警示</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </div>
+        </main>
+    </section>
+
+    <section id="page-discover" class="page-node">
+        <header class="px-8 pt-16 pb-6 border-b border-black">
+            <h2 class="text-5xl font-black tracking-tighter uppercase mb-8">Discover</h2>
+            <div class="flex gap-10">
+                <button class="text-xs font-black tracking-[0.2em] uppercase border-b-4 border-black pb-2">Bulletins</button>
+                <button class="text-xs font-black tracking-[0.2em] uppercase opacity-30 pb-2">Forum</button>
+            </div>
+        </header>
+        <main class="px-8 mt-6">
+            <div class="py-10 border-b border-black/5">
+                <span class="text-[9px] font-bold text-emerald-500 tracking-[0.3em] uppercase mb-2 block italic">New Analysis</span>
+                <h3 class="text-2xl font-black tracking-tight uppercase leading-tight">实习协议中“竞业限制”条款的法律边界</h3>
+            </div>
+            <div class="py-10 border-b border-black/5">
+                <span class="text-[9px] font-bold text-zinc-400 tracking-[0.3em] uppercase mb-2 block italic">User Case</span>
+                <h3 class="text-2xl font-black tracking-tight uppercase leading-tight">避坑：某校友分享南区兼职配送站扣费内幕</h3>
+            </div>
+        </main>
+    </section>
+
+    <section id="page-maps" class="page-node h-screen bg-black relative">
+        <div class="absolute inset-0 flex items-center justify-center opacity-20">
+            <span class="mono text-[10px] tracking-[1em] uppercase">Map Engine Loading...</span>
+        </div>
+        <div class="absolute top-10 left-6 right-6 p-4 bg-black/80 border border-white/20 backdrop-blur-xl flex items-center gap-4">
+            <i class="fa-solid fa-magnifying-glass text-zinc-500"></i>
+            <input type="text" placeholder="SEARCH LEGAL AID..." class="bg-transparent border-none outline-none text-xs w-full uppercase tracking-widest">
+        </div>
+        <div class="absolute top-1/2 left-1/3 w-3 h-3 bg-white rotate-45 animate-pulse shadow-[0_0_15px_white]"></div>
+    </section>
+
+    <section id="page-user" class="page-node">
+        <header class="p-8 border-b border-black flex justify-between items-start">
+            <div class="space-y-4">
+                <span class="mono text-[9px] text-emerald-500 tracking-[0.3em] uppercase">User_Authenticated</span>
+                <h2 class="text-5xl font-black tracking-tighter uppercase italic leading-none">Console /<br>Admin_09</h2>
+            </div>
+            <div class="w-16 h-16 border border-black flex items-center justify-center rotate-45">
+                <img src="https://ui-avatars.com/api/?name=Chen&background=000&color=fff" class="-rotate-45 w-full h-full grayscale" alt="avatar">
+            </div>
+        </header>
+        <section class="grid grid-cols-2 border-b border-black">
+            <div class="p-8 border-r border-black"><p class="mono text-[9px] text-zinc-400 uppercase">ID_Name</p><p class="text-2xl font-black italic">CHEN_YF</p></div>
+            <div class="p-8"><p class="mono text-[9px] text-zinc-400 uppercase">Risk_Averted</p><p class="text-2xl font-black italic text-emerald-500">03</p></div>
+        </section>
+        <main class="p-8 space-y-4">
+            <div class="p-6 border border-black hover:bg-black hover:text-white transition-all cursor-pointer font-bold uppercase tracking-widest text-xs">Archive_Contracts</div>
+            <div class="p-6 border border-black hover:bg-black hover:text-white transition-all cursor-pointer font-bold uppercase tracking-widest text-xs">Security_Settings</div>
+        </main>
+    </section>
+
+    <nav class="fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-xl border-t border-black px-10 py-6 flex justify-between items-center z-[100]">
+        <button onclick="showPage('home')" class="nav-link active flex flex-col items-center gap-1">
+            <i class="fa-solid fa-house text-sm"></i>
+            <span class="text-[8px] font-black uppercase tracking-[0.2em]">Home</span>
+        </button>
+        <button onclick="showPage('discover')" class="nav-link flex flex-col items-center gap-1">
+            <i class="fa-solid fa-compass text-sm"></i>
+            <span class="text-[8px] font-black uppercase tracking-[0.2em]">Discover</span>
+        </button>
+        
+        <div class="absolute left-1/2 -translate-x-1/2 -top-6">
+            <div class="w-14 h-14 bg-black text-white flex items-center justify-center shadow-2xl active:scale-90 transition-transform cursor-pointer">
+                <i class="fa-solid fa-plus text-xl"></i>
+            </div>
+        </div>
+
+        <button onclick="showPage('maps')" class="nav-link flex flex-col items-center gap-1">
+            <i class="fa-solid fa-map-marked-alt text-sm"></i>
+            <span class="text-[8px] font-black uppercase tracking-[0.2em]">Maps</span>
+        </button>
+        <button onclick="showPage('user')" class="nav-link flex flex-col items-center gap-1">
+            <i class="fa-solid fa-user text-sm"></i>
+            <span class="text-[8px] font-black uppercase tracking-[0.2em]">User</span>
+        </button>
+    </nav>
+
+    <script>
+        function showPage(pageId) {
+            // 1. 隐藏所有页面
+            document.querySelectorAll('.page-node').forEach(page => {
+                page.classList.remove('active');
+            });
+
+            // 2. 显示目标页面
+            const targetPage = document.getElementById('page-' + pageId);
+            targetPage.classList.add('active');
+
+            // 3. 更新导航栏高亮
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('onclick').includes(pageId)) {
+                    link.classList.add('active');
+                }
+            });
+
+            // 4. 自动回到顶部
+            window.scrollTo(0, 0);
+
+            // 5. 如果是地图页，强制设置背景为黑色，否则为白色
+            if (pageId === 'maps') {
+                document.body.style.backgroundColor = '#000';
+            } else {
+                document.body.style.backgroundColor = '#fff';
+            }
+        }
+    </script>
+</body>
+</html>
