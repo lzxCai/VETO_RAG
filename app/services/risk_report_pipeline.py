@@ -10,7 +10,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import Any, Dict, List
+from typing import Any, Dict, List, Union
 
 from app.services.contract_pipeline import run_contract_parsing_pipeline
 from app.services.legal_retrieval_adapter import (
@@ -21,8 +21,17 @@ from app.services.legal_retrieval_adapter import (
 from app.services.risk_identifier import identify_contract_risks
 
 
+DocumentInput = Union[str, List[str]]
+
+
+def _stringify_contract_source(contract_source: DocumentInput) -> str:
+    if isinstance(contract_source, list):
+        return ",".join(contract_source)
+    return contract_source
+
+
 def generate_report_context_for_contract(
-    contract_source: str,
+    contract_source: DocumentInput,
     parser: str = "auto",
     fallback_to_legacy: bool = True,
     enable_image_preprocess: bool = False,
@@ -47,7 +56,7 @@ def generate_report_context_for_contract(
     )
 
     report_context = build_report_context(
-        contract_source=contract_source,
+        contract_source=_stringify_contract_source(contract_source),
         classified_contract=classified_contract,
         risk_result=risk_result,
         retrieved_items=retrieved_items,
