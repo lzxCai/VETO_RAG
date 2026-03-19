@@ -245,7 +245,6 @@ def _build_embedding_func():
         @wrap_embedding_func_with_attrs(
             embedding_dim=embed_dim,
             max_token_size=_get_env_int("LR_EMBED_MAX_TOKENS", 8192),
-            model_name=embed_model,
         )
         async def embedding_func(texts: list[str]):
             return await openai_embed.func(
@@ -266,7 +265,6 @@ def _build_embedding_func():
         @wrap_embedding_func_with_attrs(
             embedding_dim=embed_dim,
             max_token_size=_get_env_int("LR_EMBED_MAX_TOKENS", 8192),
-            model_name=embed_model,
         )
         async def embedding_func(texts: list[str]):
             return await ollama_embed.func(texts, embed_model=embed_model)
@@ -282,7 +280,6 @@ def _build_embedding_func():
         @wrap_embedding_func_with_attrs(
             embedding_dim=_get_env_int("LR_EMBED_DIM", 384),
             max_token_size=_get_env_int("LR_EMBED_MAX_TOKENS", 2048),
-            model_name=embed_model,
         )
         async def embedding_func(texts: list[str]):
             return model.encode(texts, convert_to_numpy=True)

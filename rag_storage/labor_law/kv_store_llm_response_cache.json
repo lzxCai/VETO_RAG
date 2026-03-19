@@ -2770,5 +2770,705 @@
     "create_time": 1773821474,
     "update_time": 1773821474,
     "_id": "hybrid:keywords:27d581717e60dafefd4daf79fda85277"
+  },
+  "hybrid:keywords:dffc552c5e586c9c4ab1df8651a1f95e": {
+    "return": "{\"high_level_keywords\": [\"\\u8bd5\\u7528\\u671f\\u98ce\\u9669\", \"\\u52b3\\u52a8\\u5408\\u540c\", \"\\u52b3\\u52a8\\u5173\\u7cfb\", \"\\u8bd5\\u7528\\u671f\\u7ea6\\u5b9a\"], \"low_level_keywords\": [\"\\u8bd5\\u7528\\u671f\\u671f\\u9650\", \"\\u516d\\u4e2a\\u6708\", \"\\u56fa\\u5b9a\\u671f\\u9650\\u52b3\\u52a8\\u5408\\u540c\", \"\\u65e0\\u56fa\\u5b9a\\u671f\\u9650\\u52b3\\u52a8\\u5408\\u540c\", \"\\u4ee5\\u5b8c\\u6210\\u4e00\\u5b9a\\u5de5\\u4f5c\\u4efb\\u52a1\\u4e3a\\u671f\\u9650\\u52b3\\u52a8\\u5408\\u540c\", \"\\u7528\\u5de5\\u4e4b\\u65e5\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：试用期风险\n重点主题：试用期 劳动合同 期限 试用期 最长不得超过六个月 劳动合同可以约定试用期\n条款内容：一、劳动合同期限\n甲乙双方自用工之日起建立劳动关系，双\n第一条甲乙双方自用工之日起建立劳动关系，双方约定按下列\n第种方式确定劳动合同期限：\n1.固定期限：自\n年月日起至年月日止，其中，试用期从用工之日起至年月日止。\n2.无固定期限：自\n年月日起至依法解除、终止劳动合同时止，其中，试用期从用工之日起至年月日止。\n3.以完成一定工作任务为期限：自\n年月日起至工作任务完成时止。甲方应当以书面形式通知乙方工作任务完成。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773895710,
+    "update_time": 1773895710,
+    "_id": "hybrid:keywords:dffc552c5e586c9c4ab1df8651a1f95e"
+  },
+  "hybrid:keywords:0d3609c061481421b3c47ac901a46968": {
+    "return": "{\"high_level_keywords\": [\"\\u85aa\\u916c\\u652f\\u4ed8\\u98ce\\u9669\", \"\\u52b3\\u52a8\\u62a5\\u916c\", \"\\u5de5\\u8d44\\u652f\\u4ed8\"], \"low_level_keywords\": [\"\\u52a0\\u73ed\\u5de5\\u8d44\", \"\\u6708\\u5de5\\u8d44\", \"\\u8ba1\\u4ef6\\u5de5\\u8d44\", \"\\u57fa\\u672c\\u5de5\\u8d44\", \"\\u7ee9\\u6548\\u5de5\\u8d44\", \"\\u52b3\\u52a8\\u5b9a\\u989d\", \"\\u8d27\\u5e01\\u5f62\\u5f0f\\u652f\\u4ed8\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：薪酬支付风险\n重点主题：工资 劳动报酬 支付 劳动报酬 工资支付 加班工资\n条款内容：四、劳动报酬\n甲方采用以下第\n第六条甲方采用以下第\n种方式向乙方以货币形式支付工资，于每月日前足额支付：\n1.月工资\n元。\n2.计件工资。计件单价为\n，甲方应合理制定劳动定额，保证乙方在提供正常劳动情况下，获得合理的劳动报酬。\n3.基本工资和绩效工资相结合的工资分配办法，乙方月基本工\n资元，绩效工资计发办法为。\n4.双方约定的其他方式\n。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773895715,
+    "update_time": 1773895715,
+    "_id": "hybrid:keywords:0d3609c061481421b3c47ac901a46968"
+  },
+  "hybrid:keywords:f02e844cc75016fd3c6da1e039e48fcc": {
+    "return": "{\"high_level_keywords\": [\"\\u8bd5\\u7528\\u671f\\u98ce\\u9669\", \"\\u52b3\\u52a8\\u5408\\u540c\", \"\\u52b3\\u52a8\\u62a5\\u916c\", \"\\u8bd5\\u7528\\u671f\\u5de5\\u8d44\"], \"low_level_keywords\": [\"\\u8bd5\\u7528\\u671f\", \"\\u52b3\\u52a8\\u5408\\u540c\\u671f\\u9650\", \"\\u516d\\u4e2a\\u6708\", \"\\u5de5\\u8d44\\u8ba1\\u53d1\\u6807\\u51c6\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：试用期风险\n重点主题：试用期 劳动合同 期限 试用期 最长不得超过六个月 劳动合同可以约定试用期\n条款内容：四、劳动报酬\n乙方在试用期期间的工资计发标准为\n第七条乙方在试用期期间的工资计发标准为\n或元。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773895720,
+    "update_time": 1773895720,
+    "_id": "hybrid:keywords:f02e844cc75016fd3c6da1e039e48fcc"
+  },
+  "hybrid:keywords:e7ab020a0f0f86c04bbd21094ab6a3e0": {
+    "return": "{\"high_level_keywords\": [\"\\u85aa\\u916c\\u652f\\u4ed8\\u98ce\\u9669\", \"\\u52b3\\u52a8\\u62a5\\u916c\", \"\\u5de5\\u8d44\\u652f\\u4ed8\"], \"low_level_keywords\": [\"\\u5de5\\u8d44\", \"\\u52a0\\u73ed\\u5de5\\u8d44\", \"\\u4e2a\\u4eba\\u6240\\u5f97\\u7a0e\", \"\\u4ee3\\u6263\\u4ee3\\u7f34\", \"\\u7532\\u65b9\", \"\\u4e59\\u65b9\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：薪酬支付风险\n重点主题：工资 劳动报酬 支付 劳动报酬 工资支付 加班工资\n条款内容：四、劳动报酬\n甲方应合理调整乙方的工资待遇。乙方从\n第八条甲方应合理调整乙方的工资待遇。乙方从甲方获得的工\n资依法承担的个人所得税由甲方从其工资中代扣代缴。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773895724,
+    "update_time": 1773895724,
+    "_id": "hybrid:keywords:e7ab020a0f0f86c04bbd21094ab6a3e0"
+  },
+  "hybrid:keywords:07d188494bb9a45b66907cccfc1f64c8": {
+    "return": "{\"high_level_keywords\": [\"Social insurance risk\", \"Social insurance contributions\", \"Employer-employee social insurance obligations\"], \"low_level_keywords\": [\"Social insurance fund\", \"Housing provident fund\", \"Social insurance premium payment\", \"Legal participation in social insurance\", \"Article Five: Social Insurance and Welfare Benefits\", \"Article Nine\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：社保公积金风险\n重点主题：社会保险 保险费 缴纳 社会保险 缴纳社会保险费 依法参加社会保险\n条款内容：五、社会保险和福利待遇\n甲乙双方依法参加社会保险，甲方为乙方\n第九条甲乙双方依法参加社会保险，甲方为乙方办理有关社会\n保险手续，并承担相应社会保险义务，乙方应当缴纳的社会保险费由甲方从乙方的工资中代扣代缴。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773895730,
+    "update_time": 1773895730,
+    "_id": "hybrid:keywords:07d188494bb9a45b66907cccfc1f64c8"
+  },
+  "hybrid:keywords:227cb6ec189b7eedc751d8d96ce6d87e": {
+    "return": "{\"high_level_keywords\": [\"\\u7ade\\u4e1a\\u9650\\u5236\\u98ce\\u9669\", \"\\u5546\\u4e1a\\u79d8\\u5bc6\\u4fdd\\u62a4\", \"\\u77e5\\u8bc6\\u4ea7\\u6743\\u4fdd\\u5bc6\"], \"low_level_keywords\": [\"\\u7ade\\u4e1a\\u9650\\u5236\", \"\\u5546\\u4e1a\\u79d8\\u5bc6\", \"\\u4fdd\\u5bc6\\u4e8b\\u9879\", \"\\u4fdd\\u5b88\\u5546\\u4e1a\\u79d8\\u5bc6\\u534f\\u8bae\", \"\\u7ade\\u4e1a\\u9650\\u5236\\u534f\\u8bae\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：竞业限制风险\n重点主题：商业秘密 竞业限制 保密 商业秘密 竞业限制 保密\n条款内容：八、双方约定事项\n乙方工作涉及甲方商业秘密和与知识产权\n第十九条乙方工作涉及甲方商业秘密和与知识产权相关的保\n密事项的，甲方可以与乙方依法协商约定保守商业秘密或竞业限制的事项，并签订保守商业秘密协议或竞业限制协议。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773895734,
+    "update_time": 1773895734,
+    "_id": "hybrid:keywords:227cb6ec189b7eedc751d8d96ce6d87e"
+  },
+  "hybrid:keywords:482fc36bacaed5f38603d32eb78c3a1e": {
+    "return": "{\"high_level_keywords\": [\"Training service period risk\", \"Employment training agreement\", \"Professional training obligations\"], \"low_level_keywords\": [\"Training service period\", \"Specialized training\", \"Vocational training\", \"Article 20\", \"Employer funding\", \"Employee consent\", \"Rights and obligations\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：培训服务期风险\n重点主题：培训 服务期 协议 专项培训 服务期 职业培训\n条款内容：八、双方约定事项\n甲方出资对乙方进行专业技术培训，要求\n第二十条甲方出资对乙方进行专业技术培训，要求与乙方约定\n服务期的，应当征得乙方同意，并签订协议，明确双方权利义务。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773895739,
+    "update_time": 1773895739,
+    "_id": "hybrid:keywords:482fc36bacaed5f38603d32eb78c3a1e"
+  },
+  "hybrid:keywords:d736233ebf0c290dc52d595911bbd11e": {
+    "return": "{\"high_level_keywords\": [\"Training service period risk\", \"Legal liability\", \"Employment contract terms\"], \"low_level_keywords\": [\"Professional technical training\", \"Service period agreement\", \"Party A\", \"Party B\", \"Article 20\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：培训服务期风险\n法律主题：培训 服务期 职业培训\n条款内容：八、双方约定事项\n甲方出资对乙方进行专业技术培训，要求\n第二十条甲方出资对乙方进行专业技术培训，要求与乙方约定\n服务期的，应当征得乙方同意，并签订协议，明确双方权利义务。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773895744,
+    "update_time": 1773895744,
+    "_id": "hybrid:keywords:d736233ebf0c290dc52d595911bbd11e"
+  },
+  "hybrid:keywords:b813e8cbc7b2d62e5f9cb4fcc22e4f53": {
+    "return": "{\"high_level_keywords\": [\"\\u8bd5\\u7528\\u671f\\u98ce\\u9669\", \"\\u52b3\\u52a8\\u5408\\u540c\", \"\\u52b3\\u52a8\\u5408\\u540c\\u671f\\u9650\", \"\\u8bd5\\u7528\\u671f\\u7ea6\\u5b9a\"], \"low_level_keywords\": [\"\\u8bd5\\u7528\\u671f\", \"\\u516d\\u4e2a\\u6708\", \"\\u56fa\\u5b9a\\u671f\\u9650\", \"\\u65e0\\u56fa\\u5b9a\\u671f\\u9650\", \"\\u4ee5\\u5b8c\\u6210\\u4e00\\u5b9a\\u5de5\\u4f5c\\u4efb\\u52a1\\u4e3a\\u671f\\u9650\", \"\\u7528\\u5de5\\u4e4b\\u65e5\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：试用期风险\n重点主题：试用期 劳动合同 期限 试用期 最长不得超过六个月 劳动合同可以约定试用期\n条款内容：一、劳动合同期限\n甲乙双方自用工之日起建立劳动关系，双\n第一条甲乙双方自用工之日起建立劳动关系，双方约定按下列第 种方式确定劳动合同期限：\n1. 固定期限：自 年 月 日起至 年 月 日止，其中，试用期从用工之日起至 年 月 日止。\n2. 无固定期限：自 年 月 日起至依法解除、终止劳动合同时止，其中，试用期从用工之日起至 年 月 日止。\n3. 以完成一定工作任务为期限：自 年 月 日起至工作任务完成时止。甲方应当以书面形式通知乙方工作任务完成。\n#",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773895808,
+    "update_time": 1773895808,
+    "_id": "hybrid:keywords:b813e8cbc7b2d62e5f9cb4fcc22e4f53"
+  },
+  "hybrid:keywords:f45e8d4f1f0bec4ef544b734c8ccd862": {
+    "return": "{\"high_level_keywords\": [\"\\u85aa\\u916c\\u652f\\u4ed8\\u98ce\\u9669\", \"Labor compensation risk\", \"Wage payment risk\"], \"low_level_keywords\": [\"Wages\", \"Labor remuneration\", \"Payment\", \"Overtime wages\", \"Basic salary\", \"Performance-based salary\", \"Labor quota\", \"Work content\", \"Work location\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：薪酬支付风险\n重点主题：工资 劳动报酬 支付 劳动报酬 工资支付 加班工资\n条款内容：二、工作内容和工作地点#\n乙方工作岗位是甲方应合理制定劳动定额\n第二条乙方工作岗位是甲方应合理制定劳动定额，保证乙方在提供正常劳动情况下，获得合理的劳动报酬。\n3.基本工资和绩效工资相结合的工资分配办法，乙方月基本工资 元，绩效工资计发办法为 。\n4.双方约定的其他方式 。\n#",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773895813,
+    "update_time": 1773895813,
+    "_id": "hybrid:keywords:f45e8d4f1f0bec4ef544b734c8ccd862"
+  },
+  "hybrid:keywords:0dc4b44734d65309e0c36a2a14bcc044": {
+    "return": "{\"high_level_keywords\": [\"\\u8bd5\\u7528\\u671f\\u98ce\\u9669\", \"\\u52b3\\u52a8\\u5408\\u540c\", \"\\u8bd5\\u7528\\u671f\\u89c4\\u5b9a\", \"\\u5de5\\u8d44\\u8ba1\\u53d1\\u6807\\u51c6\"], \"low_level_keywords\": [\"\\u8bd5\\u7528\\u671f\", \"\\u52b3\\u52a8\\u5408\\u540c\", \"\\u516d\\u4e2a\\u6708\", \"\\u5de5\\u4f5c\\u5185\\u5bb9\", \"\\u5de5\\u4f5c\\u5730\\u70b9\", \"\\u5de5\\u8d44\\u8ba1\\u53d1\\u6807\\u51c6\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：试用期风险\n重点主题：试用期 劳动合同 期限 试用期 最长不得超过六个月 劳动合同可以约定试用期\n条款内容：二、工作内容和工作地点#\n乙方在试用期期间的工资计发标准为或元\n第七条乙方在试用期期间的工资计发标准为 或 元。\n#",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773895818,
+    "update_time": 1773895818,
+    "_id": "hybrid:keywords:0dc4b44734d65309e0c36a2a14bcc044"
+  },
+  "hybrid:keywords:4395292db7f654f6d7c2d88d93e08ee6": {
+    "return": "{\"high_level_keywords\": [\"\\u85aa\\u916c\\u652f\\u4ed8\\u98ce\\u9669\", \"Wage payment risk\", \"Labor remuneration\", \"Employment compensation\"], \"low_level_keywords\": [\"Salary\", \"Overtime pay\", \"Wage payment\", \"Personal income tax withholding\", \"Work content and location\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：薪酬支付风险\n重点主题：工资 劳动报酬 支付 劳动报酬 工资支付 加班工资\n条款内容：二、工作内容和工作地点#\n甲方应合理调整乙方的工资待遇。乙方从\n第八条甲方应合理调整乙方的工资待遇。乙方从甲方获得的工资依法承担的个人所得税由甲方从其工资中代扣代缴。\n#",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773895823,
+    "update_time": 1773895823,
+    "_id": "hybrid:keywords:4395292db7f654f6d7c2d88d93e08ee6"
+  },
+  "hybrid:keywords:96cc011145c0970befa6289a32f1dfc3": {
+    "return": "{\"high_level_keywords\": [\"Social insurance risk\", \"Social insurance contributions\", \"Employer-employee social insurance obligations\"], \"low_level_keywords\": [\"Social insurance\", \"Housing provident fund\", \"Social insurance premium payment\", \"Legal participation in social insurance\", \"Social insurance procedures\", \"Salary deduction for social insurance\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：社保公积金风险\n重点主题：社会保险 保险费 缴纳 社会保险 缴纳社会保险费 依法参加社会保险\n条款内容：五、社会保险和福利待遇#\n甲乙双方依法参加社会保险，甲方为乙方\n第九条甲乙双方依法参加社会保险，甲方为乙方办理有关社会保险手续，并承担相应社会保险义务，乙方应当缴纳的社会保险费由甲方从乙方的工资中代扣代缴。\n#",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773895828,
+    "update_time": 1773895828,
+    "_id": "hybrid:keywords:96cc011145c0970befa6289a32f1dfc3"
+  },
+  "hybrid:keywords:2dea95c93820379edbcb8dae44f89e94": {
+    "return": "{\"high_level_keywords\": [\"\\u7ade\\u4e1a\\u9650\\u5236\\u98ce\\u9669\", \"\\u5546\\u4e1a\\u79d8\\u5bc6\\u4fdd\\u62a4\", \"\\u4fdd\\u5bc6\\u4e49\\u52a1\", \"\\u77e5\\u8bc6\\u4ea7\\u6743\\u76f8\\u5173\\u4fdd\\u5bc6\"], \"low_level_keywords\": [\"\\u7ade\\u4e1a\\u9650\\u5236\\u534f\\u8bae\", \"\\u4fdd\\u5b88\\u5546\\u4e1a\\u79d8\\u5bc6\\u534f\\u8bae\", \"\\u7532\\u65b9\", \"\\u4e59\\u65b9\", \"\\u7b2c\\u5341\\u4e5d\\u6761\", \"\\u516b\\u3001\\u53cc\\u65b9\\u7ea6\\u5b9a\\u4e8b\\u9879\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：竞业限制风险\n重点主题：商业秘密 竞业限制 保密 商业秘密 竞业限制 保密\n条款内容：八、双方约定事项#\n乙方工作涉及甲方商业秘密和与知识产权\n第十九条乙方工作涉及甲方商业秘密和与知识产权相关的保密事项的，甲方可以与乙方依法协商约定保守商业秘密或竞业限制的事项，并签订保守商业秘密协议或竞业限制协议。\n#",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773895833,
+    "update_time": 1773895833,
+    "_id": "hybrid:keywords:2dea95c93820379edbcb8dae44f89e94"
+  },
+  "hybrid:keywords:d09b0c58dab98ce9532497f4c4df6159": {
+    "return": "{\"high_level_keywords\": [\"Training service period risk\", \"Employment training agreement\", \"Professional training obligations\"], \"low_level_keywords\": [\"Service period\", \"Specialized training\", \"Vocational training\", \"Training agreement\", \"Article 20\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：培训服务期风险\n重点主题：培训 服务期 协议 专项培训 服务期 职业培训\n条款内容：八、双方约定事项#\n甲方出资对乙方进行专业技术培训，要求\n第二十条甲方出资对乙方进行专业技术培训，要求与乙方约定服务期的，应当征得乙方同意，并签订协议，明确双方权利义务。\n#",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773895838,
+    "update_time": 1773895838,
+    "_id": "hybrid:keywords:d09b0c58dab98ce9532497f4c4df6159"
+  },
+  "hybrid:keywords:11fea38ad689a5c27f904d848b3b44a9": {
+    "return": "{\"high_level_keywords\": [\"Training service period risk\", \"Employment contract law\", \"Professional training obligations\"], \"low_level_keywords\": [\"Technical training\", \"Service period agreement\", \"Employer\\u51fa\\u8d44\", \"Employee consent\", \"Article 20\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：培训服务期风险\n法律主题：培训 服务期 职业培训\n条款内容：八、双方约定事项#\n甲方出资对乙方进行专业技术培训，要求\n第二十条甲方出资对乙方进行专业技术培训，要求与乙方约定服务期的，应当征得乙方同意，并签订协议，明确双方权利义务。\n#",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773895843,
+    "update_time": 1773895843,
+    "_id": "hybrid:keywords:11fea38ad689a5c27f904d848b3b44a9"
+  },
+  "hybrid:keywords:24326762e91d5a5b8564625dac245a80": {
+    "return": "{\"high_level_keywords\": [\"\\u8bd5\\u7528\\u671f\\u98ce\\u9669\", \"\\u52b3\\u52a8\\u5408\\u540c\", \"\\u52b3\\u52a8\\u5173\\u7cfb\", \"\\u8bd5\\u7528\\u671f\\u7ea6\\u5b9a\", \"\\u52b3\\u52a8\\u5408\\u540c\\u671f\\u9650\"], \"low_level_keywords\": [\"\\u516d\\u4e2a\\u6708\", \"\\u56fa\\u5b9a\\u671f\\u9650\", \"\\u65e0\\u56fa\\u5b9a\\u671f\\u9650\", \"\\u4ee5\\u5b8c\\u6210\\u4e00\\u5b9a\\u5de5\\u4f5c\\u4efb\\u52a1\\u4e3a\\u671f\\u9650\", \"\\u7528\\u5de5\\u4e4b\\u65e5\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：试用期风险\n重点主题：试用期 劳动合同 期限 试用期 最长不得超过六个月 劳动合同可以约定试用期\n条款内容：一、劳动合同期限\n甲乙双方自用工之日起建立劳动关系，双\n第一条 甲乙双方自用工之日起建立劳动关系，双方约定按下列第____种方式确定劳动合同期限：\n1. 固定期限：自_____年____月____日起至____年____月____日止，其中，试用期从用工之日起至_____年____月____日止。\n2. 无固定期限：自_____年____月____日起至依法解除、终止劳动合同吋止，其中，试用期从用工之日起至_____年____月____日止。\n3. 以完成一定工作任务为期限：自_____年____月____日起至工作任务完成时止。甲方应当以书面形式通知乙方工作任务完成。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773896904,
+    "update_time": 1773896904,
+    "_id": "hybrid:keywords:24326762e91d5a5b8564625dac245a80"
+  },
+  "hybrid:keywords:a41eeed5ff041988996f13acfcb650c7": {
+    "return": "{\"high_level_keywords\": [\"\\u85aa\\u916c\\u652f\\u4ed8\\u98ce\\u9669\", \"\\u52b3\\u52a8\\u62a5\\u916c\", \"\\u5de5\\u8d44\\u652f\\u4ed8\", \"\\u52a0\\u73ed\\u5de5\\u8d44\"], \"low_level_keywords\": [\"\\u6708\\u5de5\\u8d44\", \"\\u8ba1\\u4ef6\\u5de5\\u8d44\", \"\\u57fa\\u672c\\u5de5\\u8d44\", \"\\u7ee9\\u6548\\u5de5\\u8d44\", \"\\u8d27\\u5e01\\u5f62\\u5f0f\\u652f\\u4ed8\", \"\\u8db3\\u989d\\u652f\\u4ed8\", \"\\u52b3\\u52a8\\u5b9a\\u989d\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：薪酬支付风险\n重点主题：工资 劳动报酬 支付 劳动报酬 工资支付 加班工资\n条款内容：四、劳动报酬\n甲方采用以下第___种方式向乙方以货\n第六条 甲方采用以下第___种方式向乙方以货币形式支付工资，于每月___日前足额支付：\n1.月工资__________元。\n2.计件工资。计件单价为________________________________，\n甲方应合理制定劳动定额，保证乙方在提供正常劳动情况下，获得合理的劳动报酬。\n3. 基本工资和绩效工资相结合的工资分配办法，乙方月基本工资________元，绩效工资计发办法为__________________________。\n4. 双方约定的其他方式______________________________________。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773896909,
+    "update_time": 1773896909,
+    "_id": "hybrid:keywords:a41eeed5ff041988996f13acfcb650c7"
+  },
+  "hybrid:keywords:eb4898f371a2aeac6ceb6bc239b8de26": {
+    "return": "{\"high_level_keywords\": [\"\\u8bd5\\u7528\\u671f\\u98ce\\u9669\", \"\\u52b3\\u52a8\\u5408\\u540c\", \"\\u52b3\\u52a8\\u62a5\\u916c\", \"\\u8bd5\\u7528\\u671f\\u5de5\\u8d44\"], \"low_level_keywords\": [\"\\u8bd5\\u7528\\u671f\", \"\\u52b3\\u52a8\\u5408\\u540c\\u671f\\u9650\", \"\\u516d\\u4e2a\\u6708\", \"\\u5de5\\u8d44\\u8ba1\\u53d1\\u6807\\u51c6\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：试用期风险\n重点主题：试用期 劳动合同 期限 试用期 最长不得超过六个月 劳动合同可以约定试用期\n条款内容：四、劳动报酬\n乙方在试用期期间的工资计发标准为__\n第七条 乙方在试用期期间的工资计发标准为__________________________或________元。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773896913,
+    "update_time": 1773896913,
+    "_id": "hybrid:keywords:eb4898f371a2aeac6ceb6bc239b8de26"
+  },
+  "hybrid:keywords:c2ce32cd28452146a31c3d582c66ff29": {
+    "return": "{\"high_level_keywords\": [\"\\u85aa\\u916c\\u652f\\u4ed8\\u98ce\\u9669\", \"\\u52b3\\u52a8\\u62a5\\u916c\", \"\\u5de5\\u8d44\\u652f\\u4ed8\"], \"low_level_keywords\": [\"\\u5de5\\u8d44\", \"\\u52a0\\u73ed\\u5de5\\u8d44\", \"\\u4e2a\\u4eba\\u6240\\u5f97\\u7a0e\", \"\\u4ee3\\u6263\\u4ee3\\u7f34\", \"\\u5de5\\u8d44\\u5f85\\u9047\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：薪酬支付风险\n重点主题：工资 劳动报酬 支付 劳动报酬 工资支付 加班工资\n条款内容：四、劳动报酬\n甲方应合理调整乙方的工资待遇。乙方从\n第八条 甲方应合理调整乙方的工资待遇。乙方从甲方获得的工资依法承担的个人所得税由甲方从其工资中代扣代缴。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773896919,
+    "update_time": 1773896919,
+    "_id": "hybrid:keywords:c2ce32cd28452146a31c3d582c66ff29"
+  },
+  "hybrid:keywords:28d5adbf935e4f12d18a4a8206238b7e": {
+    "return": "{\"high_level_keywords\": [\"Social insurance risk\", \"Social insurance contributions\", \"Employer-employee social insurance obligations\"], \"low_level_keywords\": [\"Social insurance fund\", \"Housing provident fund\", \"Social insurance registration\", \"Payroll deduction for social insurance\", \"Social insurance procedures\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：社保公积金风险\n重点主题：社会保险 保险费 缴纳 社会保险 缴纳社会保险费 依法参加社会保险\n条款内容：五、社会保险和福利待遇\n甲乙双方依法参加社会保险，甲方为乙方\n第九条 甲乙双方依法参加社会保险，甲方为乙方办理有关社会保险手续，并承担相应社会保险义务，乙方应当缴纳的社会保险费由甲方从乙方的工资中代扣代缴。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773896924,
+    "update_time": 1773896924,
+    "_id": "hybrid:keywords:28d5adbf935e4f12d18a4a8206238b7e"
+  },
+  "hybrid:keywords:6c9a5329ae4f0098ba8e0c4fe86d5260": {
+    "return": "{\"high_level_keywords\": [\"\\u7ade\\u4e1a\\u9650\\u5236\\u98ce\\u9669\", \"\\u5546\\u4e1a\\u79d8\\u5bc6\\u4fdd\\u62a4\", \"\\u77e5\\u8bc6\\u4ea7\\u6743\\u4fdd\\u5bc6\"], \"low_level_keywords\": [\"\\u4fdd\\u5b88\\u5546\\u4e1a\\u79d8\\u5bc6\\u534f\\u8bae\", \"\\u7ade\\u4e1a\\u9650\\u5236\\u534f\\u8bae\", \"\\u7532\\u65b9\", \"\\u4e59\\u65b9\", \"\\u7b2c\\u5341\\u4e5d\\u6761\", \"\\u516b\\u3001\\u53cc\\u65b9\\u7ea6\\u5b9a\\u4e8b\\u9879\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：竞业限制风险\n重点主题：商业秘密 竞业限制 保密 商业秘密 竞业限制 保密\n条款内容：八、双方约定事项\n乙方工作涉及甲方商业秘密和与知识产权\n第十九条 乙方工作涉及甲方商业秘密和与知识产权相关的保密事项的，甲方可以与乙方依法协商约定保守商业秘密或竞业限制的事项，并签订保守商业秘密协议或竞业限制协议。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773896928,
+    "update_time": 1773896928,
+    "_id": "hybrid:keywords:6c9a5329ae4f0098ba8e0c4fe86d5260"
+  },
+  "hybrid:keywords:271d07fda0d709833a7583a1ce30b6b0": {
+    "return": "{\"high_level_keywords\": [\"Training service period risk\", \"Employment training agreement\", \"Professional training obligations\"], \"low_level_keywords\": [\"Service period\", \"Specialized training\", \"Vocational training\", \"Article 20\", \"Employer-funded training\", \"Employee consent\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：培训服务期风险\n重点主题：培训 服务期 协议 专项培训 服务期 职业培训\n条款内容：八、双方约定事项\n甲方出资对乙方进行专业技术培训，要求\n第二十条 甲方出资对乙方进行专业技术培训，要求与乙方约定服务期的，应当征得乙方同意，并签订协议，明确双方权利义务。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773896933,
+    "update_time": 1773896933,
+    "_id": "hybrid:keywords:271d07fda0d709833a7583a1ce30b6b0"
+  },
+  "hybrid:keywords:6db8296d6d4ce9b990f30882cb6f2def": {
+    "return": "{\"high_level_keywords\": [\"Training service period risk\", \"Labor law compliance\", \"Employment contract terms\"], \"low_level_keywords\": [\"Professional technical training\", \"Service period agreement\", \"Employer\\u51fa\\u8d44\", \"Employee consent\", \"Article 20\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：培训服务期风险\n法律主题：培训 服务期 职业培训\n条款内容：八、双方约定事项\n甲方出资对乙方进行专业技术培训，要求\n第二十条 甲方出资对乙方进行专业技术培训，要求与乙方约定服务期的，应当征得乙方同意，并签订协议，明确双方权利义务。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773896938,
+    "update_time": 1773896938,
+    "_id": "hybrid:keywords:6db8296d6d4ce9b990f30882cb6f2def"
+  },
+  "hybrid:keywords:130d18b99970f133db8992ecce5a88cb": {
+    "return": "{\"high_level_keywords\": [\"\\u8bd5\\u7528\\u671f\\u98ce\\u9669\", \"\\u52b3\\u52a8\\u5408\\u540c\", \"\\u52b3\\u52a8\\u5173\\u7cfb\", \"\\u8bd5\\u7528\\u671f\\u7ea6\\u5b9a\", \"\\u52b3\\u52a8\\u5408\\u540c\\u671f\\u9650\"], \"low_level_keywords\": [\"\\u8bd5\\u7528\\u671f\", \"\\u516d\\u4e2a\\u6708\", \"\\u56fa\\u5b9a\\u671f\\u9650\", \"\\u65e0\\u56fa\\u5b9a\\u671f\\u9650\", \"\\u4ee5\\u5b8c\\u6210\\u4e00\\u5b9a\\u5de5\\u4f5c\\u4efb\\u52a1\\u4e3a\\u671f\\u9650\", \"\\u7528\\u5de5\\u4e4b\\u65e5\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：试用期风险\n重点主题：试用期 劳动合同 期限 试用期 最长不得超过六个月 劳动合同可以约定试用期\n条款内容：一、劳动合同期限\n甲乙双方自用工之日起建立劳动关系，双\n第一条 甲乙双方自用工之日起建立劳动关系，双方约定按下列第____种方式确定劳动合同期限：\n1. 固定期限：自_____年____月____日起至____年____月____日止，其中，试用期从用工之日起至_____年____月____日止。\n2. 无固定期限：自_____年____月____日起至依法解除、终止劳动合同时止，其中，试用期从用工之日起至_____年____月____日止。\n3. 以完成一定工作任务为期限：自_____年____月____日起至工作任务完成时止。甲方应当以书面形式通知乙方工作任务完成。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773897509,
+    "update_time": 1773897509,
+    "_id": "hybrid:keywords:130d18b99970f133db8992ecce5a88cb"
+  },
+  "hybrid:keywords:506211b0b3d1b3e29a8231052146fac1": {
+    "return": "{\"high_level_keywords\": [\"\\u85aa\\u916c\\u652f\\u4ed8\\u98ce\\u9669\", \"\\u52b3\\u52a8\\u62a5\\u916c\", \"\\u5de5\\u8d44\\u652f\\u4ed8\"], \"low_level_keywords\": [\"\\u52a0\\u73ed\\u5de5\\u8d44\", \"\\u6708\\u5de5\\u8d44\", \"\\u8ba1\\u4ef6\\u5de5\\u8d44\", \"\\u57fa\\u672c\\u5de5\\u8d44\", \"\\u7ee9\\u6548\\u5de5\\u8d44\", \"\\u8d27\\u5e01\\u5f62\\u5f0f\\u652f\\u4ed8\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：薪酬支付风险\n重点主题：工资 劳动报酬 支付 劳动报酬 工资支付 加班工资\n条款内容：四、劳动报酬\n甲方采用以下第___种方式向乙方以货\n第六条 甲方采用以下第___种方式向乙方以货币形式支付工资，于每月___日前足额支付：\n1.月工资__________元。\n2.计件工资。计件单价为__________________________________，\n甲方应合理制定劳动定额，保证乙方在提供正常劳动情况下，获得合理的劳动报酬。\n3. 基本工资和绩效工资相结合的工资分配办法，乙方月基本工资______元，绩效工资计发办法为________________________。\n4. 双方约定的其他方式________________________。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773897515,
+    "update_time": 1773897515,
+    "_id": "hybrid:keywords:506211b0b3d1b3e29a8231052146fac1"
+  },
+  "hybrid:keywords:f9fbf039c11b5c295ddece90e50cb22f": {
+    "return": "{\"high_level_keywords\": [\"\\u8bd5\\u7528\\u671f\\u98ce\\u9669\", \"\\u52b3\\u52a8\\u5408\\u540c\", \"\\u52b3\\u52a8\\u62a5\\u916c\", \"\\u8bd5\\u7528\\u671f\\u5de5\\u8d44\"], \"low_level_keywords\": [\"\\u8bd5\\u7528\\u671f\", \"\\u52b3\\u52a8\\u5408\\u540c\\u671f\\u9650\", \"\\u516d\\u4e2a\\u6708\", \"\\u5de5\\u8d44\\u8ba1\\u53d1\\u6807\\u51c6\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：试用期风险\n重点主题：试用期 劳动合同 期限 试用期 最长不得超过六个月 劳动合同可以约定试用期\n条款内容：四、劳动报酬\n乙方在试用期期间的工资计发标准为__\n第七条 乙方在试用期期间的工资计发标准为________________________或______元。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773897519,
+    "update_time": 1773897519,
+    "_id": "hybrid:keywords:f9fbf039c11b5c295ddece90e50cb22f"
+  },
+  "hybrid:keywords:ad74060281605e46556dc0ba5858d3e0": {
+    "return": "{\"high_level_keywords\": [\"\\u85aa\\u916c\\u652f\\u4ed8\\u98ce\\u9669\", \"\\u52b3\\u52a8\\u62a5\\u916c\", \"\\u5de5\\u8d44\\u652f\\u4ed8\", \"Compensation payment risk\"], \"low_level_keywords\": [\"\\u52a0\\u73ed\\u5de5\\u8d44\", \"\\u6708\\u5de5\\u8d44\", \"\\u8ba1\\u4ef6\\u5de5\\u8d44\", \"\\u57fa\\u672c\\u5de5\\u8d44\", \"\\u7ee9\\u6548\\u5de5\\u8d44\", \"\\u8d27\\u5e01\\u5f62\\u5f0f\\u652f\\u4ed8\", \"\\u52b3\\u52a8\\u5b9a\\u989d\", \"\\u8db3\\u989d\\u652f\\u4ed8\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：薪酬支付风险\n重点主题：工资 劳动报酬 支付 劳动报酬 工资支付 加班工资\n条款内容：四、劳动报酬\n甲方采用以下第___种方式向乙方以货\n第六条 甲方采用以下第___种方式向乙方以货币形式支付工资，于每月___日前足额支付：\n1.月工资__________元。\n2.计件工资。计件单价为__________________________________，\n甲方应合理制定劳动定额，保证乙方在提供正常劳动情况下，获得合理的劳动报酬。\n3. 基本工资和绩效工资相结合的工资分配办法，乙方月基本工资______元，绩效工资计发办法为________________________。\n4. 双方约定的其他方式________________________________。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773897863,
+    "update_time": 1773897863,
+    "_id": "hybrid:keywords:ad74060281605e46556dc0ba5858d3e0"
+  },
+  "hybrid:keywords:2d889f64c941311b82dd51a9bec6d29e": {
+    "return": "{\"high_level_keywords\": [\"\\u8bd5\\u7528\\u671f\\u98ce\\u9669\", \"\\u52b3\\u52a8\\u5408\\u540c\", \"\\u52b3\\u52a8\\u62a5\\u916c\", \"\\u8bd5\\u7528\\u671f\\u5de5\\u8d44\"], \"low_level_keywords\": [\"\\u8bd5\\u7528\\u671f\", \"\\u52b3\\u52a8\\u5408\\u540c\\u671f\\u9650\", \"\\u516d\\u4e2a\\u6708\", \"\\u5de5\\u8d44\\u8ba1\\u53d1\\u6807\\u51c6\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：试用期风险\n重点主题：试用期 劳动合同 期限 试用期 最长不得超过六个月 劳动合同可以约定试用期\n条款内容：四、劳动报酬\n乙方在试用期期间的工资计发标准为__\n第七条 乙方在试用期期间的工资计发标准为____________________或________元。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773897868,
+    "update_time": 1773897868,
+    "_id": "hybrid:keywords:2d889f64c941311b82dd51a9bec6d29e"
+  },
+  "hybrid:keywords:882388b1ba672dfbdd29984e059a6163": {
+    "return": "{\"high_level_keywords\": [\"\\u85aa\\u916c\\u652f\\u4ed8\\u98ce\\u9669\", \"\\u52b3\\u52a8\\u62a5\\u916c\", \"\\u5de5\\u8d44\\u652f\\u4ed8\"], \"low_level_keywords\": [\"\\u52a0\\u73ed\\u5de5\\u8d44\", \"\\u6708\\u5de5\\u8d44\", \"\\u8ba1\\u4ef6\\u5de5\\u8d44\", \"\\u57fa\\u672c\\u5de5\\u8d44\", \"\\u7ee9\\u6548\\u5de5\\u8d44\", \"\\u8d27\\u5e01\\u5f62\\u5f0f\\u652f\\u4ed8\", \"\\u8db3\\u989d\\u652f\\u4ed8\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：薪酬支付风险\n重点主题：工资 劳动报酬 支付 劳动报酬 工资支付 加班工资\n条款内容：四、劳动报酬\n甲方采用以下第____种方式向乙方以\n第六条 甲方采用以下第____种方式向乙方以货币形式支付工资，于每月___日前足额支付：\n1.月工资________元。\n2.计件工资。计件单价为______________________________________，\n甲方应合理制定劳动定额，保证乙方在提供正常劳动情况下，获得合理的劳动报酬。\n3. 基本工资和绩效工资相结合的工资分配办法，乙方月基本工资______元，绩效工资计发办法为________________________。\n4. 双方约定的其他方式________________________。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773898537,
+    "update_time": 1773898537,
+    "_id": "hybrid:keywords:882388b1ba672dfbdd29984e059a6163"
+  },
+  "hybrid:keywords:f5ffd59216a5ad78f96ef978cd459c08": {
+    "return": "{\"high_level_keywords\": [\"\\u85aa\\u916c\\u652f\\u4ed8\\u98ce\\u9669\", \"\\u52b3\\u52a8\\u62a5\\u916c\", \"\\u5de5\\u8d44\\u652f\\u4ed8\"], \"low_level_keywords\": [\"\\u52a0\\u73ed\\u5de5\\u8d44\", \"\\u6708\\u5de5\\u8d44\", \"\\u8ba1\\u4ef6\\u5de5\\u8d44\", \"\\u57fa\\u672c\\u5de5\\u8d44\", \"\\u7ee9\\u6548\\u5de5\\u8d44\", \"\\u8d27\\u5e01\\u5f62\\u5f0f\\u652f\\u4ed8\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：薪酬支付风险\n重点主题：工资 劳动报酬 支付 劳动报酬 工资支付 加班工资\n条款内容：四、劳动报酬\n甲方采用以下第___种方式向乙方以货\n第六条 甲方采用以下第___种方式向乙方以货币形式支付工资，于每月___日前足额支付：\n1.月工资________元。\n2.计件工资。计件单价为________________________________，\n甲方应合理制定劳动定额，保证乙方在提供正常劳动情况下，获得合理的劳动报酬。\n3. 基本工资和绩效工资相结合的工资分配办法，乙方月基本工资______元，绩效工资计发办法为________________________。\n4. 双方约定的其他方式________________________。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773899313,
+    "update_time": 1773899313,
+    "_id": "hybrid:keywords:f5ffd59216a5ad78f96ef978cd459c08"
+  },
+  "hybrid:keywords:adfab4a3fd6900f5c64cb801a1dd332c": {
+    "return": "{\"high_level_keywords\": [\"\\u8bd5\\u7528\\u671f\\u98ce\\u9669\", \"\\u52b3\\u52a8\\u5408\\u540c\", \"\\u52b3\\u52a8\\u5173\\u7cfb\", \"\\u8bd5\\u7528\\u671f\\u7ea6\\u5b9a\", \"\\u52b3\\u52a8\\u5408\\u540c\\u671f\\u9650\"], \"low_level_keywords\": [\"\\u8bd5\\u7528\\u671f\", \"\\u516d\\u4e2a\\u6708\", \"\\u56fa\\u5b9a\\u671f\\u9650\", \"\\u65e0\\u56fa\\u5b9a\\u671f\\u9650\", \"\\u4ee5\\u5b8c\\u6210\\u4e00\\u5b9a\\u5de5\\u4f5c\\u4efb\\u52a1\\u4e3a\\u671f\\u9650\", \"\\u7528\\u5de5\\u4e4b\\u65e5\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：试用期风险\n重点主题：试用期 劳动合同 期限 试用期 最长不得超过六个月 劳动合同可以约定试用期\n条款内容：一、劳动合同期限\n甲乙双方自用工之日起建立劳动关系，双\n第一条 甲乙双方自用工之日起建立劳动关系，双方约定按下列第____种方式确定劳动合同期限：\n1. 固定期限：自_____年___月___日起至____年___月___日止，其中，试用期从用工之日起至_____年___月___日止。\n2. 无固定期限：自_____年___月___日起至依法解除、终止劳动合同时止，其中，试用期从用工之日起至_____年___月___日止。\n3. 以完成一定工作任务为期限：自_____年___月___日起至工作任务完成时止。甲方应当以书面形式通知乙方工作任务完成。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773899845,
+    "update_time": 1773899845,
+    "_id": "hybrid:keywords:adfab4a3fd6900f5c64cb801a1dd332c"
+  },
+  "hybrid:keywords:f2433ffba60e3573a563279e623e07a3": {
+    "return": "{\"high_level_keywords\": [\"\\u85aa\\u916c\\u652f\\u4ed8\\u98ce\\u9669\", \"\\u52b3\\u52a8\\u62a5\\u916c\", \"\\u5de5\\u8d44\\u652f\\u4ed8\"], \"low_level_keywords\": [\"\\u52a0\\u73ed\\u5de5\\u8d44\", \"\\u6708\\u5de5\\u8d44\", \"\\u8ba1\\u4ef6\\u5de5\\u8d44\", \"\\u57fa\\u672c\\u5de5\\u8d44\", \"\\u7ee9\\u6548\\u5de5\\u8d44\", \"\\u8d27\\u5e01\\u5f62\\u5f0f\\u652f\\u4ed8\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：薪酬支付风险\n重点主题：工资 劳动报酬 支付 劳动报酬 工资支付 加班工资\n条款内容：四、劳动报酬\n甲方采用以下第___种方式向乙方以货\n第六条 甲方采用以下第___种方式向乙方以货币形式支付工资，于每月___日前足额支付：\n1.月工资________元。\n2.计件工资。计件单价为______________________________________，\n甲方应合理制定劳动定额，保证乙方在提供正常劳动情况下，获得合理的劳动报酬。\n3. 基本工资和绩效工资相结合的工资分配办法，乙方月基本工资________元，绩效工资计发办法为__________________________。\n4. 双方约定的其他方式______________________________________。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773899850,
+    "update_time": 1773899850,
+    "_id": "hybrid:keywords:f2433ffba60e3573a563279e623e07a3"
+  },
+  "hybrid:keywords:db1d05964d7b6d9efa327382f0ba273e": {
+    "return": "{\"high_level_keywords\": [\"\\u8bd5\\u7528\\u671f\\u98ce\\u9669\", \"\\u52b3\\u52a8\\u5408\\u540c\", \"\\u52b3\\u52a8\\u62a5\\u916c\", \"\\u8bd5\\u7528\\u671f\\u5de5\\u8d44\"], \"low_level_keywords\": [\"\\u8bd5\\u7528\\u671f\", \"\\u52b3\\u52a8\\u5408\\u540c\\u671f\\u9650\", \"\\u516d\\u4e2a\\u6708\", \"\\u5de5\\u8d44\\u8ba1\\u53d1\\u6807\\u51c6\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：试用期风险\n重点主题：试用期 劳动合同 期限 试用期 最长不得超过六个月 劳动合同可以约定试用期\n条款内容：四、劳动报酬\n乙方在试用期期间的工资计发标准为__\n第七条 乙方在试用期期间的工资计发标准为________________________或________元。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773899854,
+    "update_time": 1773899854,
+    "_id": "hybrid:keywords:db1d05964d7b6d9efa327382f0ba273e"
+  },
+  "hybrid:keywords:011fd6c89f3734e8d8604ac19b629b0a": {
+    "return": "{\"high_level_keywords\": [\"\\u85aa\\u916c\\u652f\\u4ed8\\u98ce\\u9669\", \"\\u52b3\\u52a8\\u62a5\\u916c\", \"\\u5de5\\u8d44\\u652f\\u4ed8\"], \"low_level_keywords\": [\"\\u52a0\\u73ed\\u5de5\\u8d44\", \"\\u6708\\u5de5\\u8d44\", \"\\u8ba1\\u4ef6\\u5de5\\u8d44\", \"\\u57fa\\u672c\\u5de5\\u8d44\", \"\\u7ee9\\u6548\\u5de5\\u8d44\", \"\\u8d27\\u5e01\\u5f62\\u5f0f\\u652f\\u4ed8\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：薪酬支付风险\n重点主题：工资 劳动报酬 支付 劳动报酬 工资支付 加班工资\n条款内容：四、劳动报酬\n甲方采用以下第___种方式向乙方以货\n第六条 甲方采用以下第___种方式向乙方以货币形式支付工资，于每月___日前足额支付：\n1.月工资________元。\n2.计件工资。计件单价为__________________________________，\n甲方应合理制定劳动定额，保证乙方在提供正常劳动情况下，获得合理的劳动报酬。\n3. 基本工资和绩效工资相结合的工资分配办法，乙方月基本工资______元，绩效工资计发办法为________________________。\n4. 双方约定的其他方式____________________________________。",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1773900209,
+    "update_time": 1773900209,
+    "_id": "hybrid:keywords:011fd6c89f3734e8d8604ac19b629b0a"
   }
 }

@@ -1,179 +1,118 @@
-from fastapi import FastAPI, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
-from typing import Optional, List
-from datetime import datetime
-import uvicorn
-import os
-from dotenv import load_dotenv
+"""
+统一报告导出入口（Markdown / PDF）。
 
-# 导入自定义模块
-from auth import register_user, login_user, get_user, UserCreate, UserLogin
-from supabase_client import get_supabase
-from rag_wrapper import query_rag
+说明：
+- 项目内真正的后端服务入口在 `backend/main.py`，而不是这里。
+- `app/main.py`、`backend/rag_wrapper.py` 会调用本文件：
+  - `python main.py --report-context <path>`：根据 report_context 生成正式审查报告（Markdown），并尽可能导出 PDF。
+  - `python main.py "<question>"`：执行检索问答（供后端 /chat 使用）。
+"""
 
-# 加载环境变量
-load_dotenv()
+from __future__ import annotations
 
-# 创建FastAPI应用
-app = FastAPI(
-    title="法律助手后端API",
-    description="提供用户认证、聊天历史和RAG调用功能",
-    version="1.0.0"
-)
-
-# 配置CORS（允许前端调用）
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],  # 生产环境需要限制
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
+import argparse
+import shutil
+import subprocess
+import sys
+from pathlib import Path
 
 
-# 请求/响应模型
-class ChatRequest(BaseModel):
-    question: str
-    mode: str = "hybrid"
-    use_rerank: bool = False
+PROJECT_ROOT = Path(__file__).resolve().parent
+LIGHTRAG_QUERY = PROJECT_ROOT / "ragmain" / "lightrag_query.py"
+REPORT_CSS = PROJECT_ROOT / "report_style.css"
+MD_OUTPUT_DIR = PROJECT_ROOT / "MDoutput"
+PDF_OUTPUT_DIR = PROJECT_ROOT / "PDFoutput"
 
 
-class ChatResponse(BaseModel):
-    answer: str
-    conversation_id: Optional[str] = None
+def _run(cmd: list[str]) -> int:
+    result = subprocess.run(cmd, cwd=str(PROJECT_ROOT))
+    return result.returncode
 
 
-class HistoryItem(BaseModel):
-    id: str
-    question: str
-    answer: str
-    created_at: str
-    mode: str = "hybrid"
+def _find_latest_md() -> Path | None:
+    if not MD_OUTPUT_DIR.exists():
+        return None
+    candidates = sorted(MD_OUTPUT_DIR.glob("*.md"), key=lambda p: p.stat().st_mtime, reverse=True)
+    return candidates[0] if candidates else None
 
 
-class HistoryResponse(BaseModel):
-    history: List[HistoryItem]
+def _export_pdf_from_md(md_path: Path) -> int:
+    PDF_OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    out_pdf = PDF_OUTPUT_DIR / (md_path.stem + ".pdf")
 
-
-# API路由
-@app.get("/")
-async def root():
-    return {
-        "message": "法律助手API运行中",
-        "version": "1.0.0",
-        "endpoints": [
-            "/docs - API文档",
-            "/register - 用户注册",
-            "/login - 用户登录",
-            "/chat - 聊天",
-            "/history/{user_id} - 聊天历史"
+    pandoc = shutil.which("pandoc")
+    if pandoc:
+        cmd = [
+            pandoc,
+            str(md_path),
+            "-o",
+            str(out_pdf),
+            "--standalone",
+            "-f",
+            "markdown",
         ]
-    }
+        # 若可用，注入 CSS（与网页黑白绿主题一致的正式报告版式）
+        if REPORT_CSS.exists():
+            cmd.extend(["--css", str(REPORT_CSS)])
+        wk = shutil.which("wkhtmltopdf")
+        if wk:
+            cmd.extend(["--pdf-engine", wk])
+            # A4 边距对齐常见合同报告 PDF
+            cmd.extend(
+                [
+                    "--pdf-engine-opt=--margin-top",
+                    "--pdf-engine-opt=12mm",
+                    "--pdf-engine-opt=--margin-bottom",
+                    "--pdf-engine-opt=12mm",
+                    "--pdf-engine-opt=--margin-left",
+                    "--pdf-engine-opt=14mm",
+                    "--pdf-engine-opt=--margin-right",
+                    "--pdf-engine-opt=14mm",
+                    "--pdf-engine-opt=--encoding",
+                    "--pdf-engine-opt=utf-8",
+                ]
+            )
+        return _run(cmd)
+
+    # 没有 pandoc 时不强求 PDF
+    print("未检测到 pandoc，跳过 PDF 导出（已生成 Markdown）。")
+    return 0
 
 
-@app.post("/register")
-async def register(user: UserCreate):
-    """用户注册"""
-    new_user, error = await register_user(user)
-    if error:
-        raise HTTPException(status_code=400, detail=error)
-    return {"message": "注册成功", "user": new_user}
+def main() -> int:
+    parser = argparse.ArgumentParser(description="生成劳动合同风险审查报告（Markdown/PDF）或执行检索问答。")
+    parser.add_argument("query", nargs="?", default="", help="用户问题（用于检索问答）")
+    parser.add_argument("--report-context", default="", help="report_context.json 路径")
+    parser.add_argument("--no-pdf", action="store_true", help="只生成 Markdown，不导出 PDF")
+    args = parser.parse_args()
+
+    if args.report_context:
+        cmd = [sys.executable, str(LIGHTRAG_QUERY), "--report-context", args.report_context]
+        code = _run(cmd)
+        if code != 0:
+            return code
+
+        latest_md = _find_latest_md()
+        if not latest_md:
+            print("已生成报告，但未找到 MDoutput 下的 markdown 文件。")
+            return 1
+
+        if args.no_pdf:
+            print(f"Markdown 已生成：{latest_md}")
+            return 0
+
+        pdf_code = _export_pdf_from_md(latest_md)
+        if pdf_code == 0:
+            print(f"PDF 已导出：{(PDF_OUTPUT_DIR / (latest_md.stem + '.pdf'))}")
+        return pdf_code
+
+    # query mode
+    if not args.query:
+        print("缺少 query 或 --report-context。")
+        return 2
+    cmd = [sys.executable, str(LIGHTRAG_QUERY), args.query]
+    return _run(cmd)
 
 
-@app.post("/login")
-async def login(user: UserLogin):
-    """用户登录"""
-    user_data, error = await login_user(user)
-    if error:
-        raise HTTPException(status_code=401, detail=error)
-    return {"message": "登录成功", "user": user_data}
-
-
-@app.post("/chat", response_model=ChatResponse)
-async def chat(request: ChatRequest, user_id: Optional[str] = None):
-    """
-    聊天接口
-    - 如果提供user_id，会保存聊天历史
-    - 如果不提供user_id，只返回回答不保存
-    """
-    try:
-        # 1. 调用RAG
-        answer = await query_rag(request.question)
-
-        conversation_id = None
-
-        # 2. 如果提供了user_id，保存到数据库
-        if user_id:
-            supabase = get_supabase()
-            conv_data = {
-                "user_id": user_id,
-                "question": request.question,
-                "answer": answer,
-                "mode": request.mode,
-                "created_at": datetime.now().isoformat()
-            }
-            result = supabase.table("conversations").insert(conv_data).execute()
-            if result.data:
-                conversation_id = result.data[0]["id"]
-
-        return ChatResponse(
-            answer=answer,
-            conversation_id=conversation_id
-        )
-
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
-
-@app.get("/history/{user_id}", response_model=HistoryResponse)
-async def get_history(user_id: str, limit: int = 50):
-    """获取用户的聊天历史"""
-    supabase = get_supabase()
-
-    # 验证用户存在
-    user = await get_user(user_id)
-    if not user:
-        raise HTTPException(status_code=404, detail="用户不存在")
-
-    # 查询历史
-    result = supabase.table("conversations") \
-        .select("*") \
-        .eq("user_id", user_id) \
-        .order("created_at", desc=True) \
-        .limit(limit) \
-        .execute()
-
-    return HistoryResponse(history=result.data or [])
-
-
-@app.delete("/history/{conversation_id}")
-async def delete_history(conversation_id: str, user_id: str):
-    """删除单条历史记录（需要验证用户）"""
-    supabase = get_supabase()
-
-    # 验证这条记录属于该用户
-    result = supabase.table("conversations") \
-        .select("*") \
-        .eq("id", conversation_id) \
-        .eq("user_id", user_id) \
-        .execute()
-
-    if not result.data:
-        raise HTTPException(status_code=404, detail="记录不存在或无权限")
-
-    # 删除
-    supabase.table("conversations").delete().eq("id", conversation_id).execute()
-
-    return {"message": "删除成功"}
-
-
-# 启动服务
 if __name__ == "__main__":
-    port = int(os.getenv("PORT", 8000))
-    uvicorn.run(
-        "main:app",
-        host="0.0.0.0",
-        port=port,
-        reload=True  # 开发模式，代码修改后自动重启
-    )
+    raise SystemExit(main())

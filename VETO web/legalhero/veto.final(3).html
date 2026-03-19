@@ -7,6 +7,10 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <script src="https://webapi.amap.com/maps?v=2.0&key=6481e53152984f1c49c0b6adfcd196a9&plugin=AMap.Geolocation"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <!-- 2.5.2 在 cdnjs 上不存在(404)，与 html2pdf 0.10 同代用 2.5.1 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <!-- 分片截图用（避免单张超长 canvas 空白/截断）；放在 html2pdf 之后以覆盖为全局实现 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <title>VETO | OS v9.7 Smart Routing</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;700;900&display=swap');
@@ -44,6 +48,31 @@
         /* 登录页特有过渡效果 */
         .auth-panel { display: none; animation: fadeIn 0.3s ease-out; }
         .auth-panel.active { display: block; }
+
+        /* A4 卷宗导出（对齐正式 PDF：白底、固定版心宽度） */
+        #pdf-export-area.contract-pdf-sheet {
+            max-width: 210mm;
+            margin-left: auto;
+            margin-right: auto;
+            box-sizing: border-box;
+            background: #ffffff;
+        }
+        /* 导出 PDF 时临时加上：避免父级/自身被裁剪，保证 html2canvas 吃到完整高度 */
+        #pdf-export-area.pdf-capture-fix {
+            overflow: visible !important;
+            height: auto !important;
+            max-height: none !important;
+            min-height: 0 !important;
+        }
+        @media print {
+            * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+            body { background: #fff !important; }
+            .no-print { display: none !important; }
+            .page-node { display: none !important; }
+            #page-analysis.active { display: block !important; padding: 0 !important; }
+            #page-analysis.active > .min-h-screen { min-height: 0 !important; padding-bottom: 0 !important; }
+            #page-analysis.active #pdf-export-area { max-width: 100% !important; margin: 0 auto !important; box-shadow: none !important; }
+        }
     </style>
 </head>
 <body>
@@ -144,14 +173,14 @@
                                 <label class="mono text-xs font-bold text-black tracking-widest uppercase block mb-3">学号 / ID</label>
                                 <div class="w-full border-[3px] border-black flex items-center px-4 bg-white focus-within:border-emerald-500 focus-within:ring-4 focus-within:ring-emerald-500/30 transition-all shadow-[4px_4px_0px_rgba(0,0,0,1)]">
                                     <i class="fa-solid fa-graduation-cap text-zinc-300 mr-3"></i>
-                                    <input type="text" required class="w-full py-4 outline-none font-bold text-black bg-transparent placeholder-zinc-300" placeholder="请输入学号">
+                                    <input id="login-username" type="text" required class="w-full py-4 outline-none font-bold text-black bg-transparent placeholder-zinc-300" placeholder="请输入学号">
                                 </div>
                             </div>
                             <div>
                                 <label class="mono text-xs font-bold text-black tracking-widest uppercase block mb-3">密码 / PASS</label>
                                 <div class="w-full border-[3px] border-black flex items-center px-4 bg-white focus-within:border-emerald-500 focus-within:ring-4 focus-within:ring-emerald-500/30 transition-all shadow-[4px_4px_0px_rgba(0,0,0,1)]">
                                     <i class="fa-solid fa-lock text-zinc-300 mr-3"></i>
-                                    <input type="password" required class="w-full py-4 outline-none font-bold text-black bg-transparent placeholder-zinc-300" placeholder="请输入密码">
+                                    <input id="login-password" type="password" required class="w-full py-4 outline-none font-bold text-black bg-transparent placeholder-zinc-300" placeholder="请输入密码">
                                 </div>
                             </div>
                             <div class="flex justify-between items-center pt-2">
@@ -180,28 +209,28 @@
                                 <label class="mono text-xs font-bold text-black tracking-widest uppercase block mb-2">姓名 / NAME</label>
                                 <div class="w-full border-[3px] border-black flex items-center px-4 bg-white focus-within:border-emerald-500 focus-within:ring-4 focus-within:ring-emerald-500/30 transition-all shadow-[4px_4px_0px_rgba(0,0,0,1)]">
                                     <i class="fa-regular fa-user text-zinc-300 mr-3"></i>
-                                    <input type="text" required class="w-full py-3 outline-none font-bold text-black bg-transparent placeholder-zinc-300" placeholder="请输入真实姓名">
+                                    <input id="register-name" type="text" required class="w-full py-3 outline-none font-bold text-black bg-transparent placeholder-zinc-300" placeholder="请输入真实姓名">
                                 </div>
                             </div>
                             <div>
                                 <label class="mono text-xs font-bold text-black tracking-widest uppercase block mb-2">学号 / ID</label>
                                 <div class="w-full border-[3px] border-black flex items-center px-4 bg-white focus-within:border-emerald-500 focus-within:ring-4 focus-within:ring-emerald-500/30 transition-all shadow-[4px_4px_0px_rgba(0,0,0,1)]">
                                     <i class="fa-solid fa-graduation-cap text-zinc-300 mr-3"></i>
-                                    <input type="text" required class="w-full py-3 outline-none font-bold text-black bg-transparent placeholder-zinc-300" placeholder="请输入学号">
+                                    <input id="register-username" type="text" required class="w-full py-3 outline-none font-bold text-black bg-transparent placeholder-zinc-300" placeholder="请输入学号">
                                 </div>
                             </div>
                             <div>
                                 <label class="mono text-xs font-bold text-black tracking-widest uppercase block mb-2">设置密码 / PASS</label>
                                 <div class="w-full border-[3px] border-black flex items-center px-4 bg-white focus-within:border-emerald-500 focus-within:ring-4 focus-within:ring-emerald-500/30 transition-all shadow-[4px_4px_0px_rgba(0,0,0,1)]">
                                     <i class="fa-solid fa-lock text-zinc-300 mr-3"></i>
-                                    <input type="password" required class="w-full py-3 outline-none font-bold text-black bg-transparent placeholder-zinc-300" placeholder="请输入至少6位密码">
+                                    <input id="register-password" type="password" required class="w-full py-3 outline-none font-bold text-black bg-transparent placeholder-zinc-300" placeholder="请输入至少6位密码">
                                 </div>
                             </div>
                             <div>
                                 <label class="mono text-xs font-bold text-black tracking-widest uppercase block mb-2">确认密码 / CONFIRM</label>
                                 <div class="w-full border-[3px] border-black flex items-center px-4 bg-white focus-within:border-emerald-500 focus-within:ring-4 focus-within:ring-emerald-500/30 transition-all shadow-[4px_4px_0px_rgba(0,0,0,1)]">
                                     <i class="fa-solid fa-lock text-zinc-300 mr-3"></i>
-                                    <input type="password" required class="w-full py-3 outline-none font-bold text-black bg-transparent placeholder-zinc-300" placeholder="请再次输入密码">
+                                    <input id="register-password-confirm" type="password" required class="w-full py-3 outline-none font-bold text-black bg-transparent placeholder-zinc-300" placeholder="请再次输入密码">
                                 </div>
                             </div>
                             <button type="submit" id="btn-register" class="w-full py-5 mt-6 bg-black text-white font-black text-sm tracking-[0.2em] hover:bg-emerald-500 hover:text-black transition-all shadow-[4px_4px_0px_rgba(0,0,0,0.3)] hover:shadow-[6px_6px_0px_rgba(0,0,0,1)] uppercase">
@@ -335,18 +364,25 @@
 
     <section id="page-analysis" class="page-node bg-white !pb-0 text-black">
         <div class="min-h-screen">
-            <nav class="h-20 px-8 flex justify-between items-center border-b border-black sticky top-0 bg-white z-50" data-html2canvas-ignore="true">
+            <nav class="no-print h-20 px-8 flex justify-between items-center border-b border-black sticky top-0 bg-white z-50" data-html2canvas-ignore="true">
                 <div class="flex items-center gap-2 cursor-pointer hover:opacity-50 transition-opacity" onclick="goBack()"><i class="fa-solid fa-arrow-left text-xl"></i><span class="font-black text-sm tracking-[0.2em] ml-2 mt-0.5">返回上一页</span></div>
                 <div id="nav-status"></div>
             </nav>
-            <main class="px-8 mt-12 mb-32 max-w-5xl mx-auto" id="pdf-export-area">
-                <header class="mb-16" id="analysis-header"></header>
-                <section class="mb-16 p-8 border border-black bg-zinc-50" id="analysis-summary"></section>
-                <section class="space-y-12" id="analysis-clauses"></section>
+            <main class="px-8 mt-12 mb-32 max-w-5xl mx-auto contract-pdf-sheet" id="pdf-export-area">
+                <header class="mb-10" id="analysis-header"></header>
+                <section class="mb-10 p-8 border-[3px] border-black bg-white shadow-[6px_6px_0px_rgba(0,0,0,1)] break-inside-avoid" id="analysis-cover"></section>
+                <section class="mb-10 p-8 border-[3px] border-black bg-zinc-50 break-inside-avoid" id="analysis-abstract"></section>
+                <section class="mb-10 break-inside-avoid" id="analysis-risk-overview"></section>
+                <section class="space-y-12 mb-10" id="analysis-clauses"></section>
+                <section class="mb-10 p-8 border-[3px] border-black bg-white break-inside-avoid" id="analysis-conclusion"></section>
+                <section class="mb-16 p-6 border-2 border-zinc-400 bg-zinc-100 text-sm font-bold break-inside-avoid" id="analysis-disclaimer"></section>
             </main>
-            <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-black p-6 md:py-8 z-[100] flex items-center justify-center" data-html2canvas-ignore="true">
-                <button onclick="exportReport()" id="btn-export" class="w-full max-w-2xl h-14 md:h-16 bg-black text-white flex items-center justify-center gap-4 hover:bg-emerald-500 hover:text-black transition-all shadow-xl font-black tracking-[0.2em]">
-                    <i class="fa-solid fa-file-arrow-down text-xl"></i>导出完整风控卷宗
+            <div class="no-print fixed bottom-0 left-0 right-0 bg-white border-t border-black p-4 md:p-6 z-[100] flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3" data-html2canvas-ignore="true">
+                <button type="button" onclick="exportReportDownload()" id="btn-export" class="w-full sm:max-w-md h-14 md:h-16 bg-black text-white flex items-center justify-center gap-3 hover:bg-emerald-500 hover:text-black transition-all shadow-xl font-black tracking-[0.15em] text-sm md:text-base">
+                    <i class="fa-solid fa-file-arrow-down text-xl"></i>下载 PDF（完整分页）
+                </button>
+                <button type="button" onclick="exportReportPrint()" class="w-full sm:max-w-md h-14 md:h-16 border-[3px] border-black bg-white text-black flex items-center justify-center gap-3 hover:bg-zinc-100 transition-all font-black tracking-[0.15em] text-sm md:text-base">
+                    <i class="fa-solid fa-print text-xl"></i>系统打印为 PDF
                 </button>
             </div>
         </div>
@@ -414,8 +450,14 @@
         <div class="absolute top-10 left-6 right-6 z-50">
             <div class="bg-black/80 backdrop-blur-xl border border-white/20 p-4 flex items-center gap-4 shadow-2xl">
                 <i class="fa-solid fa-magnifying-glass text-zinc-500"></i>
-                <input type="text" placeholder="检索周边法律援助节点..." class="bg-transparent border-none outline-none text-sm w-full font-medium text-white">
+                <input id="map-keyword" type="text" placeholder="检索周边律所 / 法院 / 法援..." class="bg-transparent border-none outline-none text-sm w-full font-medium text-white">
                 <div class="w-8 h-8 bg-white text-black flex items-center justify-center text-xs cursor-pointer"><i class="fa-solid fa-sliders"></i></div>
+            </div>
+            <div id="map-status" class="mt-2 text-[11px] font-bold tracking-wide bg-black/70 border border-white/20 text-zinc-200 px-3 py-2">
+                地图初始化中...
+            </div>
+            <div id="map-debug" class="mt-1 text-[10px] font-mono text-emerald-200 bg-black/60 border border-emerald-500/40 px-3 py-1.5 rounded">
+                [debug] 尚未触发定位 / 雷达请求
             </div>
         </div>
         <button onclick="recenterToCurrentLocation()" class="absolute bottom-32 left-6 w-12 h-12 bg-white text-black flex items-center justify-center shadow-2xl z-40 active:scale-90 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)]">
@@ -536,15 +578,12 @@
         const APIData = {
             sysInfo: { version: "v9.7" },
             user: { 
+                id: "",
                 idName: "CHEN_YU", 
                 signature: "法律的生命不在于逻辑，而在于经验。保持警惕，否决一切不公。", 
                 avatar: "https://ui-avatars.com/api/?name=CY&background=10b981&color=fff", 
             },
-            discoverNews: [
-                { id: "n1", tag: "首发 / 2026", title: "实习协议中的“竞业禁止”边界在哪？", content: "<p>根据《中华人民共和国劳动合同法》第二十四条，竞业限制的人员限于用人单位的高级管理人员、高级技术人员和其他负有保密义务的人员。<b>绝大多数实习生并不属于上述范畴。</b></p><div class='p-4 bg-emerald-50 border-l-4 border-emerald-500 my-4 text-emerald-900'><b>系统提示：</b>如果未约定任何补偿，您可以直接使用 VETO 的「一键否决」功能生成法律抗辩书。</div>" }, 
-                { id: "n2", tag: "指南", title: "电子合同签署的 3 个致命盲区", content: "<p>随着线上兼职的普及，越来越多的雇主通过第三方平台发送电子合同。以下是盲区：<br><br><b>盲区一：</b>未核实电子签名效力。<br><b>盲区二：</b>未下载保留副本。<br><b>盲区三：</b>忽视附加协议的隐藏链接。</p>" },
-                { id: "n3", tag: "提醒", title: "关于校外兼职平台“保证金”骗局的专项通报", content: "<p>近期多发兼职被骗取保证金的案件，请各位同学注意防范。</p>" }
-            ],
+            discoverNews: [],
             discoverForum: [
                 { 
                     id: "f1", author: "匿名校友 / 计算机系", title: "避坑：南区外卖配送站点的劳务协议极其离谱！", 
@@ -572,6 +611,115 @@
             }
         };
 
+        // ===== 后端 API（统一指向当前主机:8000）=====
+        const API_BASE = `${window.location.protocol}//${window.location.hostname}:8000`;
+        function apiUrl(path) {
+            return `${API_BASE}${path}`;
+        }
+        const API = {
+            register: apiUrl("/register"),
+            login: apiUrl("/login"),
+            forumPosts: apiUrl("/api/forum/posts"),
+            forumComments: (postId) => apiUrl(`/api/forum/posts/${postId}/comments`),
+            history: (userId) => apiUrl(`/history/${userId}`),
+            deleteHistory: (conversationId, userId) =>
+                apiUrl(`/history/${conversationId}?user_id=${encodeURIComponent(userId)}`),
+            news: apiUrl("/api/news"),
+            analyzeContract: apiUrl("/api/analyze-contract"),
+            lawyerSearchByLocation: apiUrl("/api/lawyer/search-by-location"),
+        };
+
+        async function apiFetch(url, options = {}) {
+            const resp = await fetch(url, options);
+            const contentType = resp.headers.get("content-type") || "";
+            let payload;
+            try {
+                payload = contentType.includes("application/json") ? await resp.json() : await resp.text();
+            } catch (e) {
+                payload = null;
+            }
+            if (!resp.ok) {
+                const message =
+                    (payload && payload.detail && (typeof payload.detail === "string" ? payload.detail : JSON.stringify(payload.detail))) ||
+                    (typeof payload === "string" ? payload : `HTTP ${resp.status}`);
+                throw new Error(message);
+            }
+            return payload;
+        }
+
+        function saveSession(user) {
+            localStorage.setItem("veto_session_user", JSON.stringify(user));
+        }
+        function loadSession() {
+            try {
+                const raw = localStorage.getItem("veto_session_user");
+                return raw ? JSON.parse(raw) : null;
+            } catch (e) {
+                return null;
+            }
+        }
+        function clearSession() {
+            localStorage.removeItem("veto_session_user");
+        }
+
+        async function refreshForumFromBackend() {
+            try {
+                const posts = await apiFetch(API.forumPosts);
+                APIData.discoverForum = (posts || []).map((p) => ({
+                    id: p.id,
+                    author: p.author_name || "匿名",
+                    title: p.title || "",
+                    content: p.content || "",
+                    likes: p.likes || 0,
+                    created_at: p.created_at || "",
+                    user_id: p.user_id || "",
+                    comments: (p.forum_comments || []).map((c) => ({
+                        id: c.id,
+                        author: c.author_name || "匿名",
+                        text: c.content || "",
+                        time: c.created_at || "",
+                        user_id: c.user_id || "",
+                    })),
+                }));
+            } catch (e) {
+                // 拉取失败时保持原有演示数据
+            }
+        }
+
+        async function refreshNewsFromBackend() {
+            try {
+                const items = await apiFetch(API.news);
+                APIData.discoverNews = (items || []).map((n) => ({
+                    id: String(n.id || ""),
+                    tag: n.crawled_at ? `爬虫 / ${String(n.crawled_at).slice(0, 10)}` : "爬虫",
+                    title: n.title || "",
+                    // 后端已输出 content_html
+                    content: n.content_html || `<p>${(n.preview || "").replace(/</g, "&lt;")}</p>`,
+                }));
+            } catch (e) {
+                // ignore
+            }
+        }
+
+        async function refreshHistoryFromBackend() {
+            if (!APIData.user || !APIData.user.id) return;
+            try {
+                const data = await apiFetch(API.history(APIData.user.id));
+                const history = (data && data.history) ? data.history : [];
+                APIData.archives = history.map((h, idx) => ({
+                    id: h.id || `H-${idx}`,
+                    title: h.question || "未命名记录",
+                    date: (h.created_at || "").slice(0, 10).replaceAll("-", ".") || "—",
+                    level: "warning",
+                    levelText: "记录",
+                    answer: h.answer || "",
+                    mode: h.mode || "",
+                }));
+            } catch (e) {
+                // ignore
+            }
+        }
+
         // ★ 路由历史系统 ★
         let pageHistory = [];
         let currentPageId = 'login';
@@ -593,7 +741,7 @@
             });
         }
 
-        function handleAuth(e, type) {
+        async function handleAuth(e, type) {
             e.preventDefault(); 
             let btnId = '';
             if (type === 'login') btnId = 'btn-login';
@@ -605,31 +753,70 @@
             
             btn.innerHTML = '<i class="fa-solid fa-circle-notch animate-spin"></i> 处理中...';
             btn.classList.add('pointer-events-none');
+            try {
+                if (type === "login") {
+                    const username = (document.getElementById("login-username")?.value || "").trim();
+                    const password = (document.getElementById("login-password")?.value || "").trim();
+                    if (!username || !password) throw new Error("请输入学号与密码。");
+                    const result = await apiFetch(API.login, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ username, password }),
+                    });
+                    // 后端返回形如：{ message: "...", user: { id, username, ... } }
+                    const u = (result && result.user) ? result.user : null;
+                    if (!u || !u.id) throw new Error("登录成功但未获取到用户信息。");
+                    APIData.user.id = u.id;
+                    APIData.user.idName = u.username || APIData.user.idName;
+                    APIData.user.email = u.email || "";
+                    APIData.user.avatar = `https://ui-avatars.com/api/?name=${encodeURIComponent(APIData.user.idName)}&background=10b981&color=fff`;
+                    saveSession({ id: APIData.user.id, username: APIData.user.idName, email: APIData.user.email, avatar: APIData.user.avatar });
+                    await refreshForumFromBackend();
+                    await refreshHistoryFromBackend();
+                    renderHome();
+                    renderDiscover();
+                    renderUser();
+                    pageHistory = [];
+                    showPage("home");
+                } else if (type === "register") {
+                    const name = (document.getElementById("register-name")?.value || "").trim();
+                    const username = (document.getElementById("register-username")?.value || "").trim();
+                    const password = (document.getElementById("register-password")?.value || "").trim();
+                    const password2 = (document.getElementById("register-password-confirm")?.value || "").trim();
+                    if (!name || !username || !password) throw new Error("请完整填写注册信息。");
+                    if (password !== password2) throw new Error("两次密码不一致。");
+                    await apiFetch(API.register, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ username, password, email: "" }),
+                    });
+                    alert("注册成功，请登录。");
+                    switchAuthMode("login");
+                } else {
+                    alert("此页面的找回密码为演示占位，暂未接入后端。");
+                }
 
-            setTimeout(() => {
                 btn.innerHTML = '<i class="fa-solid fa-check"></i> 执行成功';
                 btn.classList.replace('bg-black', 'bg-emerald-500');
                 btn.classList.replace('text-white', 'text-black');
-
                 setTimeout(() => {
                     btn.innerHTML = originalText;
                     btn.classList.replace('bg-emerald-500', 'bg-black');
                     btn.classList.replace('text-black', 'text-white');
                     btn.classList.remove('pointer-events-none');
-
-                    if(type === 'login') {
-                        pageHistory = []; // 登录成功清空历史栈
-                        showPage('home');
-                    } else if (type === 'register' || type === 'forgot') {
-                        switchAuthMode('login');
-                    }
                 }, 600);
-            }, 1200);
+            } catch (error) {
+                alert(String(error?.message || error || "请求失败"));
+                btn.innerHTML = originalText;
+                btn.classList.remove('pointer-events-none');
+            }
         }
         
         function handleLogout() {
             if(confirm("确定要切断当前终端的连接吗？")) {
                 pageHistory = []; // 登出清空历史栈
+                APIData.user.id = "";
+                clearSession();
                 showPage('login');
                 switchAuthMode('login');
             }
@@ -702,16 +889,115 @@
             } catch(e) {}
         }
 
+        function escapeHtml(str) {
+            if (str == null || str === undefined) return '';
+            return String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+        }
+
+        function reportSectionHeading(text) {
+            return `<h2 class="text-lg md:text-xl font-black border-l-[6px] border-emerald-500 pl-3 mb-5 tracking-tight text-black">${text}</h2>`;
+        }
+
         function renderAnalysis() {
             try {
                 const data = APIData.analysis;
                 if (!data || !data.overview) return;
                 const themeMap = { critical: { color: "rose-600", bg: "rose-600", text: "text-rose-600", stripe: "danger-stripes", icon: "fa-gavel" }, warning: { color: "amber-500", bg: "amber-500", text: "text-amber-600", stripe: "warning-stripes", icon: "fa-scale-balanced" }, safe: { color: "emerald-500", bg: "emerald-500", text: "text-emerald-500", stripe: "", icon: "fa-check" } };
                 const theme = themeMap[data.status] || themeMap.safe;
+                const reportTitle = data.reportTitle || '劳动合同风险审查报告';
+                const reportSubtitle = data.reportSubtitle || '——基于模块化合规筛查的专项分析';
+                const contractSrc = data.contractSource || data.sourceFilename || '';
+                const genCn = data.generatedAtCn || '';
+                const genAt = data.generatedAt || '';
+                const metaLine = [genCn ? `生成日期：${escapeHtml(genCn)}` : (genAt ? `生成时间 ${escapeHtml(genAt)}` : ''), data.sourceFilename ? `文件：${escapeHtml(data.sourceFilename)}` : ''].filter(Boolean).join(' · ');
+
                 document.getElementById('nav-status').innerHTML = `<span class="mono text-[10px] ${theme.text} tracking-widest font-bold">异常响应_</span><div class="w-2 h-2 bg-${theme.color} rounded-full animate-ping"></div>`;
-                document.getElementById('analysis-header').innerHTML = `<div class="flex items-center gap-3 mb-4"><i class="fa-solid fa-triangle-exclamation ${theme.text} text-xl"></i><span class="mono text-xs font-bold ${theme.text} tracking-widest uppercase">Threat_Level: ${data.status}</span></div><h1 class="text-6xl md:text-7xl font-black tracking-tighter leading-none mb-8">卷宗<br>解构报告_</h1><div class="grid grid-cols-3 border-[3px] border-black bg-black text-white shadow-[8px_8px_0px_rgba(0,0,0,1)]"><div class="p-6 md:p-8 border-r border-zinc-800"><p class="mono text-[9px] text-zinc-400 tracking-widest mb-2">综合风险指数</p><p class="text-4xl md:text-5xl font-black italic ${theme.text}">${data.overview.levelText}</p></div><div class="p-6 md:p-8 border-r border-zinc-800"><p class="mono text-[9px] text-zinc-400 tracking-widest mb-2">检出核心陷阱</p><p class="text-4xl md:text-5xl font-black italic">${data.overview.fatalTrapsCount < 10 ? '0'+data.overview.fatalTrapsCount : data.overview.fatalTrapsCount}<span class="text-lg text-zinc-500 ml-1">处</span></p></div><div class="p-6 md:p-8"><p class="mono text-[9px] text-zinc-400 tracking-widest mb-2">缺失关键保障</p><p class="text-4xl md:text-5xl font-black italic">${data.overview.missingGuaranteesCount < 10 ? '0'+data.overview.missingGuaranteesCount : data.overview.missingGuaranteesCount}<span class="text-lg text-zinc-500 ml-1">项</span></p></div></div>`;
-                document.getElementById('analysis-summary').innerHTML = `<h3 class="mono text-[10px] font-bold tracking-[0.3em] text-zinc-500 mb-4">>> 引擎总控摘要</h3><p class="text-base font-bold leading-relaxed text-zinc-800">${data.summary}</p>`;
-                document.getElementById('analysis-clauses').innerHTML = `<h3 class="mono text-[10px] font-bold tracking-[0.3em] text-zinc-500 border-b border-black pb-4">>> 异常条款切片阵列</h3>` + data.clauses.map(clause => { const cTheme = themeMap[clause.severity] || themeMap.warning; const textColor = clause.severity === 'warning' ? 'text-black' : 'text-white'; return `<div class="border-[3px] border-black group mt-12 break-inside-avoid shadow-[6px_6px_0px_rgba(0,0,0,1)]"><div class="bg-black text-white p-4 flex justify-between items-center"><div class="flex items-center gap-4"><span class="mono text-xs font-bold bg-${cTheme.bg} ${textColor} px-2 py-1">目标标号_${clause.id}</span><h4 class="font-black tracking-widest text-sm">${clause.title}</h4></div><i class="fa-solid fa-fingerprint text-zinc-600"></i></div><div class="p-6 md:p-8 space-y-6"><div><p class="mono text-[9px] text-zinc-400 tracking-widest mb-2">:: 捕获原始协议片段 ::</p><div class="p-4 b-dashed bg-zinc-50 text-sm text-zinc-700 font-bold ${cTheme.stripe}">${clause.originalSnippet}</div></div><div class="flex gap-4 items-start"><div class="w-8 h-8 bg-black text-white flex items-center justify-center shrink-0 mt-1"><i class="fa-solid ${cTheme.icon} text-xs"></i></div><div><p class="mono text-[9px] text-zinc-400 tracking-widest mb-1">:: 引擎法条映射结论 ::</p><p class="text-sm font-bold text-black leading-relaxed">${clause.aiAnalysis}</p></div></div></div></div>`; }).join('');
+
+                document.getElementById('analysis-header').innerHTML = `
+                    <div class="flex items-center gap-3 mb-6"><i class="fa-solid fa-triangle-exclamation ${theme.text} text-xl"></i><span class="mono text-xs font-bold ${theme.text} tracking-widest uppercase">Threat_Level: ${data.status}</span></div>
+                    <h1 class="text-3xl md:text-4xl font-black text-center tracking-tight leading-tight mb-2">${escapeHtml(reportTitle)}</h1>
+                    <p class="text-center text-sm md:text-base font-bold text-zinc-700 mb-3">${escapeHtml(reportSubtitle)}</p>
+                    <p class="text-center text-xs md:text-sm text-zinc-600 font-bold mb-1">合同来源：${escapeHtml(contractSrc)}</p>
+                    <p class="text-center mono text-[10px] text-zinc-500 mb-8">${metaLine || '&nbsp;'}</p>
+                    <div class="grid grid-cols-3 border-[3px] border-black bg-black text-white shadow-[8px_8px_0px_rgba(0,0,0,1)]">
+                        <div class="p-4 md:p-8 border-r border-zinc-800"><p class="mono text-[9px] text-zinc-400 tracking-widest mb-2">综合风险指数</p><p class="text-3xl md:text-5xl font-black italic ${theme.text}">${data.overview.levelText}</p></div>
+                        <div class="p-4 md:p-8 border-r border-zinc-800"><p class="mono text-[9px] text-zinc-400 tracking-widest mb-2">检出核心陷阱</p><p class="text-3xl md:text-5xl font-black italic">${data.overview.fatalTrapsCount < 10 ? '0'+data.overview.fatalTrapsCount : data.overview.fatalTrapsCount}<span class="text-lg text-zinc-500 ml-1">处</span></p></div>
+                        <div class="p-4 md:p-8"><p class="mono text-[9px] text-zinc-400 tracking-widest mb-2">缺失关键保障</p><p class="text-3xl md:text-5xl font-black italic">${data.overview.missingGuaranteesCount < 10 ? '0'+data.overview.missingGuaranteesCount : data.overview.missingGuaranteesCount}<span class="text-lg text-zinc-500 ml-1">项</span></p></div>
+                    </div>`;
+
+                const cov = data.coverInfo || {};
+                document.getElementById('analysis-cover').innerHTML = reportSectionHeading('封面信息') + `
+                    <dl class="space-y-3 text-sm font-bold text-zinc-800">
+                        <div><dt class="mono text-[9px] text-zinc-500 tracking-widest mb-1">报告名称</dt><dd>${escapeHtml(cov.reportName || reportTitle)}</dd></div>
+                        <div><dt class="mono text-[9px] text-zinc-500 tracking-widest mb-1">审查对象</dt><dd>${escapeHtml(cov.reviewTarget || '—')}</dd></div>
+                        <div><dt class="mono text-[9px] text-zinc-500 tracking-widest mb-1">审查范围</dt><dd>${escapeHtml(cov.scopeLine || '—')}</dd></div>
+                        <div><dt class="mono text-[9px] text-zinc-500 tracking-widest mb-1">高风险条款数量</dt><dd>${cov.keyRiskCount != null ? escapeHtml(String(cov.keyRiskCount)) + ' 项' : '—'}</dd></div>
+                        <div><dt class="mono text-[9px] text-zinc-500 tracking-widest mb-1">主要风险类型分布</dt><dd class="leading-relaxed">${escapeHtml(cov.riskDistributionLine || '—')}</dd></div>
+                    </dl>`;
+
+                const absText = data.executiveSummary != null ? data.executiveSummary : (data.summary || '');
+                document.getElementById('analysis-abstract').innerHTML = reportSectionHeading('摘要') + `<p class="text-sm md:text-base font-bold leading-relaxed text-zinc-800">${escapeHtml(absText)}</p>`;
+
+                const rows = data.riskOverviewRows || [];
+                let tableHtml = reportSectionHeading('风险总览');
+                if (rows.length === 0) {
+                    tableHtml += `<p class="text-sm text-zinc-500 font-bold">暂无关键风险条款或未返回总览表数据。</p>`;
+                } else {
+                    tableHtml += `<div class="overflow-x-auto border-[3px] border-black shadow-[4px_4px_0px_rgba(0,0,0,1)]"><table class="w-full min-w-[640px] text-left text-[11px] md:text-sm border-collapse">
+                        <thead><tr class="bg-black text-white">
+                            <th class="border border-black p-2 md:p-3 font-black">条款编号</th>
+                            <th class="border border-black p-2 md:p-3 font-black">所属章节</th>
+                            <th class="border border-black p-2 md:p-3 font-black">风险类型</th>
+                            <th class="border border-black p-2 md:p-3 font-black">风险等级</th>
+                            <th class="border border-black p-2 md:p-3 font-black">法律依据状态</th>
+                        </tr></thead><tbody>`;
+                    tableHtml += rows.map((r, i) => `<tr class="${i % 2 === 1 ? 'bg-zinc-50' : 'bg-white'}">
+                        <td class="border border-black p-2 md:p-3 font-mono font-bold">${escapeHtml(r.clauseId)}</td>
+                        <td class="border border-black p-2 md:p-3">${escapeHtml(r.section)}</td>
+                        <td class="border border-black p-2 md:p-3">${escapeHtml(r.riskType)}</td>
+                        <td class="border border-black p-2 md:p-3 font-bold">${escapeHtml(r.riskLevel)}</td>
+                        <td class="border border-black p-2 md:p-3">${escapeHtml(r.legalBasisStatus)}</td>
+                    </tr>`).join('');
+                    tableHtml += `</tbody></table></div>`;
+                }
+                document.getElementById('analysis-risk-overview').innerHTML = tableHtml;
+
+                document.getElementById('analysis-clauses').innerHTML = reportSectionHeading('逐条风险分析') + (data.clauses || []).map(clause => {
+                    const cTheme = themeMap[clause.severity] || themeMap.warning;
+                    const textColor = clause.severity === 'warning' ? 'text-black' : 'text-white';
+                    const head = clause.analysisHeadline || clause.title || clause.id;
+                    const legalT = clause.legalBasisText != null ? clause.legalBasisText : (clause.aiAnalysis || '');
+                    const riskE = clause.riskExplanationText != null ? clause.riskExplanationText : '';
+                    const revS = clause.revisionSuggestionText != null ? clause.revisionSuggestionText : '';
+                    return `<div class="border-[3px] border-black group mt-10 break-inside-avoid shadow-[6px_6px_0px_rgba(0,0,0,1)]">
+                        <div class="bg-black text-white p-4 flex justify-between items-center">
+                            <div class="flex flex-wrap items-center gap-3">
+                                <span class="mono text-xs font-bold bg-${cTheme.bg} ${textColor} px-2 py-1">条款 ${escapeHtml(clause.id)}</span>
+                                <h4 class="font-black text-sm md:text-base tracking-tight">${escapeHtml(head)}</h4>
+                            </div>
+                            <i class="fa-solid fa-fingerprint text-zinc-600 hidden sm:block"></i>
+                        </div>
+                        <div class="p-6 md:p-8 space-y-5 text-sm font-bold text-zinc-800">
+                            <div><p class="mono text-[9px] text-zinc-500 tracking-widest mb-2">风险类型</p><p>${escapeHtml(clause.riskType || '—')}</p></div>
+                            <div><p class="mono text-[9px] text-zinc-500 tracking-widest mb-2">条款内容</p><div class="p-4 b-dashed bg-zinc-50 whitespace-pre-wrap ${cTheme.stripe}">${escapeHtml(clause.originalSnippet)}</div></div>
+                            <div><p class="mono text-[9px] text-zinc-500 tracking-widest mb-2">法律依据</p><div class="p-4 border-2 border-black bg-white whitespace-pre-wrap text-xs md:text-sm leading-relaxed">${escapeHtml(legalT)}</div></div>
+                            <div><p class="mono text-[9px] text-zinc-500 tracking-widest mb-2">风险说明</p><p class="leading-relaxed">${escapeHtml(riskE)}</p></div>
+                            <div><p class="mono text-[9px] text-zinc-500 tracking-widest mb-2">修改建议</p><p class="leading-relaxed text-emerald-900 border-l-4 border-emerald-500 pl-3">${escapeHtml(revS)}</p></div>
+                        </div>
+                    </div>`;
+                }).join('');
+
+                const sug = (data.signingSuggestions || []).map((s, i) => `<li class="mb-2 pl-1">${escapeHtml(s)}</li>`).join('');
+                document.getElementById('analysis-conclusion').innerHTML = reportSectionHeading('结论与签约建议')
+                    + `<p class="text-sm md:text-base font-bold leading-relaxed text-zinc-800 mb-6">${escapeHtml(data.conclusionBody || '')}</p>`
+                    + (sug ? `<p class="mono text-[9px] text-zinc-500 tracking-widest mb-2">签约建议</p><ol class="list-decimal list-inside space-y-1 text-sm font-bold text-zinc-800">${sug}</ol>` : '');
+
+                document.getElementById('analysis-disclaimer').innerHTML = reportSectionHeading('说明')
+                    + `<p class="text-sm font-bold text-zinc-700">${escapeHtml(data.disclaimer || '本报告不构成正式法律意见，具体签约决策应结合专业律师意见作出。')}</p>`;
             } catch(e){}
         }
 
@@ -767,19 +1053,24 @@
             const btn = document.getElementById('btn-submit-post');
             
             if(!title.trim() || !content.trim()) return alert("标题和内容不能为空！");
+            if (!APIData.user || !APIData.user.id) return alert("请先登录后再发帖。");
             
             btn.innerHTML = '<i class="fa-solid fa-circle-notch animate-spin"></i> 发送中...';
             btn.classList.add('pointer-events-none');
 
-            const newPost = {
-                id: "f" + Date.now(), author: APIData.user.idName, title: title,
-                content: `<p>${content.replace(/\n/g, '<br>')}</p>`, likes: 0, comments: []
-            };
-
             try {
-                await new Promise(r => setTimeout(r, 800)); 
-                APIData.discoverForum.unshift(newPost);
-                renderDiscover(); renderUser(); 
+                await apiFetch(API.forumPosts, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        user_id: APIData.user.id,
+                        title: title.trim(),
+                        content: `<p>${content.trim().replace(/\n/g, "<br>")}</p>`,
+                    }),
+                });
+                await refreshForumFromBackend();
+                renderDiscover();
+                renderUser();
                 closePostModal();
                 document.getElementById('new-post-title').value = '';
                 document.getElementById('new-post-content').value = '';
@@ -796,19 +1087,20 @@
             const text = input.value;
             const btn = document.getElementById('btn-submit-comment');
             if(!text.trim()) return;
+            if (!APIData.user || !APIData.user.id) return alert("请先登录后再回复。");
 
             btn.innerText = "发送中..."; btn.classList.add('pointer-events-none');
 
-            const newComment = { id: "c" + Date.now(), author: APIData.user.idName, text: text, time: "刚刚" };
-
             try {
-                await new Promise(r => setTimeout(r, 500));
-                const targetPost = APIData.discoverForum.find(f => f.id === postId);
-                if(targetPost) {
-                    targetPost.comments.push(newComment);
-                    renderComments(targetPost.comments); 
-                    renderDiscover(); 
-                }
+                await apiFetch(API.forumComments(postId), {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ user_id: APIData.user.id, content: text.trim() }),
+                });
+                await refreshForumFromBackend();
+                const targetPost = APIData.discoverForum.find((f) => f.id === postId);
+                if (targetPost) renderComments(targetPost.comments || []);
+                renderDiscover();
                 input.value = ''; 
             } catch (error) { alert("回复失败，请重试。"); } 
             finally { btn.innerText = "回复"; btn.classList.remove('pointer-events-none'); }
@@ -943,16 +1235,20 @@
             try {
                 const formData = new FormData();
                 formData.append('contract_file', selectedFile); 
-                const USE_REAL_BACKEND = false; 
+                // 通过后端同源路由直连（推荐：访问 /veto 时无需改端口）
+                const USE_REAL_BACKEND = true; 
                 if (USE_REAL_BACKEND) {
-                    const response = await fetch('http://127.0.0.1:8000/api/analyze-contract', { method: 'POST', body: formData });
-                    if (!response.ok) throw new Error('网络响应异常');
-                    const result = await response.json();
+                    const response = await fetch(API.analyzeContract, { method: 'POST', body: formData });
+                    const result = await response.json().catch(() => ({}));
+                    if (!response.ok) {
+                        const detail = result.detail != null ? (typeof result.detail === 'string' ? result.detail : JSON.stringify(result.detail)) : '网络响应异常';
+                        throw new Error(detail);
+                    }
                     APIData.analysis = result.data; 
                 } else { await new Promise(resolve => setTimeout(resolve, 2000)); }
                 renderAnalysis(); showPage('analysis'); 
             } catch (error) {
-                alert("系统异常：未能连接到风控引擎核心，请检查网络或后端服务是否开启。");
+                alert("合同分析失败：" + (error && error.message ? error.message : "请检查后端服务、API Key 或上传 PDF/图片格式。"));
             } finally {
                 btn.innerHTML = '<span class="relative z-10">执行解构_</span>';
                 btn.classList.remove('pointer-events-none');
@@ -963,31 +1259,215 @@
             }
         }
 
-        // PDF 导出
-        function exportReport() {
-            const btn = document.getElementById('btn-export');
-            const originalText = btn.innerHTML;
+        // PDF：分片 html2canvas + jsPDF 分页。mx-auto/max-w 与 windowWidth=w 组合会导致裁剪原点错位、左侧被切掉。
+        function _pdfOnClone(clonedDoc, captureW) {
+            var node = clonedDoc.getElementById('pdf-export-area');
+            if (node) {
+                node.style.height = 'auto';
+                node.style.maxHeight = 'none';
+                node.style.overflow = 'visible';
+                if (captureW && captureW > 0) {
+                    node.style.maxWidth = 'none';
+                    node.style.width = captureW + 'px';
+                    node.style.marginLeft = '0';
+                    node.style.marginRight = '0';
+                    node.style.boxSizing = 'border-box';
+                    node.style.transform = 'none';
+                }
+            }
+            clonedDoc.body.style.overflow = 'visible';
+            clonedDoc.documentElement.style.overflow = 'visible';
+            if (captureW && captureW > 0) {
+                clonedDoc.body.style.margin = '0';
+                clonedDoc.documentElement.style.width = '100%';
+            }
+        }
+
+        /** 将一张 canvas 按 A4 可视高度分页画进 pdf（可多张 tile 顺序追加） */
+        function appendCanvasAsPagedImages(pdf, canvas, opts) {
+            opts = opts || {};
+            var margin = opts.margin != null ? opts.margin : 8;
+            var quality = opts.quality != null ? opts.quality : 0.9;
+            var JsPDF = (window.jspdf && window.jspdf.jsPDF) || (typeof window.jsPDF === 'function' ? window.jsPDF : null);
+            if (!JsPDF) throw new Error('jsPDF not loaded（请检查 jspdf.umd.min.js 是否 200 加载成功）');
+            var isNew = !pdf;
+            if (isNew) pdf = new JsPDF({ unit: 'mm', format: 'a4', orientation: 'portrait' });
+            if (!isNew && opts.prependWithNewPage) pdf.addPage();
+
+            var pageW = pdf.internal.pageSize.getWidth();
+            var pageH = pdf.internal.pageSize.getHeight();
+            var imgW = pageW - 2 * margin;
+            var viewH = pageH - 2 * margin;
+            var imgH = (canvas.height * imgW) / canvas.width;
+            var imgData = canvas.toDataURL('image/jpeg', quality);
+
+            var heightLeft = imgH;
+            var y = margin;
+            pdf.addImage(imgData, 'JPEG', margin, y, imgW, imgH);
+            heightLeft -= viewH;
+            while (heightLeft > 0) {
+                y = margin + (heightLeft - imgH);
+                pdf.addPage();
+                pdf.addImage(imgData, 'JPEG', margin, y, imgW, imgH);
+                heightLeft -= viewH;
+            }
+            return pdf;
+        }
+
+        function exportReportPrint() {
+            window.print();
+        }
+
+        function exportReportDownload() {
+            var btn = document.getElementById('btn-export');
+            var originalText = btn.innerHTML;
             btn.innerHTML = '<i class="fa-solid fa-circle-notch animate-spin text-xl"></i><span class="font-black tracking-[0.2em] text-base md:text-lg">引擎封卷中...</span>';
             btn.classList.add('pointer-events-none');
-            
-            const elementToExport = document.getElementById('pdf-export-area');
-            window.scrollTo(0, 0); // 解决截图截断问题
 
-            const opt = { 
-                margin: [15, 10, 15, 10], 
-                filename: 'VETO_卷宗解构报告.pdf', 
-                image: { type: 'jpeg', quality: 0.98 }, 
-                html2canvas: { scale: 2, useCORS: true, letterRendering: true, scrollY: 0, windowWidth: document.documentElement.offsetWidth }, 
-                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-                pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
-            };
+            var el = document.getElementById('pdf-export-area');
+            if (!el) {
+                btn.innerHTML = originalText;
+                btn.classList.remove('pointer-events-none');
+                return;
+            }
 
-            html2pdf().set(opt).from(elementToExport).save().then(() => {
-                btn.innerHTML = originalText; btn.classList.remove('pointer-events-none');
-            }).catch(err => {
-                alert("系统异常：风控卷宗导出失败。");
-                btn.innerHTML = originalText; btn.classList.remove('pointer-events-none');
+            var scrollX = window.scrollX || window.pageXOffset;
+            var scrollY = window.scrollY || window.pageYOffset;
+            window.scrollTo(0, 0);
+
+            requestAnimationFrame(function () {
+                el.classList.add('pdf-capture-fix');
+                var rect = el.getBoundingClientRect();
+                var w = Math.ceil(Math.max(el.scrollWidth, el.offsetWidth, rect.width || 0, 1));
+                var h = Math.max(el.scrollHeight, el.offsetHeight, 1);
+
+                var done = function () {
+                    el.classList.remove('pdf-capture-fix');
+                    window.scrollTo(scrollX, scrollY);
+                    btn.innerHTML = originalText;
+                    btn.classList.remove('pointer-events-none');
+                };
+
+                var MAX_PX = 4096;
+                var scale = Math.min(2, MAX_PX / w);
+                if (scale < 0.35) scale = 0.35;
+                var sliceCssH = Math.max(320, Math.min(Math.floor((MAX_PX - 64) / scale), h));
+
+                var vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0, w);
+                var vh = Math.max(window.innerHeight || 0, h);
+                var html2pdfOpt = {
+                    margin: 0,
+                    filename: 'VETO_劳动合同风险审查报告.pdf',
+                    image: { type: 'jpeg', quality: 0.92 },
+                    html2canvas: {
+                        scale: scale,
+                        useCORS: true,
+                        allowTaint: true,
+                        letterRendering: true,
+                        logging: false,
+                        backgroundColor: '#ffffff',
+                        foreignObjectRendering: false,
+                        scrollX: 0,
+                        scrollY: -scrollY,
+                        windowWidth: vw,
+                        windowHeight: vh,
+                        width: w,
+                        height: h,
+                        x: 0,
+                        y: 0,
+                        onclone: function (doc) {
+                            _pdfOnClone(doc, w);
+                        },
+                    },
+                    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                };
+
+                function tryFallbackHtml2Pdf() {
+                    html2pdf()
+                        .set(html2pdfOpt)
+                        .from(el)
+                        .toCanvas()
+                        .then(function () {
+                            var canvas = this.prop && this.prop.canvas;
+                            try {
+                                if (!canvas) throw new Error('未生成画布');
+                                var p = appendCanvasAsPagedImages(null, canvas, {});
+                                p.save('VETO_劳动合同风险审查报告.pdf');
+                            } catch (err) {
+                                console.error(err);
+                                alert('PDF 保存失败：' + (err && err.message ? err.message : '未知错误'));
+                            }
+                            done();
+                        })
+                        .catch(function () {
+                            alert('导出失败：请使用「系统打印为 PDF」，或缩小浏览器缩放后重试。');
+                            done();
+                        });
+                }
+
+                if (typeof window.html2canvas !== 'function') {
+                    tryFallbackHtml2Pdf();
+                    return;
+                }
+
+                var y0 = 0;
+                var pdf = null;
+
+                function captureNextTile() {
+                    if (y0 >= h) {
+                        try {
+                            if (pdf) pdf.save('VETO_劳动合同风险审查报告.pdf');
+                            else alert('未生成 PDF，请使用「系统打印为 PDF」。');
+                        } catch (e) {
+                            console.error(e);
+                            alert('PDF 保存失败，请尝试系统打印为 PDF。');
+                        }
+                        done();
+                        return;
+                    }
+                    var sh = Math.min(sliceCssH, h - y0);
+                    window
+                        .html2canvas(el, {
+                            scale: scale,
+                            x: 0,
+                            y: y0,
+                            width: w,
+                            height: sh,
+                            useCORS: true,
+                            allowTaint: true,
+                            logging: false,
+                            backgroundColor: '#ffffff',
+                            foreignObjectRendering: false,
+                            scrollX: 0,
+                            scrollY: 0,
+                            onclone: function (doc) {
+                                _pdfOnClone(doc, w);
+                            },
+                        })
+                        .then(function (canvas) {
+                            if (!canvas || canvas.width < 2 || canvas.height < 2) {
+                                throw new Error('分片截图为空');
+                            }
+                            pdf = appendCanvasAsPagedImages(pdf, canvas, {
+                                prependWithNewPage: pdf !== null,
+                                quality: 0.9,
+                            });
+                            y0 += sh;
+                            setTimeout(captureNextTile, 40);
+                        })
+                        .catch(function (err) {
+                            console.warn('分片导出失败，回退整页截图', err);
+                            tryFallbackHtml2Pdf();
+                        });
+                }
+
+                captureNextTile();
             });
+        }
+
+        /** 兼容旧 onclick */
+        function exportReport() {
+            exportReportDownload();
         }
 
         // 高德地图
@@ -1000,6 +1480,116 @@
 
             const map = new AMap.Map('amap-container', { zoom: 4, center: [104.0, 35.0] });
             window._vetoMap = map;
+            let myLocationMarker = null;
+            const mapStatusEl = document.getElementById("map-status");
+            const mapDebugEl = document.getElementById("map-debug");
+
+            function setMapStatus(msg, level) {
+                if (!mapStatusEl) return;
+                mapStatusEl.textContent = msg || "地图状态未知";
+                mapStatusEl.className = "mt-2 text-[11px] font-bold tracking-wide border px-3 py-2";
+                if (level === "ok") {
+                    mapStatusEl.classList.add("bg-emerald-500/15", "border-emerald-400/40", "text-emerald-200");
+                } else if (level === "warn") {
+                    mapStatusEl.classList.add("bg-amber-500/15", "border-amber-400/40", "text-amber-200");
+                } else if (level === "error") {
+                    mapStatusEl.classList.add("bg-rose-500/15", "border-rose-400/40", "text-rose-200");
+                } else {
+                    mapStatusEl.classList.add("bg-black/70", "border-white/20", "text-zinc-200");
+                }
+            }
+            setMapStatus("正在请求定位权限...", "info");
+
+            function setMyLocation(lng, lat, opts) {
+                if (typeof lng !== "number" || typeof lat !== "number") return false;
+                if (!Number.isFinite(lng) || !Number.isFinite(lat)) return false;
+                window._vetoMyLocation = { lng: lng, lat: lat };
+                if (!myLocationMarker) {
+                    myLocationMarker = new AMap.Marker({
+                        position: [lng, lat],
+                        zIndex: 999,
+                        title: (opts && opts.title) || "我的位置",
+                        content: '<div style="width:22px;height:22px;border-radius:50%;background:rgba(59,130,246,0.22);display:flex;align-items:center;justify-content:center;border:1px solid rgba(59,130,246,0.45)"><div style="width:10px;height:10px;border-radius:50%;background:#3B82F6;border:2px solid #fff;"></div></div>'
+                    });
+                    myLocationMarker.setMap(map);
+                } else {
+                    myLocationMarker.setPosition([lng, lat]);
+                }
+                if (mapDebugEl) {
+                    mapDebugEl.textContent = `[debug] 定位成功 source=${(opts && opts.title) || "unknown"} lng=${lng.toFixed(5)} lat=${lat.toFixed(5)}`;
+                }
+                setMapStatus(((opts && opts.title) || "定位成功") + "，已同步附近律所", "ok");
+                return true;
+            }
+
+            function locateByBrowser() {
+                return new Promise((resolve, reject) => {
+                    if (!navigator.geolocation) {
+                        reject(new Error("当前浏览器不支持定位"));
+                        return;
+                    }
+                    navigator.geolocation.getCurrentPosition(
+                        function (pos) {
+                            const p = pos && pos.coords ? pos.coords : null;
+                            if (!p) {
+                                reject(new Error("浏览器定位返回空坐标"));
+                                return;
+                            }
+                            resolve({ lng: p.longitude, lat: p.latitude, source: "browser" });
+                        },
+                        function (err) {
+                            reject(new Error(err && err.message ? err.message : "浏览器定位失败"));
+                        },
+                        { enableHighAccuracy: true, timeout: 8000, maximumAge: 30000 }
+                    );
+                });
+            }
+
+            function locateByAmapGeo(geolocation) {
+                return new Promise((resolve, reject) => {
+                    if (!geolocation) {
+                        reject(new Error("高德定位组件不可用"));
+                        return;
+                    }
+                    geolocation.getCurrentPosition(function (status, result) {
+                        if (status === "complete" && result && result.position) {
+                            resolve({ lng: result.position.lng, lat: result.position.lat, source: "amap" });
+                            return;
+                        }
+                        const msg = result && result.message ? result.message : "高德定位失败";
+                        reject(new Error(msg));
+                    });
+                });
+            }
+
+            function locateByCitySearch() {
+                return new Promise((resolve, reject) => {
+                    AMap.plugin("AMap.CitySearch", function () {
+                        const citySearch = new AMap.CitySearch();
+                        citySearch.getLocalCity(function (status, result) {
+                            if (status !== "complete" || !result) {
+                                reject(new Error("城市定位失败"));
+                                return;
+                            }
+                            const rect = result.rectangle || "";
+                            if (rect.indexOf(";") === -1 || rect.indexOf(",") === -1) {
+                                reject(new Error("城市定位缺少坐标边界"));
+                                return;
+                            }
+                            const pair = rect.split(";");
+                            const p1 = pair[0].split(",").map(Number);
+                            const p2 = pair[1].split(",").map(Number);
+                            if (p1.length < 2 || p2.length < 2 || !Number.isFinite(p1[0]) || !Number.isFinite(p1[1]) || !Number.isFinite(p2[0]) || !Number.isFinite(p2[1])) {
+                                reject(new Error("城市定位坐标无效"));
+                                return;
+                            }
+                            const lng = (p1[0] + p2[0]) / 2;
+                            const lat = (p1[1] + p2[1]) / 2;
+                            resolve({ lng: lng, lat: lat, source: "city" });
+                        });
+                    });
+                });
+            }
 
             AMap.plugin('AMap.Geolocation', function() {
                 const geolocation = new AMap.Geolocation({
@@ -1008,26 +1598,99 @@
                 });
                 map.addControl(geolocation);
                 window._vetoGeo = geolocation; 
-                geolocation.getCurrentPosition(function(status, result){
-                    if(status === 'complete') loadLawyersByCenter([result.position.lng, result.position.lat]);
-                }); 
+
+                // 多级兜底：高德定位 -> 浏览器定位 -> 城市定位
+                (async function () {
+                    let loc = null;
+                    try {
+                        loc = await locateByAmapGeo(geolocation);
+                    } catch (e1) {
+                        try {
+                            loc = await locateByBrowser();
+                        } catch (e2) {
+                            try {
+                                loc = await locateByCitySearch();
+                            } catch (e3) {
+                                console.warn("地图定位全部失败", e1, e2, e3);
+                                setMapStatus("定位失败：请检查浏览器定位权限，或点击左下角定位按钮重试", "error");
+                            }
+                        }
+                    }
+                    if (loc && setMyLocation(loc.lng, loc.lat, { title: "我的位置（" + loc.source + "）" })) {
+                        map.setCenter([loc.lng, loc.lat]);
+                        loadLawyersByCenter([loc.lng, loc.lat]);
+                    }
+                })();
             });
 
             let markers = []; let loading = false;
+            let currentKeyword = "律师事务所";
+            let keywordTimer = null;
+
+            function toRad(deg) { return (deg * Math.PI) / 180; }
+            function distanceMeters(aLng, aLat, bLng, bLat) {
+                const R = 6371000;
+                const dLat = toRad(bLat - aLat);
+                const dLng = toRad(bLng - aLng);
+                const lat1 = toRad(aLat);
+                const lat2 = toRad(bLat);
+                const sinDLat = Math.sin(dLat / 2);
+                const sinDLng = Math.sin(dLng / 2);
+                const h = sinDLat * sinDLat + Math.cos(lat1) * Math.cos(lat2) * sinDLng * sinDLng;
+                return Math.round(2 * R * Math.asin(Math.min(1, Math.sqrt(h))));
+            }
+
+            const keywordInput = document.getElementById("map-keyword");
+            if (keywordInput) {
+                keywordInput.value = currentKeyword;
+                keywordInput.addEventListener("input", () => {
+                    const raw = (keywordInput.value || "").trim();
+                    currentKeyword = raw || "律师事务所";
+                    if (keywordTimer) window.clearTimeout(keywordTimer);
+                    keywordTimer = window.setTimeout(() => {
+                        const center = map.getCenter();
+                        loadLawyersByCenter([center.getLng(), center.getLat()]);
+                    }, 300);
+                });
+                keywordInput.addEventListener("keydown", (e) => {
+                    if (e.key === "Enter") {
+                        e.preventDefault();
+                        const center = map.getCenter();
+                        loadLawyersByCenter([center.getLng(), center.getLat()]);
+                    }
+                });
+            }
+
             async function loadLawyersByCenter(centerLngLat) {
                 if (loading) return; loading = true;
                 if (markers.length > 0) { map.remove(markers); markers = []; }
                 try {
+                    setMapStatus("正在检索附近服务点...", "info");
+                    if (mapDebugEl) {
+                        mapDebugEl.textContent = `[debug] 调用后端 /api/lawyer/search-by-location lng=${centerLngLat[0].toFixed(5)} lat=${centerLngLat[1].toFixed(5)}`;
+                    }
                     let itemsToRender = [];
-                    const USE_REAL_MAP_BACKEND = false; 
+                    // 通过后端同源路由直连
+                    const USE_REAL_MAP_BACKEND = true; 
 
                     if (USE_REAL_MAP_BACKEND) {
-                        const resp = await fetch('http://127.0.0.1:8000/api/lawyer/search-by-location', {
+                        const resp = await fetch(API.lawyerSearchByLocation, {
                             method: 'POST', headers: { 'Content-Type': 'application/json' },
-                            body: JSON.stringify({ longitude: centerLngLat[0], latitude: centerLngLat[1], radius: 5000, keyword: '律师事务所' }),
+                            body: JSON.stringify({ longitude: centerLngLat[0], latitude: centerLngLat[1], radius: 5000, keyword: currentKeyword || '律师事务所' }),
                         });
                         const data = await resp.json();
-                        if (data.success && Array.isArray(data.items)) { itemsToRender = data.items; }
+                        if (data.success && Array.isArray(data.items)) { 
+                            itemsToRender = data.items; 
+                            setMapStatus(`检索完成：找到 ${itemsToRender.length} 个服务点`, itemsToRender.length > 0 ? "ok" : "warn");
+                            if (mapDebugEl) {
+                                mapDebugEl.textContent = `[debug] 后端返回 success=${data.success} items=${itemsToRender.length}`;
+                            }
+                        } else {
+                            setMapStatus("检索成功但无结果，请更换关键词或拖动地图", "warn");
+                            if (mapDebugEl) {
+                                mapDebugEl.textContent = `[debug] 后端返回 success=${data && data.success} items=0（结构不符合预期）`;
+                            }
+                        }
                     } else {
                         const lng = centerLngLat[0]; const lat = centerLngLat[1];
                         itemsToRender = [
@@ -1036,25 +1699,94 @@
                         ];
                     }
 
+                    const myLoc = window._vetoMyLocation;
+                    if (myLoc && typeof myLoc.lng === "number" && typeof myLoc.lat === "number") {
+                        // 统一使用“距我当前位置”的距离（忽略后端 distance 字段）
+                        itemsToRender = itemsToRender
+                            .map((item) => {
+                                const dist = distanceMeters(myLoc.lng, myLoc.lat, item.longitude, item.latitude);
+                                return { ...item, _distance_to_me: dist };
+                            })
+                            .sort((a, b) => (a._distance_to_me || 0) - (b._distance_to_me || 0));
+                    }
+
                     itemsToRender.forEach((item) => {
                         const marker = new AMap.Marker({ position: [item.longitude, item.latitude], title: item.name });
                         marker.setMap(map);
-                        marker.on('click', () => toggleDrawer(item.name, item.distance != null ? `距离约 ${item.distance} 米` : '距离未知', item.tel ? `${item.address}｜电话：${item.tel}` : item.address || '暂无详细地址'));
+                        marker.on('click', () => {
+                            const dist = item._distance_to_me ?? item.distance;
+                            const distText = (typeof dist === "number" && Number.isFinite(dist))
+                                ? `距你当前位置约 ${dist} 米`
+                                : '距离未知';
+                            toggleDrawer(
+                                item.name,
+                                distText,
+                                item.tel ? `${item.address}｜电话：${item.tel}` : item.address || '暂无详细地址'
+                            );
+                        });
                         markers.push(marker);
                     });
-                } catch (e) {} finally { loading = false; }
+                } catch (e) {
+                    setMapStatus("检索失败：网络异常或服务不可用，请稍后重试", "error");
+                    if (mapDebugEl) {
+                        mapDebugEl.textContent = `[debug] 雷达请求异常: ${e && e.message ? e.message : e}`;
+                    }
+                } finally { loading = false; }
             }
             window._vetoLoadLawyersByCenter = loadLawyersByCenter;
             loadLawyersByCenter([104.0, 35.0]);
             map.on('moveend', () => { const center = map.getCenter(); loadLawyersByCenter([center.getLng(), center.getLat()]); });
         }
-        function recenterToCurrentLocation() { if (window._vetoGeo) window._vetoGeo.getCurrentPosition(); }
+        function recenterToCurrentLocation() {
+            // 优先复用最近一次成功定位；无定位则走浏览器定位兜底
+            if (window._vetoMyLocation && window._vetoMap && window._vetoLoadLawyersByCenter) {
+                const lng = window._vetoMyLocation.lng;
+                const lat = window._vetoMyLocation.lat;
+                window._vetoMap.setCenter([lng, lat]);
+                window._vetoLoadLawyersByCenter([lng, lat]);
+                return;
+            }
+            if (navigator.geolocation && window._vetoMap && window._vetoLoadLawyersByCenter) {
+                const mapStatusEl = document.getElementById("map-status");
+                if (mapStatusEl) mapStatusEl.textContent = "正在重新定位...";
+                navigator.geolocation.getCurrentPosition(function (pos) {
+                    const p = pos && pos.coords ? pos.coords : null;
+                    if (!p) return;
+                    window._vetoMyLocation = { lng: p.longitude, lat: p.latitude };
+                    window._vetoMap.setCenter([p.longitude, p.latitude]);
+                    window._vetoLoadLawyersByCenter([p.longitude, p.latitude]);
+                }, function () {
+                    if (mapStatusEl) mapStatusEl.textContent = "重定位失败：请允许定位权限后重试";
+                });
+            }
+        }
 
         window.addEventListener('load', () => {
+            const sessionUser = loadSession();
+            if (sessionUser && sessionUser.id) {
+                APIData.user.id = sessionUser.id;
+                APIData.user.idName = sessionUser.username || APIData.user.idName;
+                APIData.user.email = sessionUser.email || "";
+                APIData.user.avatar = sessionUser.avatar || APIData.user.avatar;
+                (async () => {
+                    await refreshNewsFromBackend();
+                    await refreshForumFromBackend();
+                    await refreshHistoryFromBackend();
+                    renderHome();
+                    renderDiscover();
+                    renderUser();
+                    pageHistory = [];
+                    showPage("home");
+                })();
+                return;
+            }
             showPage('login');
             switchAuthMode('login');
-            try { renderHome(); } catch(e){}
-            try { renderDiscover(); } catch(e){}
+            (async () => {
+                await refreshNewsFromBackend();
+                try { renderHome(); } catch(e){}
+                try { renderDiscover(); } catch(e){}
+            })();
             try { renderUser(); } catch(e){}
         });
     </script>

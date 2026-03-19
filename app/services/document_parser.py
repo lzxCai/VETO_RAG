@@ -20,10 +20,11 @@ from app.services.bailian_multimodal_reader import (
 )
 from app.services.image_preprocessor import preprocess_page_images
 from app.services.input_normalizer import normalize_contract_input_to_page_images
+from app.services.local_pdf_reader import read_pdf_text_with_pymupdf
 
 
 DocumentInput = Union[str, List[str]]
-SUPPORTED_PARSERS = {"auto", "bailian", "llamaparse"}
+SUPPORTED_PARSERS = {"auto", "bailian", "llamaparse", "local"}
 
 
 def _is_pdf_input(input_source: DocumentInput) -> bool:
@@ -65,6 +66,20 @@ def parse_contract_document(
     is_pdf = _is_pdf_input(input_source)
 
     try:
+        # 0) 本地 PDF（无外部依赖，速度快）
+        if is_pdf and parser == "local":
+            pages = read_pdf_text_with_pymupdf(str(input_source))
+            if pages:
+                parser_used = "local"
+                return pages, {
+                    "parser_requested": parser,
+                    "parser_used": parser_used,
+                    "fallback_used": fallback_used,
+                    "warnings": warnings,
+                    "input_meta": {"input_source_kind": "pdf_local"},
+                }
+            warnings.append("本地 PyMuPDF 解析返回空结果。")
+
         # 1) 百炼优先（PDF/图片统一走页面图像）
         if parser in {"auto", "bailian"}:
             try:
@@ -128,6 +143,25 @@ def parse_contract_document(
                 warnings.append(f"LlamaParse 解析失败: {exc}")
                 if parser == "llamaparse" or (parser == "bailian" and not fallback_to_legacy):
                     raise
+
+        # 3) 最后兜底：本地 PyMuPDF（仅 PDF）
+        if is_pdf and fallback_to_legacy:
+            try:
+                pages = read_pdf_text_with_pymupdf(str(input_source))
+                if pages:
+                    parser_used = "local"
+                    fallback_used = True
+                    warnings.append("已回退到本地 PyMuPDF 解析。")
+                    return pages, {
+                        "parser_requested": parser,
+                        "parser_used": parser_used,
+                        "fallback_used": fallback_used,
+                        "warnings": warnings,
+                        "input_meta": {"input_source_kind": "pdf_local"},
+                    }
+                warnings.append("本地 PyMuPDF 解析返回空结果。")
+            except Exception as exc:  # noqa: BLE001
+                warnings.append(f"本地 PyMuPDF 解析失败: {exc}")
 
         raise RuntimeError(
             "解析失败：当前输入未获得可用结果。"

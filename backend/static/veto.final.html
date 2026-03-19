@@ -7,6 +7,9 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <script src="https://webapi.amap.com/maps?v=2.0&key=6481e53152984f1c49c0b6adfcd196a9&plugin=AMap.Geolocation"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <!-- 2.5.2 在 cdnjs 上不存在(404)，与 html2pdf 0.10 同代用 2.5.1 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <title>VETO | OS v8.7 Data Synced</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&family=Inter:wght@400;700;900&display=swap');
@@ -40,6 +43,29 @@
         .drawer.active { transform: translateY(0); }
 
         ::-webkit-scrollbar { display: none; }
+
+        #pdf-export-area.contract-pdf-sheet {
+            max-width: 210mm;
+            margin-left: auto;
+            margin-right: auto;
+            box-sizing: border-box;
+            background: #ffffff;
+        }
+        #pdf-export-area.pdf-capture-fix {
+            overflow: visible !important;
+            height: auto !important;
+            max-height: none !important;
+            min-height: 0 !important;
+        }
+        @media print {
+            * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+            body { background: #fff !important; }
+            .no-print { display: none !important; }
+            .page-node { display: none !important; }
+            #page-analysis.active { display: block !important; padding: 0 !important; }
+            #page-analysis.active > .min-h-screen { min-height: 0 !important; padding-bottom: 0 !important; }
+            #page-analysis.active #pdf-export-area { max-width: 100% !important; margin: 0 auto !important; box-shadow: none !important; }
+        }
     </style>
 </head>
 <body>
@@ -147,18 +173,25 @@
 
     <section id="page-analysis" class="page-node bg-white !pb-0 text-black">
         <div class="min-h-screen">
-            <nav class="h-20 px-8 flex justify-between items-center border-b border-black sticky top-0 bg-white z-50" data-html2canvas-ignore="true">
+            <nav class="no-print h-20 px-8 flex justify-between items-center border-b border-black sticky top-0 bg-white z-50" data-html2canvas-ignore="true">
                 <div class="flex items-center gap-2 cursor-pointer hover:opacity-50 transition-opacity" onclick="showPage('home')"><i class="fa-solid fa-arrow-left text-xl"></i><span class="font-black text-sm tracking-[0.2em] ml-2 mt-0.5">返回中枢</span></div>
                 <div id="nav-status"></div>
             </nav>
-            <main class="px-8 mt-12 mb-32 max-w-5xl mx-auto" id="pdf-export-area">
-                <header class="mb-16" id="analysis-header"></header>
-                <section class="mb-16 p-8 border border-black bg-zinc-50" id="analysis-summary"></section>
-                <section class="space-y-12" id="analysis-clauses"></section>
+            <main class="px-8 mt-12 mb-32 max-w-5xl mx-auto contract-pdf-sheet" id="pdf-export-area">
+                <header class="mb-10" id="analysis-header"></header>
+                <section class="mb-10 p-8 border-[3px] border-black bg-white shadow-[6px_6px_0px_rgba(0,0,0,1)] break-inside-avoid" id="analysis-cover"></section>
+                <section class="mb-10 p-8 border-[3px] border-black bg-zinc-50 break-inside-avoid" id="analysis-abstract"></section>
+                <section class="mb-10 break-inside-avoid" id="analysis-risk-overview"></section>
+                <section class="space-y-12 mb-10" id="analysis-clauses"></section>
+                <section class="mb-10 p-8 border-[3px] border-black bg-white break-inside-avoid" id="analysis-conclusion"></section>
+                <section class="mb-16 p-6 border-2 border-zinc-400 bg-zinc-100 text-sm font-bold break-inside-avoid" id="analysis-disclaimer"></section>
             </main>
-            <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-black p-6 md:py-8 z-[100] flex items-center justify-center" data-html2canvas-ignore="true">
-                <button onclick="exportReport()" id="btn-export" class="w-full max-w-2xl h-14 md:h-16 bg-black text-white flex items-center justify-center gap-4 hover:bg-emerald-500 hover:text-black transition-all shadow-xl font-black tracking-[0.2em]">
-                    <i class="fa-solid fa-file-arrow-down text-xl"></i>导出完整风控卷宗
+            <div class="no-print fixed bottom-0 left-0 right-0 bg-white border-t border-black p-4 md:p-6 z-[100] flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3" data-html2canvas-ignore="true">
+                <button type="button" onclick="exportReportDownload()" id="btn-export" class="w-full sm:max-w-md h-14 md:h-16 bg-black text-white flex items-center justify-center gap-3 hover:bg-emerald-500 hover:text-black transition-all shadow-xl font-black tracking-[0.15em] text-sm md:text-base">
+                    <i class="fa-solid fa-file-arrow-down text-xl"></i>下载 PDF（完整分页）
+                </button>
+                <button type="button" onclick="exportReportPrint()" class="w-full sm:max-w-md h-14 md:h-16 border-[3px] border-black bg-white text-black flex items-center justify-center gap-3 hover:bg-zinc-100 transition-all font-black tracking-[0.15em] text-sm md:text-base">
+                    <i class="fa-solid fa-print text-xl"></i>系统打印为 PDF
                 </button>
             </div>
         </div>
@@ -656,16 +689,115 @@
             } catch(e) {}
         }
 
+        function escapeHtml(str) {
+            if (str == null || str === undefined) return '';
+            return String(str)
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;');
+        }
+
+        function reportSectionHeading(text) {
+            return `<h2 class="text-lg md:text-xl font-black border-l-[6px] border-emerald-500 pl-3 mb-5 tracking-tight text-black">${text}</h2>`;
+        }
+
         function renderAnalysis() {
             try {
                 const data = APIData.analysis;
                 if (!data || !data.overview) return;
                 const themeMap = { critical: { color: "rose-600", bg: "rose-600", text: "text-rose-600", stripe: "danger-stripes", icon: "fa-gavel" }, warning: { color: "amber-500", bg: "amber-500", text: "text-amber-600", stripe: "warning-stripes", icon: "fa-scale-balanced" }, safe: { color: "emerald-500", bg: "emerald-500", text: "text-emerald-500", stripe: "", icon: "fa-check" } };
                 const theme = themeMap[data.status] || themeMap.safe;
+                const reportTitle = data.reportTitle || '劳动合同风险审查报告';
+                const reportSubtitle = data.reportSubtitle || '——基于模块化合规筛查的专项分析';
+                const contractSrc = data.contractSource || data.sourceFilename || '';
+                const genCn = data.generatedAtCn || '';
+                const genAt = data.generatedAt || '';
+                const metaLine = [genCn ? `生成日期：${escapeHtml(genCn)}` : (genAt ? `生成时间 ${escapeHtml(genAt)}` : ''), data.sourceFilename ? `文件：${escapeHtml(data.sourceFilename)}` : ''].filter(Boolean).join(' · ');
+
                 document.getElementById('nav-status').innerHTML = `<span class="mono text-[10px] ${theme.text} tracking-widest font-bold">异常响应_</span><div class="w-2 h-2 bg-${theme.color} rounded-full animate-ping"></div>`;
-                document.getElementById('analysis-header').innerHTML = `<div class="flex items-center gap-3 mb-4"><i class="fa-solid fa-triangle-exclamation ${theme.text} text-xl"></i><span class="mono text-xs font-bold ${theme.text} tracking-widest uppercase">Threat_Level: ${data.status}</span></div><h1 class="text-6xl md:text-7xl font-black tracking-tighter leading-none mb-8">卷宗<br>解构报告_</h1><div class="grid grid-cols-3 border-[3px] border-black bg-black text-white shadow-[8px_8px_0px_rgba(0,0,0,1)]"><div class="p-6 md:p-8 border-r border-zinc-800"><p class="mono text-[9px] text-zinc-400 tracking-widest mb-2">综合风险指数</p><p class="text-4xl md:text-5xl font-black italic ${theme.text}">${data.overview.levelText}</p></div><div class="p-6 md:p-8 border-r border-zinc-800"><p class="mono text-[9px] text-zinc-400 tracking-widest mb-2">检出核心陷阱</p><p class="text-4xl md:text-5xl font-black italic">${data.overview.fatalTrapsCount < 10 ? '0'+data.overview.fatalTrapsCount : data.overview.fatalTrapsCount}<span class="text-lg text-zinc-500 ml-1">处</span></p></div><div class="p-6 md:p-8"><p class="mono text-[9px] text-zinc-400 tracking-widest mb-2">缺失关键保障</p><p class="text-4xl md:text-5xl font-black italic">${data.overview.missingGuaranteesCount < 10 ? '0'+data.overview.missingGuaranteesCount : data.overview.missingGuaranteesCount}<span class="text-lg text-zinc-500 ml-1">项</span></p></div></div>`;
-                document.getElementById('analysis-summary').innerHTML = `<h3 class="mono text-[10px] font-bold tracking-[0.3em] text-zinc-500 mb-4">>> 引擎总控摘要</h3><p class="text-base font-bold leading-relaxed text-zinc-800">${data.summary}</p>`;
-                document.getElementById('analysis-clauses').innerHTML = `<h3 class="mono text-[10px] font-bold tracking-[0.3em] text-zinc-500 border-b border-black pb-4">>> 异常条款切片阵列</h3>` + data.clauses.map(clause => { const cTheme = themeMap[clause.severity] || themeMap.warning; const textColor = clause.severity === 'warning' ? 'text-black' : 'text-white'; return `<div class="border-[3px] border-black group mt-12 break-inside-avoid shadow-[6px_6px_0px_rgba(0,0,0,1)]"><div class="bg-black text-white p-4 flex justify-between items-center"><div class="flex items-center gap-4"><span class="mono text-xs font-bold bg-${cTheme.bg} ${textColor} px-2 py-1">目标标号_${clause.id}</span><h4 class="font-black tracking-widest text-sm">${clause.title}</h4></div><i class="fa-solid fa-fingerprint text-zinc-600"></i></div><div class="p-6 md:p-8 space-y-6"><div><p class="mono text-[9px] text-zinc-400 tracking-widest mb-2">:: 捕获原始协议片段 ::</p><div class="p-4 b-dashed bg-zinc-50 text-sm text-zinc-700 font-bold ${cTheme.stripe}">${clause.originalSnippet}</div></div><div class="flex gap-4 items-start"><div class="w-8 h-8 bg-black text-white flex items-center justify-center shrink-0 mt-1"><i class="fa-solid ${cTheme.icon} text-xs"></i></div><div><p class="mono text-[9px] text-zinc-400 tracking-widest mb-1">:: 引擎法条映射结论 ::</p><p class="text-sm font-bold text-black leading-relaxed">${clause.aiAnalysis}</p></div></div></div></div>`; }).join('');
+
+                document.getElementById('analysis-header').innerHTML = `
+                    <div class="flex items-center gap-3 mb-6"><i class="fa-solid fa-triangle-exclamation ${theme.text} text-xl"></i><span class="mono text-xs font-bold ${theme.text} tracking-widest uppercase">Threat_Level: ${data.status}</span></div>
+                    <h1 class="text-3xl md:text-4xl font-black text-center tracking-tight leading-tight mb-2">${escapeHtml(reportTitle)}</h1>
+                    <p class="text-center text-sm md:text-base font-bold text-zinc-700 mb-3">${escapeHtml(reportSubtitle)}</p>
+                    <p class="text-center text-xs md:text-sm text-zinc-600 font-bold mb-1">合同来源：${escapeHtml(contractSrc)}</p>
+                    <p class="text-center mono text-[10px] text-zinc-500 mb-8">${metaLine || '&nbsp;'}</p>
+                    <div class="grid grid-cols-3 border-[3px] border-black bg-black text-white shadow-[8px_8px_0px_rgba(0,0,0,1)]">
+                        <div class="p-4 md:p-8 border-r border-zinc-800"><p class="mono text-[9px] text-zinc-400 tracking-widest mb-2">综合风险指数</p><p class="text-3xl md:text-5xl font-black italic ${theme.text}">${data.overview.levelText}</p></div>
+                        <div class="p-4 md:p-8 border-r border-zinc-800"><p class="mono text-[9px] text-zinc-400 tracking-widest mb-2">检出核心陷阱</p><p class="text-3xl md:text-5xl font-black italic">${data.overview.fatalTrapsCount < 10 ? '0'+data.overview.fatalTrapsCount : data.overview.fatalTrapsCount}<span class="text-lg text-zinc-500 ml-1">处</span></p></div>
+                        <div class="p-4 md:p-8"><p class="mono text-[9px] text-zinc-400 tracking-widest mb-2">缺失关键保障</p><p class="text-3xl md:text-5xl font-black italic">${data.overview.missingGuaranteesCount < 10 ? '0'+data.overview.missingGuaranteesCount : data.overview.missingGuaranteesCount}<span class="text-lg text-zinc-500 ml-1">项</span></p></div>
+                    </div>`;
+
+                const cov = data.coverInfo || {};
+                document.getElementById('analysis-cover').innerHTML = reportSectionHeading('封面信息') + `
+                    <dl class="space-y-3 text-sm font-bold text-zinc-800">
+                        <div><dt class="mono text-[9px] text-zinc-500 tracking-widest mb-1">报告名称</dt><dd>${escapeHtml(cov.reportName || reportTitle)}</dd></div>
+                        <div><dt class="mono text-[9px] text-zinc-500 tracking-widest mb-1">审查对象</dt><dd>${escapeHtml(cov.reviewTarget || '—')}</dd></div>
+                        <div><dt class="mono text-[9px] text-zinc-500 tracking-widest mb-1">审查范围</dt><dd>${escapeHtml(cov.scopeLine || '—')}</dd></div>
+                        <div><dt class="mono text-[9px] text-zinc-500 tracking-widest mb-1">高风险条款数量</dt><dd>${cov.keyRiskCount != null ? escapeHtml(String(cov.keyRiskCount)) + ' 项' : '—'}</dd></div>
+                        <div><dt class="mono text-[9px] text-zinc-500 tracking-widest mb-1">主要风险类型分布</dt><dd class="leading-relaxed">${escapeHtml(cov.riskDistributionLine || '—')}</dd></div>
+                    </dl>`;
+
+                const absText = data.executiveSummary != null ? data.executiveSummary : (data.summary || '');
+                document.getElementById('analysis-abstract').innerHTML = reportSectionHeading('摘要') + `<p class="text-sm md:text-base font-bold leading-relaxed text-zinc-800">${escapeHtml(absText)}</p>`;
+
+                const rows = data.riskOverviewRows || [];
+                let tableHtml = reportSectionHeading('风险总览');
+                if (rows.length === 0) {
+                    tableHtml += `<p class="text-sm text-zinc-500 font-bold">暂无关键风险条款或未返回总览表数据。</p>`;
+                } else {
+                    tableHtml += `<div class="overflow-x-auto border-[3px] border-black shadow-[4px_4px_0px_rgba(0,0,0,1)]"><table class="w-full min-w-[640px] text-left text-[11px] md:text-sm border-collapse">
+                        <thead><tr class="bg-black text-white">
+                            <th class="border border-black p-2 md:p-3 font-black">条款编号</th>
+                            <th class="border border-black p-2 md:p-3 font-black">所属章节</th>
+                            <th class="border border-black p-2 md:p-3 font-black">风险类型</th>
+                            <th class="border border-black p-2 md:p-3 font-black">风险等级</th>
+                            <th class="border border-black p-2 md:p-3 font-black">法律依据状态</th>
+                        </tr></thead><tbody>`;
+                    tableHtml += rows.map((r, i) => `<tr class="${i % 2 === 1 ? 'bg-zinc-50' : 'bg-white'}">
+                        <td class="border border-black p-2 md:p-3 font-mono font-bold">${escapeHtml(r.clauseId)}</td>
+                        <td class="border border-black p-2 md:p-3">${escapeHtml(r.section)}</td>
+                        <td class="border border-black p-2 md:p-3">${escapeHtml(r.riskType)}</td>
+                        <td class="border border-black p-2 md:p-3 font-bold">${escapeHtml(r.riskLevel)}</td>
+                        <td class="border border-black p-2 md:p-3">${escapeHtml(r.legalBasisStatus)}</td>
+                    </tr>`).join('');
+                    tableHtml += `</tbody></table></div>`;
+                }
+                document.getElementById('analysis-risk-overview').innerHTML = tableHtml;
+
+                document.getElementById('analysis-clauses').innerHTML = reportSectionHeading('逐条风险分析') + (data.clauses || []).map(clause => {
+                    const cTheme = themeMap[clause.severity] || themeMap.warning;
+                    const textColor = clause.severity === 'warning' ? 'text-black' : 'text-white';
+                    const head = clause.analysisHeadline || clause.title || clause.id;
+                    const legalT = clause.legalBasisText != null ? clause.legalBasisText : (clause.aiAnalysis || '');
+                    const riskE = clause.riskExplanationText != null ? clause.riskExplanationText : '';
+                    const revS = clause.revisionSuggestionText != null ? clause.revisionSuggestionText : '';
+                    return `<div class="border-[3px] border-black group mt-10 break-inside-avoid shadow-[6px_6px_0px_rgba(0,0,0,1)]">
+                        <div class="bg-black text-white p-4 flex justify-between items-center">
+                            <div class="flex flex-wrap items-center gap-3">
+                                <span class="mono text-xs font-bold bg-${cTheme.bg} ${textColor} px-2 py-1">条款 ${escapeHtml(clause.id)}</span>
+                                <h4 class="font-black text-sm md:text-base tracking-tight">${escapeHtml(head)}</h4>
+                            </div>
+                            <i class="fa-solid fa-fingerprint text-zinc-600 hidden sm:block"></i>
+                        </div>
+                        <div class="p-6 md:p-8 space-y-5 text-sm font-bold text-zinc-800">
+                            <div><p class="mono text-[9px] text-zinc-500 tracking-widest mb-2">风险类型</p><p>${escapeHtml(clause.riskType || '—')}</p></div>
+                            <div><p class="mono text-[9px] text-zinc-500 tracking-widest mb-2">条款内容</p><div class="p-4 b-dashed bg-zinc-50 whitespace-pre-wrap ${cTheme.stripe}">${escapeHtml(clause.originalSnippet)}</div></div>
+                            <div><p class="mono text-[9px] text-zinc-500 tracking-widest mb-2">法律依据</p><div class="p-4 border-2 border-black bg-white whitespace-pre-wrap text-xs md:text-sm leading-relaxed">${escapeHtml(legalT)}</div></div>
+                            <div><p class="mono text-[9px] text-zinc-500 tracking-widest mb-2">风险说明</p><p class="leading-relaxed">${escapeHtml(riskE)}</p></div>
+                            <div><p class="mono text-[9px] text-zinc-500 tracking-widest mb-2">修改建议</p><p class="leading-relaxed text-emerald-900 border-l-4 border-emerald-500 pl-3">${escapeHtml(revS)}</p></div>
+                        </div>
+                    </div>`;
+                }).join('');
+
+                const sug = (data.signingSuggestions || []).map((s, i) => `<li class="mb-2 pl-1">${escapeHtml(s)}</li>`).join('');
+                document.getElementById('analysis-conclusion').innerHTML = reportSectionHeading('结论与签约建议')
+                    + `<p class="text-sm md:text-base font-bold leading-relaxed text-zinc-800 mb-6">${escapeHtml(data.conclusionBody || '')}</p>`
+                    + (sug ? `<p class="mono text-[9px] text-zinc-500 tracking-widest mb-2">签约建议</p><ol class="list-decimal list-inside space-y-1 text-sm font-bold text-zinc-800">${sug}</ol>` : '');
+
+                document.getElementById('analysis-disclaimer').innerHTML = reportSectionHeading('说明')
+                    + `<p class="text-sm font-bold text-zinc-700">${escapeHtml(data.disclaimer || '本报告不构成正式法律意见，具体签约决策应结合专业律师意见作出。')}</p>`;
             } catch(e){}
         }
 
@@ -891,13 +1023,16 @@
                 const USE_REAL_BACKEND = true; 
                 if (USE_REAL_BACKEND) {
                     const response = await fetch('/api/analyze-contract', { method: 'POST', body: formData });
-                    if (!response.ok) throw new Error('网络响应异常');
-                    const result = await response.json();
+                    const result = await response.json().catch(() => ({}));
+                    if (!response.ok) {
+                        const detail = result.detail != null ? (typeof result.detail === 'string' ? result.detail : JSON.stringify(result.detail)) : '网络响应异常';
+                        throw new Error(detail);
+                    }
                     APIData.analysis = result.data; 
                 } else { await new Promise(resolve => setTimeout(resolve, 2000)); }
                 renderAnalysis(); showPage('analysis'); 
             } catch (error) {
-                alert("系统异常：未能连接到风控引擎核心，请检查网络或后端服务是否开启。");
+                alert("合同分析失败：" + (error && error.message ? error.message : "请检查后端服务、API Key 或上传 PDF/图片格式。"));
             } finally {
                 btn.innerHTML = '<span class="relative z-10">执行解构_</span>';
                 btn.classList.remove('pointer-events-none');
@@ -908,19 +1043,210 @@
             }
         }
 
-        function exportReport() {
-            const btn = document.getElementById('btn-export');
-            const originalText = btn.innerHTML;
+        function _pdfOnClone(clonedDoc, captureW) {
+            var node = clonedDoc.getElementById('pdf-export-area');
+            if (node) {
+                node.style.height = 'auto';
+                node.style.maxHeight = 'none';
+                node.style.overflow = 'visible';
+                if (captureW && captureW > 0) {
+                    node.style.maxWidth = 'none';
+                    node.style.width = captureW + 'px';
+                    node.style.marginLeft = '0';
+                    node.style.marginRight = '0';
+                    node.style.boxSizing = 'border-box';
+                    node.style.transform = 'none';
+                }
+            }
+            clonedDoc.body.style.overflow = 'visible';
+            clonedDoc.documentElement.style.overflow = 'visible';
+            if (captureW && captureW > 0) {
+                clonedDoc.body.style.margin = '0';
+                clonedDoc.documentElement.style.width = '100%';
+            }
+        }
+
+        function appendCanvasAsPagedImages(pdf, canvas, opts) {
+            opts = opts || {};
+            var margin = opts.margin != null ? opts.margin : 8;
+            var quality = opts.quality != null ? opts.quality : 0.9;
+            var JsPDF = (window.jspdf && window.jspdf.jsPDF) || (typeof window.jsPDF === 'function' ? window.jsPDF : null);
+            if (!JsPDF) throw new Error('jsPDF not loaded（请检查 jspdf.umd.min.js 是否 200 加载成功）');
+            var isNew = !pdf;
+            if (isNew) pdf = new JsPDF({ unit: 'mm', format: 'a4', orientation: 'portrait' });
+            if (!isNew && opts.prependWithNewPage) pdf.addPage();
+
+            var pageW = pdf.internal.pageSize.getWidth();
+            var pageH = pdf.internal.pageSize.getHeight();
+            var imgW = pageW - 2 * margin;
+            var viewH = pageH - 2 * margin;
+            var imgH = (canvas.height * imgW) / canvas.width;
+            var imgData = canvas.toDataURL('image/jpeg', quality);
+
+            var heightLeft = imgH;
+            var y = margin;
+            pdf.addImage(imgData, 'JPEG', margin, y, imgW, imgH);
+            heightLeft -= viewH;
+            while (heightLeft > 0) {
+                y = margin + (heightLeft - imgH);
+                pdf.addPage();
+                pdf.addImage(imgData, 'JPEG', margin, y, imgW, imgH);
+                heightLeft -= viewH;
+            }
+            return pdf;
+        }
+
+        function exportReportPrint() {
+            window.print();
+        }
+
+        function exportReportDownload() {
+            var btn = document.getElementById('btn-export');
+            var originalText = btn.innerHTML;
             btn.innerHTML = '<i class="fa-solid fa-circle-notch animate-spin text-xl"></i><span class="font-black tracking-[0.2em] text-base md:text-lg">引擎封卷中...</span>';
             btn.classList.add('pointer-events-none');
-            const elementToExport = document.getElementById('pdf-export-area');
-            const opt = { margin: [15, 10, 15, 10], filename: 'VETO_卷宗解构报告.pdf', image: { type: 'jpeg', quality: 0.98 }, html2canvas: { scale: 2, useCORS: true, letterRendering: true }, jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }};
-            html2pdf().set(opt).from(elementToExport).save().then(() => {
-                btn.innerHTML = originalText; btn.classList.remove('pointer-events-none');
-            }).catch(err => {
-                alert("系统异常：风控卷宗导出失败。");
-                btn.innerHTML = originalText; btn.classList.remove('pointer-events-none');
+            var el = document.getElementById('pdf-export-area');
+            if (!el) {
+                btn.innerHTML = originalText;
+                btn.classList.remove('pointer-events-none');
+                return;
+            }
+            var scrollX = window.scrollX || window.pageXOffset;
+            var scrollY = window.scrollY || window.pageYOffset;
+            window.scrollTo(0, 0);
+            requestAnimationFrame(function () {
+                el.classList.add('pdf-capture-fix');
+                var rect = el.getBoundingClientRect();
+                var w = Math.ceil(Math.max(el.scrollWidth, el.offsetWidth, rect.width || 0, 1));
+                var h = Math.max(el.scrollHeight, el.offsetHeight, 1);
+
+                var done = function () {
+                    el.classList.remove('pdf-capture-fix');
+                    window.scrollTo(scrollX, scrollY);
+                    btn.innerHTML = originalText;
+                    btn.classList.remove('pointer-events-none');
+                };
+
+                var MAX_PX = 4096;
+                var scale = Math.min(2, MAX_PX / w);
+                if (scale < 0.35) scale = 0.35;
+                var sliceCssH = Math.max(320, Math.min(Math.floor((MAX_PX - 64) / scale), h));
+
+                var vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0, w);
+                var vh = Math.max(window.innerHeight || 0, h);
+                var html2pdfOpt = {
+                    margin: 0,
+                    filename: 'VETO_劳动合同风险审查报告.pdf',
+                    image: { type: 'jpeg', quality: 0.92 },
+                    html2canvas: {
+                        scale: scale,
+                        useCORS: true,
+                        allowTaint: true,
+                        letterRendering: true,
+                        logging: false,
+                        backgroundColor: '#ffffff',
+                        foreignObjectRendering: false,
+                        scrollX: 0,
+                        scrollY: -scrollY,
+                        windowWidth: vw,
+                        windowHeight: vh,
+                        width: w,
+                        height: h,
+                        x: 0,
+                        y: 0,
+                        onclone: function (doc) {
+                            _pdfOnClone(doc, w);
+                        },
+                    },
+                    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                };
+
+                function tryFallbackHtml2Pdf() {
+                    html2pdf()
+                        .set(html2pdfOpt)
+                        .from(el)
+                        .toCanvas()
+                        .then(function () {
+                            var canvas = this.prop && this.prop.canvas;
+                            try {
+                                if (!canvas) throw new Error('未生成画布');
+                                var p = appendCanvasAsPagedImages(null, canvas, {});
+                                p.save('VETO_劳动合同风险审查报告.pdf');
+                            } catch (err) {
+                                console.error(err);
+                                alert('PDF 保存失败：' + (err && err.message ? err.message : '未知错误'));
+                            }
+                            done();
+                        })
+                        .catch(function () {
+                            alert('导出失败：请使用「系统打印为 PDF」，或缩小浏览器缩放后重试。');
+                            done();
+                        });
+                }
+
+                if (typeof window.html2canvas !== 'function') {
+                    tryFallbackHtml2Pdf();
+                    return;
+                }
+
+                var y0 = 0;
+                var pdf = null;
+
+                function captureNextTile() {
+                    if (y0 >= h) {
+                        try {
+                            if (pdf) pdf.save('VETO_劳动合同风险审查报告.pdf');
+                            else alert('未生成 PDF，请使用「系统打印为 PDF」。');
+                        } catch (e) {
+                            console.error(e);
+                            alert('PDF 保存失败，请尝试系统打印为 PDF。');
+                        }
+                        done();
+                        return;
+                    }
+                    var sh = Math.min(sliceCssH, h - y0);
+                    window
+                        .html2canvas(el, {
+                            scale: scale,
+                            x: 0,
+                            y: y0,
+                            width: w,
+                            height: sh,
+                            useCORS: true,
+                            allowTaint: true,
+                            logging: false,
+                            backgroundColor: '#ffffff',
+                            foreignObjectRendering: false,
+                            scrollX: 0,
+                            scrollY: 0,
+                            onclone: function (doc) {
+                                _pdfOnClone(doc, w);
+                            },
+                        })
+                        .then(function (canvas) {
+                            if (!canvas || canvas.width < 2 || canvas.height < 2) {
+                                throw new Error('分片截图为空');
+                            }
+                            pdf = appendCanvasAsPagedImages(pdf, canvas, {
+                                prependWithNewPage: pdf !== null,
+                                quality: 0.9,
+                            });
+                            y0 += sh;
+                            setTimeout(captureNextTile, 40);
+                        })
+                        .catch(function (err) {
+                            console.warn('分片导出失败，回退整页截图', err);
+                            pdf = null;
+                            tryFallbackHtml2Pdf();
+                        });
+                }
+
+                captureNextTile();
             });
+        }
+
+        function exportReport() {
+            exportReportDownload();
         }
 
         function toggleDrawer(name, dist, desc) { document.getElementById('drawer-name').innerText = name; document.getElementById('drawer-dist').innerText = dist; document.getElementById('drawer-desc').innerText = desc; document.getElementById('drawer').classList.add('active'); }

@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Optional
 
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, Field
@@ -17,20 +17,20 @@ router = APIRouter(prefix="/api/forum", tags=["forum"])
 class ForumCommentResponse(BaseModel):
     id: str
     post_id: str
-    user_id: str
-    author_name: str
+    user_id: Optional[str] = None
+    author_name: Optional[str] = None
     content: str
-    created_at: str
+    created_at: Optional[str] = None
 
 
 class ForumPostResponse(BaseModel):
     id: str
-    user_id: str
-    author_name: str
+    user_id: Optional[str] = None
+    author_name: Optional[str] = None
     title: str
     content: str
     likes: int | None = 0
-    created_at: str
+    created_at: Optional[str] = None
     forum_comments: List[ForumCommentResponse] = Field(default_factory=list)
 
 

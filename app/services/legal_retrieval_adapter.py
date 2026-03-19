@@ -323,6 +323,9 @@ async def aretrieve_legal_basis_for_risk_item(
         "clause_title": clause_detail.get("title", ""),
         "section_title": clause_detail.get("section_title", ""),
         "clause_type": clause_detail.get("clause_type", ""),
+        # 供前端「逐条风险」标题生成：风险触发词，避免仅用条文前若干字当概述
+        "trigger_phrases": list(risk_item.get("trigger_phrases") or []),
+        "risk_level_preliminary": risk_item.get("risk_level_preliminary", ""),
         "legal_basis_results": limited,
         "retrieval_notes": sorted(set(retrieval_notes)),
     }
@@ -395,6 +398,8 @@ def build_report_context(
                 "clause_title": item.get("clause_title", ""),
                 "section_title": item.get("section_title", ""),
                 "clause_text": item.get("clause_text", ""),
+                "trigger_phrases": item.get("trigger_phrases", []),
+                "risk_level_preliminary": item.get("risk_level_preliminary", ""),
                 "legal_basis_results": item.get("legal_basis_results", []),
                 "retrieval_notes": item.get("retrieval_notes", []),
             }

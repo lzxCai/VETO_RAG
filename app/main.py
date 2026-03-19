@@ -93,7 +93,7 @@ def main() -> int:
     parser.add_argument(
         "--parser",
         default="auto",
-        choices=["auto", "bailian", "llamaparse"],
+        choices=["auto", "bailian", "llamaparse", "local"],
         help="合同解析器选择。",
     )
     parser.add_argument(

@@ -57,7 +57,6 @@ def _build_embedding_func():
         @wrap_embedding_func_with_attrs(
             embedding_dim=embed_dim,
             max_token_size=_get_env_int('LR_EMBED_MAX_TOKENS', 8192),
-            model_name=embed_model,
         )
         async def embedding_func(texts: list[str]):
             return await openai_embed.func(
@@ -114,6 +113,7 @@ def _build_report_prompt(report_context: dict) -> str:
     contract_source = report_context.get('contract_source', '')
     summary = report_context.get('summary', {})
     risk_items = report_context.get('risk_items', [])
+    generation_date = datetime.now().strftime('%Y-%m-%d')
 
     risk_sections: list[str] = []
     for idx, item in enumerate(risk_items, start=1):
@@ -140,18 +140,33 @@ def _build_report_prompt(report_context: dict) -> str:
 
     body = '\n\n'.join(risk_sections)
     summary_json = json.dumps(summary, ensure_ascii=False)
+    clause_id_list = [
+        str(item.get('clause_id', '')).strip()
+        for item in risk_items
+        if str(item.get('clause_id', '')).strip()
+    ]
+    clause_id_text = ', '.join(clause_id_list) if clause_id_list else '（无）'
+    fixed_clause_count = summary.get('main_body_clause_count')
+    fixed_attachment_count = summary.get('attachment_count')
+    fixed_risk_count = summary.get('key_risk_clause_count') or len(risk_items)
     return (
         '你是一名劳动合同风险审查报告撰写助手。请根据提供的风险条款和法律依据，生成一份正式、专业、适合交付的中文 Markdown 报告。\n'
         '必须严格遵守以下要求：\n'
-        '1. 报告必须包含以下一级章节：封面信息、摘要、风险总览、逐条风险分析、结论与签约建议、说明。\n'
-        '2. 报告正文只能依据提供的 risk_items 与 legal_basis_results 撰写，不得引用未提供的法律依据。\n'
-        '3. 若某条风险的法律依据不足或检索结果不够精确，必须明确写出“法律依据待补充/建议人工复核”。\n'
-        '4. 不要输出 Knowledge Graph、检索原始噪声、JSON、代码块或系统说明。\n'
-        '5. 报告语气正式、克制、专业，适合法律审查与项目交付。\n'
-        '6. 风险总览部分请用 Markdown 表格。逐条风险分析请统一使用小标题、风险类型、条款内容、法律依据、风险说明、修改建议的结构。\n'
-        '7. 首页顶部请输出报告标题、副标题、合同来源、生成日期。\n'
-        '8. 不要写“基于常识性劳动合规要求”“虽未提供仍保留分析”等说明；如果依据不足，只能写“法律依据待补充/建议人工复核”。\n'
-        '9. “说明”章节只保留这一句：本报告不构成正式法律意见，具体签约决策应结合专业律师意见作出。\n\n'
+        '报告必须包含以下一级章节：封面信息、摘要、风险总览、逐条风险分析、结论与签约建议、说明。\n'
+        '报告正文只能依据提供的 risk_items 与 legal_basis_results 撰写，不得引用未提供的法律依据。\n'
+        '不要输出 Knowledge Graph、检索原始噪声、JSON、代码块或系统说明。\n'
+        '报告语气正式、克制、专业，适合法律审查与项目交付。\n'
+        '风险总览部分请用 Markdown 表格。逐条风险分析请统一使用小标题、风险类型、条款内容、法律依据、风险说明、修改建议的结构。\n'
+        '首页顶部请输出报告标题、副标题、合同来源、生成日期。\n'
+        '不要写“基于常识性劳动合规要求”“虽未提供仍保留分析”等说明；如果依据不足，只能写“法律依据待补充/建议人工复核”。\n'
+        '“说明”章节只保留这一句：本报告不构成正式法律意见，具体签约决策应结合专业律师意见作出。\n'
+        '严禁捏造或改写以下结构化事实（必须逐字一致）：\n'
+        f'    - 生成日期：{generation_date}\n'
+        f'    - 合同正文条款数：{fixed_clause_count}\n'
+        f'    - 附件数：{fixed_attachment_count}\n'
+        f'    - 关键风险条款数：{fixed_risk_count}\n'
+        f'    - clause_id 列表：{clause_id_text}\n'
+        '    - 风险总览表行数必须等于 risk_items 条数，且每行条款编号必须与 clause_id 完全一致。\n\n'
         f'合同来源：{contract_source}\n'
         f'合同摘要：{summary_json}\n\n'
         f'风险条款明细：\n{body}\n'

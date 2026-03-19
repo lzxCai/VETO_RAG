@@ -7,11 +7,11 @@ from app.routers import lawyer_search
 def create_app() -> FastAPI:
     app = FastAPI(title="VETO Backend", version="0.1.0")
 
-    # 允许前端本地页面调用后端接口
+    # 允许本机与局域网页面调用后端接口（开发环境）
     app.add_middleware(
         CORSMiddleware,
-        allow_origins=["http://localhost", "http://localhost:8080", "http://127.0.0.1:8080"],
-        allow_credentials=True,
+        allow_origin_regex=r"^https?://([a-zA-Z0-9\.-]+)(:\d+)?$",
+        allow_credentials=False,
         allow_methods=["*"],
         allow_headers=["*"],
     )
