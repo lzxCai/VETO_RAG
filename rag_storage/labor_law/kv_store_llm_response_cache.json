@@ -3470,5 +3470,85 @@
     "create_time": 1773900209,
     "update_time": 1773900209,
     "_id": "hybrid:keywords:011fd6c89f3734e8d8604ac19b629b0a"
+  },
+  "hybrid:keywords:20eefd0ad152140af2dcd2a550144db7": {
+    "return": "{\"high_level_keywords\": [\"\\u8bd5\\u7528\\u671f\\u98ce\\u9669\", \"\\u52b3\\u52a8\\u5408\\u540c\", \"\\u52b3\\u52a8\\u5173\\u7cfb\", \"\\u8bd5\\u7528\\u671f\\u7ea6\\u5b9a\", \"\\u52b3\\u52a8\\u5408\\u540c\\u671f\\u9650\"], \"low_level_keywords\": [\"\\u8bd5\\u7528\\u671f\", \"\\u56fa\\u5b9a\\u671f\\u9650\\u52b3\\u52a8\\u5408\\u540c\", \"\\u65e0\\u56fa\\u5b9a\\u671f\\u9650\\u52b3\\u52a8\\u5408\\u540c\", \"\\u4ee5\\u5b8c\\u6210\\u4e00\\u5b9a\\u5de5\\u4f5c\\u4efb\\u52a1\\u4e3a\\u671f\\u9650\\u7684\\u52b3\\u52a8\\u5408\\u540c\", \"\\u516d\\u4e2a\\u6708\", \"\\u7528\\u5de5\\u4e4b\\u65e5\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：试用期风险\n重点主题：试用期 劳动合同 期限 试用期 最长不得超过六个月 劳动合同可以约定试用期\n条款内容：一、劳动合同期限\n甲乙双方自用工之日起建立劳动关系，双\n第一条甲乙双方自用工之日起建立劳动关系，双方约定按下列第 种方式确定劳动合同期限：\n1.固定期限：自 年 月 日起至 年 月 日\n止，其中，试用期从用工之日起至 年 月 日止。\n2.无固定期限：自 年 月 日起至依法解除、终止劳\n动合同时止，其中，试用期从用工之日起至 年 月 日止。\n3.以完成一定工作任务为期限：自 年 月 日起至\n工作任务完成时止。甲方应当以书面形式通知乙方工作任务完成。\n#",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1774598859,
+    "update_time": 1774598859,
+    "_id": "hybrid:keywords:20eefd0ad152140af2dcd2a550144db7"
+  },
+  "hybrid:keywords:80a62ca55a63bb2c90b77f0153638cfe": {
+    "return": "{\"high_level_keywords\": [\"\\u85aa\\u916c\\u652f\\u4ed8\\u98ce\\u9669\", \"Labor compensation payment risk\", \"Wage payment\"], \"low_level_keywords\": [\"Salary\", \"Labor remuneration\", \"Payment\", \"Overtime pay\", \"Monthly wage\", \"Piece-rate wage\", \"Basic wage\", \"Performance-based wage\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：薪酬支付风险\n重点主题：工资 劳动报酬 支付 劳动报酬 工资支付 加班工资\n条款内容：四、劳动报酬#\n甲方采用以下第种方式向乙方以货币形式\n第六条甲方采用以下第 种方式向乙方以货币形式支付工资，于每月 日前足额支付：\n1. 月工资 元。\n2. 计件工资。计件单价为 ，\n甲方应合理制定劳动定额，保证乙方在提供正常劳动情况下，获得合理的劳动报酬。\n3.基本工资和绩效工资相结合的工资分配办法，乙方月基本工资 元，绩效工资计发办法为 。\n4.双方约定的其他方式 。\n#",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1774598865,
+    "update_time": 1774598865,
+    "_id": "hybrid:keywords:80a62ca55a63bb2c90b77f0153638cfe"
+  },
+  "hybrid:keywords:e29477258b77c80fbf9301e9a3419e07": {
+    "return": "{\"high_level_keywords\": [\"\\u8bd5\\u7528\\u671f\\u98ce\\u9669\", \"\\u52b3\\u52a8\\u5408\\u540c\", \"\\u52b3\\u52a8\\u62a5\\u916c\", \"\\u8bd5\\u7528\\u671f\\u5de5\\u8d44\"], \"low_level_keywords\": [\"\\u8bd5\\u7528\\u671f\", \"\\u52b3\\u52a8\\u5408\\u540c\\u671f\\u9650\", \"\\u516d\\u4e2a\\u6708\", \"\\u5de5\\u8d44\\u8ba1\\u53d1\\u6807\\u51c6\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：试用期风险\n重点主题：试用期 劳动合同 期限 试用期 最长不得超过六个月 劳动合同可以约定试用期\n条款内容：四、劳动报酬#\n乙方在试用期期间的工资计发标准为或元\n第七条乙方在试用期期间的工资计发标准为 或 元。\n#",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1774598871,
+    "update_time": 1774598871,
+    "_id": "hybrid:keywords:e29477258b77c80fbf9301e9a3419e07"
+  },
+  "hybrid:keywords:51128cdfc39cc3e07a043f57c5b0ba27": {
+    "return": "{\"high_level_keywords\": [\"\\u85aa\\u916c\\u652f\\u4ed8\\u98ce\\u9669\", \"Labor compensation risk\", \"Wage payment\"], \"low_level_keywords\": [\"Salary\", \"Labor remuneration\", \"Payment\", \"Overtime pay\", \"Article 4\", \"Article 8\", \"Personal income tax withholding\"]}",
+    "cache_type": "keywords",
+    "chunk_id": null,
+    "original_prompt": "风险类型：薪酬支付风险\n重点主题：工资 劳动报酬 支付 劳动报酬 工资支付 加班工资\n条款内容：四、劳动报酬#\n甲方应合理调整乙方的工资待遇。乙方从\n第八条甲方应合理调整乙方的工资待遇。乙方从甲方获得的工资依法承担的个人所得税由甲方从其工资中代扣代缴。\n#",
+    "queryparam": {
+      "mode": "hybrid",
+      "response_type": "Multiple Paragraphs",
+      "top_k": 40,
+      "chunk_top_k": 20,
+      "max_entity_tokens": 6000,
+      "max_relation_tokens": 8000,
+      "max_total_tokens": 30000,
+      "user_prompt": "",
+      "enable_rerank": false
+    },
+    "create_time": 1774598877,
+    "update_time": 1774598877,
+    "_id": "hybrid:keywords:51128cdfc39cc3e07a043f57c5b0ba27"
   }
 }

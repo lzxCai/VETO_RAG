@@ -1234,7 +1234,10 @@
             
             try {
                 const formData = new FormData();
-                formData.append('contract_file', selectedFile); 
+                formData.append('contract_file', selectedFile);
+                if (APIData.user && APIData.user.id) {
+                    formData.append('user_id', APIData.user.id);
+                }
                 // 通过后端同源路由直连（推荐：访问 /veto 时无需改端口）
                 const USE_REAL_BACKEND = true; 
                 if (USE_REAL_BACKEND) {
@@ -1246,6 +1249,12 @@
                     }
                     APIData.analysis = result.data; 
                 } else { await new Promise(resolve => setTimeout(resolve, 2000)); }
+                if (APIData.user && APIData.user.id) {
+                    try {
+                        await refreshHistoryFromBackend();
+                        renderUser();
+                    } catch (_) { /* ignore */ }
+                }
                 renderAnalysis(); showPage('analysis'); 
             } catch (error) {
                 alert("合同分析失败：" + (error && error.message ? error.message : "请检查后端服务、API Key 或上传 PDF/图片格式。"));
