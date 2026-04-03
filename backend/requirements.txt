@@ -6,3 +6,7 @@ pydantic==2.5.0
 httpx==0.24.1
 supabase==1.2.0
 passlib[bcrypt]==1.7.4
+openai
+llama-parse
+PyMuPDF
+
