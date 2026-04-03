@@ -4,6 +4,8 @@ llama-index-llms-openai-like
 llama-index-embeddings-dashscope
 llama-index-postprocessor-dashscope-rerank
 llama-parse
+openai
+PyMuPDF
 
 fastapi==0.103.2
 uvicorn==0.24.0
@@ -13,3 +15,5 @@ pydantic==2.5.0
 httpx==0.24.1
 supabase==1.2.0
 passlib[bcrypt]==1.7.4
+openai
+PyMuPDF
